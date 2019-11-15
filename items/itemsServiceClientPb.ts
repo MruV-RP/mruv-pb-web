@@ -11,16 +11,25 @@ import * as grpcWeb from 'grpc-web';
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 import * as common_health_pb from '../common/health_pb';
+import * as items_items_model_pb from '../items/items_model_pb';
+import * as common_spatial_pb from '../common/spatial_pb';
 
 import {
-  CreateItemRequest,
-  CreateItemResponse,
-  DestroyItemRequest,
-  DestroyItemResponse,
-  GetItemRequest,
-  GetItemResponse,
-  UpdateItemRequest,
-  UpdateItemResponse} from './items_pb';
+  GetContainerItemsResponse,
+  GetContainersRequest,
+  GetContainersResponse,
+  GetItemTypesRequest,
+  GetItemTypesResponse,
+  GetItemsRequest,
+  GetItemsResponse,
+  GetNearestItemsRequest,
+  GetNearestItemsResponse,
+  PutItemRequest,
+  RemoveItemRequest,
+  SortItemsRequest,
+  SortItemsResponse,
+  UseItemRequest,
+  UseItemResponse} from './items_pb';
 
 export class MruVItemServiceClient {
   client_: grpcWeb.AbstractClientBase;
@@ -40,91 +49,465 @@ export class MruVItemServiceClient {
     this.options_ = options;
   }
 
-  methodInfoCreate = new grpcWeb.AbstractClientBase.MethodInfo(
-    CreateItemResponse,
-    (request: CreateItemRequest) => {
+  methodInfoCreateItem = new grpcWeb.AbstractClientBase.MethodInfo(
+    items_items_model_pb.ItemID,
+    (request: items_items_model_pb.Item) => {
       return request.serializeBinary();
     },
-    CreateItemResponse.deserializeBinary
+    items_items_model_pb.ItemID.deserializeBinary
   );
 
-  create(
-    request: CreateItemRequest,
+  createItem(
+    request: items_items_model_pb.Item,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: CreateItemResponse) => void) {
+               response: items_items_model_pb.ItemID) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.MruVItemService/Create',
+        '/mruv.MruVItemService/CreateItem',
       request,
       metadata || {},
-      this.methodInfoCreate,
+      this.methodInfoCreateItem,
       callback);
   }
 
-  methodInfoDestroy = new grpcWeb.AbstractClientBase.MethodInfo(
-    DestroyItemResponse,
-    (request: DestroyItemRequest) => {
+  methodInfoGetItem = new grpcWeb.AbstractClientBase.MethodInfo(
+    items_items_model_pb.Item,
+    (request: items_items_model_pb.ItemID) => {
       return request.serializeBinary();
     },
-    DestroyItemResponse.deserializeBinary
+    items_items_model_pb.Item.deserializeBinary
   );
 
-  destroy(
-    request: DestroyItemRequest,
+  getItem(
+    request: items_items_model_pb.ItemID,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: DestroyItemResponse) => void) {
+               response: items_items_model_pb.Item) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.MruVItemService/Destroy',
+        '/mruv.MruVItemService/GetItem',
       request,
       metadata || {},
-      this.methodInfoDestroy,
+      this.methodInfoGetItem,
       callback);
   }
 
-  methodInfoUpdate = new grpcWeb.AbstractClientBase.MethodInfo(
-    UpdateItemResponse,
-    (request: UpdateItemRequest) => {
+  methodInfoUpdateItem = new grpcWeb.AbstractClientBase.MethodInfo(
+    items_items_model_pb.ItemID,
+    (request: items_items_model_pb.Item) => {
       return request.serializeBinary();
     },
-    UpdateItemResponse.deserializeBinary
+    items_items_model_pb.ItemID.deserializeBinary
   );
 
-  update(
-    request: UpdateItemRequest,
+  updateItem(
+    request: items_items_model_pb.Item,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: UpdateItemResponse) => void) {
+               response: items_items_model_pb.ItemID) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.MruVItemService/Update',
+        '/mruv.MruVItemService/UpdateItem',
       request,
       metadata || {},
-      this.methodInfoUpdate,
+      this.methodInfoUpdateItem,
       callback);
   }
 
-  methodInfoGet = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetItemResponse,
-    (request: GetItemRequest) => {
+  methodInfoDeleteItem = new grpcWeb.AbstractClientBase.MethodInfo(
+    items_items_model_pb.ItemID,
+    (request: items_items_model_pb.ItemID) => {
       return request.serializeBinary();
     },
-    GetItemResponse.deserializeBinary
+    items_items_model_pb.ItemID.deserializeBinary
   );
 
-  get(
-    request: GetItemRequest,
+  deleteItem(
+    request: items_items_model_pb.ItemID,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetItemResponse) => void) {
+               response: items_items_model_pb.ItemID) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.MruVItemService/Get',
+        '/mruv.MruVItemService/DeleteItem',
       request,
       metadata || {},
-      this.methodInfoGet,
+      this.methodInfoDeleteItem,
+      callback);
+  }
+
+  methodInfoGetItems = new grpcWeb.AbstractClientBase.MethodInfo(
+    GetItemsResponse,
+    (request: GetItemsRequest) => {
+      return request.serializeBinary();
+    },
+    GetItemsResponse.deserializeBinary
+  );
+
+  getItems(
+    request: GetItemsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: GetItemsResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.MruVItemService/GetItems',
+      request,
+      metadata || {},
+      this.methodInfoGetItems,
+      callback);
+  }
+
+  methodInfoCreateItemType = new grpcWeb.AbstractClientBase.MethodInfo(
+    items_items_model_pb.ItemTypeID,
+    (request: items_items_model_pb.ItemType) => {
+      return request.serializeBinary();
+    },
+    items_items_model_pb.ItemTypeID.deserializeBinary
+  );
+
+  createItemType(
+    request: items_items_model_pb.ItemType,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.ItemTypeID) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.MruVItemService/CreateItemType',
+      request,
+      metadata || {},
+      this.methodInfoCreateItemType,
+      callback);
+  }
+
+  methodInfoGetItemType = new grpcWeb.AbstractClientBase.MethodInfo(
+    items_items_model_pb.ItemType,
+    (request: items_items_model_pb.ItemTypeID) => {
+      return request.serializeBinary();
+    },
+    items_items_model_pb.ItemType.deserializeBinary
+  );
+
+  getItemType(
+    request: items_items_model_pb.ItemTypeID,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.ItemType) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.MruVItemService/GetItemType',
+      request,
+      metadata || {},
+      this.methodInfoGetItemType,
+      callback);
+  }
+
+  methodInfoUpdateItemType = new grpcWeb.AbstractClientBase.MethodInfo(
+    items_items_model_pb.ItemTypeID,
+    (request: items_items_model_pb.ItemType) => {
+      return request.serializeBinary();
+    },
+    items_items_model_pb.ItemTypeID.deserializeBinary
+  );
+
+  updateItemType(
+    request: items_items_model_pb.ItemType,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.ItemTypeID) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.MruVItemService/UpdateItemType',
+      request,
+      metadata || {},
+      this.methodInfoUpdateItemType,
+      callback);
+  }
+
+  methodInfoDeleteItemType = new grpcWeb.AbstractClientBase.MethodInfo(
+    items_items_model_pb.ItemTypeID,
+    (request: items_items_model_pb.ItemTypeID) => {
+      return request.serializeBinary();
+    },
+    items_items_model_pb.ItemTypeID.deserializeBinary
+  );
+
+  deleteItemType(
+    request: items_items_model_pb.ItemTypeID,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.ItemTypeID) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.MruVItemService/DeleteItemType',
+      request,
+      metadata || {},
+      this.methodInfoDeleteItemType,
+      callback);
+  }
+
+  methodInfoGetItemTypes = new grpcWeb.AbstractClientBase.MethodInfo(
+    GetItemTypesResponse,
+    (request: GetItemTypesRequest) => {
+      return request.serializeBinary();
+    },
+    GetItemTypesResponse.deserializeBinary
+  );
+
+  getItemTypes(
+    request: GetItemTypesRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: GetItemTypesResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.MruVItemService/GetItemTypes',
+      request,
+      metadata || {},
+      this.methodInfoGetItemTypes,
+      callback);
+  }
+
+  methodInfoCreateContainer = new grpcWeb.AbstractClientBase.MethodInfo(
+    items_items_model_pb.ContainerID,
+    (request: items_items_model_pb.Container) => {
+      return request.serializeBinary();
+    },
+    items_items_model_pb.ContainerID.deserializeBinary
+  );
+
+  createContainer(
+    request: items_items_model_pb.Container,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.ContainerID) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.MruVItemService/CreateContainer',
+      request,
+      metadata || {},
+      this.methodInfoCreateContainer,
+      callback);
+  }
+
+  methodInfoGetContainer = new grpcWeb.AbstractClientBase.MethodInfo(
+    items_items_model_pb.Container,
+    (request: items_items_model_pb.ContainerID) => {
+      return request.serializeBinary();
+    },
+    items_items_model_pb.Container.deserializeBinary
+  );
+
+  getContainer(
+    request: items_items_model_pb.ContainerID,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.Container) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.MruVItemService/GetContainer',
+      request,
+      metadata || {},
+      this.methodInfoGetContainer,
+      callback);
+  }
+
+  methodInfoUpdateContainer = new grpcWeb.AbstractClientBase.MethodInfo(
+    items_items_model_pb.ContainerID,
+    (request: items_items_model_pb.Container) => {
+      return request.serializeBinary();
+    },
+    items_items_model_pb.ContainerID.deserializeBinary
+  );
+
+  updateContainer(
+    request: items_items_model_pb.Container,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.ContainerID) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.MruVItemService/UpdateContainer',
+      request,
+      metadata || {},
+      this.methodInfoUpdateContainer,
+      callback);
+  }
+
+  methodInfoDeleteContainer = new grpcWeb.AbstractClientBase.MethodInfo(
+    items_items_model_pb.ContainerID,
+    (request: items_items_model_pb.ContainerID) => {
+      return request.serializeBinary();
+    },
+    items_items_model_pb.ContainerID.deserializeBinary
+  );
+
+  deleteContainer(
+    request: items_items_model_pb.ContainerID,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.ContainerID) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.MruVItemService/DeleteContainer',
+      request,
+      metadata || {},
+      this.methodInfoDeleteContainer,
+      callback);
+  }
+
+  methodInfoGetContainers = new grpcWeb.AbstractClientBase.MethodInfo(
+    GetContainersResponse,
+    (request: GetContainersRequest) => {
+      return request.serializeBinary();
+    },
+    GetContainersResponse.deserializeBinary
+  );
+
+  getContainers(
+    request: GetContainersRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: GetContainersResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.MruVItemService/GetContainers',
+      request,
+      metadata || {},
+      this.methodInfoGetContainers,
+      callback);
+  }
+
+  methodInfoGetContainerItems = new grpcWeb.AbstractClientBase.MethodInfo(
+    GetContainerItemsResponse,
+    (request: items_items_model_pb.ContainerID) => {
+      return request.serializeBinary();
+    },
+    GetContainerItemsResponse.deserializeBinary
+  );
+
+  getContainerItems(
+    request: items_items_model_pb.ContainerID,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: GetContainerItemsResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.MruVItemService/GetContainerItems',
+      request,
+      metadata || {},
+      this.methodInfoGetContainerItems,
+      callback);
+  }
+
+  methodInfoRemoveContainerItem = new grpcWeb.AbstractClientBase.MethodInfo(
+    items_items_model_pb.Item,
+    (request: RemoveItemRequest) => {
+      return request.serializeBinary();
+    },
+    items_items_model_pb.Item.deserializeBinary
+  );
+
+  removeContainerItem(
+    request: RemoveItemRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.Item) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.MruVItemService/RemoveContainerItem',
+      request,
+      metadata || {},
+      this.methodInfoRemoveContainerItem,
+      callback);
+  }
+
+  methodInfoPutItem = new grpcWeb.AbstractClientBase.MethodInfo(
+    items_items_model_pb.ItemID,
+    (request: PutItemRequest) => {
+      return request.serializeBinary();
+    },
+    items_items_model_pb.ItemID.deserializeBinary
+  );
+
+  putItem(
+    request: PutItemRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.ItemID) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.MruVItemService/PutItem',
+      request,
+      metadata || {},
+      this.methodInfoPutItem,
+      callback);
+  }
+
+  methodInfoSortItems = new grpcWeb.AbstractClientBase.MethodInfo(
+    SortItemsResponse,
+    (request: SortItemsRequest) => {
+      return request.serializeBinary();
+    },
+    SortItemsResponse.deserializeBinary
+  );
+
+  sortItems(
+    request: SortItemsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: SortItemsResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.MruVItemService/SortItems',
+      request,
+      metadata || {},
+      this.methodInfoSortItems,
+      callback);
+  }
+
+  methodInfoGetNearestItems = new grpcWeb.AbstractClientBase.MethodInfo(
+    GetNearestItemsResponse,
+    (request: GetNearestItemsRequest) => {
+      return request.serializeBinary();
+    },
+    GetNearestItemsResponse.deserializeBinary
+  );
+
+  getNearestItems(
+    request: GetNearestItemsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: GetNearestItemsResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.MruVItemService/GetNearestItems',
+      request,
+      metadata || {},
+      this.methodInfoGetNearestItems,
+      callback);
+  }
+
+  methodInfoUseItem = new grpcWeb.AbstractClientBase.MethodInfo(
+    UseItemResponse,
+    (request: UseItemRequest) => {
+      return request.serializeBinary();
+    },
+    UseItemResponse.deserializeBinary
+  );
+
+  useItem(
+    request: UseItemRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: UseItemResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.MruVItemService/UseItem',
+      request,
+      metadata || {},
+      this.methodInfoUseItem,
       callback);
   }
 
