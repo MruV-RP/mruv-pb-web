@@ -20,13 +20,9 @@ export class ItemType extends jspb.Message {
 
   getModelName(): string;
   setModelName(value: string): void;
-  hasModelName(): boolean;
 
   getModelHash(): number;
   setModelHash(value: number): void;
-  hasModelHash(): boolean;
-
-  getModelCase(): ItemType.ModelCase;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ItemType.AsObject;
@@ -45,12 +41,6 @@ export namespace ItemType {
     baseVolume: number,
     modelName: string,
     modelHash: number,
-  }
-
-  export enum ModelCase { 
-    MODEL_NOT_SET = 0,
-    MODEL_NAME = 7,
-    MODEL_HASH = 8,
   }
 }
 
