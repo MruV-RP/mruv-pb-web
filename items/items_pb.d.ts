@@ -119,6 +119,24 @@ export namespace GetContainersResponse {
   }
 }
 
+export class GetContainerTypesRequest extends jspb.Message {
+  getLimit(): number;
+  setLimit(value: number): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetContainerTypesRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: GetContainerTypesRequest): GetContainerTypesRequest.AsObject;
+  static serializeBinaryToWriter(message: GetContainerTypesRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetContainerTypesRequest;
+  static deserializeBinaryFromReader(message: GetContainerTypesRequest, reader: jspb.BinaryReader): GetContainerTypesRequest;
+}
+
+export namespace GetContainerTypesRequest {
+  export type AsObject = {
+    limit: number,
+  }
+}
+
 export class PutItemRequest extends jspb.Message {
   getContainerId(): items_items_model_pb.ContainerID | undefined;
   setContainerId(value?: items_items_model_pb.ContainerID): void;

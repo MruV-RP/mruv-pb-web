@@ -150,6 +150,24 @@ export namespace ContainerType {
   }
 }
 
+export class ContainerTypeID extends jspb.Message {
+  getId(): number;
+  setId(value: number): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): ContainerTypeID.AsObject;
+  static toObject(includeInstance: boolean, msg: ContainerTypeID): ContainerTypeID.AsObject;
+  static serializeBinaryToWriter(message: ContainerTypeID, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ContainerTypeID;
+  static deserializeBinaryFromReader(message: ContainerTypeID, reader: jspb.BinaryReader): ContainerTypeID;
+}
+
+export namespace ContainerTypeID {
+  export type AsObject = {
+    id: number,
+  }
+}
+
 export class Container extends jspb.Message {
   getId(): number;
   setId(value: number): void;
