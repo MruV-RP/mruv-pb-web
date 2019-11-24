@@ -15,6 +15,7 @@ import * as items_items_model_pb from '../items/items_model_pb';
 import * as common_spatial_pb from '../common/spatial_pb';
 
 import {
+  GetContainerItemsRequest,
   GetContainerItemsResponse,
   GetContainerTypesRequest,
   GetContainerTypesResponse,
@@ -405,14 +406,14 @@ export class MruVItemServiceClient {
 
   methodInfoGetContainerItems = new grpcWeb.AbstractClientBase.MethodInfo(
     GetContainerItemsResponse,
-    (request: items_items_model_pb.ContainerID) => {
+    (request: GetContainerItemsRequest) => {
       return request.serializeBinary();
     },
     GetContainerItemsResponse.deserializeBinary
   );
 
   getContainerItems(
-    request: items_items_model_pb.ContainerID,
+    request: GetContainerItemsRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
                response: GetContainerItemsResponse) => void) {
