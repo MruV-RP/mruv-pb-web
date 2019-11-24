@@ -137,6 +137,26 @@ export namespace GetContainerTypesRequest {
   }
 }
 
+export class GetContainerTypesResponse extends jspb.Message {
+  getContainerTypesList(): Array<items_items_model_pb.ContainerType>;
+  setContainerTypesList(value: Array<items_items_model_pb.ContainerType>): void;
+  clearContainerTypesList(): void;
+  addContainerTypes(value?: items_items_model_pb.ContainerType, index?: number): items_items_model_pb.ContainerType;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetContainerTypesResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: GetContainerTypesResponse): GetContainerTypesResponse.AsObject;
+  static serializeBinaryToWriter(message: GetContainerTypesResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetContainerTypesResponse;
+  static deserializeBinaryFromReader(message: GetContainerTypesResponse, reader: jspb.BinaryReader): GetContainerTypesResponse;
+}
+
+export namespace GetContainerTypesResponse {
+  export type AsObject = {
+    containerTypesList: Array<items_items_model_pb.ContainerType.AsObject>,
+  }
+}
+
 export class PutItemRequest extends jspb.Message {
   getContainerId(): items_items_model_pb.ContainerID | undefined;
   setContainerId(value?: items_items_model_pb.ContainerID): void;
