@@ -226,18 +226,22 @@ export class InsideItem extends jspb.Message {
   getContainerId(): number;
   setContainerId(value: number): void;
 
-  getItemId(): number;
-  setItemId(value: number): void;
+  getItemId(): ItemID | undefined;
+  setItemId(value?: ItemID): void;
+  hasItemId(): boolean;
+  clearItemId(): void;
+  hasItemId(): boolean;
 
-  getPosition(): common_spatial_pb.Position | undefined;
-  setPosition(value?: common_spatial_pb.Position): void;
-  hasPosition(): boolean;
-  clearPosition(): void;
+  getItem(): Item | undefined;
+  setItem(value?: Item): void;
+  hasItem(): boolean;
+  clearItem(): void;
+  hasItem(): boolean;
 
-  getRotation(): common_spatial_pb.Rotation | undefined;
-  setRotation(value?: common_spatial_pb.Rotation): void;
-  hasRotation(): boolean;
-  clearRotation(): void;
+  getPosition(): number;
+  setPosition(value: number): void;
+
+  getItemOrIdCase(): InsideItem.ItemOrIdCase;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): InsideItem.AsObject;
@@ -250,9 +254,15 @@ export class InsideItem extends jspb.Message {
 export namespace InsideItem {
   export type AsObject = {
     containerId: number,
-    itemId: number,
-    position?: common_spatial_pb.Position.AsObject,
-    rotation?: common_spatial_pb.Rotation.AsObject,
+    itemId?: ItemID.AsObject,
+    item?: Item.AsObject,
+    position: number,
+  }
+
+  export enum ItemOrIdCase { 
+    ITEM_OR_ID_NOT_SET = 0,
+    ITEM_ID = 2,
+    ITEM = 3,
   }
 }
 
