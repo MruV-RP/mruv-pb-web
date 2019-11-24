@@ -359,18 +359,18 @@ export class MruVItemServiceClient {
   }
 
   methodInfoDeleteContainerType = new grpcWeb.AbstractClientBase.MethodInfo(
-    items_items_model_pb.ContainerID,
+    items_items_model_pb.ContainerTypeID,
     (request: items_items_model_pb.ContainerTypeID) => {
       return request.serializeBinary();
     },
-    items_items_model_pb.ContainerID.deserializeBinary
+    items_items_model_pb.ContainerTypeID.deserializeBinary
   );
 
   deleteContainerType(
     request: items_items_model_pb.ContainerTypeID,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: items_items_model_pb.ContainerID) => void) {
+               response: items_items_model_pb.ContainerTypeID) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
         '/mruv.MruVItemService/DeleteContainerType',
