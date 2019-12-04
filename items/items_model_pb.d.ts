@@ -1,7 +1,5 @@
 import * as jspb from "google-protobuf"
 
-import * as common_spatial_pb from '../common/spatial_pb';
-
 export class ItemType extends jspb.Message {
   getId(): number;
   setId(value: number): void;
