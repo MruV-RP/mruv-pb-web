@@ -24,9 +24,10 @@ export class MruVCharactersServiceClient {
   options_: null | { [index: string]: string; };
 
   constructor (hostname: string,
-               credentials: null | { [index: string]: string; },
-               options: null | { [index: string]: string; }) {
+               credentials?: null | { [index: string]: string; },
+               options?: null | { [index: string]: string; }) {
     if (!options) options = {};
+    if (!credentials) credentials = {};
     options['format'] = 'text';
 
     this.client_ = new grpcWeb.GrpcWebClientBase(options);
@@ -123,7 +124,7 @@ export class MruVCharactersServiceClient {
       callback);
   }
 
-  methodInfoKillCharacter = new grpcWeb.AbstractClientBase.MethodInfo(
+  methodInfoPermanentCharacterKill = new grpcWeb.AbstractClientBase.MethodInfo(
     characters_characters_model_pb.CharacterID,
     (request: characters_characters_model_pb.CharacterID) => {
       return request.serializeBinary();
@@ -131,17 +132,17 @@ export class MruVCharactersServiceClient {
     characters_characters_model_pb.CharacterID.deserializeBinary
   );
 
-  killCharacter(
+  permanentCharacterKill(
     request: characters_characters_model_pb.CharacterID,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
                response: characters_characters_model_pb.CharacterID) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.MruVCharactersService/KillCharacter',
+        '/mruv.MruVCharactersService/PermanentCharacterKill',
       request,
       metadata || {},
-      this.methodInfoKillCharacter,
+      this.methodInfoPermanentCharacterKill,
       callback);
   }
 

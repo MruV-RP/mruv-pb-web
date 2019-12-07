@@ -27,8 +27,8 @@ import {
   GetItemsResponse,
   GetNearestItemsRequest,
   GetNearestItemsResponse,
+  PullItemRequest,
   PutItemRequest,
-  RemoveItemRequest,
   SortItemsRequest,
   SortItemsResponse,
   UseItemRequest,
@@ -41,9 +41,10 @@ export class MruVItemServiceClient {
   options_: null | { [index: string]: string; };
 
   constructor (hostname: string,
-               credentials: null | { [index: string]: string; },
-               options: null | { [index: string]: string; }) {
+               credentials?: null | { [index: string]: string; },
+               options?: null | { [index: string]: string; }) {
     if (!options) options = {};
+    if (!credentials) credentials = {};
     options['format'] = 'text';
 
     this.client_ = new grpcWeb.GrpcWebClientBase(options);
@@ -426,25 +427,25 @@ export class MruVItemServiceClient {
       callback);
   }
 
-  methodInfoRemoveContainerItem = new grpcWeb.AbstractClientBase.MethodInfo(
+  methodInfoPullItem = new grpcWeb.AbstractClientBase.MethodInfo(
     items_items_model_pb.Item,
-    (request: RemoveItemRequest) => {
+    (request: PullItemRequest) => {
       return request.serializeBinary();
     },
     items_items_model_pb.Item.deserializeBinary
   );
 
-  removeContainerItem(
-    request: RemoveItemRequest,
+  pullItem(
+    request: PullItemRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
                response: items_items_model_pb.Item) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.MruVItemService/RemoveContainerItem',
+        '/mruv.MruVItemService/PullItem',
       request,
       metadata || {},
-      this.methodInfoRemoveContainerItem,
+      this.methodInfoPullItem,
       callback);
   }
 

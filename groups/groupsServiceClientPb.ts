@@ -25,9 +25,10 @@ export class MruVGroupsServiceClient {
   options_: null | { [index: string]: string; };
 
   constructor (hostname: string,
-               credentials: null | { [index: string]: string; },
-               options: null | { [index: string]: string; }) {
+               credentials?: null | { [index: string]: string; },
+               options?: null | { [index: string]: string; }) {
     if (!options) options = {};
+    if (!credentials) credentials = {};
     options['format'] = 'text';
 
     this.client_ = new grpcWeb.GrpcWebClientBase(options);
