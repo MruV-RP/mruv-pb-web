@@ -29,6 +29,7 @@ import {
   GetNearestItemsResponse,
   PullItemRequest,
   PutItemRequest,
+  PutItemResponse,
   SortItemsRequest,
   SortItemsResponse,
   UseItemRequest,
@@ -450,18 +451,18 @@ export class MruVItemServiceClient {
   }
 
   methodInfoPutItem = new grpcWeb.AbstractClientBase.MethodInfo(
-    items_items_model_pb.ItemID,
+    PutItemResponse,
     (request: PutItemRequest) => {
       return request.serializeBinary();
     },
-    items_items_model_pb.ItemID.deserializeBinary
+    PutItemResponse.deserializeBinary
   );
 
   putItem(
     request: PutItemRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: items_items_model_pb.ItemID) => void) {
+               response: PutItemResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
         '/mruv.MruVItemService/PutItem',

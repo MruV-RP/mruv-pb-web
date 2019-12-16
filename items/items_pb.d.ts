@@ -194,6 +194,26 @@ export namespace PutItemRequest {
   }
 }
 
+export class PutItemResponse extends jspb.Message {
+  getInsideItem(): items_items_model_pb.InsideItem | undefined;
+  setInsideItem(value?: items_items_model_pb.InsideItem): void;
+  hasInsideItem(): boolean;
+  clearInsideItem(): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): PutItemResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: PutItemResponse): PutItemResponse.AsObject;
+  static serializeBinaryToWriter(message: PutItemResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): PutItemResponse;
+  static deserializeBinaryFromReader(message: PutItemResponse, reader: jspb.BinaryReader): PutItemResponse;
+}
+
+export namespace PutItemResponse {
+  export type AsObject = {
+    insideItem?: items_items_model_pb.InsideItem.AsObject,
+  }
+}
+
 export class GetContainerItemsRequest extends jspb.Message {
   getContainerId(): items_items_model_pb.ContainerID | undefined;
   setContainerId(value?: items_items_model_pb.ContainerID): void;
@@ -270,8 +290,8 @@ export class SortItemsRequest extends jspb.Message {
   hasContainerId(): boolean;
   clearContainerId(): void;
 
-  getSortBy(): string;
-  setSortBy(value: string): void;
+  getSortBy(): items_items_model_pb.SortingMode;
+  setSortBy(value: items_items_model_pb.SortingMode): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SortItemsRequest.AsObject;
@@ -284,15 +304,15 @@ export class SortItemsRequest extends jspb.Message {
 export namespace SortItemsRequest {
   export type AsObject = {
     containerId?: items_items_model_pb.ContainerID.AsObject,
-    sortBy: string,
+    sortBy: items_items_model_pb.SortingMode,
   }
 }
 
 export class SortItemsResponse extends jspb.Message {
-  getItemsList(): Array<items_items_model_pb.Item>;
-  setItemsList(value: Array<items_items_model_pb.Item>): void;
-  clearItemsList(): void;
-  addItems(value?: items_items_model_pb.Item, index?: number): items_items_model_pb.Item;
+  getContainer(): items_items_model_pb.Container | undefined;
+  setContainer(value?: items_items_model_pb.Container): void;
+  hasContainer(): boolean;
+  clearContainer(): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SortItemsResponse.AsObject;
@@ -304,7 +324,7 @@ export class SortItemsResponse extends jspb.Message {
 
 export namespace SortItemsResponse {
   export type AsObject = {
-    itemsList: Array<items_items_model_pb.Item.AsObject>,
+    container?: items_items_model_pb.Container.AsObject,
   }
 }
 
