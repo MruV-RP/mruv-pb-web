@@ -1,7 +1,5 @@
 import * as jspb from "google-protobuf"
 
-import * as validate_validate_pb from '../validate/validate_pb';
-
 export class ItemType extends jspb.Message {
   getId(): ItemTypeID | undefined;
   setId(value?: ItemTypeID): void;
