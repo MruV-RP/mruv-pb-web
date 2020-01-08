@@ -1,0 +1,24 @@
+import * as jspb from "google-protobuf"
+
+import * as google_ads_googleads_v2_resources_account_budget_pb from '../../../../../google/ads/googleads/v2/resources/account_budget_pb';
+import * as google_api_annotations_pb from '../../../../../google/api/annotations_pb';
+import * as google_api_client_pb from '../../../../../google/api/client_pb';
+
+export class GetAccountBudgetRequest extends jspb.Message {
+  getResourceName(): string;
+  setResourceName(value: string): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetAccountBudgetRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: GetAccountBudgetRequest): GetAccountBudgetRequest.AsObject;
+  static serializeBinaryToWriter(message: GetAccountBudgetRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetAccountBudgetRequest;
+  static deserializeBinaryFromReader(message: GetAccountBudgetRequest, reader: jspb.BinaryReader): GetAccountBudgetRequest;
+}
+
+export namespace GetAccountBudgetRequest {
+  export type AsObject = {
+    resourceName: string,
+  }
+}
+
