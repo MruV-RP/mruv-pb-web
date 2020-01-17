@@ -36,7 +36,7 @@ export class MruVCharactersServiceClient {
     this.options_ = options;
   }
 
-  methodInfoCreate = new grpcWeb.AbstractClientBase.MethodInfo(
+  methodInfoCreateCharacter = new grpcWeb.AbstractClientBase.MethodInfo(
     characters_characters_model_pb.CharacterID,
     (request: characters_characters_model_pb.Character) => {
       return request.serializeBinary();
@@ -44,21 +44,21 @@ export class MruVCharactersServiceClient {
     characters_characters_model_pb.CharacterID.deserializeBinary
   );
 
-  create(
+  createCharacter(
     request: characters_characters_model_pb.Character,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
                response: characters_characters_model_pb.CharacterID) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.MruVCharactersService/Create',
+        '/mruv.MruVCharactersService/CreateCharacter',
       request,
       metadata || {},
-      this.methodInfoCreate,
+      this.methodInfoCreateCharacter,
       callback);
   }
 
-  methodInfoGet = new grpcWeb.AbstractClientBase.MethodInfo(
+  methodInfoGetCharacter = new grpcWeb.AbstractClientBase.MethodInfo(
     characters_characters_model_pb.Character,
     (request: characters_characters_model_pb.CharacterID) => {
       return request.serializeBinary();
@@ -66,43 +66,21 @@ export class MruVCharactersServiceClient {
     characters_characters_model_pb.Character.deserializeBinary
   );
 
-  get(
+  getCharacter(
     request: characters_characters_model_pb.CharacterID,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
                response: characters_characters_model_pb.Character) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.MruVCharactersService/Get',
+        '/mruv.MruVCharactersService/GetCharacter',
       request,
       metadata || {},
-      this.methodInfoGet,
+      this.methodInfoGetCharacter,
       callback);
   }
 
-  methodInfoUpdate = new grpcWeb.AbstractClientBase.MethodInfo(
-    characters_characters_model_pb.CharacterID,
-    (request: characters_characters_model_pb.Character) => {
-      return request.serializeBinary();
-    },
-    characters_characters_model_pb.CharacterID.deserializeBinary
-  );
-
-  update(
-    request: characters_characters_model_pb.Character,
-    metadata: grpcWeb.Metadata | null,
-    callback: (err: grpcWeb.Error,
-               response: characters_characters_model_pb.CharacterID) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVCharactersService/Update',
-      request,
-      metadata || {},
-      this.methodInfoUpdate,
-      callback);
-  }
-
-  methodInfoRemove = new grpcWeb.AbstractClientBase.MethodInfo(
+  methodInfoRemoveCharacter = new grpcWeb.AbstractClientBase.MethodInfo(
     characters_characters_model_pb.CharacterID,
     (request: characters_characters_model_pb.CharacterID) => {
       return request.serializeBinary();
@@ -110,17 +88,17 @@ export class MruVCharactersServiceClient {
     characters_characters_model_pb.CharacterID.deserializeBinary
   );
 
-  remove(
+  removeCharacter(
     request: characters_characters_model_pb.CharacterID,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
                response: characters_characters_model_pb.CharacterID) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.MruVCharactersService/Remove',
+        '/mruv.MruVCharactersService/RemoveCharacter',
       request,
       metadata || {},
-      this.methodInfoRemove,
+      this.methodInfoRemoveCharacter,
       callback);
   }
 

@@ -1,28 +1,31 @@
 import * as jspb from "google-protobuf"
 
-export class User extends jspb.Message {
+import * as accounts_accounts_model_pb from '../accounts/accounts_model_pb';
+
+export class PermissionID extends jspb.Message {
   getId(): number;
   setId(value: number): void;
 
-  getName(): string;
-  setName(value: string): void;
-
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): User.AsObject;
-  static toObject(includeInstance: boolean, msg: User): User.AsObject;
-  static serializeBinaryToWriter(message: User, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): User;
-  static deserializeBinaryFromReader(message: User, reader: jspb.BinaryReader): User;
+  toObject(includeInstance?: boolean): PermissionID.AsObject;
+  static toObject(includeInstance: boolean, msg: PermissionID): PermissionID.AsObject;
+  static serializeBinaryToWriter(message: PermissionID, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): PermissionID;
+  static deserializeBinaryFromReader(message: PermissionID, reader: jspb.BinaryReader): PermissionID;
 }
 
-export namespace User {
+export namespace PermissionID {
   export type AsObject = {
     id: number,
-    name: string,
   }
 }
 
 export class Permission extends jspb.Message {
+  getId(): PermissionID | undefined;
+  setId(value?: PermissionID): void;
+  hasId(): boolean;
+  clearId(): void;
+
   getName(): string;
   setName(value: string): void;
 
@@ -39,14 +42,35 @@ export class Permission extends jspb.Message {
 
 export namespace Permission {
   export type AsObject = {
+    id?: PermissionID.AsObject,
     name: string,
     role: string,
   }
 }
 
-export class Group extends jspb.Message {
+export class GroupID extends jspb.Message {
   getId(): number;
   setId(value: number): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GroupID.AsObject;
+  static toObject(includeInstance: boolean, msg: GroupID): GroupID.AsObject;
+  static serializeBinaryToWriter(message: GroupID, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GroupID;
+  static deserializeBinaryFromReader(message: GroupID, reader: jspb.BinaryReader): GroupID;
+}
+
+export namespace GroupID {
+  export type AsObject = {
+    id: number,
+  }
+}
+
+export class Group extends jspb.Message {
+  getId(): GroupID | undefined;
+  setId(value?: GroupID): void;
+  hasId(): boolean;
+  clearId(): void;
 
   getName(): string;
   setName(value: string): void;
@@ -59,10 +83,10 @@ export class Group extends jspb.Message {
   clearPermissionsList(): void;
   addPermissions(value?: Permission, index?: number): Permission;
 
-  getUsersList(): Array<User>;
-  setUsersList(value: Array<User>): void;
-  clearUsersList(): void;
-  addUsers(value?: User, index?: number): User;
+  getMembersList(): Array<accounts_accounts_model_pb.AccountID>;
+  setMembersList(value: Array<accounts_accounts_model_pb.AccountID>): void;
+  clearMembersList(): void;
+  addMembers(value?: accounts_accounts_model_pb.AccountID, index?: number): accounts_accounts_model_pb.AccountID;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Group.AsObject;
@@ -74,11 +98,11 @@ export class Group extends jspb.Message {
 
 export namespace Group {
   export type AsObject = {
-    id: number,
+    id?: GroupID.AsObject,
     name: string,
     description: string,
     permissionsList: Array<Permission.AsObject>,
-    usersList: Array<User.AsObject>,
+    membersList: Array<accounts_accounts_model_pb.AccountID.AsObject>,
   }
 }
 
