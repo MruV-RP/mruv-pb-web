@@ -1,0 +1,29 @@
+{
+  "name": "mruv-pb-web",
+  "version": "0.3.0",
+  "description": "MruV protocol buffers generated files for gRPC Web",
+  "dependencies": {
+    "google-protobuf": "^3.6.1",
+    "grpc-web": "^0.4.0"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.2",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mruv-RP/mruv-pb-web.git"
+  },
+  "keywords": [
+    "mruv",
+    "grpc",
+    "protobuf"
+  ],
+  "author": "Mrucznik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mruv-RP/mruv-pb-web/issues"
+  },
+  "homepage": "https://github.com/Mruv-RP/mruv-pb-web#readme"
+}
