@@ -11,8 +11,10 @@ import * as grpcWeb from 'grpc-web';
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 import * as accounts_accounts_model_pb from '../accounts/accounts_model_pb';
+import * as characters_characters_model_pb from '../characters/characters_model_pb';
 
 import {
+  GetAccountCharactersResponse,
   LogInRequest,
   LogInResponse,
   RegisterAccountRequest,
@@ -100,6 +102,28 @@ export class MruVAccountsServiceClient {
       request,
       metadata || {},
       this.methodInfoGetAccount,
+      callback);
+  }
+
+  methodInfoGetAccountCharacters = new grpcWeb.AbstractClientBase.MethodInfo(
+    GetAccountCharactersResponse,
+    (request: accounts_accounts_model_pb.AccountID) => {
+      return request.serializeBinary();
+    },
+    GetAccountCharactersResponse.deserializeBinary
+  );
+
+  getAccountCharacters(
+    request: accounts_accounts_model_pb.AccountID,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: GetAccountCharactersResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.MruVAccountsService/GetAccountCharacters',
+      request,
+      metadata || {},
+      this.methodInfoGetAccountCharacters,
       callback);
   }
 

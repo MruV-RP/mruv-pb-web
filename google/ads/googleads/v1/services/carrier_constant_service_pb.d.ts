@@ -1,0 +1,23 @@
+import * as jspb from "google-protobuf"
+
+import * as google_ads_googleads_v1_resources_carrier_constant_pb from '../../../../../google/ads/googleads/v1/resources/carrier_constant_pb';
+import * as google_api_annotations_pb from '../../../../../google/api/annotations_pb';
+
+export class GetCarrierConstantRequest extends jspb.Message {
+  getResourceName(): string;
+  setResourceName(value: string): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetCarrierConstantRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: GetCarrierConstantRequest): GetCarrierConstantRequest.AsObject;
+  static serializeBinaryToWriter(message: GetCarrierConstantRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetCarrierConstantRequest;
+  static deserializeBinaryFromReader(message: GetCarrierConstantRequest, reader: jspb.BinaryReader): GetCarrierConstantRequest;
+}
+
+export namespace GetCarrierConstantRequest {
+  export type AsObject = {
+    resourceName: string,
+  }
+}
+

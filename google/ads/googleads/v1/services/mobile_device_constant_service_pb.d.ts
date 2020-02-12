@@ -1,0 +1,23 @@
+import * as jspb from "google-protobuf"
+
+import * as google_ads_googleads_v1_resources_mobile_device_constant_pb from '../../../../../google/ads/googleads/v1/resources/mobile_device_constant_pb';
+import * as google_api_annotations_pb from '../../../../../google/api/annotations_pb';
+
+export class GetMobileDeviceConstantRequest extends jspb.Message {
+  getResourceName(): string;
+  setResourceName(value: string): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetMobileDeviceConstantRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: GetMobileDeviceConstantRequest): GetMobileDeviceConstantRequest.AsObject;
+  static serializeBinaryToWriter(message: GetMobileDeviceConstantRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetMobileDeviceConstantRequest;
+  static deserializeBinaryFromReader(message: GetMobileDeviceConstantRequest, reader: jspb.BinaryReader): GetMobileDeviceConstantRequest;
+}
+
+export namespace GetMobileDeviceConstantRequest {
+  export type AsObject = {
+    resourceName: string,
+  }
+}
+
