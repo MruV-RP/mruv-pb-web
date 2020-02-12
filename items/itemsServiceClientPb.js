@@ -4,11 +4,18 @@
  * @enhanceable
  * @public
  */
-exports.__esModule = true;
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
 // GENERATED CODE -- DO NOT EDIT!
-var grpcWeb = require("grpc-web");
-var common_health_pb = require("../common/health_pb");
-var items_items_model_pb = require("../items/items_model_pb");
+var grpcWeb = __importStar(require("grpc-web"));
+var common_health_pb = __importStar(require("../common/health_pb"));
+var items_items_model_pb = __importStar(require("../items/items_model_pb"));
 var items_pb_1 = require("./items_pb");
 var MruVItemServiceClient = /** @class */ (function () {
     function MruVItemServiceClient(hostname, credentials, options) {
