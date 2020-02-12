@@ -1,4 +1,0 @@
-import * as jspb from "google-protobuf"
-
-import * as google_api_expr_v1alpha1_conformance_service_pb from '../../../../google/api/expr/v1alpha1/conformance_service_pb';
-
