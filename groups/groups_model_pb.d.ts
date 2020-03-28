@@ -1,7 +1,5 @@
 import * as jspb from "google-protobuf"
 
-import * as accounts_accounts_model_pb from '../accounts/accounts_model_pb';
-
 export class PermissionID extends jspb.Message {
   getId(): number;
   setId(value: number): void;
@@ -21,10 +19,8 @@ export namespace PermissionID {
 }
 
 export class Permission extends jspb.Message {
-  getId(): PermissionID | undefined;
-  setId(value?: PermissionID): void;
-  hasId(): boolean;
-  clearId(): void;
+  getId(): number;
+  setId(value: number): void;
 
   getName(): string;
   setName(value: string): void;
@@ -42,7 +38,7 @@ export class Permission extends jspb.Message {
 
 export namespace Permission {
   export type AsObject = {
-    id?: PermissionID.AsObject,
+    id: number,
     name: string,
     role: string,
   }
@@ -67,10 +63,8 @@ export namespace GroupID {
 }
 
 export class Group extends jspb.Message {
-  getId(): GroupID | undefined;
-  setId(value?: GroupID): void;
-  hasId(): boolean;
-  clearId(): void;
+  getId(): number;
+  setId(value: number): void;
 
   getName(): string;
   setName(value: string): void;
@@ -83,10 +77,10 @@ export class Group extends jspb.Message {
   clearPermissionsList(): void;
   addPermissions(value?: Permission, index?: number): Permission;
 
-  getMembersList(): Array<accounts_accounts_model_pb.AccountID>;
-  setMembersList(value: Array<accounts_accounts_model_pb.AccountID>): void;
+  getMembersList(): Array<number>;
+  setMembersList(value: Array<number>): void;
   clearMembersList(): void;
-  addMembers(value?: accounts_accounts_model_pb.AccountID, index?: number): accounts_accounts_model_pb.AccountID;
+  addMembers(value: number, index?: number): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Group.AsObject;
@@ -98,11 +92,11 @@ export class Group extends jspb.Message {
 
 export namespace Group {
   export type AsObject = {
-    id?: GroupID.AsObject,
+    id: number,
     name: string,
     description: string,
     permissionsList: Array<Permission.AsObject>,
-    membersList: Array<accounts_accounts_model_pb.AccountID.AsObject>,
+    membersList: Array<number>,
   }
 }
 

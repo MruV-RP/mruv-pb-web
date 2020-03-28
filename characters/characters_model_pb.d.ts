@@ -1,18 +1,13 @@
 import * as jspb from "google-protobuf"
 
-import * as accounts_accounts_model_pb from '../accounts/accounts_model_pb';
 import * as common_spatial_pb from '../common/spatial_pb';
 
 export class Character extends jspb.Message {
-  getId(): CharacterID | undefined;
-  setId(value?: CharacterID): void;
-  hasId(): boolean;
-  clearId(): void;
+  getId(): number;
+  setId(value: number): void;
 
-  getOwnerId(): accounts_accounts_model_pb.AccountID | undefined;
-  setOwnerId(value?: accounts_accounts_model_pb.AccountID): void;
-  hasOwnerId(): boolean;
-  clearOwnerId(): void;
+  getOwnerId(): number;
+  setOwnerId(value: number): void;
 
   getFirstName(): string;
   setFirstName(value: string): void;
@@ -41,8 +36,8 @@ export class Character extends jspb.Message {
 
 export namespace Character {
   export type AsObject = {
-    id?: CharacterID.AsObject,
-    ownerId?: accounts_accounts_model_pb.AccountID.AsObject,
+    id: number,
+    ownerId: number,
     firstName: string,
     secondName: string,
     age: number,

@@ -19,10 +19,8 @@ export namespace AccountID {
 }
 
 export class Account extends jspb.Message {
-  getId(): AccountID | undefined;
-  setId(value?: AccountID): void;
-  hasId(): boolean;
-  clearId(): void;
+  getId(): number;
+  setId(value: number): void;
 
   getLogin(): string;
   setLogin(value: string): void;
@@ -43,7 +41,7 @@ export class Account extends jspb.Message {
 
 export namespace Account {
   export type AsObject = {
-    id?: AccountID.AsObject,
+    id: number,
     login: string,
     nick: string,
     email: string,

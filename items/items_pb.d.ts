@@ -158,15 +158,11 @@ export namespace GetContainerTypesResponse {
 }
 
 export class PutItemRequest extends jspb.Message {
-  getContainerId(): items_items_model_pb.ContainerID | undefined;
-  setContainerId(value?: items_items_model_pb.ContainerID): void;
-  hasContainerId(): boolean;
-  clearContainerId(): void;
+  getContainerId(): number;
+  setContainerId(value: number): void;
 
-  getItemId(): items_items_model_pb.ItemID | undefined;
-  setItemId(value?: items_items_model_pb.ItemID): void;
-  hasItemId(): boolean;
-  clearItemId(): void;
+  getItemId(): number;
+  setItemId(value: number): void;
 
   getSlot(): number;
   setSlot(value: number): void;
@@ -183,8 +179,8 @@ export class PutItemRequest extends jspb.Message {
 
 export namespace PutItemRequest {
   export type AsObject = {
-    containerId?: items_items_model_pb.ContainerID.AsObject,
-    itemId?: items_items_model_pb.ItemID.AsObject,
+    containerId: number,
+    itemId: number,
     slot: number,
   }
 
@@ -215,10 +211,8 @@ export namespace PutItemResponse {
 }
 
 export class GetContainerItemsRequest extends jspb.Message {
-  getContainerId(): items_items_model_pb.ContainerID | undefined;
-  setContainerId(value?: items_items_model_pb.ContainerID): void;
-  hasContainerId(): boolean;
-  clearContainerId(): void;
+  getContainerId(): number;
+  setContainerId(value: number): void;
 
   getLimit(): number;
   setLimit(value: number): void;
@@ -233,7 +227,7 @@ export class GetContainerItemsRequest extends jspb.Message {
 
 export namespace GetContainerItemsRequest {
   export type AsObject = {
-    containerId?: items_items_model_pb.ContainerID.AsObject,
+    containerId: number,
     limit: number,
   }
 }
@@ -259,15 +253,11 @@ export namespace GetContainerItemsResponse {
 }
 
 export class PullItemRequest extends jspb.Message {
-  getContainerId(): items_items_model_pb.ContainerID | undefined;
-  setContainerId(value?: items_items_model_pb.ContainerID): void;
-  hasContainerId(): boolean;
-  clearContainerId(): void;
+  getContainerId(): number;
+  setContainerId(value: number): void;
 
-  getItemId(): items_items_model_pb.ItemID | undefined;
-  setItemId(value?: items_items_model_pb.ItemID): void;
-  hasItemId(): boolean;
-  clearItemId(): void;
+  getItemId(): number;
+  setItemId(value: number): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PullItemRequest.AsObject;
@@ -279,16 +269,14 @@ export class PullItemRequest extends jspb.Message {
 
 export namespace PullItemRequest {
   export type AsObject = {
-    containerId?: items_items_model_pb.ContainerID.AsObject,
-    itemId?: items_items_model_pb.ItemID.AsObject,
+    containerId: number,
+    itemId: number,
   }
 }
 
 export class SortItemsRequest extends jspb.Message {
-  getContainerId(): items_items_model_pb.ContainerID | undefined;
-  setContainerId(value?: items_items_model_pb.ContainerID): void;
-  hasContainerId(): boolean;
-  clearContainerId(): void;
+  getContainerId(): number;
+  setContainerId(value: number): void;
 
   getSortBy(): items_items_model_pb.SortingMode;
   setSortBy(value: items_items_model_pb.SortingMode): void;
@@ -303,7 +291,7 @@ export class SortItemsRequest extends jspb.Message {
 
 export namespace SortItemsRequest {
   export type AsObject = {
-    containerId?: items_items_model_pb.ContainerID.AsObject,
+    containerId: number,
     sortBy: items_items_model_pb.SortingMode,
   }
 }
@@ -334,10 +322,8 @@ export class GetNearestItemsRequest extends jspb.Message {
   hasPosition(): boolean;
   clearPosition(): void;
 
-  getContainerId(): items_items_model_pb.ContainerID | undefined;
-  setContainerId(value?: items_items_model_pb.ContainerID): void;
-  hasContainerId(): boolean;
-  clearContainerId(): void;
+  getContainerId(): number;
+  setContainerId(value: number): void;
 
   getDistanceLimit(): number;
   setDistanceLimit(value: number): void;
@@ -353,7 +339,7 @@ export class GetNearestItemsRequest extends jspb.Message {
 export namespace GetNearestItemsRequest {
   export type AsObject = {
     position?: common_spatial_pb.Position.AsObject,
-    containerId?: items_items_model_pb.ContainerID.AsObject,
+    containerId: number,
     distanceLimit: number,
   }
 }
@@ -379,10 +365,8 @@ export namespace GetNearestItemsResponse {
 }
 
 export class UseItemRequest extends jspb.Message {
-  getItemId(): items_items_model_pb.ItemID | undefined;
-  setItemId(value?: items_items_model_pb.ItemID): void;
-  hasItemId(): boolean;
-  clearItemId(): void;
+  getItemId(): number;
+  setItemId(value: number): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UseItemRequest.AsObject;
@@ -394,7 +378,7 @@ export class UseItemRequest extends jspb.Message {
 
 export namespace UseItemRequest {
   export type AsObject = {
-    itemId?: items_items_model_pb.ItemID.AsObject,
+    itemId: number,
   }
 }
 
