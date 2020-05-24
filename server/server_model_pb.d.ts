@@ -19,6 +19,9 @@ export namespace ServerID {
 }
 
 export class ServerInfo extends jspb.Message {
+  getId(): number;
+  setId(value: number): void;
+
   getName(): string;
   setName(value: string): void;
 
@@ -31,6 +34,12 @@ export class ServerInfo extends jspb.Message {
   getPlatform(): string;
   setPlatform(value: string): void;
 
+  getStatus(): ServerStatus;
+  setStatus(value: ServerStatus): void;
+
+  getPlayers(): number;
+  setPlayers(value: number): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ServerInfo.AsObject;
   static toObject(includeInstance: boolean, msg: ServerInfo): ServerInfo.AsObject;
@@ -41,32 +50,18 @@ export class ServerInfo extends jspb.Message {
 
 export namespace ServerInfo {
   export type AsObject = {
+    id: number,
     name: string,
     host: string,
     port: string,
     platform: string,
-  }
-}
-
-export class ServerStatus extends jspb.Message {
-  getActive(): boolean;
-  setActive(value: boolean): void;
-
-  getPlayers(): number;
-  setPlayers(value: number): void;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): ServerStatus.AsObject;
-  static toObject(includeInstance: boolean, msg: ServerStatus): ServerStatus.AsObject;
-  static serializeBinaryToWriter(message: ServerStatus, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): ServerStatus;
-  static deserializeBinaryFromReader(message: ServerStatus, reader: jspb.BinaryReader): ServerStatus;
-}
-
-export namespace ServerStatus {
-  export type AsObject = {
-    active: boolean,
+    status: ServerStatus,
     players: number,
   }
 }
 
+export enum ServerStatus { 
+  UNKNOWN = 0,
+  ON = 1,
+  OFF = 2,
+}

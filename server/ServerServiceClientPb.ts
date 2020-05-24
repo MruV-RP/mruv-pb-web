@@ -1,5 +1,5 @@
 /**
- * @fileoverview gRPC-Web generated client stub for mruv
+ * @fileoverview gRPC-Web generated client stub for mruv.server
  * @enhanceable
  * @public
  */
@@ -13,8 +13,12 @@ import * as google_api_annotations_pb from '../google/api/annotations_pb';
 import * as server_server_model_pb from '../server/server_model_pb';
 
 import {
-  RegisterServerRequest,
-  RegisterServerResponse} from './server_pb';
+  GetRegisteredServersRequest,
+  GetRegisteredServersResponse,
+  ServerEvent,
+  ServerEventsStreamRequest,
+  UpdateServerStatusRequest,
+  UpdateServerStatusResponse} from './server_pb';
 
 export class MruVServerServiceClient {
   client_: grpcWeb.AbstractClientBase;
@@ -36,47 +40,110 @@ export class MruVServerServiceClient {
   }
 
   methodInfoRegisterServer = new grpcWeb.AbstractClientBase.MethodInfo(
-    RegisterServerResponse,
-    (request: RegisterServerRequest) => {
+    server_server_model_pb.ServerID,
+    (request: server_server_model_pb.ServerInfo) => {
       return request.serializeBinary();
     },
-    RegisterServerResponse.deserializeBinary
+    server_server_model_pb.ServerID.deserializeBinary
   );
 
   registerServer(
-    request: RegisterServerRequest,
+    request: server_server_model_pb.ServerInfo,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: RegisterServerResponse) => void) {
+               response: server_server_model_pb.ServerID) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.MruVServerService/RegisterServer',
+        '/mruv.server.MruVServerService/RegisterServer',
       request,
       metadata || {},
       this.methodInfoRegisterServer,
       callback);
   }
 
-  methodInfoGetServerStatus = new grpcWeb.AbstractClientBase.MethodInfo(
-    server_server_model_pb.ServerStatus,
+  methodInfoGetRegisteredServers = new grpcWeb.AbstractClientBase.MethodInfo(
+    GetRegisteredServersResponse,
+    (request: GetRegisteredServersRequest) => {
+      return request.serializeBinary();
+    },
+    GetRegisteredServersResponse.deserializeBinary
+  );
+
+  getRegisteredServers(
+    request: GetRegisteredServersRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: GetRegisteredServersResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.server.MruVServerService/GetRegisteredServers',
+      request,
+      metadata || {},
+      this.methodInfoGetRegisteredServers,
+      callback);
+  }
+
+  methodInfoGetServerInfo = new grpcWeb.AbstractClientBase.MethodInfo(
+    server_server_model_pb.ServerInfo,
     (request: server_server_model_pb.ServerID) => {
       return request.serializeBinary();
     },
-    server_server_model_pb.ServerStatus.deserializeBinary
+    server_server_model_pb.ServerInfo.deserializeBinary
   );
 
-  getServerStatus(
+  getServerInfo(
     request: server_server_model_pb.ServerID,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: server_server_model_pb.ServerStatus) => void) {
+               response: server_server_model_pb.ServerInfo) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.MruVServerService/GetServerStatus',
+        '/mruv.server.MruVServerService/GetServerInfo',
       request,
       metadata || {},
-      this.methodInfoGetServerStatus,
+      this.methodInfoGetServerInfo,
       callback);
+  }
+
+  methodInfoUpdateServerStatus = new grpcWeb.AbstractClientBase.MethodInfo(
+    UpdateServerStatusResponse,
+    (request: UpdateServerStatusRequest) => {
+      return request.serializeBinary();
+    },
+    UpdateServerStatusResponse.deserializeBinary
+  );
+
+  updateServerStatus(
+    request: UpdateServerStatusRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: UpdateServerStatusResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.server.MruVServerService/UpdateServerStatus',
+      request,
+      metadata || {},
+      this.methodInfoUpdateServerStatus,
+      callback);
+  }
+
+  methodInfoServerEventsStream = new grpcWeb.AbstractClientBase.MethodInfo(
+    ServerEvent,
+    (request: ServerEventsStreamRequest) => {
+      return request.serializeBinary();
+    },
+    ServerEvent.deserializeBinary
+  );
+
+  serverEventsStream(
+    request: ServerEventsStreamRequest,
+    metadata?: grpcWeb.Metadata) {
+    return this.client_.serverStreaming(
+      this.hostname_ +
+        '/mruv.server.MruVServerService/ServerEventsStream',
+      request,
+      metadata || {},
+      this.methodInfoServerEventsStream);
   }
 
 }
