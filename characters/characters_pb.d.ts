@@ -105,6 +105,9 @@ export namespace CreateCharacterRequest {
 }
 
 export class CreateCharacterResponse extends jspb.Message {
+  getId(): number;
+  setId(value: number): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateCharacterResponse.AsObject;
   static toObject(includeInstance: boolean, msg: CreateCharacterResponse): CreateCharacterResponse.AsObject;
@@ -115,6 +118,7 @@ export class CreateCharacterResponse extends jspb.Message {
 
 export namespace CreateCharacterResponse {
   export type AsObject = {
+    id: number,
   }
 }
 
@@ -137,6 +141,29 @@ export namespace GetCharacterRequest {
 }
 
 export class GetCharacterResponse extends jspb.Message {
+  getId(): number;
+  setId(value: number): void;
+
+  getOwnerId(): number;
+  setOwnerId(value: number): void;
+
+  getFirstName(): string;
+  setFirstName(value: string): void;
+
+  getSecondName(): string;
+  setSecondName(value: string): void;
+
+  getAge(): number;
+  setAge(value: number): void;
+
+  getSex(): number;
+  setSex(value: number): void;
+
+  getPosition(): common_spatial_pb.Position | undefined;
+  setPosition(value?: common_spatial_pb.Position): void;
+  hasPosition(): boolean;
+  clearPosition(): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetCharacterResponse.AsObject;
   static toObject(includeInstance: boolean, msg: GetCharacterResponse): GetCharacterResponse.AsObject;
@@ -147,6 +174,13 @@ export class GetCharacterResponse extends jspb.Message {
 
 export namespace GetCharacterResponse {
   export type AsObject = {
+    id: number,
+    ownerId: number,
+    firstName: string,
+    secondName: string,
+    age: number,
+    sex: number,
+    position?: common_spatial_pb.Position.AsObject,
   }
 }
 
