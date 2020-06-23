@@ -1,5 +1,5 @@
 /**
- * @fileoverview gRPC-Web generated client stub for mruv
+ * @fileoverview gRPC-Web generated client stub for mruv.houses
  * @enhanceable
  * @public
  */
@@ -10,18 +10,18 @@
 import * as grpcWeb from 'grpc-web';
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
-import * as characters_characters_pb from '../characters/characters_pb';
 
 import {
-  Account,
-  AccountID,
-  GetAccountCharactersResponse,
-  LogInRequest,
-  LogInResponse,
-  RegisterAccountRequest,
-  RegisterAccountResponse} from './accounts_pb';
+  CreateHouseRequest,
+  CreateHouseResponse,
+  DeleteHouseRequest,
+  DeleteHouseResponse,
+  GetHouseRequest,
+  GetHouseResponse,
+  UpdateHouseRequest,
+  UpdateHouseResponse} from './houses_pb';
 
-export class MruVAccountsServiceClient {
+export class MruVHousesServiceClient {
   client_: grpcWeb.AbstractClientBase;
   hostname_: string;
   credentials_: null | { [index: string]: string; };
@@ -40,91 +40,91 @@ export class MruVAccountsServiceClient {
     this.options_ = options;
   }
 
-  methodInfoRegisterAccount = new grpcWeb.AbstractClientBase.MethodInfo(
-    RegisterAccountResponse,
-    (request: RegisterAccountRequest) => {
+  methodInfoCreateHouse = new grpcWeb.AbstractClientBase.MethodInfo(
+    CreateHouseResponse,
+    (request: CreateHouseRequest) => {
       return request.serializeBinary();
     },
-    RegisterAccountResponse.deserializeBinary
+    CreateHouseResponse.deserializeBinary
   );
 
-  registerAccount(
-    request: RegisterAccountRequest,
+  createHouse(
+    request: CreateHouseRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: RegisterAccountResponse) => void) {
+               response: CreateHouseResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.MruVAccountsService/RegisterAccount',
+        '/mruv.houses.MruVHousesService/CreateHouse',
       request,
       metadata || {},
-      this.methodInfoRegisterAccount,
+      this.methodInfoCreateHouse,
       callback);
   }
 
-  methodInfoLogIn = new grpcWeb.AbstractClientBase.MethodInfo(
-    LogInResponse,
-    (request: LogInRequest) => {
+  methodInfoGetHouse = new grpcWeb.AbstractClientBase.MethodInfo(
+    GetHouseResponse,
+    (request: GetHouseRequest) => {
       return request.serializeBinary();
     },
-    LogInResponse.deserializeBinary
+    GetHouseResponse.deserializeBinary
   );
 
-  logIn(
-    request: LogInRequest,
+  getHouse(
+    request: GetHouseRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: LogInResponse) => void) {
+               response: GetHouseResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.MruVAccountsService/LogIn',
+        '/mruv.houses.MruVHousesService/GetHouse',
       request,
       metadata || {},
-      this.methodInfoLogIn,
+      this.methodInfoGetHouse,
       callback);
   }
 
-  methodInfoGetAccount = new grpcWeb.AbstractClientBase.MethodInfo(
-    Account,
-    (request: AccountID) => {
+  methodInfoUpdateHouse = new grpcWeb.AbstractClientBase.MethodInfo(
+    UpdateHouseResponse,
+    (request: UpdateHouseRequest) => {
       return request.serializeBinary();
     },
-    Account.deserializeBinary
+    UpdateHouseResponse.deserializeBinary
   );
 
-  getAccount(
-    request: AccountID,
+  updateHouse(
+    request: UpdateHouseRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: Account) => void) {
+               response: UpdateHouseResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.MruVAccountsService/GetAccount',
+        '/mruv.houses.MruVHousesService/UpdateHouse',
       request,
       metadata || {},
-      this.methodInfoGetAccount,
+      this.methodInfoUpdateHouse,
       callback);
   }
 
-  methodInfoGetAccountCharacters = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetAccountCharactersResponse,
-    (request: AccountID) => {
+  methodInfoDeleteHouse = new grpcWeb.AbstractClientBase.MethodInfo(
+    DeleteHouseResponse,
+    (request: DeleteHouseRequest) => {
       return request.serializeBinary();
     },
-    GetAccountCharactersResponse.deserializeBinary
+    DeleteHouseResponse.deserializeBinary
   );
 
-  getAccountCharacters(
-    request: AccountID,
+  deleteHouse(
+    request: DeleteHouseRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetAccountCharactersResponse) => void) {
+               response: DeleteHouseResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.MruVAccountsService/GetAccountCharacters',
+        '/mruv.houses.MruVHousesService/DeleteHouse',
       request,
       metadata || {},
-      this.methodInfoGetAccountCharacters,
+      this.methodInfoDeleteHouse,
       callback);
   }
 

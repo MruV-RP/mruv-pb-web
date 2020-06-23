@@ -1,5 +1,5 @@
 /**
- * @fileoverview gRPC-Web generated client stub for mruv
+ * @fileoverview gRPC-Web generated client stub for mruv.jobs
  * @enhanceable
  * @public
  */
@@ -10,18 +10,18 @@
 import * as grpcWeb from 'grpc-web';
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
-import * as characters_characters_pb from '../characters/characters_pb';
 
 import {
-  Account,
-  AccountID,
-  GetAccountCharactersResponse,
-  LogInRequest,
-  LogInResponse,
-  RegisterAccountRequest,
-  RegisterAccountResponse} from './accounts_pb';
+  CreateJobRequest,
+  CreateJobResponse,
+  DeleteJobRequest,
+  DeleteJobResponse,
+  GetJobRequest,
+  GetJobResponse,
+  UpdateJobRequest,
+  UpdateJobResponse} from './jobs_pb';
 
-export class MruVAccountsServiceClient {
+export class MruVJobsServiceClient {
   client_: grpcWeb.AbstractClientBase;
   hostname_: string;
   credentials_: null | { [index: string]: string; };
@@ -40,91 +40,91 @@ export class MruVAccountsServiceClient {
     this.options_ = options;
   }
 
-  methodInfoRegisterAccount = new grpcWeb.AbstractClientBase.MethodInfo(
-    RegisterAccountResponse,
-    (request: RegisterAccountRequest) => {
+  methodInfoCreateJob = new grpcWeb.AbstractClientBase.MethodInfo(
+    CreateJobResponse,
+    (request: CreateJobRequest) => {
       return request.serializeBinary();
     },
-    RegisterAccountResponse.deserializeBinary
+    CreateJobResponse.deserializeBinary
   );
 
-  registerAccount(
-    request: RegisterAccountRequest,
+  createJob(
+    request: CreateJobRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: RegisterAccountResponse) => void) {
+               response: CreateJobResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.MruVAccountsService/RegisterAccount',
+        '/mruv.jobs.MruVJobsService/CreateJob',
       request,
       metadata || {},
-      this.methodInfoRegisterAccount,
+      this.methodInfoCreateJob,
       callback);
   }
 
-  methodInfoLogIn = new grpcWeb.AbstractClientBase.MethodInfo(
-    LogInResponse,
-    (request: LogInRequest) => {
+  methodInfoGetJob = new grpcWeb.AbstractClientBase.MethodInfo(
+    GetJobResponse,
+    (request: GetJobRequest) => {
       return request.serializeBinary();
     },
-    LogInResponse.deserializeBinary
+    GetJobResponse.deserializeBinary
   );
 
-  logIn(
-    request: LogInRequest,
+  getJob(
+    request: GetJobRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: LogInResponse) => void) {
+               response: GetJobResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.MruVAccountsService/LogIn',
+        '/mruv.jobs.MruVJobsService/GetJob',
       request,
       metadata || {},
-      this.methodInfoLogIn,
+      this.methodInfoGetJob,
       callback);
   }
 
-  methodInfoGetAccount = new grpcWeb.AbstractClientBase.MethodInfo(
-    Account,
-    (request: AccountID) => {
+  methodInfoUpdateJob = new grpcWeb.AbstractClientBase.MethodInfo(
+    UpdateJobResponse,
+    (request: UpdateJobRequest) => {
       return request.serializeBinary();
     },
-    Account.deserializeBinary
+    UpdateJobResponse.deserializeBinary
   );
 
-  getAccount(
-    request: AccountID,
+  updateJob(
+    request: UpdateJobRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: Account) => void) {
+               response: UpdateJobResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.MruVAccountsService/GetAccount',
+        '/mruv.jobs.MruVJobsService/UpdateJob',
       request,
       metadata || {},
-      this.methodInfoGetAccount,
+      this.methodInfoUpdateJob,
       callback);
   }
 
-  methodInfoGetAccountCharacters = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetAccountCharactersResponse,
-    (request: AccountID) => {
+  methodInfoDeleteJob = new grpcWeb.AbstractClientBase.MethodInfo(
+    DeleteJobResponse,
+    (request: DeleteJobRequest) => {
       return request.serializeBinary();
     },
-    GetAccountCharactersResponse.deserializeBinary
+    DeleteJobResponse.deserializeBinary
   );
 
-  getAccountCharacters(
-    request: AccountID,
+  deleteJob(
+    request: DeleteJobRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetAccountCharactersResponse) => void) {
+               response: DeleteJobResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.MruVAccountsService/GetAccountCharacters',
+        '/mruv.jobs.MruVJobsService/DeleteJob',
       request,
       metadata || {},
-      this.methodInfoGetAccountCharacters,
+      this.methodInfoDeleteJob,
       callback);
   }
 

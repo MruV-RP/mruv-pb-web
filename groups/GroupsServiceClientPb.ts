@@ -11,13 +11,14 @@ import * as grpcWeb from 'grpc-web';
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 import * as common_health_pb from '../common/health_pb';
-import * as groups_groups_model_pb from '../groups/groups_model_pb';
 
 import {
   AddGroupMemberRequest,
   AddGroupMemberResponse,
   GetGroupsRequest,
   GetGroupsResponse,
+  Group,
+  GroupID,
   RemoveGroupMemberRequest,
   RemoveGroupMemberResponse} from './groups_pb';
 
@@ -41,18 +42,18 @@ export class MruVGroupsServiceClient {
   }
 
   methodInfoCreateGroup = new grpcWeb.AbstractClientBase.MethodInfo(
-    groups_groups_model_pb.GroupID,
-    (request: groups_groups_model_pb.Group) => {
+    GroupID,
+    (request: Group) => {
       return request.serializeBinary();
     },
-    groups_groups_model_pb.GroupID.deserializeBinary
+    GroupID.deserializeBinary
   );
 
   createGroup(
-    request: groups_groups_model_pb.Group,
+    request: Group,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: groups_groups_model_pb.GroupID) => void) {
+               response: GroupID) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
         '/mruv.MruVGroupsService/CreateGroup',
@@ -63,18 +64,18 @@ export class MruVGroupsServiceClient {
   }
 
   methodInfoGetGroup = new grpcWeb.AbstractClientBase.MethodInfo(
-    groups_groups_model_pb.Group,
-    (request: groups_groups_model_pb.GroupID) => {
+    Group,
+    (request: GroupID) => {
       return request.serializeBinary();
     },
-    groups_groups_model_pb.Group.deserializeBinary
+    Group.deserializeBinary
   );
 
   getGroup(
-    request: groups_groups_model_pb.GroupID,
+    request: GroupID,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: groups_groups_model_pb.Group) => void) {
+               response: Group) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
         '/mruv.MruVGroupsService/GetGroup',
@@ -85,18 +86,18 @@ export class MruVGroupsServiceClient {
   }
 
   methodInfoDeleteGroup = new grpcWeb.AbstractClientBase.MethodInfo(
-    groups_groups_model_pb.GroupID,
-    (request: groups_groups_model_pb.GroupID) => {
+    GroupID,
+    (request: GroupID) => {
       return request.serializeBinary();
     },
-    groups_groups_model_pb.GroupID.deserializeBinary
+    GroupID.deserializeBinary
   );
 
   deleteGroup(
-    request: groups_groups_model_pb.GroupID,
+    request: GroupID,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: groups_groups_model_pb.GroupID) => void) {
+               response: GroupID) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
         '/mruv.MruVGroupsService/DeleteGroup',
