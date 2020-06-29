@@ -16,6 +16,8 @@ import {
   Account,
   AccountID,
   GetAccountCharactersResponse,
+  IsAccountExistsRequest,
+  IsAccountExistsResponse,
   LogInRequest,
   LogInResponse,
   RegisterAccountRequest,
@@ -81,6 +83,28 @@ export class MruVAccountsServiceClient {
       request,
       metadata || {},
       this.methodInfoLogIn,
+      callback);
+  }
+
+  methodInfoIsAccountExists = new grpcWeb.AbstractClientBase.MethodInfo(
+    IsAccountExistsResponse,
+    (request: IsAccountExistsRequest) => {
+      return request.serializeBinary();
+    },
+    IsAccountExistsResponse.deserializeBinary
+  );
+
+  isAccountExists(
+    request: IsAccountExistsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: IsAccountExistsResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.MruVAccountsService/IsAccountExists',
+      request,
+      metadata || {},
+      this.methodInfoIsAccountExists,
       callback);
   }
 
