@@ -10,14 +10,14 @@
 import * as grpcWeb from 'grpc-web';
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
-import * as characters_characters_pb from '../characters/characters_pb';
 
 import {
-  Account,
-  AccountID,
+  GetAccountCharactersRequest,
   GetAccountCharactersResponse,
-  IsAccountExistsRequest,
-  IsAccountExistsResponse,
+  GetAccountRequest,
+  GetAccountResponse,
+  IsAccountExistRequest,
+  IsAccountExistResponse,
   LogInRequest,
   LogInResponse,
   RegisterAccountRequest,
@@ -86,41 +86,41 @@ export class MruVAccountsServiceClient {
       callback);
   }
 
-  methodInfoIsAccountExists = new grpcWeb.AbstractClientBase.MethodInfo(
-    IsAccountExistsResponse,
-    (request: IsAccountExistsRequest) => {
+  methodInfoIsAccountExist = new grpcWeb.AbstractClientBase.MethodInfo(
+    IsAccountExistResponse,
+    (request: IsAccountExistRequest) => {
       return request.serializeBinary();
     },
-    IsAccountExistsResponse.deserializeBinary
+    IsAccountExistResponse.deserializeBinary
   );
 
-  isAccountExists(
-    request: IsAccountExistsRequest,
+  isAccountExist(
+    request: IsAccountExistRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: IsAccountExistsResponse) => void) {
+               response: IsAccountExistResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.MruVAccountsService/IsAccountExists',
+        '/mruv.MruVAccountsService/IsAccountExist',
       request,
       metadata || {},
-      this.methodInfoIsAccountExists,
+      this.methodInfoIsAccountExist,
       callback);
   }
 
   methodInfoGetAccount = new grpcWeb.AbstractClientBase.MethodInfo(
-    Account,
-    (request: AccountID) => {
+    GetAccountResponse,
+    (request: GetAccountRequest) => {
       return request.serializeBinary();
     },
-    Account.deserializeBinary
+    GetAccountResponse.deserializeBinary
   );
 
   getAccount(
-    request: AccountID,
+    request: GetAccountRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: Account) => void) {
+               response: GetAccountResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
         '/mruv.MruVAccountsService/GetAccount',
@@ -132,14 +132,14 @@ export class MruVAccountsServiceClient {
 
   methodInfoGetAccountCharacters = new grpcWeb.AbstractClientBase.MethodInfo(
     GetAccountCharactersResponse,
-    (request: AccountID) => {
+    (request: GetAccountCharactersRequest) => {
       return request.serializeBinary();
     },
     GetAccountCharactersResponse.deserializeBinary
   );
 
   getAccountCharacters(
-    request: AccountID,
+    request: GetAccountCharactersRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
                response: GetAccountCharactersResponse) => void) {
