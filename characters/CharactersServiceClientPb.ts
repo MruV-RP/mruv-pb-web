@@ -11,9 +11,10 @@ import * as grpcWeb from 'grpc-web';
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 import * as common_health_pb from '../common/health_pb';
-import * as common_spatial_pb from '../common/spatial_pb';
 
 import {
+  ChangeClothesRequest,
+  ChangeClothesResponse,
   CharacterID,
   CreateCharacterRequest,
   CreateCharacterResponse,
@@ -152,6 +153,28 @@ export class MruVCharactersServiceClient {
       request,
       metadata || {},
       this.methodInfoPermanentCharacterKill,
+      callback);
+  }
+
+  methodInfoChangeClothes = new grpcWeb.AbstractClientBase.MethodInfo(
+    ChangeClothesResponse,
+    (request: ChangeClothesRequest) => {
+      return request.serializeBinary();
+    },
+    ChangeClothesResponse.deserializeBinary
+  );
+
+  changeClothes(
+    request: ChangeClothesRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: ChangeClothesResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.MruVCharactersService/ChangeClothes',
+      request,
+      metadata || {},
+      this.methodInfoChangeClothes,
       callback);
   }
 
