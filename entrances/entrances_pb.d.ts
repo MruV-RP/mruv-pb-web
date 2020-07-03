@@ -92,6 +92,11 @@ export namespace Entrance {
 }
 
 export class CreateEntranceRequest extends jspb.Message {
+  getEntrance(): Entrance | undefined;
+  setEntrance(value?: Entrance): void;
+  hasEntrance(): boolean;
+  clearEntrance(): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateEntranceRequest.AsObject;
   static toObject(includeInstance: boolean, msg: CreateEntranceRequest): CreateEntranceRequest.AsObject;
@@ -102,6 +107,7 @@ export class CreateEntranceRequest extends jspb.Message {
 
 export namespace CreateEntranceRequest {
   export type AsObject = {
+    entrance?: Entrance.AsObject,
   }
 }
 
