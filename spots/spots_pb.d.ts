@@ -2,7 +2,7 @@ import * as jspb from "google-protobuf"
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 
-export class CreateSpotRequest extends jspb.Message {
+export class Spot extends jspb.Message {
   getName(): string;
   setName(value: string): void;
 
@@ -31,14 +31,14 @@ export class CreateSpotRequest extends jspb.Message {
   setInt(value: number): void;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): CreateSpotRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: CreateSpotRequest): CreateSpotRequest.AsObject;
-  static serializeBinaryToWriter(message: CreateSpotRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): CreateSpotRequest;
-  static deserializeBinaryFromReader(message: CreateSpotRequest, reader: jspb.BinaryReader): CreateSpotRequest;
+  toObject(includeInstance?: boolean): Spot.AsObject;
+  static toObject(includeInstance: boolean, msg: Spot): Spot.AsObject;
+  static serializeBinaryToWriter(message: Spot, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): Spot;
+  static deserializeBinaryFromReader(message: Spot, reader: jspb.BinaryReader): Spot;
 }
 
-export namespace CreateSpotRequest {
+export namespace Spot {
   export type AsObject = {
     name: string,
     message: string,
@@ -49,6 +49,26 @@ export namespace CreateSpotRequest {
     z: number,
     vw: number,
     pb_int: number,
+  }
+}
+
+export class CreateSpotRequest extends jspb.Message {
+  getSpot(): Spot | undefined;
+  setSpot(value?: Spot): void;
+  hasSpot(): boolean;
+  clearSpot(): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): CreateSpotRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: CreateSpotRequest): CreateSpotRequest.AsObject;
+  static serializeBinaryToWriter(message: CreateSpotRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): CreateSpotRequest;
+  static deserializeBinaryFromReader(message: CreateSpotRequest, reader: jspb.BinaryReader): CreateSpotRequest;
+}
+
+export namespace CreateSpotRequest {
+  export type AsObject = {
+    spot?: Spot.AsObject,
   }
 }
 
@@ -89,32 +109,10 @@ export namespace GetSpotRequest {
 }
 
 export class GetSpotResponse extends jspb.Message {
-  getName(): string;
-  setName(value: string): void;
-
-  getMessage(): string;
-  setMessage(value: string): void;
-
-  getIcon(): number;
-  setIcon(value: number): void;
-
-  getMarker(): number;
-  setMarker(value: number): void;
-
-  getX(): number;
-  setX(value: number): void;
-
-  getY(): number;
-  setY(value: number): void;
-
-  getZ(): number;
-  setZ(value: number): void;
-
-  getVw(): number;
-  setVw(value: number): void;
-
-  getInt(): number;
-  setInt(value: number): void;
+  getSpot(): Spot | undefined;
+  setSpot(value?: Spot): void;
+  hasSpot(): boolean;
+  clearSpot(): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetSpotResponse.AsObject;
@@ -126,15 +124,7 @@ export class GetSpotResponse extends jspb.Message {
 
 export namespace GetSpotResponse {
   export type AsObject = {
-    name: string,
-    message: string,
-    icon: number,
-    marker: number,
-    x: number,
-    y: number,
-    z: number,
-    vw: number,
-    pb_int: number,
+    spot?: Spot.AsObject,
   }
 }
 
@@ -142,32 +132,10 @@ export class UpdateSpotRequest extends jspb.Message {
   getId(): number;
   setId(value: number): void;
 
-  getName(): string;
-  setName(value: string): void;
-
-  getMessage(): string;
-  setMessage(value: string): void;
-
-  getIcon(): number;
-  setIcon(value: number): void;
-
-  getMarker(): number;
-  setMarker(value: number): void;
-
-  getX(): number;
-  setX(value: number): void;
-
-  getY(): number;
-  setY(value: number): void;
-
-  getZ(): number;
-  setZ(value: number): void;
-
-  getVw(): number;
-  setVw(value: number): void;
-
-  getInt(): number;
-  setInt(value: number): void;
+  getSpot(): Spot | undefined;
+  setSpot(value?: Spot): void;
+  hasSpot(): boolean;
+  clearSpot(): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UpdateSpotRequest.AsObject;
@@ -180,15 +148,7 @@ export class UpdateSpotRequest extends jspb.Message {
 export namespace UpdateSpotRequest {
   export type AsObject = {
     id: number,
-    name: string,
-    message: string,
-    icon: number,
-    marker: number,
-    x: number,
-    y: number,
-    z: number,
-    vw: number,
-    pb_int: number,
+    spot?: Spot.AsObject,
   }
 }
 
