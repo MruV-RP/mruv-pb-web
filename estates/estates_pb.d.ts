@@ -181,8 +181,11 @@ export namespace DeleteEstateResponse {
 }
 
 export class GetEstatesRequest extends jspb.Message {
-  getId(): number;
-  setId(value: number): void;
+  getFrom(): number;
+  setFrom(value: number): void;
+
+  getLimit(): number;
+  setLimit(value: number): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetEstatesRequest.AsObject;
@@ -194,7 +197,8 @@ export class GetEstatesRequest extends jspb.Message {
 
 export namespace GetEstatesRequest {
   export type AsObject = {
-    id: number,
+    from: number,
+    limit: number,
   }
 }
 
@@ -311,6 +315,11 @@ export namespace GetEstateGatesRequest {
 }
 
 export class GetEstateGatesResponse extends jspb.Message {
+  getEstatesList(): Array<Estate>;
+  setEstatesList(value: Array<Estate>): void;
+  clearEstatesList(): void;
+  addEstates(value?: Estate, index?: number): Estate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetEstateGatesResponse.AsObject;
   static toObject(includeInstance: boolean, msg: GetEstateGatesResponse): GetEstateGatesResponse.AsObject;
@@ -321,6 +330,7 @@ export class GetEstateGatesResponse extends jspb.Message {
 
 export namespace GetEstateGatesResponse {
   export type AsObject = {
+    estatesList: Array<Estate.AsObject>,
   }
 }
 
