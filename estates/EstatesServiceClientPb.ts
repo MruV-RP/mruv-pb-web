@@ -10,6 +10,8 @@
 import * as grpcWeb from 'grpc-web';
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
+import * as entrances_entrances_pb from '../entrances/entrances_pb';
+import * as gates_gates_pb from '../gates/gates_pb';
 
 import {
   AddEntranceRequest,
@@ -20,8 +22,6 @@ import {
   CreateEstateResponse,
   DeleteEstateRequest,
   DeleteEstateResponse,
-  DeleteGateRequest,
-  DeleteGateResponse,
   Estate,
   GetEstateEntrancesRequest,
   GetEstateEntrancesResponse,
@@ -32,6 +32,8 @@ import {
   GetEstatesResponse,
   RemoveEntranceRequest,
   RemoveEntranceResponse,
+  RemoveGateRequest,
+  RemoveGateResponse,
   UpdateEstateRequest,
   UpdateEstateResponse} from './estates_pb';
 
@@ -186,25 +188,25 @@ export class MruVEstateServiceClient {
       callback);
   }
 
-  methodInfoDeleteGate = new grpcWeb.AbstractClientBase.MethodInfo(
-    DeleteGateResponse,
-    (request: DeleteGateRequest) => {
+  methodInfoRemoveGate = new grpcWeb.AbstractClientBase.MethodInfo(
+    RemoveGateResponse,
+    (request: RemoveGateRequest) => {
       return request.serializeBinary();
     },
-    DeleteGateResponse.deserializeBinary
+    RemoveGateResponse.deserializeBinary
   );
 
-  deleteGate(
-    request: DeleteGateRequest,
+  removeGate(
+    request: RemoveGateRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: DeleteGateResponse) => void) {
+               response: RemoveGateResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.estates.MruVEstateService/DeleteGate',
+        '/mruv.estates.MruVEstateService/RemoveGate',
       request,
       metadata || {},
-      this.methodInfoDeleteGate,
+      this.methodInfoRemoveGate,
       callback);
   }
 
