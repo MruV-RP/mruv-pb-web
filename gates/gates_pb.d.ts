@@ -1,14 +1,9 @@
 import * as jspb from "google-protobuf"
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
+import * as objects_movable_pb from '../objects/movable_pb';
 
 export class Gate extends jspb.Message {
-  getId(): number;
-  setId(value: number): void;
-
-  getEstateId(): number;
-  setEstateId(value: number): void;
-
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Gate.AsObject;
   static toObject(includeInstance: boolean, msg: Gate): Gate.AsObject;
@@ -19,12 +14,18 @@ export class Gate extends jspb.Message {
 
 export namespace Gate {
   export type AsObject = {
-    id: number,
-    estateId: number,
   }
 }
 
 export class CreateGateRequest extends jspb.Message {
+  getName(): string;
+  setName(value: string): void;
+
+  getGateObjectsList(): Array<objects_movable_pb.MovableObject>;
+  setGateObjectsList(value: Array<objects_movable_pb.MovableObject>): void;
+  clearGateObjectsList(): void;
+  addGateObjects(value?: objects_movable_pb.MovableObject, index?: number): objects_movable_pb.MovableObject;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateGateRequest.AsObject;
   static toObject(includeInstance: boolean, msg: CreateGateRequest): CreateGateRequest.AsObject;
@@ -35,10 +36,15 @@ export class CreateGateRequest extends jspb.Message {
 
 export namespace CreateGateRequest {
   export type AsObject = {
+    name: string,
+    gateObjectsList: Array<objects_movable_pb.MovableObject.AsObject>,
   }
 }
 
 export class CreateGateResponse extends jspb.Message {
+  getId(): number;
+  setId(value: number): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateGateResponse.AsObject;
   static toObject(includeInstance: boolean, msg: CreateGateResponse): CreateGateResponse.AsObject;
@@ -49,6 +55,7 @@ export class CreateGateResponse extends jspb.Message {
 
 export namespace CreateGateResponse {
   export type AsObject = {
+    id: number,
   }
 }
 
@@ -71,8 +78,19 @@ export namespace GetGateRequest {
 }
 
 export class GetGateResponse extends jspb.Message {
-  getId(): number;
-  setId(value: number): void;
+  getName(): string;
+  setName(value: string): void;
+
+  getGateObjectsList(): Array<objects_movable_pb.MovableObject>;
+  setGateObjectsList(value: Array<objects_movable_pb.MovableObject>): void;
+  clearGateObjectsList(): void;
+  addGateObjects(value?: objects_movable_pb.MovableObject, index?: number): objects_movable_pb.MovableObject;
+
+  getOpened(): boolean;
+  setOpened(value: boolean): void;
+
+  getLocked(): boolean;
+  setLocked(value: boolean): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetGateResponse.AsObject;
@@ -84,13 +102,19 @@ export class GetGateResponse extends jspb.Message {
 
 export namespace GetGateResponse {
   export type AsObject = {
-    id: number,
+    name: string,
+    gateObjectsList: Array<objects_movable_pb.MovableObject.AsObject>,
+    opened: boolean,
+    locked: boolean,
   }
 }
 
 export class UpdateGateRequest extends jspb.Message {
   getId(): number;
   setId(value: number): void;
+
+  getName(): string;
+  setName(value: string): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UpdateGateRequest.AsObject;
@@ -103,6 +127,7 @@ export class UpdateGateRequest extends jspb.Message {
 export namespace UpdateGateRequest {
   export type AsObject = {
     id: number,
+    name: string,
   }
 }
 

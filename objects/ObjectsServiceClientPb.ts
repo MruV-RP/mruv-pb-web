@@ -1,5 +1,5 @@
 /**
- * @fileoverview gRPC-Web generated client stub for mruv.gates
+ * @fileoverview gRPC-Web generated client stub for mruv.objects
  * @enhanceable
  * @public
  */
@@ -63,7 +63,7 @@ export class MruVObjectsServiceClient {
                response: CreateObjectModelResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.gates.MruVObjectsService/CreateObjectModel',
+        '/mruv.objects.MruVObjectsService/CreateObjectModel',
       request,
       metadata || {},
       this.methodInfoCreateObjectModel,
@@ -85,7 +85,7 @@ export class MruVObjectsServiceClient {
                response: GetObjectModelResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.gates.MruVObjectsService/GetObjectModel',
+        '/mruv.objects.MruVObjectsService/GetObjectModel',
       request,
       metadata || {},
       this.methodInfoGetObjectModel,
@@ -107,7 +107,7 @@ export class MruVObjectsServiceClient {
                response: UpdateObjectModelResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.gates.MruVObjectsService/UpdateObjectModel',
+        '/mruv.objects.MruVObjectsService/UpdateObjectModel',
       request,
       metadata || {},
       this.methodInfoUpdateObjectModel,
@@ -129,7 +129,7 @@ export class MruVObjectsServiceClient {
                response: DeleteObjectModelResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.gates.MruVObjectsService/DeleteObjectModel',
+        '/mruv.objects.MruVObjectsService/DeleteObjectModel',
       request,
       metadata || {},
       this.methodInfoDeleteObjectModel,
@@ -151,7 +151,7 @@ export class MruVObjectsServiceClient {
                response: CreateObjectResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.gates.MruVObjectsService/CreateObject',
+        '/mruv.objects.MruVObjectsService/CreateObject',
       request,
       metadata || {},
       this.methodInfoCreateObject,
@@ -173,7 +173,7 @@ export class MruVObjectsServiceClient {
                response: GetObjectResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.gates.MruVObjectsService/GetObject',
+        '/mruv.objects.MruVObjectsService/GetObject',
       request,
       metadata || {},
       this.methodInfoGetObject,
@@ -195,7 +195,7 @@ export class MruVObjectsServiceClient {
                response: UpdateObjectResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.gates.MruVObjectsService/UpdateObject',
+        '/mruv.objects.MruVObjectsService/UpdateObject',
       request,
       metadata || {},
       this.methodInfoUpdateObject,
@@ -217,7 +217,7 @@ export class MruVObjectsServiceClient {
                response: DeleteObjectResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.gates.MruVObjectsService/DeleteObject',
+        '/mruv.objects.MruVObjectsService/DeleteObject',
       request,
       metadata || {},
       this.methodInfoDeleteObject,
