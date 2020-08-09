@@ -12,20 +12,12 @@ import * as grpcWeb from 'grpc-web';
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 
 import {
-  CreateObjectModelRequest,
-  CreateObjectModelResponse,
   CreateObjectRequest,
   CreateObjectResponse,
-  DeleteObjectModelRequest,
-  DeleteObjectModelResponse,
   DeleteObjectRequest,
   DeleteObjectResponse,
-  GetObjectModelRequest,
-  GetObjectModelResponse,
   GetObjectRequest,
   GetObjectResponse,
-  UpdateObjectModelRequest,
-  UpdateObjectModelResponse,
   UpdateObjectRequest,
   UpdateObjectResponse} from './objects_pb';
 
@@ -46,94 +38,6 @@ export class MruVObjectsServiceClient {
     this.hostname_ = hostname;
     this.credentials_ = credentials;
     this.options_ = options;
-  }
-
-  methodInfoCreateObjectModel = new grpcWeb.AbstractClientBase.MethodInfo(
-    CreateObjectModelResponse,
-    (request: CreateObjectModelRequest) => {
-      return request.serializeBinary();
-    },
-    CreateObjectModelResponse.deserializeBinary
-  );
-
-  createObjectModel(
-    request: CreateObjectModelRequest,
-    metadata: grpcWeb.Metadata | null,
-    callback: (err: grpcWeb.Error,
-               response: CreateObjectModelResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.objects.MruVObjectsService/CreateObjectModel',
-      request,
-      metadata || {},
-      this.methodInfoCreateObjectModel,
-      callback);
-  }
-
-  methodInfoGetObjectModel = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetObjectModelResponse,
-    (request: GetObjectModelRequest) => {
-      return request.serializeBinary();
-    },
-    GetObjectModelResponse.deserializeBinary
-  );
-
-  getObjectModel(
-    request: GetObjectModelRequest,
-    metadata: grpcWeb.Metadata | null,
-    callback: (err: grpcWeb.Error,
-               response: GetObjectModelResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.objects.MruVObjectsService/GetObjectModel',
-      request,
-      metadata || {},
-      this.methodInfoGetObjectModel,
-      callback);
-  }
-
-  methodInfoUpdateObjectModel = new grpcWeb.AbstractClientBase.MethodInfo(
-    UpdateObjectModelResponse,
-    (request: UpdateObjectModelRequest) => {
-      return request.serializeBinary();
-    },
-    UpdateObjectModelResponse.deserializeBinary
-  );
-
-  updateObjectModel(
-    request: UpdateObjectModelRequest,
-    metadata: grpcWeb.Metadata | null,
-    callback: (err: grpcWeb.Error,
-               response: UpdateObjectModelResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.objects.MruVObjectsService/UpdateObjectModel',
-      request,
-      metadata || {},
-      this.methodInfoUpdateObjectModel,
-      callback);
-  }
-
-  methodInfoDeleteObjectModel = new grpcWeb.AbstractClientBase.MethodInfo(
-    DeleteObjectModelResponse,
-    (request: DeleteObjectModelRequest) => {
-      return request.serializeBinary();
-    },
-    DeleteObjectModelResponse.deserializeBinary
-  );
-
-  deleteObjectModel(
-    request: DeleteObjectModelRequest,
-    metadata: grpcWeb.Metadata | null,
-    callback: (err: grpcWeb.Error,
-               response: DeleteObjectModelResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.objects.MruVObjectsService/DeleteObjectModel',
-      request,
-      metadata || {},
-      this.methodInfoDeleteObjectModel,
-      callback);
   }
 
   methodInfoCreateObject = new grpcWeb.AbstractClientBase.MethodInfo(

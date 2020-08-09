@@ -25,6 +25,9 @@ export class State extends jspb.Message {
   getRz(): number;
   setRz(value: number): void;
 
+  getTransitionSpeed(): number;
+  setTransitionSpeed(value: number): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): State.AsObject;
   static toObject(includeInstance: boolean, msg: State): State.AsObject;
@@ -42,6 +45,7 @@ export namespace State {
     rx: number,
     ry: number,
     rz: number,
+    transitionSpeed: number,
   }
 }
 
