@@ -11,6 +11,7 @@ import * as grpcWeb from 'grpc-web';
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 import * as objects_movable_pb from '../objects/movable_pb';
+import * as spots_spots_pb from '../spots/spots_pb';
 
 import {
   CloseRequest,
