@@ -112,10 +112,10 @@ export class GetGateResponse extends jspb.Message {
   getName(): string;
   setName(value: string): void;
 
-  getGateMovableObjectsList(): Array<number>;
-  setGateMovableObjectsList(value: Array<number>): void;
-  clearGateMovableObjectsList(): void;
-  addGateMovableObjects(value: number, index?: number): void;
+  getMovableObjectsList(): Array<objects_movable_pb.MovableObject>;
+  setMovableObjectsList(value: Array<objects_movable_pb.MovableObject>): void;
+  clearMovableObjectsList(): void;
+  addMovableObjects(value?: objects_movable_pb.MovableObject, index?: number): objects_movable_pb.MovableObject;
 
   getSpot(): spots_spots_pb.Spot | undefined;
   setSpot(value?: spots_spots_pb.Spot): void;
@@ -139,7 +139,7 @@ export class GetGateResponse extends jspb.Message {
 export namespace GetGateResponse {
   export type AsObject = {
     name: string,
-    gateMovableObjectsList: Array<number>,
+    movableObjectsList: Array<objects_movable_pb.MovableObject.AsObject>,
     spot?: spots_spots_pb.Spot.AsObject,
     opened: boolean,
     locked: boolean,

@@ -19,6 +19,8 @@ import {
   DeleteEntranceResponse,
   EnterRequest,
   EnterResponse,
+  ExitRequest,
+  ExitResponse,
   FindNearestEntranceRequest,
   FindNearestEntranceResponse,
   GetEntranceRequest,
@@ -222,6 +224,28 @@ export class MruVEntrancesServiceClient {
       request,
       metadata || {},
       this.methodInfoEnter,
+      callback);
+  }
+
+  methodInfoExit = new grpcWeb.AbstractClientBase.MethodInfo(
+    ExitResponse,
+    (request: ExitRequest) => {
+      return request.serializeBinary();
+    },
+    ExitResponse.deserializeBinary
+  );
+
+  exit(
+    request: ExitRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: ExitResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.entrances.MruVEntrancesService/Exit',
+      request,
+      metadata || {},
+      this.methodInfoExit,
       callback);
   }
 
