@@ -45,6 +45,8 @@ import {
   UnBanRequest,
   UnBanResponse,
   UnBlockMessage,
+  UnBlockRequest,
+  UnBlockResponse,
   UnMuteGlobalChatsRequest,
   UnMuteGlobalChatsResponse,
   UnWarnMessage,
@@ -216,6 +218,28 @@ export class MruVPunishmentsServiceClient {
       request,
       metadata || {},
       this.methodInfoUnBan,
+      callback);
+  }
+
+  methodInfoUnBlock = new grpcWeb.AbstractClientBase.MethodInfo(
+    UnBlockResponse,
+    (request: UnBlockRequest) => {
+      return request.serializeBinary();
+    },
+    UnBlockResponse.deserializeBinary
+  );
+
+  unBlock(
+    request: UnBlockRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: UnBlockResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.economy.MruVPunishmentsService/UnBlock',
+      request,
+      metadata || {},
+      this.methodInfoUnBlock,
       callback);
   }
 

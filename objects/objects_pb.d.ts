@@ -45,6 +45,9 @@ export class Object extends jspb.Message {
   getPriority(): number;
   setPriority(value: number): void;
 
+  getEstateId(): number;
+  setEstateId(value: number): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Object.AsObject;
   static toObject(includeInstance: boolean, msg: Object): Object.AsObject;
@@ -69,6 +72,7 @@ export namespace Object {
     streamDistance: number,
     drawDistance: number,
     priority: number,
+    estateId: number,
   }
 }
 
