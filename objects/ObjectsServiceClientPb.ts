@@ -12,10 +12,24 @@ import * as grpcWeb from 'grpc-web';
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 
 import {
+  AddObjectMaterialRequest,
+  AddObjectMaterialResponse,
+  AddObjectMaterialTextRequest,
+  AddObjectMaterialTextResponse,
   CreateObjectRequest,
   CreateObjectResponse,
+  DeleteObjectMaterialRequest,
+  DeleteObjectMaterialResponse,
+  DeleteObjectMaterialTextRequest,
+  DeleteObjectMaterialTextResponse,
   DeleteObjectRequest,
   DeleteObjectResponse,
+  FetchAllRequest,
+  FetchAllResponse,
+  GetObjectMaterialTextsRequest,
+  GetObjectMaterialTextsResponse,
+  GetObjectMaterialsRequest,
+  GetObjectMaterialsResponse,
   GetObjectRequest,
   GetObjectResponse,
   UpdateObjectRequest,
@@ -125,6 +139,160 @@ export class MruVObjectsServiceClient {
       request,
       metadata || {},
       this.methodInfoDeleteObject,
+      callback);
+  }
+
+  methodInfoAddObjectMaterial = new grpcWeb.AbstractClientBase.MethodInfo(
+    AddObjectMaterialResponse,
+    (request: AddObjectMaterialRequest) => {
+      return request.serializeBinary();
+    },
+    AddObjectMaterialResponse.deserializeBinary
+  );
+
+  addObjectMaterial(
+    request: AddObjectMaterialRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: AddObjectMaterialResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.objects.MruVObjectsService/AddObjectMaterial',
+      request,
+      metadata || {},
+      this.methodInfoAddObjectMaterial,
+      callback);
+  }
+
+  methodInfoGetObjectMaterials = new grpcWeb.AbstractClientBase.MethodInfo(
+    GetObjectMaterialsResponse,
+    (request: GetObjectMaterialsRequest) => {
+      return request.serializeBinary();
+    },
+    GetObjectMaterialsResponse.deserializeBinary
+  );
+
+  getObjectMaterials(
+    request: GetObjectMaterialsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: GetObjectMaterialsResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.objects.MruVObjectsService/GetObjectMaterials',
+      request,
+      metadata || {},
+      this.methodInfoGetObjectMaterials,
+      callback);
+  }
+
+  methodInfoDeleteObjectMaterial = new grpcWeb.AbstractClientBase.MethodInfo(
+    DeleteObjectMaterialResponse,
+    (request: DeleteObjectMaterialRequest) => {
+      return request.serializeBinary();
+    },
+    DeleteObjectMaterialResponse.deserializeBinary
+  );
+
+  deleteObjectMaterial(
+    request: DeleteObjectMaterialRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: DeleteObjectMaterialResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.objects.MruVObjectsService/DeleteObjectMaterial',
+      request,
+      metadata || {},
+      this.methodInfoDeleteObjectMaterial,
+      callback);
+  }
+
+  methodInfoAddObjectMaterialText = new grpcWeb.AbstractClientBase.MethodInfo(
+    AddObjectMaterialTextResponse,
+    (request: AddObjectMaterialTextRequest) => {
+      return request.serializeBinary();
+    },
+    AddObjectMaterialTextResponse.deserializeBinary
+  );
+
+  addObjectMaterialText(
+    request: AddObjectMaterialTextRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: AddObjectMaterialTextResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.objects.MruVObjectsService/AddObjectMaterialText',
+      request,
+      metadata || {},
+      this.methodInfoAddObjectMaterialText,
+      callback);
+  }
+
+  methodInfoGetObjectMaterialTexts = new grpcWeb.AbstractClientBase.MethodInfo(
+    GetObjectMaterialTextsResponse,
+    (request: GetObjectMaterialTextsRequest) => {
+      return request.serializeBinary();
+    },
+    GetObjectMaterialTextsResponse.deserializeBinary
+  );
+
+  getObjectMaterialTexts(
+    request: GetObjectMaterialTextsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: GetObjectMaterialTextsResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.objects.MruVObjectsService/GetObjectMaterialTexts',
+      request,
+      metadata || {},
+      this.methodInfoGetObjectMaterialTexts,
+      callback);
+  }
+
+  methodInfoDeleteObjectMaterialText = new grpcWeb.AbstractClientBase.MethodInfo(
+    DeleteObjectMaterialTextResponse,
+    (request: DeleteObjectMaterialTextRequest) => {
+      return request.serializeBinary();
+    },
+    DeleteObjectMaterialTextResponse.deserializeBinary
+  );
+
+  deleteObjectMaterialText(
+    request: DeleteObjectMaterialTextRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: DeleteObjectMaterialTextResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.objects.MruVObjectsService/DeleteObjectMaterialText',
+      request,
+      metadata || {},
+      this.methodInfoDeleteObjectMaterialText,
+      callback);
+  }
+
+  methodInfoFetchAll = new grpcWeb.AbstractClientBase.MethodInfo(
+    FetchAllResponse,
+    (request: FetchAllRequest) => {
+      return request.serializeBinary();
+    },
+    FetchAllResponse.deserializeBinary
+  );
+
+  fetchAll(
+    request: FetchAllRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: FetchAllResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.objects.MruVObjectsService/FetchAll',
+      request,
+      metadata || {},
+      this.methodInfoFetchAll,
       callback);
   }
 
