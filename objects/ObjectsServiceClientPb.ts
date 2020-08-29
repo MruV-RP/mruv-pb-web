@@ -16,6 +16,8 @@ import {
   AddObjectMaterialResponse,
   AddObjectMaterialTextRequest,
   AddObjectMaterialTextResponse,
+  AddRemoveBuildingRequest,
+  AddRemoveBuildingResponse,
   CreateObjectRequest,
   CreateObjectResponse,
   DeleteObjectMaterialRequest,
@@ -24,6 +26,8 @@ import {
   DeleteObjectMaterialTextResponse,
   DeleteObjectRequest,
   DeleteObjectResponse,
+  DeleteRemoveBuildingRequest,
+  DeleteRemoveBuildingResponse,
   FetchAllRequest,
   FetchAllResponse,
   GetObjectMaterialTextsRequest,
@@ -32,6 +36,8 @@ import {
   GetObjectMaterialsResponse,
   GetObjectRequest,
   GetObjectResponse,
+  GetRemovedBuildingsRequest,
+  GetRemovedBuildingsResponse,
   UpdateObjectRequest,
   UpdateObjectResponse} from './objects_pb';
 
@@ -271,6 +277,72 @@ export class MruVObjectsServiceClient {
       request,
       metadata || {},
       this.methodInfoDeleteObjectMaterialText,
+      callback);
+  }
+
+  methodInfoAddRemoveBuilding = new grpcWeb.AbstractClientBase.MethodInfo(
+    AddRemoveBuildingResponse,
+    (request: AddRemoveBuildingRequest) => {
+      return request.serializeBinary();
+    },
+    AddRemoveBuildingResponse.deserializeBinary
+  );
+
+  addRemoveBuilding(
+    request: AddRemoveBuildingRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: AddRemoveBuildingResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.objects.MruVObjectsService/AddRemoveBuilding',
+      request,
+      metadata || {},
+      this.methodInfoAddRemoveBuilding,
+      callback);
+  }
+
+  methodInfoGetRemovedBuildings = new grpcWeb.AbstractClientBase.MethodInfo(
+    GetRemovedBuildingsResponse,
+    (request: GetRemovedBuildingsRequest) => {
+      return request.serializeBinary();
+    },
+    GetRemovedBuildingsResponse.deserializeBinary
+  );
+
+  getRemovedBuildings(
+    request: GetRemovedBuildingsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: GetRemovedBuildingsResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.objects.MruVObjectsService/GetRemovedBuildings',
+      request,
+      metadata || {},
+      this.methodInfoGetRemovedBuildings,
+      callback);
+  }
+
+  methodInfoDeleteRemoveBuilding = new grpcWeb.AbstractClientBase.MethodInfo(
+    DeleteRemoveBuildingResponse,
+    (request: DeleteRemoveBuildingRequest) => {
+      return request.serializeBinary();
+    },
+    DeleteRemoveBuildingResponse.deserializeBinary
+  );
+
+  deleteRemoveBuilding(
+    request: DeleteRemoveBuildingRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.Error,
+               response: DeleteRemoveBuildingResponse) => void) {
+    return this.client_.rpcCall(
+      this.hostname_ +
+        '/mruv.objects.MruVObjectsService/DeleteRemoveBuilding',
+      request,
+      metadata || {},
+      this.methodInfoDeleteRemoveBuilding,
       callback);
   }
 

@@ -97,6 +97,9 @@ export class Material extends jspb.Message {
   getMaterialColor(): number;
   setMaterialColor(value: number): void;
 
+  getEstateId(): number;
+  setEstateId(value: number): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Material.AsObject;
   static toObject(includeInstance: boolean, msg: Material): Material.AsObject;
@@ -111,6 +114,7 @@ export namespace Material {
     txdName: string,
     textureName: string,
     materialColor: number,
+    estateId: number,
   }
 }
 
@@ -157,6 +161,40 @@ export namespace MaterialText {
     fontColor: number,
     backColor: number,
     textAlignment: number,
+  }
+}
+
+export class RemovedBuilding extends jspb.Message {
+  getModel(): number;
+  setModel(value: number): void;
+
+  getX(): number;
+  setX(value: number): void;
+
+  getY(): number;
+  setY(value: number): void;
+
+  getZ(): number;
+  setZ(value: number): void;
+
+  getRadius(): number;
+  setRadius(value: number): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): RemovedBuilding.AsObject;
+  static toObject(includeInstance: boolean, msg: RemovedBuilding): RemovedBuilding.AsObject;
+  static serializeBinaryToWriter(message: RemovedBuilding, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): RemovedBuilding;
+  static deserializeBinaryFromReader(message: RemovedBuilding, reader: jspb.BinaryReader): RemovedBuilding;
+}
+
+export namespace RemovedBuilding {
+  export type AsObject = {
+    model: number,
+    x: number,
+    y: number,
+    z: number,
+    radius: number,
   }
 }
 
@@ -530,6 +568,114 @@ export class DeleteObjectMaterialTextResponse extends jspb.Message {
 }
 
 export namespace DeleteObjectMaterialTextResponse {
+  export type AsObject = {
+  }
+}
+
+export class AddRemoveBuildingRequest extends jspb.Message {
+  getRemovedBuilding(): RemovedBuilding | undefined;
+  setRemovedBuilding(value?: RemovedBuilding): void;
+  hasRemovedBuilding(): boolean;
+  clearRemovedBuilding(): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): AddRemoveBuildingRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: AddRemoveBuildingRequest): AddRemoveBuildingRequest.AsObject;
+  static serializeBinaryToWriter(message: AddRemoveBuildingRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): AddRemoveBuildingRequest;
+  static deserializeBinaryFromReader(message: AddRemoveBuildingRequest, reader: jspb.BinaryReader): AddRemoveBuildingRequest;
+}
+
+export namespace AddRemoveBuildingRequest {
+  export type AsObject = {
+    removedBuilding?: RemovedBuilding.AsObject,
+  }
+}
+
+export class AddRemoveBuildingResponse extends jspb.Message {
+  getId(): number;
+  setId(value: number): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): AddRemoveBuildingResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: AddRemoveBuildingResponse): AddRemoveBuildingResponse.AsObject;
+  static serializeBinaryToWriter(message: AddRemoveBuildingResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): AddRemoveBuildingResponse;
+  static deserializeBinaryFromReader(message: AddRemoveBuildingResponse, reader: jspb.BinaryReader): AddRemoveBuildingResponse;
+}
+
+export namespace AddRemoveBuildingResponse {
+  export type AsObject = {
+    id: number,
+  }
+}
+
+export class GetRemovedBuildingsRequest extends jspb.Message {
+  getEstateId(): number;
+  setEstateId(value: number): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetRemovedBuildingsRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: GetRemovedBuildingsRequest): GetRemovedBuildingsRequest.AsObject;
+  static serializeBinaryToWriter(message: GetRemovedBuildingsRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetRemovedBuildingsRequest;
+  static deserializeBinaryFromReader(message: GetRemovedBuildingsRequest, reader: jspb.BinaryReader): GetRemovedBuildingsRequest;
+}
+
+export namespace GetRemovedBuildingsRequest {
+  export type AsObject = {
+    estateId: number,
+  }
+}
+
+export class GetRemovedBuildingsResponse extends jspb.Message {
+  getRemovedBuildingList(): Array<RemovedBuilding>;
+  setRemovedBuildingList(value: Array<RemovedBuilding>): void;
+  clearRemovedBuildingList(): void;
+  addRemovedBuilding(value?: RemovedBuilding, index?: number): RemovedBuilding;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetRemovedBuildingsResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: GetRemovedBuildingsResponse): GetRemovedBuildingsResponse.AsObject;
+  static serializeBinaryToWriter(message: GetRemovedBuildingsResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetRemovedBuildingsResponse;
+  static deserializeBinaryFromReader(message: GetRemovedBuildingsResponse, reader: jspb.BinaryReader): GetRemovedBuildingsResponse;
+}
+
+export namespace GetRemovedBuildingsResponse {
+  export type AsObject = {
+    removedBuildingList: Array<RemovedBuilding.AsObject>,
+  }
+}
+
+export class DeleteRemoveBuildingRequest extends jspb.Message {
+  getId(): number;
+  setId(value: number): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DeleteRemoveBuildingRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: DeleteRemoveBuildingRequest): DeleteRemoveBuildingRequest.AsObject;
+  static serializeBinaryToWriter(message: DeleteRemoveBuildingRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DeleteRemoveBuildingRequest;
+  static deserializeBinaryFromReader(message: DeleteRemoveBuildingRequest, reader: jspb.BinaryReader): DeleteRemoveBuildingRequest;
+}
+
+export namespace DeleteRemoveBuildingRequest {
+  export type AsObject = {
+    id: number,
+  }
+}
+
+export class DeleteRemoveBuildingResponse extends jspb.Message {
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DeleteRemoveBuildingResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: DeleteRemoveBuildingResponse): DeleteRemoveBuildingResponse.AsObject;
+  static serializeBinaryToWriter(message: DeleteRemoveBuildingResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DeleteRemoveBuildingResponse;
+  static deserializeBinaryFromReader(message: DeleteRemoveBuildingResponse, reader: jspb.BinaryReader): DeleteRemoveBuildingResponse;
+}
+
+export namespace DeleteRemoveBuildingResponse {
   export type AsObject = {
   }
 }
