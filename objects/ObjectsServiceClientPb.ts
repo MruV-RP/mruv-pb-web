@@ -356,16 +356,13 @@ export class MruVObjectsServiceClient {
 
   fetchAll(
     request: FetchAllRequest,
-    metadata: grpcWeb.Metadata | null,
-    callback: (err: grpcWeb.Error,
-               response: FetchAllResponse) => void) {
-    return this.client_.rpcCall(
+    metadata?: grpcWeb.Metadata) {
+    return this.client_.serverStreaming(
       this.hostname_ +
         '/mruv.objects.MruVObjectsService/FetchAll',
       request,
       metadata || {},
-      this.methodInfoFetchAll,
-      callback);
+      this.methodInfoFetchAll);
   }
 
 }
