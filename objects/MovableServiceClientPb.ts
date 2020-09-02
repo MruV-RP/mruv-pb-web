@@ -203,7 +203,7 @@ export class MruVMovableObjectsServiceClient {
       callback);
   }
 
-  methodInfoFetchAll = new grpcWeb.AbstractClientBase.MethodInfo(
+  methodInfoFetchAllMovableObjects = new grpcWeb.AbstractClientBase.MethodInfo(
     FetchAllMovableObjectsResponse,
     (request: FetchAllMovableObjectsRequest) => {
       return request.serializeBinary();
@@ -211,15 +211,15 @@ export class MruVMovableObjectsServiceClient {
     FetchAllMovableObjectsResponse.deserializeBinary
   );
 
-  fetchAll(
+  fetchAllMovableObjects(
     request: FetchAllMovableObjectsRequest,
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +
-        '/mruv.objects.MruVMovableObjectsService/FetchAll',
+        '/mruv.objects.MruVMovableObjectsService/FetchAllMovableObjects',
       request,
       metadata || {},
-      this.methodInfoFetchAll);
+      this.methodInfoFetchAllMovableObjects);
   }
 
 }

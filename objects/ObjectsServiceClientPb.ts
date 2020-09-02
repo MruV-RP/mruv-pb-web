@@ -346,7 +346,7 @@ export class MruVObjectsServiceClient {
       callback);
   }
 
-  methodInfoFetchAll = new grpcWeb.AbstractClientBase.MethodInfo(
+  methodInfoFetchAllObjects = new grpcWeb.AbstractClientBase.MethodInfo(
     FetchAllObjectsResponse,
     (request: FetchAllObjectsRequest) => {
       return request.serializeBinary();
@@ -354,15 +354,15 @@ export class MruVObjectsServiceClient {
     FetchAllObjectsResponse.deserializeBinary
   );
 
-  fetchAll(
+  fetchAllObjects(
     request: FetchAllObjectsRequest,
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +
-        '/mruv.objects.MruVObjectsService/FetchAll',
+        '/mruv.objects.MruVObjectsService/FetchAllObjects',
       request,
       metadata || {},
-      this.methodInfoFetchAll);
+      this.methodInfoFetchAllObjects);
   }
 
 }
