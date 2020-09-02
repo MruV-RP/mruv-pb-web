@@ -10,6 +10,7 @@
 import * as grpcWeb from 'grpc-web';
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
+import * as objects_objects_pb from '../objects/objects_pb';
 import * as entrances_entrances_pb from '../entrances/entrances_pb';
 import * as gates_gates_pb from '../gates/gates_pb';
 
@@ -23,6 +24,8 @@ import {
   DeleteEstateRequest,
   DeleteEstateResponse,
   Estate,
+  FetchAllEstatesRequest,
+  FetchAllEstatesResponse,
   GetEstateEntrancesRequest,
   GetEstateEntrancesResponse,
   GetEstateGatesRequest,
@@ -296,6 +299,25 @@ export class MruVEstateServiceClient {
       metadata || {},
       this.methodInfoGetEstateEntrances,
       callback);
+  }
+
+  methodInfoFetchAll = new grpcWeb.AbstractClientBase.MethodInfo(
+    FetchAllEstatesResponse,
+    (request: FetchAllEstatesRequest) => {
+      return request.serializeBinary();
+    },
+    FetchAllEstatesResponse.deserializeBinary
+  );
+
+  fetchAll(
+    request: FetchAllEstatesRequest,
+    metadata?: grpcWeb.Metadata) {
+    return this.client_.serverStreaming(
+      this.hostname_ +
+        '/mruv.estates.MruVEstateService/FetchAll',
+      request,
+      metadata || {},
+      this.methodInfoFetchAll);
   }
 
 }

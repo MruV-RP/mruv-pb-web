@@ -220,3 +220,39 @@ export namespace DeleteObjectModelResponse {
   }
 }
 
+export class FetchAllModelsRequest extends jspb.Message {
+  getChunkSize(): number;
+  setChunkSize(value: number): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): FetchAllModelsRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: FetchAllModelsRequest): FetchAllModelsRequest.AsObject;
+  static serializeBinaryToWriter(message: FetchAllModelsRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): FetchAllModelsRequest;
+  static deserializeBinaryFromReader(message: FetchAllModelsRequest, reader: jspb.BinaryReader): FetchAllModelsRequest;
+}
+
+export namespace FetchAllModelsRequest {
+  export type AsObject = {
+    chunkSize: number,
+  }
+}
+
+export class FetchAllModelsResponse extends jspb.Message {
+  getModelsMap(): jspb.Map<number, ObjectModel>;
+  clearModelsMap(): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): FetchAllModelsResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: FetchAllModelsResponse): FetchAllModelsResponse.AsObject;
+  static serializeBinaryToWriter(message: FetchAllModelsResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): FetchAllModelsResponse;
+  static deserializeBinaryFromReader(message: FetchAllModelsResponse, reader: jspb.BinaryReader): FetchAllModelsResponse;
+}
+
+export namespace FetchAllModelsResponse {
+  export type AsObject = {
+    modelsMap: Array<[number, ObjectModel.AsObject]>,
+  }
+}
+

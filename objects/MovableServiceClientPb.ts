@@ -17,6 +17,8 @@ import {
   CreateMovableObjectResponse,
   DeleteMovableObjectRequest,
   DeleteMovableObjectResponse,
+  FetchAllMovableObjectsRequest,
+  FetchAllMovableObjectsResponse,
   GetMovableObjectRequest,
   GetMovableObjectResponse,
   MoveObjectNextRequest,
@@ -199,6 +201,25 @@ export class MruVMovableObjectsServiceClient {
       metadata || {},
       this.methodInfoMoveObjectPrevious,
       callback);
+  }
+
+  methodInfoFetchAll = new grpcWeb.AbstractClientBase.MethodInfo(
+    FetchAllMovableObjectsResponse,
+    (request: FetchAllMovableObjectsRequest) => {
+      return request.serializeBinary();
+    },
+    FetchAllMovableObjectsResponse.deserializeBinary
+  );
+
+  fetchAll(
+    request: FetchAllMovableObjectsRequest,
+    metadata?: grpcWeb.Metadata) {
+    return this.client_.serverStreaming(
+      this.hostname_ +
+        '/mruv.objects.MruVMovableObjectsService/FetchAll',
+      request,
+      metadata || {},
+      this.methodInfoFetchAll);
   }
 
 }

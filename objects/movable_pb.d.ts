@@ -357,3 +357,39 @@ export namespace MoveObjectPreviousResponse {
   }
 }
 
+export class FetchAllMovableObjectsRequest extends jspb.Message {
+  getChunkSize(): number;
+  setChunkSize(value: number): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): FetchAllMovableObjectsRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: FetchAllMovableObjectsRequest): FetchAllMovableObjectsRequest.AsObject;
+  static serializeBinaryToWriter(message: FetchAllMovableObjectsRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): FetchAllMovableObjectsRequest;
+  static deserializeBinaryFromReader(message: FetchAllMovableObjectsRequest, reader: jspb.BinaryReader): FetchAllMovableObjectsRequest;
+}
+
+export namespace FetchAllMovableObjectsRequest {
+  export type AsObject = {
+    chunkSize: number,
+  }
+}
+
+export class FetchAllMovableObjectsResponse extends jspb.Message {
+  getMovableObjectsMap(): jspb.Map<number, MovableObject>;
+  clearMovableObjectsMap(): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): FetchAllMovableObjectsResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: FetchAllMovableObjectsResponse): FetchAllMovableObjectsResponse.AsObject;
+  static serializeBinaryToWriter(message: FetchAllMovableObjectsResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): FetchAllMovableObjectsResponse;
+  static deserializeBinaryFromReader(message: FetchAllMovableObjectsResponse, reader: jspb.BinaryReader): FetchAllMovableObjectsResponse;
+}
+
+export namespace FetchAllMovableObjectsResponse {
+  export type AsObject = {
+    movableObjectsMap: Array<[number, MovableObject.AsObject]>,
+  }
+}
+

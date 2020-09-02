@@ -16,6 +16,8 @@ import {
   CreateObjectModelResponse,
   DeleteObjectModelRequest,
   DeleteObjectModelResponse,
+  FetchAllModelsRequest,
+  FetchAllModelsResponse,
   GetObjectModelRequest,
   GetObjectModelResponse,
   UpdateObjectModelRequest,
@@ -126,6 +128,25 @@ export class MruVObjectModelsServiceClient {
       metadata || {},
       this.methodInfoDeleteObjectModel,
       callback);
+  }
+
+  methodInfoFetchAll = new grpcWeb.AbstractClientBase.MethodInfo(
+    FetchAllModelsResponse,
+    (request: FetchAllModelsRequest) => {
+      return request.serializeBinary();
+    },
+    FetchAllModelsResponse.deserializeBinary
+  );
+
+  fetchAll(
+    request: FetchAllModelsRequest,
+    metadata?: grpcWeb.Metadata) {
+    return this.client_.serverStreaming(
+      this.hostname_ +
+        '/mruv.objects.MruVObjectModelsService/FetchAll',
+      request,
+      metadata || {},
+      this.methodInfoFetchAll);
   }
 
 }

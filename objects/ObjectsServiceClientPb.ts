@@ -28,8 +28,8 @@ import {
   DeleteObjectResponse,
   DeleteRemoveBuildingRequest,
   DeleteRemoveBuildingResponse,
-  FetchAllRequest,
-  FetchAllResponse,
+  FetchAllObjectsRequest,
+  FetchAllObjectsResponse,
   GetObjectMaterialTextsRequest,
   GetObjectMaterialTextsResponse,
   GetObjectMaterialsRequest,
@@ -347,15 +347,15 @@ export class MruVObjectsServiceClient {
   }
 
   methodInfoFetchAll = new grpcWeb.AbstractClientBase.MethodInfo(
-    FetchAllResponse,
-    (request: FetchAllRequest) => {
+    FetchAllObjectsResponse,
+    (request: FetchAllObjectsRequest) => {
       return request.serializeBinary();
     },
-    FetchAllResponse.deserializeBinary
+    FetchAllObjectsResponse.deserializeBinary
   );
 
   fetchAll(
-    request: FetchAllRequest,
+    request: FetchAllObjectsRequest,
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +

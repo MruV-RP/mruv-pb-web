@@ -16,6 +16,8 @@ import {
   CreateSpotResponse,
   DeleteSpotRequest,
   DeleteSpotResponse,
+  FetchAllSpotsRequest,
+  FetchAllSpotsResponse,
   GetSpotRequest,
   GetSpotResponse,
   UpdateSpotRequest,
@@ -126,6 +128,25 @@ export class MruVSpotsServiceClient {
       metadata || {},
       this.methodInfoDeleteSpot,
       callback);
+  }
+
+  methodInfoFetchAll = new grpcWeb.AbstractClientBase.MethodInfo(
+    FetchAllSpotsResponse,
+    (request: FetchAllSpotsRequest) => {
+      return request.serializeBinary();
+    },
+    FetchAllSpotsResponse.deserializeBinary
+  );
+
+  fetchAll(
+    request: FetchAllSpotsRequest,
+    metadata?: grpcWeb.Metadata) {
+    return this.client_.serverStreaming(
+      this.hostname_ +
+        '/mruv.spots.MruVSpotsService/FetchAll',
+      request,
+      metadata || {},
+      this.methodInfoFetchAll);
   }
 
 }

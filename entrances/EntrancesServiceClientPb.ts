@@ -21,6 +21,8 @@ import {
   EnterResponse,
   ExitRequest,
   ExitResponse,
+  FetchAllEntrancesRequest,
+  FetchAllEntrancesResponse,
   FindNearestEntranceRequest,
   FindNearestEntranceResponse,
   GetEntranceRequest,
@@ -247,6 +249,25 @@ export class MruVEntrancesServiceClient {
       metadata || {},
       this.methodInfoExit,
       callback);
+  }
+
+  methodInfoFetchAll = new grpcWeb.AbstractClientBase.MethodInfo(
+    FetchAllEntrancesResponse,
+    (request: FetchAllEntrancesRequest) => {
+      return request.serializeBinary();
+    },
+    FetchAllEntrancesResponse.deserializeBinary
+  );
+
+  fetchAll(
+    request: FetchAllEntrancesRequest,
+    metadata?: grpcWeb.Metadata) {
+    return this.client_.serverStreaming(
+      this.hostname_ +
+        '/mruv.entrances.MruVEntrancesService/FetchAll',
+      request,
+      metadata || {},
+      this.methodInfoFetchAll);
   }
 
 }

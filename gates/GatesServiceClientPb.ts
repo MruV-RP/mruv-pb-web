@@ -20,6 +20,8 @@ import {
   CreateGateResponse,
   DeleteGateRequest,
   DeleteGateResponse,
+  FetchAllGatesRequest,
+  FetchAllGatesResponse,
   FindNearestGateRequest,
   FindNearestGateResponse,
   GetGateRequest,
@@ -248,6 +250,25 @@ export class MruVGatesServiceClient {
       metadata || {},
       this.methodInfoFindNearestGate,
       callback);
+  }
+
+  methodInfoFetchAll = new grpcWeb.AbstractClientBase.MethodInfo(
+    FetchAllGatesResponse,
+    (request: FetchAllGatesRequest) => {
+      return request.serializeBinary();
+    },
+    FetchAllGatesResponse.deserializeBinary
+  );
+
+  fetchAll(
+    request: FetchAllGatesRequest,
+    metadata?: grpcWeb.Metadata) {
+    return this.client_.serverStreaming(
+      this.hostname_ +
+        '/mruv.gates.MruVGatesService/FetchAll',
+      request,
+      metadata || {},
+      this.methodInfoFetchAll);
   }
 
 }
