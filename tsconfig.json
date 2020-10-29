@@ -64,11 +64,28 @@
     "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */
   },
   "include": [
-    "accounts",
+        "accounts",
+	"business",
 	"characters",
 	"common",
+	"devtools",
+	"economy",
+	"elevators",
+	"entrances",
+	"estates",
+	"gates",
 	"groups",
+	"houses",
 	"items",
-	"server"
+	"jobs",
+	"objects",
+	"offers",
+	"organizations",
+	"plots",
+	"punishments",
+	"server",
+	"spots",
+	"texturestudio",
+	"vehicles"
   ]
 }
