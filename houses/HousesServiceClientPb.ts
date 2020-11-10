@@ -7,29 +7,24 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 
+/* eslint-disable */
+// @ts-nocheck
+
+
 import * as grpcWeb from 'grpc-web';
 
-import * as google_api_annotations_pb from '../google/api/annotations_pb';
+import * as houses_houses_pb from '../houses/houses_pb';
 
-import {
-  CreateHouseRequest,
-  CreateHouseResponse,
-  DeleteHouseRequest,
-  DeleteHouseResponse,
-  GetHouseRequest,
-  GetHouseResponse,
-  UpdateHouseRequest,
-  UpdateHouseResponse} from './houses_pb';
 
 export class MruVHousesServiceClient {
   client_: grpcWeb.AbstractClientBase;
   hostname_: string;
   credentials_: null | { [index: string]: string; };
-  options_: null | { [index: string]: string; };
+  options_: null | { [index: string]: any; };
 
   constructor (hostname: string,
                credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: string; }) {
+               options?: null | { [index: string]: any; }) {
     if (!options) options = {};
     if (!credentials) credentials = {};
     options['format'] = 'text';
@@ -41,91 +36,163 @@ export class MruVHousesServiceClient {
   }
 
   methodInfoCreateHouse = new grpcWeb.AbstractClientBase.MethodInfo(
-    CreateHouseResponse,
-    (request: CreateHouseRequest) => {
+    houses_houses_pb.CreateHouseResponse,
+    (request: houses_houses_pb.CreateHouseRequest) => {
       return request.serializeBinary();
     },
-    CreateHouseResponse.deserializeBinary
+    houses_houses_pb.CreateHouseResponse.deserializeBinary
   );
 
   createHouse(
-    request: CreateHouseRequest,
+    request: houses_houses_pb.CreateHouseRequest,
+    metadata: grpcWeb.Metadata | null): Promise<houses_houses_pb.CreateHouseResponse>;
+
+  createHouse(
+    request: houses_houses_pb.CreateHouseRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: CreateHouseResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.houses.MruVHousesService/CreateHouse',
-      request,
-      metadata || {},
-      this.methodInfoCreateHouse,
-      callback);
+               response: houses_houses_pb.CreateHouseResponse) => void): grpcWeb.ClientReadableStream<houses_houses_pb.CreateHouseResponse>;
+
+  createHouse(
+    request: houses_houses_pb.CreateHouseRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: houses_houses_pb.CreateHouseResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.houses.MruVHousesService/CreateHouse',
+        request,
+        metadata || {},
+        this.methodInfoCreateHouse,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.houses.MruVHousesService/CreateHouse',
+    request,
+    metadata || {},
+    this.methodInfoCreateHouse);
   }
 
   methodInfoGetHouse = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetHouseResponse,
-    (request: GetHouseRequest) => {
+    houses_houses_pb.GetHouseResponse,
+    (request: houses_houses_pb.GetHouseRequest) => {
       return request.serializeBinary();
     },
-    GetHouseResponse.deserializeBinary
+    houses_houses_pb.GetHouseResponse.deserializeBinary
   );
 
   getHouse(
-    request: GetHouseRequest,
+    request: houses_houses_pb.GetHouseRequest,
+    metadata: grpcWeb.Metadata | null): Promise<houses_houses_pb.GetHouseResponse>;
+
+  getHouse(
+    request: houses_houses_pb.GetHouseRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetHouseResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.houses.MruVHousesService/GetHouse',
-      request,
-      metadata || {},
-      this.methodInfoGetHouse,
-      callback);
+               response: houses_houses_pb.GetHouseResponse) => void): grpcWeb.ClientReadableStream<houses_houses_pb.GetHouseResponse>;
+
+  getHouse(
+    request: houses_houses_pb.GetHouseRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: houses_houses_pb.GetHouseResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.houses.MruVHousesService/GetHouse',
+        request,
+        metadata || {},
+        this.methodInfoGetHouse,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.houses.MruVHousesService/GetHouse',
+    request,
+    metadata || {},
+    this.methodInfoGetHouse);
   }
 
   methodInfoUpdateHouse = new grpcWeb.AbstractClientBase.MethodInfo(
-    UpdateHouseResponse,
-    (request: UpdateHouseRequest) => {
+    houses_houses_pb.UpdateHouseResponse,
+    (request: houses_houses_pb.UpdateHouseRequest) => {
       return request.serializeBinary();
     },
-    UpdateHouseResponse.deserializeBinary
+    houses_houses_pb.UpdateHouseResponse.deserializeBinary
   );
 
   updateHouse(
-    request: UpdateHouseRequest,
+    request: houses_houses_pb.UpdateHouseRequest,
+    metadata: grpcWeb.Metadata | null): Promise<houses_houses_pb.UpdateHouseResponse>;
+
+  updateHouse(
+    request: houses_houses_pb.UpdateHouseRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: UpdateHouseResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.houses.MruVHousesService/UpdateHouse',
-      request,
-      metadata || {},
-      this.methodInfoUpdateHouse,
-      callback);
+               response: houses_houses_pb.UpdateHouseResponse) => void): grpcWeb.ClientReadableStream<houses_houses_pb.UpdateHouseResponse>;
+
+  updateHouse(
+    request: houses_houses_pb.UpdateHouseRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: houses_houses_pb.UpdateHouseResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.houses.MruVHousesService/UpdateHouse',
+        request,
+        metadata || {},
+        this.methodInfoUpdateHouse,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.houses.MruVHousesService/UpdateHouse',
+    request,
+    metadata || {},
+    this.methodInfoUpdateHouse);
   }
 
   methodInfoDeleteHouse = new grpcWeb.AbstractClientBase.MethodInfo(
-    DeleteHouseResponse,
-    (request: DeleteHouseRequest) => {
+    houses_houses_pb.DeleteHouseResponse,
+    (request: houses_houses_pb.DeleteHouseRequest) => {
       return request.serializeBinary();
     },
-    DeleteHouseResponse.deserializeBinary
+    houses_houses_pb.DeleteHouseResponse.deserializeBinary
   );
 
   deleteHouse(
-    request: DeleteHouseRequest,
+    request: houses_houses_pb.DeleteHouseRequest,
+    metadata: grpcWeb.Metadata | null): Promise<houses_houses_pb.DeleteHouseResponse>;
+
+  deleteHouse(
+    request: houses_houses_pb.DeleteHouseRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: DeleteHouseResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.houses.MruVHousesService/DeleteHouse',
-      request,
-      metadata || {},
-      this.methodInfoDeleteHouse,
-      callback);
+               response: houses_houses_pb.DeleteHouseResponse) => void): grpcWeb.ClientReadableStream<houses_houses_pb.DeleteHouseResponse>;
+
+  deleteHouse(
+    request: houses_houses_pb.DeleteHouseRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: houses_houses_pb.DeleteHouseResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.houses.MruVHousesService/DeleteHouse',
+        request,
+        metadata || {},
+        this.methodInfoDeleteHouse,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.houses.MruVHousesService/DeleteHouse',
+    request,
+    metadata || {},
+    this.methodInfoDeleteHouse);
   }
 
 }

@@ -1,37 +1,38 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 
+
 export class BanMessage extends jspb.Message {
   getPlayer(): number;
-  setPlayer(value: number): void;
+  setPlayer(value: number): BanMessage;
 
   getCharacter(): number;
-  setCharacter(value: number): void;
+  setCharacter(value: number): BanMessage;
 
   getIp(): string;
-  setIp(value: string): void;
+  setIp(value: string): BanMessage;
 
   getExpirationDate(): number;
-  setExpirationDate(value: number): void;
+  setExpirationDate(value: number): BanMessage;
 
   getReason(): string;
-  setReason(value: string): void;
+  setReason(value: string): BanMessage;
 
   getAdmin(): number;
-  setAdmin(value: number): void;
+  setAdmin(value: number): BanMessage;
 
   getBanDate(): number;
-  setBanDate(value: number): void;
+  setBanDate(value: number): BanMessage;
 
   getActive(): boolean;
-  setActive(value: boolean): void;
+  setActive(value: boolean): BanMessage;
 
   getUnbanDate(): number;
-  setUnbanDate(value: number): void;
+  setUnbanDate(value: number): BanMessage;
 
   getUnbanAdmin(): number;
-  setUnbanAdmin(value: number): void;
+  setUnbanAdmin(value: number): BanMessage;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): BanMessage.AsObject;
@@ -58,31 +59,31 @@ export namespace BanMessage {
 
 export class WarnMessage extends jspb.Message {
   getPlayer(): number;
-  setPlayer(value: number): void;
+  setPlayer(value: number): WarnMessage;
 
   getCharacter(): number;
-  setCharacter(value: number): void;
+  setCharacter(value: number): WarnMessage;
 
   getExpirationDate(): number;
-  setExpirationDate(value: number): void;
+  setExpirationDate(value: number): WarnMessage;
 
   getReason(): string;
-  setReason(value: string): void;
+  setReason(value: string): WarnMessage;
 
   getAdmin(): number;
-  setAdmin(value: number): void;
+  setAdmin(value: number): WarnMessage;
 
   getWarnDate(): number;
-  setWarnDate(value: number): void;
+  setWarnDate(value: number): WarnMessage;
 
   getActive(): boolean;
-  setActive(value: boolean): void;
+  setActive(value: boolean): WarnMessage;
 
   getUnwarnDate(): number;
-  setUnwarnDate(value: number): void;
+  setUnwarnDate(value: number): WarnMessage;
 
   getUnwarnAdmin(): number;
-  setUnwarnAdmin(value: number): void;
+  setUnwarnAdmin(value: number): WarnMessage;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): WarnMessage.AsObject;
@@ -108,28 +109,28 @@ export namespace WarnMessage {
 
 export class BlockMessage extends jspb.Message {
   getPlayer(): number;
-  setPlayer(value: number): void;
+  setPlayer(value: number): BlockMessage;
 
   getCharacter(): number;
-  setCharacter(value: number): void;
+  setCharacter(value: number): BlockMessage;
 
   getReason(): string;
-  setReason(value: string): void;
+  setReason(value: string): BlockMessage;
 
   getAdmin(): number;
-  setAdmin(value: number): void;
+  setAdmin(value: number): BlockMessage;
 
   getBlockDate(): number;
-  setBlockDate(value: number): void;
+  setBlockDate(value: number): BlockMessage;
 
   getActive(): boolean;
-  setActive(value: boolean): void;
+  setActive(value: boolean): BlockMessage;
 
   getUnblockDate(): number;
-  setUnblockDate(value: number): void;
+  setUnblockDate(value: number): BlockMessage;
 
   getUnblockAdmin(): number;
-  setUnblockAdmin(value: number): void;
+  setUnblockAdmin(value: number): BlockMessage;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): BlockMessage.AsObject;
@@ -154,22 +155,22 @@ export namespace BlockMessage {
 
 export class AdminJailMessage extends jspb.Message {
   getPlayer(): number;
-  setPlayer(value: number): void;
+  setPlayer(value: number): AdminJailMessage;
 
   getCharacter(): number;
-  setCharacter(value: number): void;
+  setCharacter(value: number): AdminJailMessage;
 
   getReason(): string;
-  setReason(value: string): void;
+  setReason(value: string): AdminJailMessage;
 
   getAdmin(): number;
-  setAdmin(value: number): void;
+  setAdmin(value: number): AdminJailMessage;
 
   getAjDate(): number;
-  setAjDate(value: number): void;
+  setAjDate(value: number): AdminJailMessage;
 
   getJailTime(): number;
-  setJailTime(value: number): void;
+  setJailTime(value: number): AdminJailMessage;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AdminJailMessage.AsObject;
@@ -192,10 +193,10 @@ export namespace AdminJailMessage {
 
 export class UnBanMessage extends jspb.Message {
   getPlayer(): number;
-  setPlayer(value: number): void;
+  setPlayer(value: number): UnBanMessage;
 
   getBanId(): number;
-  setBanId(value: number): void;
+  setBanId(value: number): UnBanMessage;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UnBanMessage.AsObject;
@@ -214,10 +215,10 @@ export namespace UnBanMessage {
 
 export class UnBlockMessage extends jspb.Message {
   getPlayer(): number;
-  setPlayer(value: number): void;
+  setPlayer(value: number): UnBlockMessage;
 
   getBlockId(): number;
-  setBlockId(value: number): void;
+  setBlockId(value: number): UnBlockMessage;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UnBlockMessage.AsObject;
@@ -236,10 +237,10 @@ export namespace UnBlockMessage {
 
 export class UnWarnMessage extends jspb.Message {
   getPlayer(): number;
-  setPlayer(value: number): void;
+  setPlayer(value: number): UnWarnMessage;
 
   getWarnId(): number;
-  setWarnId(value: number): void;
+  setWarnId(value: number): UnWarnMessage;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UnWarnMessage.AsObject;
@@ -258,10 +259,10 @@ export namespace UnWarnMessage {
 
 export class UnAdminJailMessage extends jspb.Message {
   getPlayer(): number;
-  setPlayer(value: number): void;
+  setPlayer(value: number): UnAdminJailMessage;
 
   getCharacter(): number;
-  setCharacter(value: number): void;
+  setCharacter(value: number): UnAdminJailMessage;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UnAdminJailMessage.AsObject;
@@ -280,22 +281,22 @@ export namespace UnAdminJailMessage {
 
 export class BanRequest extends jspb.Message {
   getPlayer(): number;
-  setPlayer(value: number): void;
+  setPlayer(value: number): BanRequest;
 
   getCharacter(): number;
-  setCharacter(value: number): void;
+  setCharacter(value: number): BanRequest;
 
   getIp(): string;
-  setIp(value: string): void;
+  setIp(value: string): BanRequest;
 
   getTime(): number;
-  setTime(value: number): void;
+  setTime(value: number): BanRequest;
 
   getReason(): string;
-  setReason(value: string): void;
+  setReason(value: string): BanRequest;
 
   getAdmin(): number;
-  setAdmin(value: number): void;
+  setAdmin(value: number): BanRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): BanRequest.AsObject;
@@ -318,7 +319,7 @@ export namespace BanRequest {
 
 export class BanResponse extends jspb.Message {
   getBanId(): number;
-  setBanId(value: number): void;
+  setBanId(value: number): BanResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): BanResponse.AsObject;
@@ -336,13 +337,13 @@ export namespace BanResponse {
 
 export class BlockRequest extends jspb.Message {
   getCharacter(): number;
-  setCharacter(value: number): void;
+  setCharacter(value: number): BlockRequest;
 
   getReason(): string;
-  setReason(value: string): void;
+  setReason(value: string): BlockRequest;
 
   getAdmin(): number;
-  setAdmin(value: number): void;
+  setAdmin(value: number): BlockRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): BlockRequest.AsObject;
@@ -362,7 +363,7 @@ export namespace BlockRequest {
 
 export class BlockResponse extends jspb.Message {
   getBlockId(): number;
-  setBlockId(value: number): void;
+  setBlockId(value: number): BlockResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): BlockResponse.AsObject;
@@ -380,19 +381,19 @@ export namespace BlockResponse {
 
 export class WarnRequest extends jspb.Message {
   getPlayer(): number;
-  setPlayer(value: number): void;
+  setPlayer(value: number): WarnRequest;
 
   getCharacter(): number;
-  setCharacter(value: number): void;
+  setCharacter(value: number): WarnRequest;
 
   getTime(): number;
-  setTime(value: number): void;
+  setTime(value: number): WarnRequest;
 
   getReason(): string;
-  setReason(value: string): void;
+  setReason(value: string): WarnRequest;
 
   getAdmin(): number;
-  setAdmin(value: number): void;
+  setAdmin(value: number): WarnRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): WarnRequest.AsObject;
@@ -414,7 +415,7 @@ export namespace WarnRequest {
 
 export class WarnResponse extends jspb.Message {
   getWarnId(): number;
-  setWarnId(value: number): void;
+  setWarnId(value: number): WarnResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): WarnResponse.AsObject;
@@ -432,16 +433,16 @@ export namespace WarnResponse {
 
 export class AdminJailRequest extends jspb.Message {
   getCharacter(): number;
-  setCharacter(value: number): void;
+  setCharacter(value: number): AdminJailRequest;
 
   getTime(): number;
-  setTime(value: number): void;
+  setTime(value: number): AdminJailRequest;
 
   getReason(): string;
-  setReason(value: string): void;
+  setReason(value: string): AdminJailRequest;
 
   getAdmin(): number;
-  setAdmin(value: number): void;
+  setAdmin(value: number): AdminJailRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AdminJailRequest.AsObject;
@@ -476,7 +477,7 @@ export namespace AdminJailResponse {
 
 export class MuteGlobalChatsRequest extends jspb.Message {
   getAccount(): number;
-  setAccount(value: number): void;
+  setAccount(value: number): MuteGlobalChatsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): MuteGlobalChatsRequest.AsObject;
@@ -508,10 +509,10 @@ export namespace MuteGlobalChatsResponse {
 
 export class UnBanRequest extends jspb.Message {
   getBanId(): number;
-  setBanId(value: number): void;
+  setBanId(value: number): UnBanRequest;
 
   getReason(): string;
-  setReason(value: string): void;
+  setReason(value: string): UnBanRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UnBanRequest.AsObject;
@@ -544,10 +545,10 @@ export namespace UnBanResponse {
 
 export class UnBlockRequest extends jspb.Message {
   getBlockId(): number;
-  setBlockId(value: number): void;
+  setBlockId(value: number): UnBlockRequest;
 
   getReason(): string;
-  setReason(value: string): void;
+  setReason(value: string): UnBlockRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UnBlockRequest.AsObject;
@@ -580,10 +581,10 @@ export namespace UnBlockResponse {
 
 export class UnWarnRequest extends jspb.Message {
   getWarnId(): number;
-  setWarnId(value: number): void;
+  setWarnId(value: number): UnWarnRequest;
 
   getReason(): string;
-  setReason(value: string): void;
+  setReason(value: string): UnWarnRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UnWarnRequest.AsObject;
@@ -616,7 +617,7 @@ export namespace UnWarnResponse {
 
 export class UnAdminJailRequest extends jspb.Message {
   getCharacter(): number;
-  setCharacter(value: number): void;
+  setCharacter(value: number): UnAdminJailRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UnAdminJailRequest.AsObject;
@@ -648,7 +649,7 @@ export namespace UnAdminJailResponse {
 
 export class UnMuteGlobalChatsRequest extends jspb.Message {
   getAccount(): number;
-  setAccount(value: number): void;
+  setAccount(value: number): UnMuteGlobalChatsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UnMuteGlobalChatsRequest.AsObject;
@@ -680,10 +681,10 @@ export namespace UnMuteGlobalChatsResponse {
 
 export class GetPlayerBansRequest extends jspb.Message {
   getPlayer(): number;
-  setPlayer(value: number): void;
+  setPlayer(value: number): GetPlayerBansRequest;
 
   getIp(): string;
-  setIp(value: string): void;
+  setIp(value: string): GetPlayerBansRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetPlayerBansRequest.AsObject;
@@ -702,8 +703,8 @@ export namespace GetPlayerBansRequest {
 
 export class GetPlayerBansResponse extends jspb.Message {
   getBansList(): Array<BanMessage>;
-  setBansList(value: Array<BanMessage>): void;
-  clearBansList(): void;
+  setBansList(value: Array<BanMessage>): GetPlayerBansResponse;
+  clearBansList(): GetPlayerBansResponse;
   addBans(value?: BanMessage, index?: number): BanMessage;
 
   serializeBinary(): Uint8Array;
@@ -722,7 +723,7 @@ export namespace GetPlayerBansResponse {
 
 export class GetPlayerWarnsRequest extends jspb.Message {
   getPlayer(): number;
-  setPlayer(value: number): void;
+  setPlayer(value: number): GetPlayerWarnsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetPlayerWarnsRequest.AsObject;
@@ -740,8 +741,8 @@ export namespace GetPlayerWarnsRequest {
 
 export class GetPlayerWarnsResponse extends jspb.Message {
   getWarnsList(): Array<WarnMessage>;
-  setWarnsList(value: Array<WarnMessage>): void;
-  clearWarnsList(): void;
+  setWarnsList(value: Array<WarnMessage>): GetPlayerWarnsResponse;
+  clearWarnsList(): GetPlayerWarnsResponse;
   addWarns(value?: WarnMessage, index?: number): WarnMessage;
 
   serializeBinary(): Uint8Array;
@@ -760,7 +761,7 @@ export namespace GetPlayerWarnsResponse {
 
 export class GetPlayerAdminJailRequest extends jspb.Message {
   getCharacter(): number;
-  setCharacter(value: number): void;
+  setCharacter(value: number): GetPlayerAdminJailRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetPlayerAdminJailRequest.AsObject;
@@ -778,16 +779,16 @@ export namespace GetPlayerAdminJailRequest {
 
 export class GetPlayerAdminJailResponse extends jspb.Message {
   getJailTime(): number;
-  setJailTime(value: number): void;
+  setJailTime(value: number): GetPlayerAdminJailResponse;
 
   getReason(): string;
-  setReason(value: string): void;
+  setReason(value: string): GetPlayerAdminJailResponse;
 
   getAdmin(): number;
-  setAdmin(value: number): void;
+  setAdmin(value: number): GetPlayerAdminJailResponse;
 
   getDate(): number;
-  setDate(value: number): void;
+  setDate(value: number): GetPlayerAdminJailResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetPlayerAdminJailResponse.AsObject;
@@ -808,7 +809,7 @@ export namespace GetPlayerAdminJailResponse {
 
 export class GetBanRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): GetBanRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetBanRequest.AsObject;
@@ -826,7 +827,7 @@ export namespace GetBanRequest {
 
 export class GetWarnRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): GetWarnRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetWarnRequest.AsObject;
@@ -844,7 +845,7 @@ export namespace GetWarnRequest {
 
 export class GetBlockRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): GetBlockRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetBlockRequest.AsObject;
@@ -862,10 +863,10 @@ export namespace GetBlockRequest {
 
 export class IsPlayerBannedRequest extends jspb.Message {
   getPlayer(): number;
-  setPlayer(value: number): void;
+  setPlayer(value: number): IsPlayerBannedRequest;
 
   getIp(): string;
-  setIp(value: string): void;
+  setIp(value: string): IsPlayerBannedRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): IsPlayerBannedRequest.AsObject;
@@ -884,10 +885,10 @@ export namespace IsPlayerBannedRequest {
 
 export class IsPlayerBannedResponse extends jspb.Message {
   getBanned(): boolean;
-  setBanned(value: boolean): void;
+  setBanned(value: boolean): IsPlayerBannedResponse;
 
   getBanId(): number;
-  setBanId(value: number): void;
+  setBanId(value: number): IsPlayerBannedResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): IsPlayerBannedResponse.AsObject;
@@ -906,7 +907,7 @@ export namespace IsPlayerBannedResponse {
 
 export class IsCharacterBlockedRequest extends jspb.Message {
   getCharacter(): number;
-  setCharacter(value: number): void;
+  setCharacter(value: number): IsCharacterBlockedRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): IsCharacterBlockedRequest.AsObject;
@@ -924,10 +925,10 @@ export namespace IsCharacterBlockedRequest {
 
 export class IsCharacterBlockedResponse extends jspb.Message {
   getBlocked(): boolean;
-  setBlocked(value: boolean): void;
+  setBlocked(value: boolean): IsCharacterBlockedResponse;
 
   getBlockId(): number;
-  setBlockId(value: number): void;
+  setBlockId(value: number): IsCharacterBlockedResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): IsCharacterBlockedResponse.AsObject;
@@ -946,7 +947,7 @@ export namespace IsCharacterBlockedResponse {
 
 export class IsCharacterJailedRequest extends jspb.Message {
   getCharacter(): number;
-  setCharacter(value: number): void;
+  setCharacter(value: number): IsCharacterJailedRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): IsCharacterJailedRequest.AsObject;
@@ -964,10 +965,10 @@ export namespace IsCharacterJailedRequest {
 
 export class IsCharacterJailedResponse extends jspb.Message {
   getJailed(): boolean;
-  setJailed(value: boolean): void;
+  setJailed(value: boolean): IsCharacterJailedResponse;
 
   getJailTime(): number;
-  setJailTime(value: number): void;
+  setJailTime(value: number): IsCharacterJailedResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): IsCharacterJailedResponse.AsObject;
@@ -1140,10 +1141,10 @@ export namespace WatchPlayerPunishmentsRequest {
 
 export class WatchPlayerPunishmentsResponse extends jspb.Message {
   getType(): PunishmentType;
-  setType(value: PunishmentType): void;
+  setType(value: PunishmentType): WatchPlayerPunishmentsResponse;
 
   getPunishmentId(): number;
-  setPunishmentId(value: number): void;
+  setPunishmentId(value: number): WatchPlayerPunishmentsResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): WatchPlayerPunishmentsResponse.AsObject;
@@ -1176,16 +1177,16 @@ export namespace WatchPunishmentsRequest {
 
 export class WatchPunishmentsResponse extends jspb.Message {
   getType(): PunishmentType;
-  setType(value: PunishmentType): void;
+  setType(value: PunishmentType): WatchPunishmentsResponse;
 
   getPunishmentId(): number;
-  setPunishmentId(value: number): void;
+  setPunishmentId(value: number): WatchPunishmentsResponse;
 
   getPlayer(): number;
-  setPlayer(value: number): void;
+  setPlayer(value: number): WatchPunishmentsResponse;
 
   getCharacter(): number;
-  setCharacter(value: number): void;
+  setCharacter(value: number): WatchPunishmentsResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): WatchPunishmentsResponse.AsObject;

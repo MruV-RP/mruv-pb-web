@@ -1,20 +1,21 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 import * as common_health_pb from '../common/health_pb';
 import * as devtools_devtools_model_pb from '../devtools/devtools_model_pb';
 
+
 export class GetPositionsRequest extends jspb.Message {
   getLimit(): number;
-  setLimit(value: number): void;
+  setLimit(value: number): GetPositionsRequest;
 
   getCategory(): string;
-  setCategory(value: string): void;
+  setCategory(value: string): GetPositionsRequest;
 
   getAuthor(): devtools_devtools_model_pb.Player | undefined;
-  setAuthor(value?: devtools_devtools_model_pb.Player): void;
+  setAuthor(value?: devtools_devtools_model_pb.Player): GetPositionsRequest;
   hasAuthor(): boolean;
-  clearAuthor(): void;
+  clearAuthor(): GetPositionsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetPositionsRequest.AsObject;
@@ -34,8 +35,8 @@ export namespace GetPositionsRequest {
 
 export class GetPositionsResponse extends jspb.Message {
   getPositionsList(): Array<GetPositionsResponse.Row>;
-  setPositionsList(value: Array<GetPositionsResponse.Row>): void;
-  clearPositionsList(): void;
+  setPositionsList(value: Array<GetPositionsResponse.Row>): GetPositionsResponse;
+  clearPositionsList(): GetPositionsResponse;
   addPositions(value?: GetPositionsResponse.Row, index?: number): GetPositionsResponse.Row;
 
   serializeBinary(): Uint8Array;
@@ -53,14 +54,14 @@ export namespace GetPositionsResponse {
 
   export class Row extends jspb.Message {
     getPosition(): devtools_devtools_model_pb.Position | undefined;
-    setPosition(value?: devtools_devtools_model_pb.Position): void;
+    setPosition(value?: devtools_devtools_model_pb.Position): Row;
     hasPosition(): boolean;
-    clearPosition(): void;
+    clearPosition(): Row;
 
     getAuthor(): devtools_devtools_model_pb.Player | undefined;
-    setAuthor(value?: devtools_devtools_model_pb.Player): void;
+    setAuthor(value?: devtools_devtools_model_pb.Player): Row;
     hasAuthor(): boolean;
-    clearAuthor(): void;
+    clearAuthor(): Row;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Row.AsObject;
@@ -81,9 +82,9 @@ export namespace GetPositionsResponse {
 
 export class SavePositionRequest extends jspb.Message {
   getPosition(): devtools_devtools_model_pb.Position | undefined;
-  setPosition(value?: devtools_devtools_model_pb.Position): void;
+  setPosition(value?: devtools_devtools_model_pb.Position): SavePositionRequest;
   hasPosition(): boolean;
-  clearPosition(): void;
+  clearPosition(): SavePositionRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SavePositionRequest.AsObject;
@@ -101,7 +102,7 @@ export namespace SavePositionRequest {
 
 export class SavePositionResponse extends jspb.Message {
   getSuccess(): boolean;
-  setSuccess(value: boolean): void;
+  setSuccess(value: boolean): SavePositionResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SavePositionResponse.AsObject;
@@ -119,9 +120,9 @@ export namespace SavePositionResponse {
 
 export class DeletePositionRequest extends jspb.Message {
   getPosition(): devtools_devtools_model_pb.Position | undefined;
-  setPosition(value?: devtools_devtools_model_pb.Position): void;
+  setPosition(value?: devtools_devtools_model_pb.Position): DeletePositionRequest;
   hasPosition(): boolean;
-  clearPosition(): void;
+  clearPosition(): DeletePositionRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeletePositionRequest.AsObject;
@@ -139,7 +140,7 @@ export namespace DeletePositionRequest {
 
 export class DeletePositionResponse extends jspb.Message {
   getSuccess(): boolean;
-  setSuccess(value: boolean): void;
+  setSuccess(value: boolean): DeletePositionResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeletePositionResponse.AsObject;
@@ -157,13 +158,13 @@ export namespace DeletePositionResponse {
 
 export class GetOutfitsRequest extends jspb.Message {
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): GetOutfitsRequest;
 
   getCategory(): string;
-  setCategory(value: string): void;
+  setCategory(value: string): GetOutfitsRequest;
 
   getAuthor(): string;
-  setAuthor(value: string): void;
+  setAuthor(value: string): GetOutfitsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetOutfitsRequest.AsObject;
@@ -183,8 +184,8 @@ export namespace GetOutfitsRequest {
 
 export class GetOutfitsResponse extends jspb.Message {
   getOutfitsList(): Array<GetOutfitsResponse.Row>;
-  setOutfitsList(value: Array<GetOutfitsResponse.Row>): void;
-  clearOutfitsList(): void;
+  setOutfitsList(value: Array<GetOutfitsResponse.Row>): GetOutfitsResponse;
+  clearOutfitsList(): GetOutfitsResponse;
   addOutfits(value?: GetOutfitsResponse.Row, index?: number): GetOutfitsResponse.Row;
 
   serializeBinary(): Uint8Array;
@@ -202,14 +203,14 @@ export namespace GetOutfitsResponse {
 
   export class Row extends jspb.Message {
     getOutfit(): devtools_devtools_model_pb.Outfit | undefined;
-    setOutfit(value?: devtools_devtools_model_pb.Outfit): void;
+    setOutfit(value?: devtools_devtools_model_pb.Outfit): Row;
     hasOutfit(): boolean;
-    clearOutfit(): void;
+    clearOutfit(): Row;
 
     getAuthor(): devtools_devtools_model_pb.Player | undefined;
-    setAuthor(value?: devtools_devtools_model_pb.Player): void;
+    setAuthor(value?: devtools_devtools_model_pb.Player): Row;
     hasAuthor(): boolean;
-    clearAuthor(): void;
+    clearAuthor(): Row;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Row.AsObject;
@@ -230,9 +231,9 @@ export namespace GetOutfitsResponse {
 
 export class SaveOutfitRequest extends jspb.Message {
   getOutfit(): devtools_devtools_model_pb.Outfit | undefined;
-  setOutfit(value?: devtools_devtools_model_pb.Outfit): void;
+  setOutfit(value?: devtools_devtools_model_pb.Outfit): SaveOutfitRequest;
   hasOutfit(): boolean;
-  clearOutfit(): void;
+  clearOutfit(): SaveOutfitRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SaveOutfitRequest.AsObject;
@@ -250,7 +251,7 @@ export namespace SaveOutfitRequest {
 
 export class SaveOutfitResponse extends jspb.Message {
   getSuccess(): boolean;
-  setSuccess(value: boolean): void;
+  setSuccess(value: boolean): SaveOutfitResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SaveOutfitResponse.AsObject;
@@ -268,13 +269,13 @@ export namespace SaveOutfitResponse {
 
 export class GetAnimationsRequest extends jspb.Message {
   getLimit(): number;
-  setLimit(value: number): void;
+  setLimit(value: number): GetAnimationsRequest;
 
   getDict(): string;
-  setDict(value: string): void;
+  setDict(value: string): GetAnimationsRequest;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): GetAnimationsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetAnimationsRequest.AsObject;
@@ -294,8 +295,8 @@ export namespace GetAnimationsRequest {
 
 export class GetAnimationsResponse extends jspb.Message {
   getAnimationsList(): Array<GetAnimationsResponse.Row>;
-  setAnimationsList(value: Array<GetAnimationsResponse.Row>): void;
-  clearAnimationsList(): void;
+  setAnimationsList(value: Array<GetAnimationsResponse.Row>): GetAnimationsResponse;
+  clearAnimationsList(): GetAnimationsResponse;
   addAnimations(value?: GetAnimationsResponse.Row, index?: number): GetAnimationsResponse.Row;
 
   serializeBinary(): Uint8Array;
@@ -313,14 +314,14 @@ export namespace GetAnimationsResponse {
 
   export class Row extends jspb.Message {
     getAnimation(): devtools_devtools_model_pb.Animation | undefined;
-    setAnimation(value?: devtools_devtools_model_pb.Animation): void;
+    setAnimation(value?: devtools_devtools_model_pb.Animation): Row;
     hasAnimation(): boolean;
-    clearAnimation(): void;
+    clearAnimation(): Row;
 
     getAuthor(): devtools_devtools_model_pb.Player | undefined;
-    setAuthor(value?: devtools_devtools_model_pb.Player): void;
+    setAuthor(value?: devtools_devtools_model_pb.Player): Row;
     hasAuthor(): boolean;
-    clearAuthor(): void;
+    clearAuthor(): Row;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Row.AsObject;
@@ -341,10 +342,10 @@ export namespace GetAnimationsResponse {
 
 export class GetAnimationRequest extends jspb.Message {
   getDict(): string;
-  setDict(value: string): void;
+  setDict(value: string): GetAnimationRequest;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): GetAnimationRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetAnimationRequest.AsObject;
@@ -363,14 +364,14 @@ export namespace GetAnimationRequest {
 
 export class GetAnimationResponse extends jspb.Message {
   getAnimation(): devtools_devtools_model_pb.Animation | undefined;
-  setAnimation(value?: devtools_devtools_model_pb.Animation): void;
+  setAnimation(value?: devtools_devtools_model_pb.Animation): GetAnimationResponse;
   hasAnimation(): boolean;
-  clearAnimation(): void;
+  clearAnimation(): GetAnimationResponse;
 
   getAuthor(): devtools_devtools_model_pb.Player | undefined;
-  setAuthor(value?: devtools_devtools_model_pb.Player): void;
+  setAuthor(value?: devtools_devtools_model_pb.Player): GetAnimationResponse;
   hasAuthor(): boolean;
-  clearAuthor(): void;
+  clearAuthor(): GetAnimationResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetAnimationResponse.AsObject;
@@ -389,9 +390,9 @@ export namespace GetAnimationResponse {
 
 export class SaveAnimationRequest extends jspb.Message {
   getAnimation(): devtools_devtools_model_pb.Animation | undefined;
-  setAnimation(value?: devtools_devtools_model_pb.Animation): void;
+  setAnimation(value?: devtools_devtools_model_pb.Animation): SaveAnimationRequest;
   hasAnimation(): boolean;
-  clearAnimation(): void;
+  clearAnimation(): SaveAnimationRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SaveAnimationRequest.AsObject;
@@ -409,7 +410,7 @@ export namespace SaveAnimationRequest {
 
 export class SaveAnimationResponse extends jspb.Message {
   getSuccess(): boolean;
-  setSuccess(value: boolean): void;
+  setSuccess(value: boolean): SaveAnimationResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SaveAnimationResponse.AsObject;

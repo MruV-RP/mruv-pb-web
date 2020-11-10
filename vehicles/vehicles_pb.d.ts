@@ -1,6 +1,7 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
+
 
 export class CreateVehicleRequest extends jspb.Message {
   serializeBinary(): Uint8Array;
@@ -32,7 +33,7 @@ export namespace CreateVehicleResponse {
 
 export class GetVehicleRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): GetVehicleRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetVehicleRequest.AsObject;
@@ -64,7 +65,7 @@ export namespace GetVehicleResponse {
 
 export class UpdateVehicleRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): UpdateVehicleRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UpdateVehicleRequest.AsObject;
@@ -96,7 +97,7 @@ export namespace UpdateVehicleResponse {
 
 export class DeleteVehicleRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): DeleteVehicleRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteVehicleRequest.AsObject;

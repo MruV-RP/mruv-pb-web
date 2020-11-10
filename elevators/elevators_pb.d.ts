@@ -1,6 +1,7 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
+
 
 export class CreateElevatorRequest extends jspb.Message {
   serializeBinary(): Uint8Array;
@@ -18,7 +19,7 @@ export namespace CreateElevatorRequest {
 
 export class CreateElevatorResponse extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): CreateElevatorResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateElevatorResponse.AsObject;
@@ -36,7 +37,7 @@ export namespace CreateElevatorResponse {
 
 export class GetElevatorRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): GetElevatorRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetElevatorRequest.AsObject;
@@ -68,7 +69,7 @@ export namespace GetElevatorResponse {
 
 export class UpdateElevatorRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): UpdateElevatorRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UpdateElevatorRequest.AsObject;
@@ -100,7 +101,7 @@ export namespace UpdateElevatorResponse {
 
 export class DeleteElevatorRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): DeleteElevatorRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteElevatorRequest.AsObject;
@@ -132,7 +133,7 @@ export namespace DeleteElevatorResponse {
 
 export class GetElevatorFloorsRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): GetElevatorFloorsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetElevatorFloorsRequest.AsObject;

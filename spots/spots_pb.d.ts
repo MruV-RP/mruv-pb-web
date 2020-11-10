@@ -1,34 +1,35 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 
+
 export class Spot extends jspb.Message {
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): Spot;
 
   getMessage(): string;
-  setMessage(value: string): void;
+  setMessage(value: string): Spot;
 
   getIcon(): number;
-  setIcon(value: number): void;
+  setIcon(value: number): Spot;
 
   getMarker(): number;
-  setMarker(value: number): void;
+  setMarker(value: number): Spot;
 
   getX(): number;
-  setX(value: number): void;
+  setX(value: number): Spot;
 
   getY(): number;
-  setY(value: number): void;
+  setY(value: number): Spot;
 
   getZ(): number;
-  setZ(value: number): void;
+  setZ(value: number): Spot;
 
   getVw(): number;
-  setVw(value: number): void;
+  setVw(value: number): Spot;
 
   getInt(): number;
-  setInt(value: number): void;
+  setInt(value: number): Spot;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Spot.AsObject;
@@ -54,9 +55,9 @@ export namespace Spot {
 
 export class CreateSpotRequest extends jspb.Message {
   getSpot(): Spot | undefined;
-  setSpot(value?: Spot): void;
+  setSpot(value?: Spot): CreateSpotRequest;
   hasSpot(): boolean;
-  clearSpot(): void;
+  clearSpot(): CreateSpotRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateSpotRequest.AsObject;
@@ -74,7 +75,7 @@ export namespace CreateSpotRequest {
 
 export class CreateSpotResponse extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): CreateSpotResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateSpotResponse.AsObject;
@@ -92,7 +93,7 @@ export namespace CreateSpotResponse {
 
 export class GetSpotRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): GetSpotRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetSpotRequest.AsObject;
@@ -110,9 +111,9 @@ export namespace GetSpotRequest {
 
 export class GetSpotResponse extends jspb.Message {
   getSpot(): Spot | undefined;
-  setSpot(value?: Spot): void;
+  setSpot(value?: Spot): GetSpotResponse;
   hasSpot(): boolean;
-  clearSpot(): void;
+  clearSpot(): GetSpotResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetSpotResponse.AsObject;
@@ -130,12 +131,12 @@ export namespace GetSpotResponse {
 
 export class UpdateSpotRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): UpdateSpotRequest;
 
   getSpot(): Spot | undefined;
-  setSpot(value?: Spot): void;
+  setSpot(value?: Spot): UpdateSpotRequest;
   hasSpot(): boolean;
-  clearSpot(): void;
+  clearSpot(): UpdateSpotRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UpdateSpotRequest.AsObject;
@@ -168,7 +169,7 @@ export namespace UpdateSpotResponse {
 
 export class DeleteSpotRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): DeleteSpotRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteSpotRequest.AsObject;
@@ -200,7 +201,7 @@ export namespace DeleteSpotResponse {
 
 export class FetchAllSpotsRequest extends jspb.Message {
   getChunkSize(): number;
-  setChunkSize(value: number): void;
+  setChunkSize(value: number): FetchAllSpotsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FetchAllSpotsRequest.AsObject;
@@ -218,7 +219,7 @@ export namespace FetchAllSpotsRequest {
 
 export class FetchAllSpotsResponse extends jspb.Message {
   getSpotsMap(): jspb.Map<number, Spot>;
-  clearSpotsMap(): void;
+  clearSpotsMap(): FetchAllSpotsResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FetchAllSpotsResponse.AsObject;

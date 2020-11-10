@@ -7,48 +7,24 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 
+/* eslint-disable */
+// @ts-nocheck
+
+
 import * as grpcWeb from 'grpc-web';
 
-import * as google_api_annotations_pb from '../google/api/annotations_pb';
-import * as objects_objects_pb from '../objects/objects_pb';
-import * as entrances_entrances_pb from '../entrances/entrances_pb';
-import * as gates_gates_pb from '../gates/gates_pb';
+import * as estates_estates_pb from '../estates/estates_pb';
 
-import {
-  AddEntranceRequest,
-  AddEntranceResponse,
-  AddGateRequest,
-  AddGateResponse,
-  CreateEstateRequest,
-  CreateEstateResponse,
-  DeleteEstateRequest,
-  DeleteEstateResponse,
-  Estate,
-  FetchAllEstatesRequest,
-  FetchAllEstatesResponse,
-  GetEstateEntrancesRequest,
-  GetEstateEntrancesResponse,
-  GetEstateGatesRequest,
-  GetEstateGatesResponse,
-  GetEstateRequest,
-  GetEstatesRequest,
-  GetEstatesResponse,
-  RemoveEntranceRequest,
-  RemoveEntranceResponse,
-  RemoveGateRequest,
-  RemoveGateResponse,
-  UpdateEstateRequest,
-  UpdateEstateResponse} from './estates_pb';
 
 export class MruVEstateServiceClient {
   client_: grpcWeb.AbstractClientBase;
   hostname_: string;
   credentials_: null | { [index: string]: string; };
-  options_: null | { [index: string]: string; };
+  options_: null | { [index: string]: any; };
 
   constructor (hostname: string,
                credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: string; }) {
+               options?: null | { [index: string]: any; }) {
     if (!options) options = {};
     if (!credentials) credentials = {};
     options['format'] = 'text';
@@ -60,257 +36,455 @@ export class MruVEstateServiceClient {
   }
 
   methodInfoCreateEstate = new grpcWeb.AbstractClientBase.MethodInfo(
-    CreateEstateResponse,
-    (request: CreateEstateRequest) => {
+    estates_estates_pb.CreateEstateResponse,
+    (request: estates_estates_pb.CreateEstateRequest) => {
       return request.serializeBinary();
     },
-    CreateEstateResponse.deserializeBinary
+    estates_estates_pb.CreateEstateResponse.deserializeBinary
   );
 
   createEstate(
-    request: CreateEstateRequest,
+    request: estates_estates_pb.CreateEstateRequest,
+    metadata: grpcWeb.Metadata | null): Promise<estates_estates_pb.CreateEstateResponse>;
+
+  createEstate(
+    request: estates_estates_pb.CreateEstateRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: CreateEstateResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.estates.MruVEstateService/CreateEstate',
-      request,
-      metadata || {},
-      this.methodInfoCreateEstate,
-      callback);
+               response: estates_estates_pb.CreateEstateResponse) => void): grpcWeb.ClientReadableStream<estates_estates_pb.CreateEstateResponse>;
+
+  createEstate(
+    request: estates_estates_pb.CreateEstateRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: estates_estates_pb.CreateEstateResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.estates.MruVEstateService/CreateEstate',
+        request,
+        metadata || {},
+        this.methodInfoCreateEstate,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.estates.MruVEstateService/CreateEstate',
+    request,
+    metadata || {},
+    this.methodInfoCreateEstate);
   }
 
   methodInfoGetEstate = new grpcWeb.AbstractClientBase.MethodInfo(
-    Estate,
-    (request: GetEstateRequest) => {
+    estates_estates_pb.Estate,
+    (request: estates_estates_pb.GetEstateRequest) => {
       return request.serializeBinary();
     },
-    Estate.deserializeBinary
+    estates_estates_pb.Estate.deserializeBinary
   );
 
   getEstate(
-    request: GetEstateRequest,
+    request: estates_estates_pb.GetEstateRequest,
+    metadata: grpcWeb.Metadata | null): Promise<estates_estates_pb.Estate>;
+
+  getEstate(
+    request: estates_estates_pb.GetEstateRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: Estate) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.estates.MruVEstateService/GetEstate',
-      request,
-      metadata || {},
-      this.methodInfoGetEstate,
-      callback);
+               response: estates_estates_pb.Estate) => void): grpcWeb.ClientReadableStream<estates_estates_pb.Estate>;
+
+  getEstate(
+    request: estates_estates_pb.GetEstateRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: estates_estates_pb.Estate) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.estates.MruVEstateService/GetEstate',
+        request,
+        metadata || {},
+        this.methodInfoGetEstate,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.estates.MruVEstateService/GetEstate',
+    request,
+    metadata || {},
+    this.methodInfoGetEstate);
   }
 
   methodInfoUpdateEstate = new grpcWeb.AbstractClientBase.MethodInfo(
-    UpdateEstateResponse,
-    (request: UpdateEstateRequest) => {
+    estates_estates_pb.UpdateEstateResponse,
+    (request: estates_estates_pb.UpdateEstateRequest) => {
       return request.serializeBinary();
     },
-    UpdateEstateResponse.deserializeBinary
+    estates_estates_pb.UpdateEstateResponse.deserializeBinary
   );
 
   updateEstate(
-    request: UpdateEstateRequest,
+    request: estates_estates_pb.UpdateEstateRequest,
+    metadata: grpcWeb.Metadata | null): Promise<estates_estates_pb.UpdateEstateResponse>;
+
+  updateEstate(
+    request: estates_estates_pb.UpdateEstateRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: UpdateEstateResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.estates.MruVEstateService/UpdateEstate',
-      request,
-      metadata || {},
-      this.methodInfoUpdateEstate,
-      callback);
+               response: estates_estates_pb.UpdateEstateResponse) => void): grpcWeb.ClientReadableStream<estates_estates_pb.UpdateEstateResponse>;
+
+  updateEstate(
+    request: estates_estates_pb.UpdateEstateRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: estates_estates_pb.UpdateEstateResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.estates.MruVEstateService/UpdateEstate',
+        request,
+        metadata || {},
+        this.methodInfoUpdateEstate,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.estates.MruVEstateService/UpdateEstate',
+    request,
+    metadata || {},
+    this.methodInfoUpdateEstate);
   }
 
   methodInfoDeleteEstate = new grpcWeb.AbstractClientBase.MethodInfo(
-    DeleteEstateResponse,
-    (request: DeleteEstateRequest) => {
+    estates_estates_pb.DeleteEstateResponse,
+    (request: estates_estates_pb.DeleteEstateRequest) => {
       return request.serializeBinary();
     },
-    DeleteEstateResponse.deserializeBinary
+    estates_estates_pb.DeleteEstateResponse.deserializeBinary
   );
 
   deleteEstate(
-    request: DeleteEstateRequest,
+    request: estates_estates_pb.DeleteEstateRequest,
+    metadata: grpcWeb.Metadata | null): Promise<estates_estates_pb.DeleteEstateResponse>;
+
+  deleteEstate(
+    request: estates_estates_pb.DeleteEstateRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: DeleteEstateResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.estates.MruVEstateService/DeleteEstate',
-      request,
-      metadata || {},
-      this.methodInfoDeleteEstate,
-      callback);
+               response: estates_estates_pb.DeleteEstateResponse) => void): grpcWeb.ClientReadableStream<estates_estates_pb.DeleteEstateResponse>;
+
+  deleteEstate(
+    request: estates_estates_pb.DeleteEstateRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: estates_estates_pb.DeleteEstateResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.estates.MruVEstateService/DeleteEstate',
+        request,
+        metadata || {},
+        this.methodInfoDeleteEstate,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.estates.MruVEstateService/DeleteEstate',
+    request,
+    metadata || {},
+    this.methodInfoDeleteEstate);
   }
 
   methodInfoGetEstates = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetEstatesResponse,
-    (request: GetEstatesRequest) => {
+    estates_estates_pb.GetEstatesResponse,
+    (request: estates_estates_pb.GetEstatesRequest) => {
       return request.serializeBinary();
     },
-    GetEstatesResponse.deserializeBinary
+    estates_estates_pb.GetEstatesResponse.deserializeBinary
   );
 
   getEstates(
-    request: GetEstatesRequest,
+    request: estates_estates_pb.GetEstatesRequest,
+    metadata: grpcWeb.Metadata | null): Promise<estates_estates_pb.GetEstatesResponse>;
+
+  getEstates(
+    request: estates_estates_pb.GetEstatesRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetEstatesResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.estates.MruVEstateService/GetEstates',
-      request,
-      metadata || {},
-      this.methodInfoGetEstates,
-      callback);
+               response: estates_estates_pb.GetEstatesResponse) => void): grpcWeb.ClientReadableStream<estates_estates_pb.GetEstatesResponse>;
+
+  getEstates(
+    request: estates_estates_pb.GetEstatesRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: estates_estates_pb.GetEstatesResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.estates.MruVEstateService/GetEstates',
+        request,
+        metadata || {},
+        this.methodInfoGetEstates,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.estates.MruVEstateService/GetEstates',
+    request,
+    metadata || {},
+    this.methodInfoGetEstates);
   }
 
   methodInfoAddGate = new grpcWeb.AbstractClientBase.MethodInfo(
-    AddGateResponse,
-    (request: AddGateRequest) => {
+    estates_estates_pb.AddGateResponse,
+    (request: estates_estates_pb.AddGateRequest) => {
       return request.serializeBinary();
     },
-    AddGateResponse.deserializeBinary
+    estates_estates_pb.AddGateResponse.deserializeBinary
   );
 
   addGate(
-    request: AddGateRequest,
+    request: estates_estates_pb.AddGateRequest,
+    metadata: grpcWeb.Metadata | null): Promise<estates_estates_pb.AddGateResponse>;
+
+  addGate(
+    request: estates_estates_pb.AddGateRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: AddGateResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.estates.MruVEstateService/AddGate',
-      request,
-      metadata || {},
-      this.methodInfoAddGate,
-      callback);
+               response: estates_estates_pb.AddGateResponse) => void): grpcWeb.ClientReadableStream<estates_estates_pb.AddGateResponse>;
+
+  addGate(
+    request: estates_estates_pb.AddGateRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: estates_estates_pb.AddGateResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.estates.MruVEstateService/AddGate',
+        request,
+        metadata || {},
+        this.methodInfoAddGate,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.estates.MruVEstateService/AddGate',
+    request,
+    metadata || {},
+    this.methodInfoAddGate);
   }
 
   methodInfoRemoveGate = new grpcWeb.AbstractClientBase.MethodInfo(
-    RemoveGateResponse,
-    (request: RemoveGateRequest) => {
+    estates_estates_pb.RemoveGateResponse,
+    (request: estates_estates_pb.RemoveGateRequest) => {
       return request.serializeBinary();
     },
-    RemoveGateResponse.deserializeBinary
+    estates_estates_pb.RemoveGateResponse.deserializeBinary
   );
 
   removeGate(
-    request: RemoveGateRequest,
+    request: estates_estates_pb.RemoveGateRequest,
+    metadata: grpcWeb.Metadata | null): Promise<estates_estates_pb.RemoveGateResponse>;
+
+  removeGate(
+    request: estates_estates_pb.RemoveGateRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: RemoveGateResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.estates.MruVEstateService/RemoveGate',
-      request,
-      metadata || {},
-      this.methodInfoRemoveGate,
-      callback);
+               response: estates_estates_pb.RemoveGateResponse) => void): grpcWeb.ClientReadableStream<estates_estates_pb.RemoveGateResponse>;
+
+  removeGate(
+    request: estates_estates_pb.RemoveGateRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: estates_estates_pb.RemoveGateResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.estates.MruVEstateService/RemoveGate',
+        request,
+        metadata || {},
+        this.methodInfoRemoveGate,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.estates.MruVEstateService/RemoveGate',
+    request,
+    metadata || {},
+    this.methodInfoRemoveGate);
   }
 
   methodInfoGetEstateGates = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetEstateGatesResponse,
-    (request: GetEstateGatesRequest) => {
+    estates_estates_pb.GetEstateGatesResponse,
+    (request: estates_estates_pb.GetEstateGatesRequest) => {
       return request.serializeBinary();
     },
-    GetEstateGatesResponse.deserializeBinary
+    estates_estates_pb.GetEstateGatesResponse.deserializeBinary
   );
 
   getEstateGates(
-    request: GetEstateGatesRequest,
+    request: estates_estates_pb.GetEstateGatesRequest,
+    metadata: grpcWeb.Metadata | null): Promise<estates_estates_pb.GetEstateGatesResponse>;
+
+  getEstateGates(
+    request: estates_estates_pb.GetEstateGatesRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetEstateGatesResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.estates.MruVEstateService/GetEstateGates',
-      request,
-      metadata || {},
-      this.methodInfoGetEstateGates,
-      callback);
+               response: estates_estates_pb.GetEstateGatesResponse) => void): grpcWeb.ClientReadableStream<estates_estates_pb.GetEstateGatesResponse>;
+
+  getEstateGates(
+    request: estates_estates_pb.GetEstateGatesRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: estates_estates_pb.GetEstateGatesResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.estates.MruVEstateService/GetEstateGates',
+        request,
+        metadata || {},
+        this.methodInfoGetEstateGates,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.estates.MruVEstateService/GetEstateGates',
+    request,
+    metadata || {},
+    this.methodInfoGetEstateGates);
   }
 
   methodInfoAddEntrance = new grpcWeb.AbstractClientBase.MethodInfo(
-    AddEntranceResponse,
-    (request: AddEntranceRequest) => {
+    estates_estates_pb.AddEntranceResponse,
+    (request: estates_estates_pb.AddEntranceRequest) => {
       return request.serializeBinary();
     },
-    AddEntranceResponse.deserializeBinary
+    estates_estates_pb.AddEntranceResponse.deserializeBinary
   );
 
   addEntrance(
-    request: AddEntranceRequest,
+    request: estates_estates_pb.AddEntranceRequest,
+    metadata: grpcWeb.Metadata | null): Promise<estates_estates_pb.AddEntranceResponse>;
+
+  addEntrance(
+    request: estates_estates_pb.AddEntranceRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: AddEntranceResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.estates.MruVEstateService/AddEntrance',
-      request,
-      metadata || {},
-      this.methodInfoAddEntrance,
-      callback);
+               response: estates_estates_pb.AddEntranceResponse) => void): grpcWeb.ClientReadableStream<estates_estates_pb.AddEntranceResponse>;
+
+  addEntrance(
+    request: estates_estates_pb.AddEntranceRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: estates_estates_pb.AddEntranceResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.estates.MruVEstateService/AddEntrance',
+        request,
+        metadata || {},
+        this.methodInfoAddEntrance,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.estates.MruVEstateService/AddEntrance',
+    request,
+    metadata || {},
+    this.methodInfoAddEntrance);
   }
 
   methodInfoRemoveEntrance = new grpcWeb.AbstractClientBase.MethodInfo(
-    RemoveEntranceResponse,
-    (request: RemoveEntranceRequest) => {
+    estates_estates_pb.RemoveEntranceResponse,
+    (request: estates_estates_pb.RemoveEntranceRequest) => {
       return request.serializeBinary();
     },
-    RemoveEntranceResponse.deserializeBinary
+    estates_estates_pb.RemoveEntranceResponse.deserializeBinary
   );
 
   removeEntrance(
-    request: RemoveEntranceRequest,
+    request: estates_estates_pb.RemoveEntranceRequest,
+    metadata: grpcWeb.Metadata | null): Promise<estates_estates_pb.RemoveEntranceResponse>;
+
+  removeEntrance(
+    request: estates_estates_pb.RemoveEntranceRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: RemoveEntranceResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.estates.MruVEstateService/RemoveEntrance',
-      request,
-      metadata || {},
-      this.methodInfoRemoveEntrance,
-      callback);
+               response: estates_estates_pb.RemoveEntranceResponse) => void): grpcWeb.ClientReadableStream<estates_estates_pb.RemoveEntranceResponse>;
+
+  removeEntrance(
+    request: estates_estates_pb.RemoveEntranceRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: estates_estates_pb.RemoveEntranceResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.estates.MruVEstateService/RemoveEntrance',
+        request,
+        metadata || {},
+        this.methodInfoRemoveEntrance,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.estates.MruVEstateService/RemoveEntrance',
+    request,
+    metadata || {},
+    this.methodInfoRemoveEntrance);
   }
 
   methodInfoGetEstateEntrances = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetEstateEntrancesResponse,
-    (request: GetEstateEntrancesRequest) => {
+    estates_estates_pb.GetEstateEntrancesResponse,
+    (request: estates_estates_pb.GetEstateEntrancesRequest) => {
       return request.serializeBinary();
     },
-    GetEstateEntrancesResponse.deserializeBinary
+    estates_estates_pb.GetEstateEntrancesResponse.deserializeBinary
   );
 
   getEstateEntrances(
-    request: GetEstateEntrancesRequest,
+    request: estates_estates_pb.GetEstateEntrancesRequest,
+    metadata: grpcWeb.Metadata | null): Promise<estates_estates_pb.GetEstateEntrancesResponse>;
+
+  getEstateEntrances(
+    request: estates_estates_pb.GetEstateEntrancesRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetEstateEntrancesResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.estates.MruVEstateService/GetEstateEntrances',
-      request,
-      metadata || {},
-      this.methodInfoGetEstateEntrances,
-      callback);
+               response: estates_estates_pb.GetEstateEntrancesResponse) => void): grpcWeb.ClientReadableStream<estates_estates_pb.GetEstateEntrancesResponse>;
+
+  getEstateEntrances(
+    request: estates_estates_pb.GetEstateEntrancesRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: estates_estates_pb.GetEstateEntrancesResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.estates.MruVEstateService/GetEstateEntrances',
+        request,
+        metadata || {},
+        this.methodInfoGetEstateEntrances,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.estates.MruVEstateService/GetEstateEntrances',
+    request,
+    metadata || {},
+    this.methodInfoGetEstateEntrances);
   }
 
   methodInfoFetchAll = new grpcWeb.AbstractClientBase.MethodInfo(
-    FetchAllEstatesResponse,
-    (request: FetchAllEstatesRequest) => {
+    estates_estates_pb.FetchAllEstatesResponse,
+    (request: estates_estates_pb.FetchAllEstatesRequest) => {
       return request.serializeBinary();
     },
-    FetchAllEstatesResponse.deserializeBinary
+    estates_estates_pb.FetchAllEstatesResponse.deserializeBinary
   );
 
   fetchAll(
-    request: FetchAllEstatesRequest,
+    request: estates_estates_pb.FetchAllEstatesRequest,
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +

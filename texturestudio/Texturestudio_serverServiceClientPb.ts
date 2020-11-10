@@ -7,37 +7,24 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 
+/* eslint-disable */
+// @ts-nocheck
+
+
 import * as grpcWeb from 'grpc-web';
 
-import * as google_api_annotations_pb from '../google/api/annotations_pb';
+import * as texturestudio_texturestudio_server_pb from '../texturestudio/texturestudio_server_pb';
 
-import {
-  GetProjectRequest,
-  GetProjectResponse,
-  GetProjectsRequest,
-  GetProjectsResponse,
-  RestartServerRequest,
-  RestartServerResponse,
-  ServerStatusRequest,
-  ServerStatusResponse,
-  StartServerRequest,
-  StartServerResponse,
-  StopServerRequest,
-  StopServerResponse,
-  SubscribeToProjectsChangesRequest,
-  SubscribeToProjectsChangesResponse,
-  UploadProjectRequest,
-  UploadProjectResponse} from './texturestudio_server_pb';
 
 export class TextureStudioServerServiceClient {
   client_: grpcWeb.AbstractClientBase;
   hostname_: string;
   credentials_: null | { [index: string]: string; };
-  options_: null | { [index: string]: string; };
+  options_: null | { [index: string]: any; };
 
   constructor (hostname: string,
                credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: string; }) {
+               options?: null | { [index: string]: any; }) {
     if (!options) options = {};
     if (!credentials) credentials = {};
     options['format'] = 'text';
@@ -49,169 +36,295 @@ export class TextureStudioServerServiceClient {
   }
 
   methodInfoStartServer = new grpcWeb.AbstractClientBase.MethodInfo(
-    StartServerResponse,
-    (request: StartServerRequest) => {
+    texturestudio_texturestudio_server_pb.StartServerResponse,
+    (request: texturestudio_texturestudio_server_pb.StartServerRequest) => {
       return request.serializeBinary();
     },
-    StartServerResponse.deserializeBinary
+    texturestudio_texturestudio_server_pb.StartServerResponse.deserializeBinary
   );
 
   startServer(
-    request: StartServerRequest,
+    request: texturestudio_texturestudio_server_pb.StartServerRequest,
+    metadata: grpcWeb.Metadata | null): Promise<texturestudio_texturestudio_server_pb.StartServerResponse>;
+
+  startServer(
+    request: texturestudio_texturestudio_server_pb.StartServerRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: StartServerResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/texture_studio.TextureStudioServerService/StartServer',
-      request,
-      metadata || {},
-      this.methodInfoStartServer,
-      callback);
+               response: texturestudio_texturestudio_server_pb.StartServerResponse) => void): grpcWeb.ClientReadableStream<texturestudio_texturestudio_server_pb.StartServerResponse>;
+
+  startServer(
+    request: texturestudio_texturestudio_server_pb.StartServerRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: texturestudio_texturestudio_server_pb.StartServerResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/texture_studio.TextureStudioServerService/StartServer',
+        request,
+        metadata || {},
+        this.methodInfoStartServer,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/texture_studio.TextureStudioServerService/StartServer',
+    request,
+    metadata || {},
+    this.methodInfoStartServer);
   }
 
   methodInfoStopServer = new grpcWeb.AbstractClientBase.MethodInfo(
-    StopServerResponse,
-    (request: StopServerRequest) => {
+    texturestudio_texturestudio_server_pb.StopServerResponse,
+    (request: texturestudio_texturestudio_server_pb.StopServerRequest) => {
       return request.serializeBinary();
     },
-    StopServerResponse.deserializeBinary
+    texturestudio_texturestudio_server_pb.StopServerResponse.deserializeBinary
   );
 
   stopServer(
-    request: StopServerRequest,
+    request: texturestudio_texturestudio_server_pb.StopServerRequest,
+    metadata: grpcWeb.Metadata | null): Promise<texturestudio_texturestudio_server_pb.StopServerResponse>;
+
+  stopServer(
+    request: texturestudio_texturestudio_server_pb.StopServerRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: StopServerResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/texture_studio.TextureStudioServerService/StopServer',
-      request,
-      metadata || {},
-      this.methodInfoStopServer,
-      callback);
+               response: texturestudio_texturestudio_server_pb.StopServerResponse) => void): grpcWeb.ClientReadableStream<texturestudio_texturestudio_server_pb.StopServerResponse>;
+
+  stopServer(
+    request: texturestudio_texturestudio_server_pb.StopServerRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: texturestudio_texturestudio_server_pb.StopServerResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/texture_studio.TextureStudioServerService/StopServer',
+        request,
+        metadata || {},
+        this.methodInfoStopServer,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/texture_studio.TextureStudioServerService/StopServer',
+    request,
+    metadata || {},
+    this.methodInfoStopServer);
   }
 
   methodInfoRestartServer = new grpcWeb.AbstractClientBase.MethodInfo(
-    RestartServerResponse,
-    (request: RestartServerRequest) => {
+    texturestudio_texturestudio_server_pb.RestartServerResponse,
+    (request: texturestudio_texturestudio_server_pb.RestartServerRequest) => {
       return request.serializeBinary();
     },
-    RestartServerResponse.deserializeBinary
+    texturestudio_texturestudio_server_pb.RestartServerResponse.deserializeBinary
   );
 
   restartServer(
-    request: RestartServerRequest,
+    request: texturestudio_texturestudio_server_pb.RestartServerRequest,
+    metadata: grpcWeb.Metadata | null): Promise<texturestudio_texturestudio_server_pb.RestartServerResponse>;
+
+  restartServer(
+    request: texturestudio_texturestudio_server_pb.RestartServerRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: RestartServerResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/texture_studio.TextureStudioServerService/RestartServer',
-      request,
-      metadata || {},
-      this.methodInfoRestartServer,
-      callback);
+               response: texturestudio_texturestudio_server_pb.RestartServerResponse) => void): grpcWeb.ClientReadableStream<texturestudio_texturestudio_server_pb.RestartServerResponse>;
+
+  restartServer(
+    request: texturestudio_texturestudio_server_pb.RestartServerRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: texturestudio_texturestudio_server_pb.RestartServerResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/texture_studio.TextureStudioServerService/RestartServer',
+        request,
+        metadata || {},
+        this.methodInfoRestartServer,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/texture_studio.TextureStudioServerService/RestartServer',
+    request,
+    metadata || {},
+    this.methodInfoRestartServer);
   }
 
   methodInfoServerStatus = new grpcWeb.AbstractClientBase.MethodInfo(
-    ServerStatusResponse,
-    (request: ServerStatusRequest) => {
+    texturestudio_texturestudio_server_pb.ServerStatusResponse,
+    (request: texturestudio_texturestudio_server_pb.ServerStatusRequest) => {
       return request.serializeBinary();
     },
-    ServerStatusResponse.deserializeBinary
+    texturestudio_texturestudio_server_pb.ServerStatusResponse.deserializeBinary
   );
 
   serverStatus(
-    request: ServerStatusRequest,
+    request: texturestudio_texturestudio_server_pb.ServerStatusRequest,
+    metadata: grpcWeb.Metadata | null): Promise<texturestudio_texturestudio_server_pb.ServerStatusResponse>;
+
+  serverStatus(
+    request: texturestudio_texturestudio_server_pb.ServerStatusRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: ServerStatusResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/texture_studio.TextureStudioServerService/ServerStatus',
-      request,
-      metadata || {},
-      this.methodInfoServerStatus,
-      callback);
+               response: texturestudio_texturestudio_server_pb.ServerStatusResponse) => void): grpcWeb.ClientReadableStream<texturestudio_texturestudio_server_pb.ServerStatusResponse>;
+
+  serverStatus(
+    request: texturestudio_texturestudio_server_pb.ServerStatusRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: texturestudio_texturestudio_server_pb.ServerStatusResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/texture_studio.TextureStudioServerService/ServerStatus',
+        request,
+        metadata || {},
+        this.methodInfoServerStatus,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/texture_studio.TextureStudioServerService/ServerStatus',
+    request,
+    metadata || {},
+    this.methodInfoServerStatus);
   }
 
   methodInfoUploadProject = new grpcWeb.AbstractClientBase.MethodInfo(
-    UploadProjectResponse,
-    (request: UploadProjectRequest) => {
+    texturestudio_texturestudio_server_pb.UploadProjectResponse,
+    (request: texturestudio_texturestudio_server_pb.UploadProjectRequest) => {
       return request.serializeBinary();
     },
-    UploadProjectResponse.deserializeBinary
+    texturestudio_texturestudio_server_pb.UploadProjectResponse.deserializeBinary
   );
 
   uploadProject(
-    request: UploadProjectRequest,
+    request: texturestudio_texturestudio_server_pb.UploadProjectRequest,
+    metadata: grpcWeb.Metadata | null): Promise<texturestudio_texturestudio_server_pb.UploadProjectResponse>;
+
+  uploadProject(
+    request: texturestudio_texturestudio_server_pb.UploadProjectRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: UploadProjectResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/texture_studio.TextureStudioServerService/UploadProject',
-      request,
-      metadata || {},
-      this.methodInfoUploadProject,
-      callback);
+               response: texturestudio_texturestudio_server_pb.UploadProjectResponse) => void): grpcWeb.ClientReadableStream<texturestudio_texturestudio_server_pb.UploadProjectResponse>;
+
+  uploadProject(
+    request: texturestudio_texturestudio_server_pb.UploadProjectRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: texturestudio_texturestudio_server_pb.UploadProjectResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/texture_studio.TextureStudioServerService/UploadProject',
+        request,
+        metadata || {},
+        this.methodInfoUploadProject,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/texture_studio.TextureStudioServerService/UploadProject',
+    request,
+    metadata || {},
+    this.methodInfoUploadProject);
   }
 
   methodInfoGetProject = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetProjectResponse,
-    (request: GetProjectRequest) => {
+    texturestudio_texturestudio_server_pb.GetProjectResponse,
+    (request: texturestudio_texturestudio_server_pb.GetProjectRequest) => {
       return request.serializeBinary();
     },
-    GetProjectResponse.deserializeBinary
+    texturestudio_texturestudio_server_pb.GetProjectResponse.deserializeBinary
   );
 
   getProject(
-    request: GetProjectRequest,
+    request: texturestudio_texturestudio_server_pb.GetProjectRequest,
+    metadata: grpcWeb.Metadata | null): Promise<texturestudio_texturestudio_server_pb.GetProjectResponse>;
+
+  getProject(
+    request: texturestudio_texturestudio_server_pb.GetProjectRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetProjectResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/texture_studio.TextureStudioServerService/GetProject',
-      request,
-      metadata || {},
-      this.methodInfoGetProject,
-      callback);
+               response: texturestudio_texturestudio_server_pb.GetProjectResponse) => void): grpcWeb.ClientReadableStream<texturestudio_texturestudio_server_pb.GetProjectResponse>;
+
+  getProject(
+    request: texturestudio_texturestudio_server_pb.GetProjectRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: texturestudio_texturestudio_server_pb.GetProjectResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/texture_studio.TextureStudioServerService/GetProject',
+        request,
+        metadata || {},
+        this.methodInfoGetProject,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/texture_studio.TextureStudioServerService/GetProject',
+    request,
+    metadata || {},
+    this.methodInfoGetProject);
   }
 
   methodInfoGetProjects = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetProjectsResponse,
-    (request: GetProjectsRequest) => {
+    texturestudio_texturestudio_server_pb.GetProjectsResponse,
+    (request: texturestudio_texturestudio_server_pb.GetProjectsRequest) => {
       return request.serializeBinary();
     },
-    GetProjectsResponse.deserializeBinary
+    texturestudio_texturestudio_server_pb.GetProjectsResponse.deserializeBinary
   );
 
   getProjects(
-    request: GetProjectsRequest,
+    request: texturestudio_texturestudio_server_pb.GetProjectsRequest,
+    metadata: grpcWeb.Metadata | null): Promise<texturestudio_texturestudio_server_pb.GetProjectsResponse>;
+
+  getProjects(
+    request: texturestudio_texturestudio_server_pb.GetProjectsRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetProjectsResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/texture_studio.TextureStudioServerService/GetProjects',
-      request,
-      metadata || {},
-      this.methodInfoGetProjects,
-      callback);
+               response: texturestudio_texturestudio_server_pb.GetProjectsResponse) => void): grpcWeb.ClientReadableStream<texturestudio_texturestudio_server_pb.GetProjectsResponse>;
+
+  getProjects(
+    request: texturestudio_texturestudio_server_pb.GetProjectsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: texturestudio_texturestudio_server_pb.GetProjectsResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/texture_studio.TextureStudioServerService/GetProjects',
+        request,
+        metadata || {},
+        this.methodInfoGetProjects,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/texture_studio.TextureStudioServerService/GetProjects',
+    request,
+    metadata || {},
+    this.methodInfoGetProjects);
   }
 
   methodInfoSubscribeToProjectsChanges = new grpcWeb.AbstractClientBase.MethodInfo(
-    SubscribeToProjectsChangesResponse,
-    (request: SubscribeToProjectsChangesRequest) => {
+    texturestudio_texturestudio_server_pb.SubscribeToProjectsChangesResponse,
+    (request: texturestudio_texturestudio_server_pb.SubscribeToProjectsChangesRequest) => {
       return request.serializeBinary();
     },
-    SubscribeToProjectsChangesResponse.deserializeBinary
+    texturestudio_texturestudio_server_pb.SubscribeToProjectsChangesResponse.deserializeBinary
   );
 
   subscribeToProjectsChanges(
-    request: SubscribeToProjectsChangesRequest,
+    request: texturestudio_texturestudio_server_pb.SubscribeToProjectsChangesRequest,
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +

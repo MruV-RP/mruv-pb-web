@@ -1,4 +1,6 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
+
+
 
 export class ServiceStatusRequest extends jspb.Message {
   serializeBinary(): Uint8Array;
@@ -16,7 +18,7 @@ export namespace ServiceStatusRequest {
 
 export class ServiceStatusResponse extends jspb.Message {
   getStatus(): string;
-  setStatus(value: string): void;
+  setStatus(value: string): ServiceStatusResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ServiceStatusResponse.AsObject;
@@ -48,16 +50,16 @@ export namespace VersionRequest {
 
 export class VersionResponse extends jspb.Message {
   getVersion(): string;
-  setVersion(value: string): void;
+  setVersion(value: string): VersionResponse;
 
   getBuildDate(): string;
-  setBuildDate(value: string): void;
+  setBuildDate(value: string): VersionResponse;
 
   getCommit(): string;
-  setCommit(value: string): void;
+  setCommit(value: string): VersionResponse;
 
   getOsArch(): string;
-  setOsArch(value: string): void;
+  setOsArch(value: string): VersionResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): VersionResponse.AsObject;

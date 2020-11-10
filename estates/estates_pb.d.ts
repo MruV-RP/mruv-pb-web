@@ -1,37 +1,38 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 import * as objects_objects_pb from '../objects/objects_pb';
 import * as entrances_entrances_pb from '../entrances/entrances_pb';
 import * as gates_gates_pb from '../gates/gates_pb';
 
+
 export class Estate extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): Estate;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): Estate;
 
   getDescription(): string;
-  setDescription(value: string): void;
+  setDescription(value: string): Estate;
 
   getEntrancesList(): Array<number>;
-  setEntrancesList(value: Array<number>): void;
-  clearEntrancesList(): void;
-  addEntrances(value: number, index?: number): void;
+  setEntrancesList(value: Array<number>): Estate;
+  clearEntrancesList(): Estate;
+  addEntrances(value: number, index?: number): Estate;
 
   getGatesList(): Array<number>;
-  setGatesList(value: Array<number>): void;
-  clearGatesList(): void;
-  addGates(value: number, index?: number): void;
+  setGatesList(value: Array<number>): Estate;
+  clearGatesList(): Estate;
+  addGates(value: number, index?: number): Estate;
 
   getRoomsList(): Array<number>;
-  setRoomsList(value: Array<number>): void;
-  clearRoomsList(): void;
-  addRooms(value: number, index?: number): void;
+  setRoomsList(value: Array<number>): Estate;
+  clearRoomsList(): Estate;
+  addRooms(value: number, index?: number): Estate;
 
   getProductId(): number;
-  setProductId(value: number): void;
+  setProductId(value: number): Estate;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Estate.AsObject;
@@ -55,25 +56,25 @@ export namespace Estate {
 
 export class FullEstate extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): FullEstate;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): FullEstate;
 
   getDescription(): string;
-  setDescription(value: string): void;
+  setDescription(value: string): FullEstate;
 
   getObjectsMap(): jspb.Map<number, objects_objects_pb.Object>;
-  clearObjectsMap(): void;
+  clearObjectsMap(): FullEstate;
 
   getRemovedBuildingsMap(): jspb.Map<number, objects_objects_pb.RemovedBuilding>;
-  clearRemovedBuildingsMap(): void;
+  clearRemovedBuildingsMap(): FullEstate;
 
   getEntrancesMap(): jspb.Map<number, entrances_entrances_pb.Entrance>;
-  clearEntrancesMap(): void;
+  clearEntrancesMap(): FullEstate;
 
   getGatesMap(): jspb.Map<number, gates_gates_pb.Gate>;
-  clearGatesMap(): void;
+  clearGatesMap(): FullEstate;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FullEstate.AsObject;
@@ -97,10 +98,10 @@ export namespace FullEstate {
 
 export class CreateEstateRequest extends jspb.Message {
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): CreateEstateRequest;
 
   getDescription(): string;
-  setDescription(value: string): void;
+  setDescription(value: string): CreateEstateRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateEstateRequest.AsObject;
@@ -119,7 +120,7 @@ export namespace CreateEstateRequest {
 
 export class CreateEstateResponse extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): CreateEstateResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateEstateResponse.AsObject;
@@ -137,7 +138,7 @@ export namespace CreateEstateResponse {
 
 export class GetEstateRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): GetEstateRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetEstateRequest.AsObject;
@@ -155,13 +156,13 @@ export namespace GetEstateRequest {
 
 export class UpdateEstateRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): UpdateEstateRequest;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): UpdateEstateRequest;
 
   getDescription(): string;
-  setDescription(value: string): void;
+  setDescription(value: string): UpdateEstateRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UpdateEstateRequest.AsObject;
@@ -195,7 +196,7 @@ export namespace UpdateEstateResponse {
 
 export class DeleteEstateRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): DeleteEstateRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteEstateRequest.AsObject;
@@ -227,10 +228,10 @@ export namespace DeleteEstateResponse {
 
 export class GetEstatesRequest extends jspb.Message {
   getFrom(): number;
-  setFrom(value: number): void;
+  setFrom(value: number): GetEstatesRequest;
 
   getLimit(): number;
-  setLimit(value: number): void;
+  setLimit(value: number): GetEstatesRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetEstatesRequest.AsObject;
@@ -249,8 +250,8 @@ export namespace GetEstatesRequest {
 
 export class GetEstatesResponse extends jspb.Message {
   getEstatesList(): Array<Estate>;
-  setEstatesList(value: Array<Estate>): void;
-  clearEstatesList(): void;
+  setEstatesList(value: Array<Estate>): GetEstatesResponse;
+  clearEstatesList(): GetEstatesResponse;
   addEstates(value?: Estate, index?: number): Estate;
 
   serializeBinary(): Uint8Array;
@@ -269,10 +270,10 @@ export namespace GetEstatesResponse {
 
 export class AddGateRequest extends jspb.Message {
   getEstateId(): number;
-  setEstateId(value: number): void;
+  setEstateId(value: number): AddGateRequest;
 
   getGateId(): number;
-  setGateId(value: number): void;
+  setGateId(value: number): AddGateRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AddGateRequest.AsObject;
@@ -305,10 +306,10 @@ export namespace AddGateResponse {
 
 export class RemoveGateRequest extends jspb.Message {
   getEstateId(): number;
-  setEstateId(value: number): void;
+  setEstateId(value: number): RemoveGateRequest;
 
   getGateId(): number;
-  setGateId(value: number): void;
+  setGateId(value: number): RemoveGateRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): RemoveGateRequest.AsObject;
@@ -341,7 +342,7 @@ export namespace RemoveGateResponse {
 
 export class GetEstateGatesRequest extends jspb.Message {
   getEstateId(): number;
-  setEstateId(value: number): void;
+  setEstateId(value: number): GetEstateGatesRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetEstateGatesRequest.AsObject;
@@ -359,8 +360,8 @@ export namespace GetEstateGatesRequest {
 
 export class GetEstateGatesResponse extends jspb.Message {
   getGatesList(): Array<gates_gates_pb.Gate>;
-  setGatesList(value: Array<gates_gates_pb.Gate>): void;
-  clearGatesList(): void;
+  setGatesList(value: Array<gates_gates_pb.Gate>): GetEstateGatesResponse;
+  clearGatesList(): GetEstateGatesResponse;
   addGates(value?: gates_gates_pb.Gate, index?: number): gates_gates_pb.Gate;
 
   serializeBinary(): Uint8Array;
@@ -379,10 +380,10 @@ export namespace GetEstateGatesResponse {
 
 export class AddEntranceRequest extends jspb.Message {
   getEstateId(): number;
-  setEstateId(value: number): void;
+  setEstateId(value: number): AddEntranceRequest;
 
   getEntranceId(): number;
-  setEntranceId(value: number): void;
+  setEntranceId(value: number): AddEntranceRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AddEntranceRequest.AsObject;
@@ -415,10 +416,10 @@ export namespace AddEntranceResponse {
 
 export class RemoveEntranceRequest extends jspb.Message {
   getEstateId(): number;
-  setEstateId(value: number): void;
+  setEstateId(value: number): RemoveEntranceRequest;
 
   getEntranceId(): number;
-  setEntranceId(value: number): void;
+  setEntranceId(value: number): RemoveEntranceRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): RemoveEntranceRequest.AsObject;
@@ -451,7 +452,7 @@ export namespace RemoveEntranceResponse {
 
 export class GetEstateEntrancesRequest extends jspb.Message {
   getEstateId(): number;
-  setEstateId(value: number): void;
+  setEstateId(value: number): GetEstateEntrancesRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetEstateEntrancesRequest.AsObject;
@@ -469,8 +470,8 @@ export namespace GetEstateEntrancesRequest {
 
 export class GetEstateEntrancesResponse extends jspb.Message {
   getEntrancesList(): Array<entrances_entrances_pb.Entrance>;
-  setEntrancesList(value: Array<entrances_entrances_pb.Entrance>): void;
-  clearEntrancesList(): void;
+  setEntrancesList(value: Array<entrances_entrances_pb.Entrance>): GetEstateEntrancesResponse;
+  clearEntrancesList(): GetEstateEntrancesResponse;
   addEntrances(value?: entrances_entrances_pb.Entrance, index?: number): entrances_entrances_pb.Entrance;
 
   serializeBinary(): Uint8Array;
@@ -489,7 +490,7 @@ export namespace GetEstateEntrancesResponse {
 
 export class FetchAllEstatesRequest extends jspb.Message {
   getChunkSize(): number;
-  setChunkSize(value: number): void;
+  setChunkSize(value: number): FetchAllEstatesRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FetchAllEstatesRequest.AsObject;
@@ -507,8 +508,8 @@ export namespace FetchAllEstatesRequest {
 
 export class FetchAllEstatesResponse extends jspb.Message {
   getEstatesList(): Array<FullEstate>;
-  setEstatesList(value: Array<FullEstate>): void;
-  clearEstatesList(): void;
+  setEstatesList(value: Array<FullEstate>): FetchAllEstatesResponse;
+  clearEstatesList(): FetchAllEstatesResponse;
   addEstates(value?: FullEstate, index?: number): FullEstate;
 
   serializeBinary(): Uint8Array;

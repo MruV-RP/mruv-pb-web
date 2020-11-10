@@ -1,6 +1,7 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
+
 
 export class CreateJobRequest extends jspb.Message {
   serializeBinary(): Uint8Array;
@@ -32,7 +33,7 @@ export namespace CreateJobResponse {
 
 export class GetJobRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): GetJobRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetJobRequest.AsObject;
@@ -64,7 +65,7 @@ export namespace GetJobResponse {
 
 export class UpdateJobRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): UpdateJobRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UpdateJobRequest.AsObject;
@@ -96,7 +97,7 @@ export namespace UpdateJobResponse {
 
 export class DeleteJobRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): DeleteJobRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteJobRequest.AsObject;

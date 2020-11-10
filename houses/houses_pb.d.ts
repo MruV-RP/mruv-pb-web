@@ -1,6 +1,7 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
+
 
 export class CreateHouseRequest extends jspb.Message {
   serializeBinary(): Uint8Array;
@@ -32,7 +33,7 @@ export namespace CreateHouseResponse {
 
 export class GetHouseRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): GetHouseRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetHouseRequest.AsObject;
@@ -64,7 +65,7 @@ export namespace GetHouseResponse {
 
 export class UpdateHouseRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): UpdateHouseRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UpdateHouseRequest.AsObject;
@@ -96,7 +97,7 @@ export namespace UpdateHouseResponse {
 
 export class DeleteHouseRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): DeleteHouseRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteHouseRequest.AsObject;

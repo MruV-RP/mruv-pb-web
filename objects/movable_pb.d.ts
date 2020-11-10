@@ -1,32 +1,33 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 import * as objects_objects_pb from '../objects/objects_pb';
 
+
 export class State extends jspb.Message {
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): State;
 
   getX(): number;
-  setX(value: number): void;
+  setX(value: number): State;
 
   getY(): number;
-  setY(value: number): void;
+  setY(value: number): State;
 
   getZ(): number;
-  setZ(value: number): void;
+  setZ(value: number): State;
 
   getRx(): number;
-  setRx(value: number): void;
+  setRx(value: number): State;
 
   getRy(): number;
-  setRy(value: number): void;
+  setRy(value: number): State;
 
   getRz(): number;
-  setRz(value: number): void;
+  setRz(value: number): State;
 
   getTransitionSpeed(): number;
-  setTransitionSpeed(value: number): void;
+  setTransitionSpeed(value: number): State;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): State.AsObject;
@@ -51,13 +52,13 @@ export namespace State {
 
 export class MovableObject extends jspb.Message {
   getObject(): objects_objects_pb.Object | undefined;
-  setObject(value?: objects_objects_pb.Object): void;
+  setObject(value?: objects_objects_pb.Object): MovableObject;
   hasObject(): boolean;
-  clearObject(): void;
+  clearObject(): MovableObject;
 
   getStatesList(): Array<State>;
-  setStatesList(value: Array<State>): void;
-  clearStatesList(): void;
+  setStatesList(value: Array<State>): MovableObject;
+  clearStatesList(): MovableObject;
   addStates(value?: State, index?: number): State;
 
   serializeBinary(): Uint8Array;
@@ -77,13 +78,13 @@ export namespace MovableObject {
 
 export class CreateMovableObjectRequest extends jspb.Message {
   getObject(): objects_objects_pb.Object | undefined;
-  setObject(value?: objects_objects_pb.Object): void;
+  setObject(value?: objects_objects_pb.Object): CreateMovableObjectRequest;
   hasObject(): boolean;
-  clearObject(): void;
+  clearObject(): CreateMovableObjectRequest;
 
   getStatesList(): Array<State>;
-  setStatesList(value: Array<State>): void;
-  clearStatesList(): void;
+  setStatesList(value: Array<State>): CreateMovableObjectRequest;
+  clearStatesList(): CreateMovableObjectRequest;
   addStates(value?: State, index?: number): State;
 
   serializeBinary(): Uint8Array;
@@ -103,7 +104,7 @@ export namespace CreateMovableObjectRequest {
 
 export class CreateMovableObjectResponse extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): CreateMovableObjectResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateMovableObjectResponse.AsObject;
@@ -121,7 +122,7 @@ export namespace CreateMovableObjectResponse {
 
 export class GetMovableObjectRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): GetMovableObjectRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetMovableObjectRequest.AsObject;
@@ -139,20 +140,20 @@ export namespace GetMovableObjectRequest {
 
 export class GetMovableObjectResponse extends jspb.Message {
   getObject(): objects_objects_pb.Object | undefined;
-  setObject(value?: objects_objects_pb.Object): void;
+  setObject(value?: objects_objects_pb.Object): GetMovableObjectResponse;
   hasObject(): boolean;
-  clearObject(): void;
+  clearObject(): GetMovableObjectResponse;
 
   getStatesList(): Array<State>;
-  setStatesList(value: Array<State>): void;
-  clearStatesList(): void;
+  setStatesList(value: Array<State>): GetMovableObjectResponse;
+  clearStatesList(): GetMovableObjectResponse;
   addStates(value?: State, index?: number): State;
 
   getCurrentStateId(): number;
-  setCurrentStateId(value: number): void;
+  setCurrentStateId(value: number): GetMovableObjectResponse;
 
   getCurrentStateName(): string;
-  setCurrentStateName(value: string): void;
+  setCurrentStateName(value: string): GetMovableObjectResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetMovableObjectResponse.AsObject;
@@ -173,14 +174,14 @@ export namespace GetMovableObjectResponse {
 
 export class UpdateMovableObjectRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): UpdateMovableObjectRequest;
 
   getObjectId(): number;
-  setObjectId(value: number): void;
+  setObjectId(value: number): UpdateMovableObjectRequest;
 
   getStatesList(): Array<State>;
-  setStatesList(value: Array<State>): void;
-  clearStatesList(): void;
+  setStatesList(value: Array<State>): UpdateMovableObjectRequest;
+  clearStatesList(): UpdateMovableObjectRequest;
   addStates(value?: State, index?: number): State;
 
   serializeBinary(): Uint8Array;
@@ -215,7 +216,7 @@ export namespace UpdateMovableObjectResponse {
 
 export class DeleteMovableObjectRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): DeleteMovableObjectRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteMovableObjectRequest.AsObject;
@@ -247,7 +248,7 @@ export namespace DeleteMovableObjectResponse {
 
 export class MoveObjectRequest extends jspb.Message {
   getState(): number;
-  setState(value: number): void;
+  setState(value: number): MoveObjectRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): MoveObjectRequest.AsObject;
@@ -279,7 +280,7 @@ export namespace MoveObjectResponse {
 
 export class MoveObjectNextRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): MoveObjectNextRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): MoveObjectNextRequest.AsObject;
@@ -297,10 +298,10 @@ export namespace MoveObjectNextRequest {
 
 export class MoveObjectNextResponse extends jspb.Message {
   getStateId(): number;
-  setStateId(value: number): void;
+  setStateId(value: number): MoveObjectNextResponse;
 
   getStateName(): string;
-  setStateName(value: string): void;
+  setStateName(value: string): MoveObjectNextResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): MoveObjectNextResponse.AsObject;
@@ -319,7 +320,7 @@ export namespace MoveObjectNextResponse {
 
 export class MoveObjectPreviousRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): MoveObjectPreviousRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): MoveObjectPreviousRequest.AsObject;
@@ -337,10 +338,10 @@ export namespace MoveObjectPreviousRequest {
 
 export class MoveObjectPreviousResponse extends jspb.Message {
   getStateId(): number;
-  setStateId(value: number): void;
+  setStateId(value: number): MoveObjectPreviousResponse;
 
   getStateName(): string;
-  setStateName(value: string): void;
+  setStateName(value: string): MoveObjectPreviousResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): MoveObjectPreviousResponse.AsObject;
@@ -359,7 +360,7 @@ export namespace MoveObjectPreviousResponse {
 
 export class FetchAllMovableObjectsRequest extends jspb.Message {
   getChunkSize(): number;
-  setChunkSize(value: number): void;
+  setChunkSize(value: number): FetchAllMovableObjectsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FetchAllMovableObjectsRequest.AsObject;
@@ -377,7 +378,7 @@ export namespace FetchAllMovableObjectsRequest {
 
 export class FetchAllMovableObjectsResponse extends jspb.Message {
   getMovableObjectsMap(): jspb.Map<number, MovableObject>;
-  clearMovableObjectsMap(): void;
+  clearMovableObjectsMap(): FetchAllMovableObjectsResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FetchAllMovableObjectsResponse.AsObject;

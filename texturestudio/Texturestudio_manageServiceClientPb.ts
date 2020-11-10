@@ -7,31 +7,24 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 
+/* eslint-disable */
+// @ts-nocheck
+
+
 import * as grpcWeb from 'grpc-web';
 
-import * as google_api_annotations_pb from '../google/api/annotations_pb';
+import * as texturestudio_texturestudio_manage_pb from '../texturestudio/texturestudio_manage_pb';
 
-import {
-  CreateServerRequest,
-  CreateServerResponse,
-  DeleteServerRequest,
-  DeleteServerResponse,
-  GetServersRequest,
-  GetServersResponse,
-  MyServerRequest,
-  MyServerResponse,
-  TransferOwnershipRequest,
-  TransferOwnershipResponse} from './texturestudio_manage_pb';
 
 export class TextureStudioManagerServiceClient {
   client_: grpcWeb.AbstractClientBase;
   hostname_: string;
   credentials_: null | { [index: string]: string; };
-  options_: null | { [index: string]: string; };
+  options_: null | { [index: string]: any; };
 
   constructor (hostname: string,
                credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: string; }) {
+               options?: null | { [index: string]: any; }) {
     if (!options) options = {};
     if (!credentials) credentials = {};
     options['format'] = 'text';
@@ -43,113 +36,203 @@ export class TextureStudioManagerServiceClient {
   }
 
   methodInfoCreateServer = new grpcWeb.AbstractClientBase.MethodInfo(
-    CreateServerResponse,
-    (request: CreateServerRequest) => {
+    texturestudio_texturestudio_manage_pb.CreateServerResponse,
+    (request: texturestudio_texturestudio_manage_pb.CreateServerRequest) => {
       return request.serializeBinary();
     },
-    CreateServerResponse.deserializeBinary
+    texturestudio_texturestudio_manage_pb.CreateServerResponse.deserializeBinary
   );
 
   createServer(
-    request: CreateServerRequest,
+    request: texturestudio_texturestudio_manage_pb.CreateServerRequest,
+    metadata: grpcWeb.Metadata | null): Promise<texturestudio_texturestudio_manage_pb.CreateServerResponse>;
+
+  createServer(
+    request: texturestudio_texturestudio_manage_pb.CreateServerRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: CreateServerResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/texture_studio.TextureStudioManagerService/CreateServer',
-      request,
-      metadata || {},
-      this.methodInfoCreateServer,
-      callback);
+               response: texturestudio_texturestudio_manage_pb.CreateServerResponse) => void): grpcWeb.ClientReadableStream<texturestudio_texturestudio_manage_pb.CreateServerResponse>;
+
+  createServer(
+    request: texturestudio_texturestudio_manage_pb.CreateServerRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: texturestudio_texturestudio_manage_pb.CreateServerResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/texture_studio.TextureStudioManagerService/CreateServer',
+        request,
+        metadata || {},
+        this.methodInfoCreateServer,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/texture_studio.TextureStudioManagerService/CreateServer',
+    request,
+    metadata || {},
+    this.methodInfoCreateServer);
   }
 
   methodInfoGetServers = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetServersResponse,
-    (request: GetServersRequest) => {
+    texturestudio_texturestudio_manage_pb.GetServersResponse,
+    (request: texturestudio_texturestudio_manage_pb.GetServersRequest) => {
       return request.serializeBinary();
     },
-    GetServersResponse.deserializeBinary
+    texturestudio_texturestudio_manage_pb.GetServersResponse.deserializeBinary
   );
 
   getServers(
-    request: GetServersRequest,
+    request: texturestudio_texturestudio_manage_pb.GetServersRequest,
+    metadata: grpcWeb.Metadata | null): Promise<texturestudio_texturestudio_manage_pb.GetServersResponse>;
+
+  getServers(
+    request: texturestudio_texturestudio_manage_pb.GetServersRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetServersResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/texture_studio.TextureStudioManagerService/GetServers',
-      request,
-      metadata || {},
-      this.methodInfoGetServers,
-      callback);
+               response: texturestudio_texturestudio_manage_pb.GetServersResponse) => void): grpcWeb.ClientReadableStream<texturestudio_texturestudio_manage_pb.GetServersResponse>;
+
+  getServers(
+    request: texturestudio_texturestudio_manage_pb.GetServersRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: texturestudio_texturestudio_manage_pb.GetServersResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/texture_studio.TextureStudioManagerService/GetServers',
+        request,
+        metadata || {},
+        this.methodInfoGetServers,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/texture_studio.TextureStudioManagerService/GetServers',
+    request,
+    metadata || {},
+    this.methodInfoGetServers);
   }
 
   methodInfoMyServer = new grpcWeb.AbstractClientBase.MethodInfo(
-    MyServerResponse,
-    (request: MyServerRequest) => {
+    texturestudio_texturestudio_manage_pb.MyServerResponse,
+    (request: texturestudio_texturestudio_manage_pb.MyServerRequest) => {
       return request.serializeBinary();
     },
-    MyServerResponse.deserializeBinary
+    texturestudio_texturestudio_manage_pb.MyServerResponse.deserializeBinary
   );
 
   myServer(
-    request: MyServerRequest,
+    request: texturestudio_texturestudio_manage_pb.MyServerRequest,
+    metadata: grpcWeb.Metadata | null): Promise<texturestudio_texturestudio_manage_pb.MyServerResponse>;
+
+  myServer(
+    request: texturestudio_texturestudio_manage_pb.MyServerRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: MyServerResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/texture_studio.TextureStudioManagerService/MyServer',
-      request,
-      metadata || {},
-      this.methodInfoMyServer,
-      callback);
+               response: texturestudio_texturestudio_manage_pb.MyServerResponse) => void): grpcWeb.ClientReadableStream<texturestudio_texturestudio_manage_pb.MyServerResponse>;
+
+  myServer(
+    request: texturestudio_texturestudio_manage_pb.MyServerRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: texturestudio_texturestudio_manage_pb.MyServerResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/texture_studio.TextureStudioManagerService/MyServer',
+        request,
+        metadata || {},
+        this.methodInfoMyServer,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/texture_studio.TextureStudioManagerService/MyServer',
+    request,
+    metadata || {},
+    this.methodInfoMyServer);
   }
 
   methodInfoTransferOwnership = new grpcWeb.AbstractClientBase.MethodInfo(
-    TransferOwnershipResponse,
-    (request: TransferOwnershipRequest) => {
+    texturestudio_texturestudio_manage_pb.TransferOwnershipResponse,
+    (request: texturestudio_texturestudio_manage_pb.TransferOwnershipRequest) => {
       return request.serializeBinary();
     },
-    TransferOwnershipResponse.deserializeBinary
+    texturestudio_texturestudio_manage_pb.TransferOwnershipResponse.deserializeBinary
   );
 
   transferOwnership(
-    request: TransferOwnershipRequest,
+    request: texturestudio_texturestudio_manage_pb.TransferOwnershipRequest,
+    metadata: grpcWeb.Metadata | null): Promise<texturestudio_texturestudio_manage_pb.TransferOwnershipResponse>;
+
+  transferOwnership(
+    request: texturestudio_texturestudio_manage_pb.TransferOwnershipRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: TransferOwnershipResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/texture_studio.TextureStudioManagerService/TransferOwnership',
-      request,
-      metadata || {},
-      this.methodInfoTransferOwnership,
-      callback);
+               response: texturestudio_texturestudio_manage_pb.TransferOwnershipResponse) => void): grpcWeb.ClientReadableStream<texturestudio_texturestudio_manage_pb.TransferOwnershipResponse>;
+
+  transferOwnership(
+    request: texturestudio_texturestudio_manage_pb.TransferOwnershipRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: texturestudio_texturestudio_manage_pb.TransferOwnershipResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/texture_studio.TextureStudioManagerService/TransferOwnership',
+        request,
+        metadata || {},
+        this.methodInfoTransferOwnership,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/texture_studio.TextureStudioManagerService/TransferOwnership',
+    request,
+    metadata || {},
+    this.methodInfoTransferOwnership);
   }
 
   methodInfoDeleteServer = new grpcWeb.AbstractClientBase.MethodInfo(
-    DeleteServerResponse,
-    (request: DeleteServerRequest) => {
+    texturestudio_texturestudio_manage_pb.DeleteServerResponse,
+    (request: texturestudio_texturestudio_manage_pb.DeleteServerRequest) => {
       return request.serializeBinary();
     },
-    DeleteServerResponse.deserializeBinary
+    texturestudio_texturestudio_manage_pb.DeleteServerResponse.deserializeBinary
   );
 
   deleteServer(
-    request: DeleteServerRequest,
+    request: texturestudio_texturestudio_manage_pb.DeleteServerRequest,
+    metadata: grpcWeb.Metadata | null): Promise<texturestudio_texturestudio_manage_pb.DeleteServerResponse>;
+
+  deleteServer(
+    request: texturestudio_texturestudio_manage_pb.DeleteServerRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: DeleteServerResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/texture_studio.TextureStudioManagerService/DeleteServer',
-      request,
-      metadata || {},
-      this.methodInfoDeleteServer,
-      callback);
+               response: texturestudio_texturestudio_manage_pb.DeleteServerResponse) => void): grpcWeb.ClientReadableStream<texturestudio_texturestudio_manage_pb.DeleteServerResponse>;
+
+  deleteServer(
+    request: texturestudio_texturestudio_manage_pb.DeleteServerRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: texturestudio_texturestudio_manage_pb.DeleteServerResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/texture_studio.TextureStudioManagerService/DeleteServer',
+        request,
+        metadata || {},
+        this.methodInfoDeleteServer,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/texture_studio.TextureStudioManagerService/DeleteServer',
+    request,
+    metadata || {},
+    this.methodInfoDeleteServer);
   }
 
 }

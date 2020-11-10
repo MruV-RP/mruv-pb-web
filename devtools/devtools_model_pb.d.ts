@@ -1,20 +1,22 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
+
+
 
 export class Position extends jspb.Message {
   getX(): number;
-  setX(value: number): void;
+  setX(value: number): Position;
 
   getY(): number;
-  setY(value: number): void;
+  setY(value: number): Position;
 
   getZ(): number;
-  setZ(value: number): void;
+  setZ(value: number): Position;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): Position;
 
   getDescription(): string;
-  setDescription(value: string): void;
+  setDescription(value: string): Position;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Position.AsObject;
@@ -36,10 +38,10 @@ export namespace Position {
 
 export class Outfit extends jspb.Message {
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): Outfit;
 
   getCategory(): string;
-  setCategory(value: string): void;
+  setCategory(value: string): Outfit;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Outfit.AsObject;
@@ -58,16 +60,16 @@ export namespace Outfit {
 
 export class Animation extends jspb.Message {
   getDict(): string;
-  setDict(value: string): void;
+  setDict(value: string): Animation;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): Animation;
 
   getReadableCategory(): string;
-  setReadableCategory(value: string): void;
+  setReadableCategory(value: string): Animation;
 
   getCategory(): string;
-  setCategory(value: string): void;
+  setCategory(value: string): Animation;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Animation.AsObject;
@@ -88,13 +90,13 @@ export namespace Animation {
 
 export class Player extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): Player;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): Player;
 
   getHash(): string;
-  setHash(value: string): void;
+  setHash(value: string): Player;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Player.AsObject;

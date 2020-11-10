@@ -7,43 +7,26 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 
+/* eslint-disable */
+// @ts-nocheck
+
+
 import * as grpcWeb from 'grpc-web';
 
-import * as google_api_annotations_pb from '../google/api/annotations_pb';
 import * as common_health_pb from '../common/health_pb';
 import * as items_items_model_pb from '../items/items_model_pb';
-import * as common_spatial_pb from '../common/spatial_pb';
+import * as items_items_pb from '../items/items_pb';
 
-import {
-  GetContainerItemsRequest,
-  GetContainerItemsResponse,
-  GetContainerTypesRequest,
-  GetContainerTypesResponse,
-  GetContainersRequest,
-  GetContainersResponse,
-  GetItemTypesRequest,
-  GetItemTypesResponse,
-  GetItemsRequest,
-  GetItemsResponse,
-  GetNearestItemsRequest,
-  GetNearestItemsResponse,
-  PullItemRequest,
-  PutItemRequest,
-  PutItemResponse,
-  SortItemsRequest,
-  SortItemsResponse,
-  UseItemRequest,
-  UseItemResponse} from './items_pb';
 
 export class MruVItemServiceClient {
   client_: grpcWeb.AbstractClientBase;
   hostname_: string;
   credentials_: null | { [index: string]: string; };
-  options_: null | { [index: string]: string; };
+  options_: null | { [index: string]: any; };
 
   constructor (hostname: string,
                credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: string; }) {
+               options?: null | { [index: string]: any; }) {
     if (!options) options = {};
     if (!credentials) credentials = {};
     options['format'] = 'text';
@@ -64,16 +47,34 @@ export class MruVItemServiceClient {
 
   createItem(
     request: items_items_model_pb.Item,
+    metadata: grpcWeb.Metadata | null): Promise<items_items_model_pb.ItemID>;
+
+  createItem(
+    request: items_items_model_pb.Item,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.ItemID) => void): grpcWeb.ClientReadableStream<items_items_model_pb.ItemID>;
+
+  createItem(
+    request: items_items_model_pb.Item,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
                response: items_items_model_pb.ItemID) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/CreateItem',
-      request,
-      metadata || {},
-      this.methodInfoCreateItem,
-      callback);
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/CreateItem',
+        request,
+        metadata || {},
+        this.methodInfoCreateItem,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/CreateItem',
+    request,
+    metadata || {},
+    this.methodInfoCreateItem);
   }
 
   methodInfoGetItem = new grpcWeb.AbstractClientBase.MethodInfo(
@@ -86,16 +87,34 @@ export class MruVItemServiceClient {
 
   getItem(
     request: items_items_model_pb.ItemID,
+    metadata: grpcWeb.Metadata | null): Promise<items_items_model_pb.Item>;
+
+  getItem(
+    request: items_items_model_pb.ItemID,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.Item) => void): grpcWeb.ClientReadableStream<items_items_model_pb.Item>;
+
+  getItem(
+    request: items_items_model_pb.ItemID,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
                response: items_items_model_pb.Item) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/GetItem',
-      request,
-      metadata || {},
-      this.methodInfoGetItem,
-      callback);
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/GetItem',
+        request,
+        metadata || {},
+        this.methodInfoGetItem,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/GetItem',
+    request,
+    metadata || {},
+    this.methodInfoGetItem);
   }
 
   methodInfoDeleteItem = new grpcWeb.AbstractClientBase.MethodInfo(
@@ -108,38 +127,74 @@ export class MruVItemServiceClient {
 
   deleteItem(
     request: items_items_model_pb.ItemID,
+    metadata: grpcWeb.Metadata | null): Promise<items_items_model_pb.ItemID>;
+
+  deleteItem(
+    request: items_items_model_pb.ItemID,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.ItemID) => void): grpcWeb.ClientReadableStream<items_items_model_pb.ItemID>;
+
+  deleteItem(
+    request: items_items_model_pb.ItemID,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
                response: items_items_model_pb.ItemID) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/DeleteItem',
-      request,
-      metadata || {},
-      this.methodInfoDeleteItem,
-      callback);
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/DeleteItem',
+        request,
+        metadata || {},
+        this.methodInfoDeleteItem,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/DeleteItem',
+    request,
+    metadata || {},
+    this.methodInfoDeleteItem);
   }
 
   methodInfoGetItems = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetItemsResponse,
-    (request: GetItemsRequest) => {
+    items_items_pb.GetItemsResponse,
+    (request: items_items_pb.GetItemsRequest) => {
       return request.serializeBinary();
     },
-    GetItemsResponse.deserializeBinary
+    items_items_pb.GetItemsResponse.deserializeBinary
   );
 
   getItems(
-    request: GetItemsRequest,
+    request: items_items_pb.GetItemsRequest,
+    metadata: grpcWeb.Metadata | null): Promise<items_items_pb.GetItemsResponse>;
+
+  getItems(
+    request: items_items_pb.GetItemsRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetItemsResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/GetItems',
-      request,
-      metadata || {},
-      this.methodInfoGetItems,
-      callback);
+               response: items_items_pb.GetItemsResponse) => void): grpcWeb.ClientReadableStream<items_items_pb.GetItemsResponse>;
+
+  getItems(
+    request: items_items_pb.GetItemsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: items_items_pb.GetItemsResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/GetItems',
+        request,
+        metadata || {},
+        this.methodInfoGetItems,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/GetItems',
+    request,
+    metadata || {},
+    this.methodInfoGetItems);
   }
 
   methodInfoCreateItemType = new grpcWeb.AbstractClientBase.MethodInfo(
@@ -152,16 +207,34 @@ export class MruVItemServiceClient {
 
   createItemType(
     request: items_items_model_pb.ItemType,
+    metadata: grpcWeb.Metadata | null): Promise<items_items_model_pb.ItemTypeID>;
+
+  createItemType(
+    request: items_items_model_pb.ItemType,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.ItemTypeID) => void): grpcWeb.ClientReadableStream<items_items_model_pb.ItemTypeID>;
+
+  createItemType(
+    request: items_items_model_pb.ItemType,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
                response: items_items_model_pb.ItemTypeID) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/CreateItemType',
-      request,
-      metadata || {},
-      this.methodInfoCreateItemType,
-      callback);
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/CreateItemType',
+        request,
+        metadata || {},
+        this.methodInfoCreateItemType,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/CreateItemType',
+    request,
+    metadata || {},
+    this.methodInfoCreateItemType);
   }
 
   methodInfoGetItemType = new grpcWeb.AbstractClientBase.MethodInfo(
@@ -174,16 +247,34 @@ export class MruVItemServiceClient {
 
   getItemType(
     request: items_items_model_pb.ItemTypeID,
+    metadata: grpcWeb.Metadata | null): Promise<items_items_model_pb.ItemType>;
+
+  getItemType(
+    request: items_items_model_pb.ItemTypeID,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.ItemType) => void): grpcWeb.ClientReadableStream<items_items_model_pb.ItemType>;
+
+  getItemType(
+    request: items_items_model_pb.ItemTypeID,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
                response: items_items_model_pb.ItemType) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/GetItemType',
-      request,
-      metadata || {},
-      this.methodInfoGetItemType,
-      callback);
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/GetItemType',
+        request,
+        metadata || {},
+        this.methodInfoGetItemType,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/GetItemType',
+    request,
+    metadata || {},
+    this.methodInfoGetItemType);
   }
 
   methodInfoDeleteItemType = new grpcWeb.AbstractClientBase.MethodInfo(
@@ -196,38 +287,74 @@ export class MruVItemServiceClient {
 
   deleteItemType(
     request: items_items_model_pb.ItemTypeID,
+    metadata: grpcWeb.Metadata | null): Promise<items_items_model_pb.ItemTypeID>;
+
+  deleteItemType(
+    request: items_items_model_pb.ItemTypeID,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.ItemTypeID) => void): grpcWeb.ClientReadableStream<items_items_model_pb.ItemTypeID>;
+
+  deleteItemType(
+    request: items_items_model_pb.ItemTypeID,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
                response: items_items_model_pb.ItemTypeID) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/DeleteItemType',
-      request,
-      metadata || {},
-      this.methodInfoDeleteItemType,
-      callback);
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/DeleteItemType',
+        request,
+        metadata || {},
+        this.methodInfoDeleteItemType,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/DeleteItemType',
+    request,
+    metadata || {},
+    this.methodInfoDeleteItemType);
   }
 
   methodInfoGetItemTypes = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetItemTypesResponse,
-    (request: GetItemTypesRequest) => {
+    items_items_pb.GetItemTypesResponse,
+    (request: items_items_pb.GetItemTypesRequest) => {
       return request.serializeBinary();
     },
-    GetItemTypesResponse.deserializeBinary
+    items_items_pb.GetItemTypesResponse.deserializeBinary
   );
 
   getItemTypes(
-    request: GetItemTypesRequest,
+    request: items_items_pb.GetItemTypesRequest,
+    metadata: grpcWeb.Metadata | null): Promise<items_items_pb.GetItemTypesResponse>;
+
+  getItemTypes(
+    request: items_items_pb.GetItemTypesRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetItemTypesResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/GetItemTypes',
-      request,
-      metadata || {},
-      this.methodInfoGetItemTypes,
-      callback);
+               response: items_items_pb.GetItemTypesResponse) => void): grpcWeb.ClientReadableStream<items_items_pb.GetItemTypesResponse>;
+
+  getItemTypes(
+    request: items_items_pb.GetItemTypesRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: items_items_pb.GetItemTypesResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/GetItemTypes',
+        request,
+        metadata || {},
+        this.methodInfoGetItemTypes,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/GetItemTypes',
+    request,
+    metadata || {},
+    this.methodInfoGetItemTypes);
   }
 
   methodInfoCreateContainer = new grpcWeb.AbstractClientBase.MethodInfo(
@@ -240,16 +367,34 @@ export class MruVItemServiceClient {
 
   createContainer(
     request: items_items_model_pb.Container,
+    metadata: grpcWeb.Metadata | null): Promise<items_items_model_pb.ContainerID>;
+
+  createContainer(
+    request: items_items_model_pb.Container,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.ContainerID) => void): grpcWeb.ClientReadableStream<items_items_model_pb.ContainerID>;
+
+  createContainer(
+    request: items_items_model_pb.Container,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
                response: items_items_model_pb.ContainerID) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/CreateContainer',
-      request,
-      metadata || {},
-      this.methodInfoCreateContainer,
-      callback);
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/CreateContainer',
+        request,
+        metadata || {},
+        this.methodInfoCreateContainer,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/CreateContainer',
+    request,
+    metadata || {},
+    this.methodInfoCreateContainer);
   }
 
   methodInfoGetContainer = new grpcWeb.AbstractClientBase.MethodInfo(
@@ -262,16 +407,34 @@ export class MruVItemServiceClient {
 
   getContainer(
     request: items_items_model_pb.ContainerID,
+    metadata: grpcWeb.Metadata | null): Promise<items_items_model_pb.Container>;
+
+  getContainer(
+    request: items_items_model_pb.ContainerID,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.Container) => void): grpcWeb.ClientReadableStream<items_items_model_pb.Container>;
+
+  getContainer(
+    request: items_items_model_pb.ContainerID,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
                response: items_items_model_pb.Container) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/GetContainer',
-      request,
-      metadata || {},
-      this.methodInfoGetContainer,
-      callback);
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/GetContainer',
+        request,
+        metadata || {},
+        this.methodInfoGetContainer,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/GetContainer',
+    request,
+    metadata || {},
+    this.methodInfoGetContainer);
   }
 
   methodInfoDeleteContainer = new grpcWeb.AbstractClientBase.MethodInfo(
@@ -284,38 +447,74 @@ export class MruVItemServiceClient {
 
   deleteContainer(
     request: items_items_model_pb.ContainerID,
+    metadata: grpcWeb.Metadata | null): Promise<items_items_model_pb.ContainerID>;
+
+  deleteContainer(
+    request: items_items_model_pb.ContainerID,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.ContainerID) => void): grpcWeb.ClientReadableStream<items_items_model_pb.ContainerID>;
+
+  deleteContainer(
+    request: items_items_model_pb.ContainerID,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
                response: items_items_model_pb.ContainerID) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/DeleteContainer',
-      request,
-      metadata || {},
-      this.methodInfoDeleteContainer,
-      callback);
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/DeleteContainer',
+        request,
+        metadata || {},
+        this.methodInfoDeleteContainer,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/DeleteContainer',
+    request,
+    metadata || {},
+    this.methodInfoDeleteContainer);
   }
 
   methodInfoGetContainers = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetContainersResponse,
-    (request: GetContainersRequest) => {
+    items_items_pb.GetContainersResponse,
+    (request: items_items_pb.GetContainersRequest) => {
       return request.serializeBinary();
     },
-    GetContainersResponse.deserializeBinary
+    items_items_pb.GetContainersResponse.deserializeBinary
   );
 
   getContainers(
-    request: GetContainersRequest,
+    request: items_items_pb.GetContainersRequest,
+    metadata: grpcWeb.Metadata | null): Promise<items_items_pb.GetContainersResponse>;
+
+  getContainers(
+    request: items_items_pb.GetContainersRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetContainersResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/GetContainers',
-      request,
-      metadata || {},
-      this.methodInfoGetContainers,
-      callback);
+               response: items_items_pb.GetContainersResponse) => void): grpcWeb.ClientReadableStream<items_items_pb.GetContainersResponse>;
+
+  getContainers(
+    request: items_items_pb.GetContainersRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: items_items_pb.GetContainersResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/GetContainers',
+        request,
+        metadata || {},
+        this.methodInfoGetContainers,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/GetContainers',
+    request,
+    metadata || {},
+    this.methodInfoGetContainers);
   }
 
   methodInfoCreateContainerType = new grpcWeb.AbstractClientBase.MethodInfo(
@@ -328,16 +527,34 @@ export class MruVItemServiceClient {
 
   createContainerType(
     request: items_items_model_pb.ContainerType,
+    metadata: grpcWeb.Metadata | null): Promise<items_items_model_pb.ContainerTypeID>;
+
+  createContainerType(
+    request: items_items_model_pb.ContainerType,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.ContainerTypeID) => void): grpcWeb.ClientReadableStream<items_items_model_pb.ContainerTypeID>;
+
+  createContainerType(
+    request: items_items_model_pb.ContainerType,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
                response: items_items_model_pb.ContainerTypeID) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/CreateContainerType',
-      request,
-      metadata || {},
-      this.methodInfoCreateContainerType,
-      callback);
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/CreateContainerType',
+        request,
+        metadata || {},
+        this.methodInfoCreateContainerType,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/CreateContainerType',
+    request,
+    metadata || {},
+    this.methodInfoCreateContainerType);
   }
 
   methodInfoGetContainerType = new grpcWeb.AbstractClientBase.MethodInfo(
@@ -350,16 +567,34 @@ export class MruVItemServiceClient {
 
   getContainerType(
     request: items_items_model_pb.ContainerTypeID,
+    metadata: grpcWeb.Metadata | null): Promise<items_items_model_pb.ContainerType>;
+
+  getContainerType(
+    request: items_items_model_pb.ContainerTypeID,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.ContainerType) => void): grpcWeb.ClientReadableStream<items_items_model_pb.ContainerType>;
+
+  getContainerType(
+    request: items_items_model_pb.ContainerTypeID,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
                response: items_items_model_pb.ContainerType) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/GetContainerType',
-      request,
-      metadata || {},
-      this.methodInfoGetContainerType,
-      callback);
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/GetContainerType',
+        request,
+        metadata || {},
+        this.methodInfoGetContainerType,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/GetContainerType',
+    request,
+    metadata || {},
+    this.methodInfoGetContainerType);
   }
 
   methodInfoDeleteContainerType = new grpcWeb.AbstractClientBase.MethodInfo(
@@ -372,170 +607,314 @@ export class MruVItemServiceClient {
 
   deleteContainerType(
     request: items_items_model_pb.ContainerTypeID,
+    metadata: grpcWeb.Metadata | null): Promise<items_items_model_pb.ContainerTypeID>;
+
+  deleteContainerType(
+    request: items_items_model_pb.ContainerTypeID,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.ContainerTypeID) => void): grpcWeb.ClientReadableStream<items_items_model_pb.ContainerTypeID>;
+
+  deleteContainerType(
+    request: items_items_model_pb.ContainerTypeID,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
                response: items_items_model_pb.ContainerTypeID) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/DeleteContainerType',
-      request,
-      metadata || {},
-      this.methodInfoDeleteContainerType,
-      callback);
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/DeleteContainerType',
+        request,
+        metadata || {},
+        this.methodInfoDeleteContainerType,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/DeleteContainerType',
+    request,
+    metadata || {},
+    this.methodInfoDeleteContainerType);
   }
 
   methodInfoGetContainerTypes = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetContainerTypesResponse,
-    (request: GetContainerTypesRequest) => {
+    items_items_pb.GetContainerTypesResponse,
+    (request: items_items_pb.GetContainerTypesRequest) => {
       return request.serializeBinary();
     },
-    GetContainerTypesResponse.deserializeBinary
+    items_items_pb.GetContainerTypesResponse.deserializeBinary
   );
 
   getContainerTypes(
-    request: GetContainerTypesRequest,
+    request: items_items_pb.GetContainerTypesRequest,
+    metadata: grpcWeb.Metadata | null): Promise<items_items_pb.GetContainerTypesResponse>;
+
+  getContainerTypes(
+    request: items_items_pb.GetContainerTypesRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetContainerTypesResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/GetContainerTypes',
-      request,
-      metadata || {},
-      this.methodInfoGetContainerTypes,
-      callback);
+               response: items_items_pb.GetContainerTypesResponse) => void): grpcWeb.ClientReadableStream<items_items_pb.GetContainerTypesResponse>;
+
+  getContainerTypes(
+    request: items_items_pb.GetContainerTypesRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: items_items_pb.GetContainerTypesResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/GetContainerTypes',
+        request,
+        metadata || {},
+        this.methodInfoGetContainerTypes,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/GetContainerTypes',
+    request,
+    metadata || {},
+    this.methodInfoGetContainerTypes);
   }
 
   methodInfoGetContainerItems = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetContainerItemsResponse,
-    (request: GetContainerItemsRequest) => {
+    items_items_pb.GetContainerItemsResponse,
+    (request: items_items_pb.GetContainerItemsRequest) => {
       return request.serializeBinary();
     },
-    GetContainerItemsResponse.deserializeBinary
+    items_items_pb.GetContainerItemsResponse.deserializeBinary
   );
 
   getContainerItems(
-    request: GetContainerItemsRequest,
+    request: items_items_pb.GetContainerItemsRequest,
+    metadata: grpcWeb.Metadata | null): Promise<items_items_pb.GetContainerItemsResponse>;
+
+  getContainerItems(
+    request: items_items_pb.GetContainerItemsRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetContainerItemsResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/GetContainerItems',
-      request,
-      metadata || {},
-      this.methodInfoGetContainerItems,
-      callback);
+               response: items_items_pb.GetContainerItemsResponse) => void): grpcWeb.ClientReadableStream<items_items_pb.GetContainerItemsResponse>;
+
+  getContainerItems(
+    request: items_items_pb.GetContainerItemsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: items_items_pb.GetContainerItemsResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/GetContainerItems',
+        request,
+        metadata || {},
+        this.methodInfoGetContainerItems,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/GetContainerItems',
+    request,
+    metadata || {},
+    this.methodInfoGetContainerItems);
   }
 
   methodInfoPullItem = new grpcWeb.AbstractClientBase.MethodInfo(
     items_items_model_pb.Item,
-    (request: PullItemRequest) => {
+    (request: items_items_pb.PullItemRequest) => {
       return request.serializeBinary();
     },
     items_items_model_pb.Item.deserializeBinary
   );
 
   pullItem(
-    request: PullItemRequest,
+    request: items_items_pb.PullItemRequest,
+    metadata: grpcWeb.Metadata | null): Promise<items_items_model_pb.Item>;
+
+  pullItem(
+    request: items_items_pb.PullItemRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
+               response: items_items_model_pb.Item) => void): grpcWeb.ClientReadableStream<items_items_model_pb.Item>;
+
+  pullItem(
+    request: items_items_pb.PullItemRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
                response: items_items_model_pb.Item) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/PullItem',
-      request,
-      metadata || {},
-      this.methodInfoPullItem,
-      callback);
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/PullItem',
+        request,
+        metadata || {},
+        this.methodInfoPullItem,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/PullItem',
+    request,
+    metadata || {},
+    this.methodInfoPullItem);
   }
 
   methodInfoPutItem = new grpcWeb.AbstractClientBase.MethodInfo(
-    PutItemResponse,
-    (request: PutItemRequest) => {
+    items_items_pb.PutItemResponse,
+    (request: items_items_pb.PutItemRequest) => {
       return request.serializeBinary();
     },
-    PutItemResponse.deserializeBinary
+    items_items_pb.PutItemResponse.deserializeBinary
   );
 
   putItem(
-    request: PutItemRequest,
+    request: items_items_pb.PutItemRequest,
+    metadata: grpcWeb.Metadata | null): Promise<items_items_pb.PutItemResponse>;
+
+  putItem(
+    request: items_items_pb.PutItemRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: PutItemResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/PutItem',
-      request,
-      metadata || {},
-      this.methodInfoPutItem,
-      callback);
+               response: items_items_pb.PutItemResponse) => void): grpcWeb.ClientReadableStream<items_items_pb.PutItemResponse>;
+
+  putItem(
+    request: items_items_pb.PutItemRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: items_items_pb.PutItemResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/PutItem',
+        request,
+        metadata || {},
+        this.methodInfoPutItem,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/PutItem',
+    request,
+    metadata || {},
+    this.methodInfoPutItem);
   }
 
   methodInfoSortItems = new grpcWeb.AbstractClientBase.MethodInfo(
-    SortItemsResponse,
-    (request: SortItemsRequest) => {
+    items_items_pb.SortItemsResponse,
+    (request: items_items_pb.SortItemsRequest) => {
       return request.serializeBinary();
     },
-    SortItemsResponse.deserializeBinary
+    items_items_pb.SortItemsResponse.deserializeBinary
   );
 
   sortItems(
-    request: SortItemsRequest,
+    request: items_items_pb.SortItemsRequest,
+    metadata: grpcWeb.Metadata | null): Promise<items_items_pb.SortItemsResponse>;
+
+  sortItems(
+    request: items_items_pb.SortItemsRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: SortItemsResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/SortItems',
-      request,
-      metadata || {},
-      this.methodInfoSortItems,
-      callback);
+               response: items_items_pb.SortItemsResponse) => void): grpcWeb.ClientReadableStream<items_items_pb.SortItemsResponse>;
+
+  sortItems(
+    request: items_items_pb.SortItemsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: items_items_pb.SortItemsResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/SortItems',
+        request,
+        metadata || {},
+        this.methodInfoSortItems,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/SortItems',
+    request,
+    metadata || {},
+    this.methodInfoSortItems);
   }
 
   methodInfoGetNearestItems = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetNearestItemsResponse,
-    (request: GetNearestItemsRequest) => {
+    items_items_pb.GetNearestItemsResponse,
+    (request: items_items_pb.GetNearestItemsRequest) => {
       return request.serializeBinary();
     },
-    GetNearestItemsResponse.deserializeBinary
+    items_items_pb.GetNearestItemsResponse.deserializeBinary
   );
 
   getNearestItems(
-    request: GetNearestItemsRequest,
+    request: items_items_pb.GetNearestItemsRequest,
+    metadata: grpcWeb.Metadata | null): Promise<items_items_pb.GetNearestItemsResponse>;
+
+  getNearestItems(
+    request: items_items_pb.GetNearestItemsRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetNearestItemsResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/GetNearestItems',
-      request,
-      metadata || {},
-      this.methodInfoGetNearestItems,
-      callback);
+               response: items_items_pb.GetNearestItemsResponse) => void): grpcWeb.ClientReadableStream<items_items_pb.GetNearestItemsResponse>;
+
+  getNearestItems(
+    request: items_items_pb.GetNearestItemsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: items_items_pb.GetNearestItemsResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/GetNearestItems',
+        request,
+        metadata || {},
+        this.methodInfoGetNearestItems,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/GetNearestItems',
+    request,
+    metadata || {},
+    this.methodInfoGetNearestItems);
   }
 
   methodInfoUseItem = new grpcWeb.AbstractClientBase.MethodInfo(
-    UseItemResponse,
-    (request: UseItemRequest) => {
+    items_items_pb.UseItemResponse,
+    (request: items_items_pb.UseItemRequest) => {
       return request.serializeBinary();
     },
-    UseItemResponse.deserializeBinary
+    items_items_pb.UseItemResponse.deserializeBinary
   );
 
   useItem(
-    request: UseItemRequest,
+    request: items_items_pb.UseItemRequest,
+    metadata: grpcWeb.Metadata | null): Promise<items_items_pb.UseItemResponse>;
+
+  useItem(
+    request: items_items_pb.UseItemRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: UseItemResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/UseItem',
-      request,
-      metadata || {},
-      this.methodInfoUseItem,
-      callback);
+               response: items_items_pb.UseItemResponse) => void): grpcWeb.ClientReadableStream<items_items_pb.UseItemResponse>;
+
+  useItem(
+    request: items_items_pb.UseItemRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: items_items_pb.UseItemResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/UseItem',
+        request,
+        metadata || {},
+        this.methodInfoUseItem,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/UseItem',
+    request,
+    metadata || {},
+    this.methodInfoUseItem);
   }
 
   methodInfoGetServiceStatus = new grpcWeb.AbstractClientBase.MethodInfo(
@@ -548,16 +927,34 @@ export class MruVItemServiceClient {
 
   getServiceStatus(
     request: common_health_pb.ServiceStatusRequest,
+    metadata: grpcWeb.Metadata | null): Promise<common_health_pb.ServiceStatusResponse>;
+
+  getServiceStatus(
+    request: common_health_pb.ServiceStatusRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
+               response: common_health_pb.ServiceStatusResponse) => void): grpcWeb.ClientReadableStream<common_health_pb.ServiceStatusResponse>;
+
+  getServiceStatus(
+    request: common_health_pb.ServiceStatusRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
                response: common_health_pb.ServiceStatusResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/GetServiceStatus',
-      request,
-      metadata || {},
-      this.methodInfoGetServiceStatus,
-      callback);
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/GetServiceStatus',
+        request,
+        metadata || {},
+        this.methodInfoGetServiceStatus,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/GetServiceStatus',
+    request,
+    metadata || {},
+    this.methodInfoGetServiceStatus);
   }
 
   methodInfoGetServiceVersion = new grpcWeb.AbstractClientBase.MethodInfo(
@@ -570,16 +967,34 @@ export class MruVItemServiceClient {
 
   getServiceVersion(
     request: common_health_pb.VersionRequest,
+    metadata: grpcWeb.Metadata | null): Promise<common_health_pb.VersionResponse>;
+
+  getServiceVersion(
+    request: common_health_pb.VersionRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
+               response: common_health_pb.VersionResponse) => void): grpcWeb.ClientReadableStream<common_health_pb.VersionResponse>;
+
+  getServiceVersion(
+    request: common_health_pb.VersionRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
                response: common_health_pb.VersionResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVItemService/GetServiceVersion',
-      request,
-      metadata || {},
-      this.methodInfoGetServiceVersion,
-      callback);
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVItemService/GetServiceVersion',
+        request,
+        metadata || {},
+        this.methodInfoGetServiceVersion,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVItemService/GetServiceVersion',
+    request,
+    metadata || {},
+    this.methodInfoGetServiceVersion);
   }
 
 }

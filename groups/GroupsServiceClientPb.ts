@@ -7,56 +7,25 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 
+/* eslint-disable */
+// @ts-nocheck
+
+
 import * as grpcWeb from 'grpc-web';
 
-import * as google_api_annotations_pb from '../google/api/annotations_pb';
 import * as common_health_pb from '../common/health_pb';
+import * as groups_groups_pb from '../groups/groups_pb';
 
-import {
-  AddMemberRequest,
-  AddMemberResponse,
-  AddPermissionRequest,
-  AddPermissionResponse,
-  AddSubgroupRequest,
-  AddSubgroupResponse,
-  AssignOwnerRequest,
-  AssignOwnerResponse,
-  CreateGroupRequest,
-  CreateGroupResponse,
-  DeleteGroupRequest,
-  DeleteGroupResponse,
-  GetGroupRequest,
-  GetGroupResponse,
-  GetGroupsRequest,
-  GetGroupsResponse,
-  GetMembersRequest,
-  GetMembersResponse,
-  GetOwnerRequest,
-  GetOwnerResponse,
-  GetPermissionsRequest,
-  GetPermissionsResponse,
-  GetSubgroupsRequest,
-  GetSubgroupsResponse,
-  IsPermittedRequest,
-  IsPermittedResponse,
-  RemoveMemberRequest,
-  RemoveMemberResponse,
-  RemovePermissionRequest,
-  RemovePermissionResponse,
-  RemoveSubgroupRequest,
-  RemoveSubgroupResponse,
-  UpdateGroupRequest,
-  UpdateGroupResponse} from './groups_pb';
 
 export class MruVGroupsServiceClient {
   client_: grpcWeb.AbstractClientBase;
   hostname_: string;
   credentials_: null | { [index: string]: string; };
-  options_: null | { [index: string]: string; };
+  options_: null | { [index: string]: any; };
 
   constructor (hostname: string,
                credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: string; }) {
+               options?: null | { [index: string]: any; }) {
     if (!options) options = {};
     if (!credentials) credentials = {};
     options['format'] = 'text';
@@ -68,377 +37,683 @@ export class MruVGroupsServiceClient {
   }
 
   methodInfoCreateGroup = new grpcWeb.AbstractClientBase.MethodInfo(
-    CreateGroupResponse,
-    (request: CreateGroupRequest) => {
+    groups_groups_pb.CreateGroupResponse,
+    (request: groups_groups_pb.CreateGroupRequest) => {
       return request.serializeBinary();
     },
-    CreateGroupResponse.deserializeBinary
+    groups_groups_pb.CreateGroupResponse.deserializeBinary
   );
 
   createGroup(
-    request: CreateGroupRequest,
+    request: groups_groups_pb.CreateGroupRequest,
+    metadata: grpcWeb.Metadata | null): Promise<groups_groups_pb.CreateGroupResponse>;
+
+  createGroup(
+    request: groups_groups_pb.CreateGroupRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: CreateGroupResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVGroupsService/CreateGroup',
-      request,
-      metadata || {},
-      this.methodInfoCreateGroup,
-      callback);
+               response: groups_groups_pb.CreateGroupResponse) => void): grpcWeb.ClientReadableStream<groups_groups_pb.CreateGroupResponse>;
+
+  createGroup(
+    request: groups_groups_pb.CreateGroupRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: groups_groups_pb.CreateGroupResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVGroupsService/CreateGroup',
+        request,
+        metadata || {},
+        this.methodInfoCreateGroup,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVGroupsService/CreateGroup',
+    request,
+    metadata || {},
+    this.methodInfoCreateGroup);
   }
 
   methodInfoGetGroup = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetGroupResponse,
-    (request: GetGroupRequest) => {
+    groups_groups_pb.GetGroupResponse,
+    (request: groups_groups_pb.GetGroupRequest) => {
       return request.serializeBinary();
     },
-    GetGroupResponse.deserializeBinary
+    groups_groups_pb.GetGroupResponse.deserializeBinary
   );
 
   getGroup(
-    request: GetGroupRequest,
+    request: groups_groups_pb.GetGroupRequest,
+    metadata: grpcWeb.Metadata | null): Promise<groups_groups_pb.GetGroupResponse>;
+
+  getGroup(
+    request: groups_groups_pb.GetGroupRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetGroupResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVGroupsService/GetGroup',
-      request,
-      metadata || {},
-      this.methodInfoGetGroup,
-      callback);
+               response: groups_groups_pb.GetGroupResponse) => void): grpcWeb.ClientReadableStream<groups_groups_pb.GetGroupResponse>;
+
+  getGroup(
+    request: groups_groups_pb.GetGroupRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: groups_groups_pb.GetGroupResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVGroupsService/GetGroup',
+        request,
+        metadata || {},
+        this.methodInfoGetGroup,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVGroupsService/GetGroup',
+    request,
+    metadata || {},
+    this.methodInfoGetGroup);
   }
 
   methodInfoUpdateGroup = new grpcWeb.AbstractClientBase.MethodInfo(
-    UpdateGroupResponse,
-    (request: UpdateGroupRequest) => {
+    groups_groups_pb.UpdateGroupResponse,
+    (request: groups_groups_pb.UpdateGroupRequest) => {
       return request.serializeBinary();
     },
-    UpdateGroupResponse.deserializeBinary
+    groups_groups_pb.UpdateGroupResponse.deserializeBinary
   );
 
   updateGroup(
-    request: UpdateGroupRequest,
+    request: groups_groups_pb.UpdateGroupRequest,
+    metadata: grpcWeb.Metadata | null): Promise<groups_groups_pb.UpdateGroupResponse>;
+
+  updateGroup(
+    request: groups_groups_pb.UpdateGroupRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: UpdateGroupResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVGroupsService/UpdateGroup',
-      request,
-      metadata || {},
-      this.methodInfoUpdateGroup,
-      callback);
+               response: groups_groups_pb.UpdateGroupResponse) => void): grpcWeb.ClientReadableStream<groups_groups_pb.UpdateGroupResponse>;
+
+  updateGroup(
+    request: groups_groups_pb.UpdateGroupRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: groups_groups_pb.UpdateGroupResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVGroupsService/UpdateGroup',
+        request,
+        metadata || {},
+        this.methodInfoUpdateGroup,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVGroupsService/UpdateGroup',
+    request,
+    metadata || {},
+    this.methodInfoUpdateGroup);
   }
 
   methodInfoDeleteGroup = new grpcWeb.AbstractClientBase.MethodInfo(
-    DeleteGroupResponse,
-    (request: DeleteGroupRequest) => {
+    groups_groups_pb.DeleteGroupResponse,
+    (request: groups_groups_pb.DeleteGroupRequest) => {
       return request.serializeBinary();
     },
-    DeleteGroupResponse.deserializeBinary
+    groups_groups_pb.DeleteGroupResponse.deserializeBinary
   );
 
   deleteGroup(
-    request: DeleteGroupRequest,
+    request: groups_groups_pb.DeleteGroupRequest,
+    metadata: grpcWeb.Metadata | null): Promise<groups_groups_pb.DeleteGroupResponse>;
+
+  deleteGroup(
+    request: groups_groups_pb.DeleteGroupRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: DeleteGroupResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVGroupsService/DeleteGroup',
-      request,
-      metadata || {},
-      this.methodInfoDeleteGroup,
-      callback);
+               response: groups_groups_pb.DeleteGroupResponse) => void): grpcWeb.ClientReadableStream<groups_groups_pb.DeleteGroupResponse>;
+
+  deleteGroup(
+    request: groups_groups_pb.DeleteGroupRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: groups_groups_pb.DeleteGroupResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVGroupsService/DeleteGroup',
+        request,
+        metadata || {},
+        this.methodInfoDeleteGroup,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVGroupsService/DeleteGroup',
+    request,
+    metadata || {},
+    this.methodInfoDeleteGroup);
   }
 
   methodInfoGetGroups = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetGroupsResponse,
-    (request: GetGroupsRequest) => {
+    groups_groups_pb.GetGroupsResponse,
+    (request: groups_groups_pb.GetGroupsRequest) => {
       return request.serializeBinary();
     },
-    GetGroupsResponse.deserializeBinary
+    groups_groups_pb.GetGroupsResponse.deserializeBinary
   );
 
   getGroups(
-    request: GetGroupsRequest,
+    request: groups_groups_pb.GetGroupsRequest,
+    metadata: grpcWeb.Metadata | null): Promise<groups_groups_pb.GetGroupsResponse>;
+
+  getGroups(
+    request: groups_groups_pb.GetGroupsRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetGroupsResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVGroupsService/GetGroups',
-      request,
-      metadata || {},
-      this.methodInfoGetGroups,
-      callback);
+               response: groups_groups_pb.GetGroupsResponse) => void): grpcWeb.ClientReadableStream<groups_groups_pb.GetGroupsResponse>;
+
+  getGroups(
+    request: groups_groups_pb.GetGroupsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: groups_groups_pb.GetGroupsResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVGroupsService/GetGroups',
+        request,
+        metadata || {},
+        this.methodInfoGetGroups,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVGroupsService/GetGroups',
+    request,
+    metadata || {},
+    this.methodInfoGetGroups);
   }
 
   methodInfoAssignOwner = new grpcWeb.AbstractClientBase.MethodInfo(
-    AssignOwnerResponse,
-    (request: AssignOwnerRequest) => {
+    groups_groups_pb.AssignOwnerResponse,
+    (request: groups_groups_pb.AssignOwnerRequest) => {
       return request.serializeBinary();
     },
-    AssignOwnerResponse.deserializeBinary
+    groups_groups_pb.AssignOwnerResponse.deserializeBinary
   );
 
   assignOwner(
-    request: AssignOwnerRequest,
+    request: groups_groups_pb.AssignOwnerRequest,
+    metadata: grpcWeb.Metadata | null): Promise<groups_groups_pb.AssignOwnerResponse>;
+
+  assignOwner(
+    request: groups_groups_pb.AssignOwnerRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: AssignOwnerResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVGroupsService/AssignOwner',
-      request,
-      metadata || {},
-      this.methodInfoAssignOwner,
-      callback);
+               response: groups_groups_pb.AssignOwnerResponse) => void): grpcWeb.ClientReadableStream<groups_groups_pb.AssignOwnerResponse>;
+
+  assignOwner(
+    request: groups_groups_pb.AssignOwnerRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: groups_groups_pb.AssignOwnerResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVGroupsService/AssignOwner',
+        request,
+        metadata || {},
+        this.methodInfoAssignOwner,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVGroupsService/AssignOwner',
+    request,
+    metadata || {},
+    this.methodInfoAssignOwner);
   }
 
   methodInfoGetOwner = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetOwnerResponse,
-    (request: GetOwnerRequest) => {
+    groups_groups_pb.GetOwnerResponse,
+    (request: groups_groups_pb.GetOwnerRequest) => {
       return request.serializeBinary();
     },
-    GetOwnerResponse.deserializeBinary
+    groups_groups_pb.GetOwnerResponse.deserializeBinary
   );
 
   getOwner(
-    request: GetOwnerRequest,
+    request: groups_groups_pb.GetOwnerRequest,
+    metadata: grpcWeb.Metadata | null): Promise<groups_groups_pb.GetOwnerResponse>;
+
+  getOwner(
+    request: groups_groups_pb.GetOwnerRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetOwnerResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVGroupsService/GetOwner',
-      request,
-      metadata || {},
-      this.methodInfoGetOwner,
-      callback);
+               response: groups_groups_pb.GetOwnerResponse) => void): grpcWeb.ClientReadableStream<groups_groups_pb.GetOwnerResponse>;
+
+  getOwner(
+    request: groups_groups_pb.GetOwnerRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: groups_groups_pb.GetOwnerResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVGroupsService/GetOwner',
+        request,
+        metadata || {},
+        this.methodInfoGetOwner,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVGroupsService/GetOwner',
+    request,
+    metadata || {},
+    this.methodInfoGetOwner);
   }
 
   methodInfoAddMember = new grpcWeb.AbstractClientBase.MethodInfo(
-    AddMemberResponse,
-    (request: AddMemberRequest) => {
+    groups_groups_pb.AddMemberResponse,
+    (request: groups_groups_pb.AddMemberRequest) => {
       return request.serializeBinary();
     },
-    AddMemberResponse.deserializeBinary
+    groups_groups_pb.AddMemberResponse.deserializeBinary
   );
 
   addMember(
-    request: AddMemberRequest,
+    request: groups_groups_pb.AddMemberRequest,
+    metadata: grpcWeb.Metadata | null): Promise<groups_groups_pb.AddMemberResponse>;
+
+  addMember(
+    request: groups_groups_pb.AddMemberRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: AddMemberResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVGroupsService/AddMember',
-      request,
-      metadata || {},
-      this.methodInfoAddMember,
-      callback);
+               response: groups_groups_pb.AddMemberResponse) => void): grpcWeb.ClientReadableStream<groups_groups_pb.AddMemberResponse>;
+
+  addMember(
+    request: groups_groups_pb.AddMemberRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: groups_groups_pb.AddMemberResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVGroupsService/AddMember',
+        request,
+        metadata || {},
+        this.methodInfoAddMember,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVGroupsService/AddMember',
+    request,
+    metadata || {},
+    this.methodInfoAddMember);
   }
 
   methodInfoGetMembers = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetMembersResponse,
-    (request: GetMembersRequest) => {
+    groups_groups_pb.GetMembersResponse,
+    (request: groups_groups_pb.GetMembersRequest) => {
       return request.serializeBinary();
     },
-    GetMembersResponse.deserializeBinary
+    groups_groups_pb.GetMembersResponse.deserializeBinary
   );
 
   getMembers(
-    request: GetMembersRequest,
+    request: groups_groups_pb.GetMembersRequest,
+    metadata: grpcWeb.Metadata | null): Promise<groups_groups_pb.GetMembersResponse>;
+
+  getMembers(
+    request: groups_groups_pb.GetMembersRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetMembersResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVGroupsService/GetMembers',
-      request,
-      metadata || {},
-      this.methodInfoGetMembers,
-      callback);
+               response: groups_groups_pb.GetMembersResponse) => void): grpcWeb.ClientReadableStream<groups_groups_pb.GetMembersResponse>;
+
+  getMembers(
+    request: groups_groups_pb.GetMembersRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: groups_groups_pb.GetMembersResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVGroupsService/GetMembers',
+        request,
+        metadata || {},
+        this.methodInfoGetMembers,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVGroupsService/GetMembers',
+    request,
+    metadata || {},
+    this.methodInfoGetMembers);
   }
 
   methodInfoRemoveMember = new grpcWeb.AbstractClientBase.MethodInfo(
-    RemoveMemberResponse,
-    (request: RemoveMemberRequest) => {
+    groups_groups_pb.RemoveMemberResponse,
+    (request: groups_groups_pb.RemoveMemberRequest) => {
       return request.serializeBinary();
     },
-    RemoveMemberResponse.deserializeBinary
+    groups_groups_pb.RemoveMemberResponse.deserializeBinary
   );
 
   removeMember(
-    request: RemoveMemberRequest,
+    request: groups_groups_pb.RemoveMemberRequest,
+    metadata: grpcWeb.Metadata | null): Promise<groups_groups_pb.RemoveMemberResponse>;
+
+  removeMember(
+    request: groups_groups_pb.RemoveMemberRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: RemoveMemberResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVGroupsService/RemoveMember',
-      request,
-      metadata || {},
-      this.methodInfoRemoveMember,
-      callback);
+               response: groups_groups_pb.RemoveMemberResponse) => void): grpcWeb.ClientReadableStream<groups_groups_pb.RemoveMemberResponse>;
+
+  removeMember(
+    request: groups_groups_pb.RemoveMemberRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: groups_groups_pb.RemoveMemberResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVGroupsService/RemoveMember',
+        request,
+        metadata || {},
+        this.methodInfoRemoveMember,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVGroupsService/RemoveMember',
+    request,
+    metadata || {},
+    this.methodInfoRemoveMember);
   }
 
   methodInfoAddPermission = new grpcWeb.AbstractClientBase.MethodInfo(
-    AddPermissionResponse,
-    (request: AddPermissionRequest) => {
+    groups_groups_pb.AddPermissionResponse,
+    (request: groups_groups_pb.AddPermissionRequest) => {
       return request.serializeBinary();
     },
-    AddPermissionResponse.deserializeBinary
+    groups_groups_pb.AddPermissionResponse.deserializeBinary
   );
 
   addPermission(
-    request: AddPermissionRequest,
+    request: groups_groups_pb.AddPermissionRequest,
+    metadata: grpcWeb.Metadata | null): Promise<groups_groups_pb.AddPermissionResponse>;
+
+  addPermission(
+    request: groups_groups_pb.AddPermissionRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: AddPermissionResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVGroupsService/AddPermission',
-      request,
-      metadata || {},
-      this.methodInfoAddPermission,
-      callback);
+               response: groups_groups_pb.AddPermissionResponse) => void): grpcWeb.ClientReadableStream<groups_groups_pb.AddPermissionResponse>;
+
+  addPermission(
+    request: groups_groups_pb.AddPermissionRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: groups_groups_pb.AddPermissionResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVGroupsService/AddPermission',
+        request,
+        metadata || {},
+        this.methodInfoAddPermission,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVGroupsService/AddPermission',
+    request,
+    metadata || {},
+    this.methodInfoAddPermission);
   }
 
   methodInfoGetPermissions = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetPermissionsResponse,
-    (request: GetPermissionsRequest) => {
+    groups_groups_pb.GetPermissionsResponse,
+    (request: groups_groups_pb.GetPermissionsRequest) => {
       return request.serializeBinary();
     },
-    GetPermissionsResponse.deserializeBinary
+    groups_groups_pb.GetPermissionsResponse.deserializeBinary
   );
 
   getPermissions(
-    request: GetPermissionsRequest,
+    request: groups_groups_pb.GetPermissionsRequest,
+    metadata: grpcWeb.Metadata | null): Promise<groups_groups_pb.GetPermissionsResponse>;
+
+  getPermissions(
+    request: groups_groups_pb.GetPermissionsRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetPermissionsResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVGroupsService/GetPermissions',
-      request,
-      metadata || {},
-      this.methodInfoGetPermissions,
-      callback);
+               response: groups_groups_pb.GetPermissionsResponse) => void): grpcWeb.ClientReadableStream<groups_groups_pb.GetPermissionsResponse>;
+
+  getPermissions(
+    request: groups_groups_pb.GetPermissionsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: groups_groups_pb.GetPermissionsResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVGroupsService/GetPermissions',
+        request,
+        metadata || {},
+        this.methodInfoGetPermissions,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVGroupsService/GetPermissions',
+    request,
+    metadata || {},
+    this.methodInfoGetPermissions);
   }
 
   methodInfoRemovePermission = new grpcWeb.AbstractClientBase.MethodInfo(
-    RemovePermissionResponse,
-    (request: RemovePermissionRequest) => {
+    groups_groups_pb.RemovePermissionResponse,
+    (request: groups_groups_pb.RemovePermissionRequest) => {
       return request.serializeBinary();
     },
-    RemovePermissionResponse.deserializeBinary
+    groups_groups_pb.RemovePermissionResponse.deserializeBinary
   );
 
   removePermission(
-    request: RemovePermissionRequest,
+    request: groups_groups_pb.RemovePermissionRequest,
+    metadata: grpcWeb.Metadata | null): Promise<groups_groups_pb.RemovePermissionResponse>;
+
+  removePermission(
+    request: groups_groups_pb.RemovePermissionRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: RemovePermissionResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVGroupsService/RemovePermission',
-      request,
-      metadata || {},
-      this.methodInfoRemovePermission,
-      callback);
+               response: groups_groups_pb.RemovePermissionResponse) => void): grpcWeb.ClientReadableStream<groups_groups_pb.RemovePermissionResponse>;
+
+  removePermission(
+    request: groups_groups_pb.RemovePermissionRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: groups_groups_pb.RemovePermissionResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVGroupsService/RemovePermission',
+        request,
+        metadata || {},
+        this.methodInfoRemovePermission,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVGroupsService/RemovePermission',
+    request,
+    metadata || {},
+    this.methodInfoRemovePermission);
   }
 
   methodInfoAddSubgroup = new grpcWeb.AbstractClientBase.MethodInfo(
-    AddSubgroupResponse,
-    (request: AddSubgroupRequest) => {
+    groups_groups_pb.AddSubgroupResponse,
+    (request: groups_groups_pb.AddSubgroupRequest) => {
       return request.serializeBinary();
     },
-    AddSubgroupResponse.deserializeBinary
+    groups_groups_pb.AddSubgroupResponse.deserializeBinary
   );
 
   addSubgroup(
-    request: AddSubgroupRequest,
+    request: groups_groups_pb.AddSubgroupRequest,
+    metadata: grpcWeb.Metadata | null): Promise<groups_groups_pb.AddSubgroupResponse>;
+
+  addSubgroup(
+    request: groups_groups_pb.AddSubgroupRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: AddSubgroupResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVGroupsService/AddSubgroup',
-      request,
-      metadata || {},
-      this.methodInfoAddSubgroup,
-      callback);
+               response: groups_groups_pb.AddSubgroupResponse) => void): grpcWeb.ClientReadableStream<groups_groups_pb.AddSubgroupResponse>;
+
+  addSubgroup(
+    request: groups_groups_pb.AddSubgroupRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: groups_groups_pb.AddSubgroupResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVGroupsService/AddSubgroup',
+        request,
+        metadata || {},
+        this.methodInfoAddSubgroup,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVGroupsService/AddSubgroup',
+    request,
+    metadata || {},
+    this.methodInfoAddSubgroup);
   }
 
   methodInfoGetSubgroups = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetSubgroupsResponse,
-    (request: GetSubgroupsRequest) => {
+    groups_groups_pb.GetSubgroupsResponse,
+    (request: groups_groups_pb.GetSubgroupsRequest) => {
       return request.serializeBinary();
     },
-    GetSubgroupsResponse.deserializeBinary
+    groups_groups_pb.GetSubgroupsResponse.deserializeBinary
   );
 
   getSubgroups(
-    request: GetSubgroupsRequest,
+    request: groups_groups_pb.GetSubgroupsRequest,
+    metadata: grpcWeb.Metadata | null): Promise<groups_groups_pb.GetSubgroupsResponse>;
+
+  getSubgroups(
+    request: groups_groups_pb.GetSubgroupsRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetSubgroupsResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVGroupsService/GetSubgroups',
-      request,
-      metadata || {},
-      this.methodInfoGetSubgroups,
-      callback);
+               response: groups_groups_pb.GetSubgroupsResponse) => void): grpcWeb.ClientReadableStream<groups_groups_pb.GetSubgroupsResponse>;
+
+  getSubgroups(
+    request: groups_groups_pb.GetSubgroupsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: groups_groups_pb.GetSubgroupsResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVGroupsService/GetSubgroups',
+        request,
+        metadata || {},
+        this.methodInfoGetSubgroups,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVGroupsService/GetSubgroups',
+    request,
+    metadata || {},
+    this.methodInfoGetSubgroups);
   }
 
   methodInfoRemoveSubgroup = new grpcWeb.AbstractClientBase.MethodInfo(
-    RemoveSubgroupResponse,
-    (request: RemoveSubgroupRequest) => {
+    groups_groups_pb.RemoveSubgroupResponse,
+    (request: groups_groups_pb.RemoveSubgroupRequest) => {
       return request.serializeBinary();
     },
-    RemoveSubgroupResponse.deserializeBinary
+    groups_groups_pb.RemoveSubgroupResponse.deserializeBinary
   );
 
   removeSubgroup(
-    request: RemoveSubgroupRequest,
+    request: groups_groups_pb.RemoveSubgroupRequest,
+    metadata: grpcWeb.Metadata | null): Promise<groups_groups_pb.RemoveSubgroupResponse>;
+
+  removeSubgroup(
+    request: groups_groups_pb.RemoveSubgroupRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: RemoveSubgroupResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVGroupsService/RemoveSubgroup',
-      request,
-      metadata || {},
-      this.methodInfoRemoveSubgroup,
-      callback);
+               response: groups_groups_pb.RemoveSubgroupResponse) => void): grpcWeb.ClientReadableStream<groups_groups_pb.RemoveSubgroupResponse>;
+
+  removeSubgroup(
+    request: groups_groups_pb.RemoveSubgroupRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: groups_groups_pb.RemoveSubgroupResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVGroupsService/RemoveSubgroup',
+        request,
+        metadata || {},
+        this.methodInfoRemoveSubgroup,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVGroupsService/RemoveSubgroup',
+    request,
+    metadata || {},
+    this.methodInfoRemoveSubgroup);
   }
 
   methodInfoIsPermitted = new grpcWeb.AbstractClientBase.MethodInfo(
-    IsPermittedResponse,
-    (request: IsPermittedRequest) => {
+    groups_groups_pb.IsPermittedResponse,
+    (request: groups_groups_pb.IsPermittedRequest) => {
       return request.serializeBinary();
     },
-    IsPermittedResponse.deserializeBinary
+    groups_groups_pb.IsPermittedResponse.deserializeBinary
   );
 
   isPermitted(
-    request: IsPermittedRequest,
+    request: groups_groups_pb.IsPermittedRequest,
+    metadata: grpcWeb.Metadata | null): Promise<groups_groups_pb.IsPermittedResponse>;
+
+  isPermitted(
+    request: groups_groups_pb.IsPermittedRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: IsPermittedResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVGroupsService/IsPermitted',
-      request,
-      metadata || {},
-      this.methodInfoIsPermitted,
-      callback);
+               response: groups_groups_pb.IsPermittedResponse) => void): grpcWeb.ClientReadableStream<groups_groups_pb.IsPermittedResponse>;
+
+  isPermitted(
+    request: groups_groups_pb.IsPermittedRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: groups_groups_pb.IsPermittedResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVGroupsService/IsPermitted',
+        request,
+        metadata || {},
+        this.methodInfoIsPermitted,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVGroupsService/IsPermitted',
+    request,
+    metadata || {},
+    this.methodInfoIsPermitted);
   }
 
   methodInfoGetServiceStatus = new grpcWeb.AbstractClientBase.MethodInfo(
@@ -451,16 +726,34 @@ export class MruVGroupsServiceClient {
 
   getServiceStatus(
     request: common_health_pb.ServiceStatusRequest,
+    metadata: grpcWeb.Metadata | null): Promise<common_health_pb.ServiceStatusResponse>;
+
+  getServiceStatus(
+    request: common_health_pb.ServiceStatusRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
+               response: common_health_pb.ServiceStatusResponse) => void): grpcWeb.ClientReadableStream<common_health_pb.ServiceStatusResponse>;
+
+  getServiceStatus(
+    request: common_health_pb.ServiceStatusRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
                response: common_health_pb.ServiceStatusResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVGroupsService/GetServiceStatus',
-      request,
-      metadata || {},
-      this.methodInfoGetServiceStatus,
-      callback);
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVGroupsService/GetServiceStatus',
+        request,
+        metadata || {},
+        this.methodInfoGetServiceStatus,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVGroupsService/GetServiceStatus',
+    request,
+    metadata || {},
+    this.methodInfoGetServiceStatus);
   }
 
   methodInfoGetServiceVersion = new grpcWeb.AbstractClientBase.MethodInfo(
@@ -473,16 +766,34 @@ export class MruVGroupsServiceClient {
 
   getServiceVersion(
     request: common_health_pb.VersionRequest,
+    metadata: grpcWeb.Metadata | null): Promise<common_health_pb.VersionResponse>;
+
+  getServiceVersion(
+    request: common_health_pb.VersionRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
+               response: common_health_pb.VersionResponse) => void): grpcWeb.ClientReadableStream<common_health_pb.VersionResponse>;
+
+  getServiceVersion(
+    request: common_health_pb.VersionRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
                response: common_health_pb.VersionResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.MruVGroupsService/GetServiceVersion',
-      request,
-      metadata || {},
-      this.methodInfoGetServiceVersion,
-      callback);
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.MruVGroupsService/GetServiceVersion',
+        request,
+        metadata || {},
+        this.methodInfoGetServiceVersion,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.MruVGroupsService/GetServiceVersion',
+    request,
+    metadata || {},
+    this.methodInfoGetServiceVersion);
   }
 
 }

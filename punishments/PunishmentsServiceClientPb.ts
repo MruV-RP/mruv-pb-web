@@ -7,78 +7,24 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 
+/* eslint-disable */
+// @ts-nocheck
+
+
 import * as grpcWeb from 'grpc-web';
 
-import * as google_api_annotations_pb from '../google/api/annotations_pb';
+import * as punishments_punishments_pb from '../punishments/punishments_pb';
 
-import {
-  AdminJailMessage,
-  AdminJailRequest,
-  AdminJailResponse,
-  BanMessage,
-  BanRequest,
-  BanResponse,
-  BlockMessage,
-  BlockRequest,
-  BlockResponse,
-  GetBanRequest,
-  GetBlockRequest,
-  GetPlayerAdminJailRequest,
-  GetPlayerAdminJailResponse,
-  GetPlayerBansRequest,
-  GetPlayerBansResponse,
-  GetPlayerWarnsRequest,
-  GetPlayerWarnsResponse,
-  GetWarnRequest,
-  IsCharacterBlockedRequest,
-  IsCharacterBlockedResponse,
-  IsCharacterJailedRequest,
-  IsCharacterJailedResponse,
-  IsPlayerBannedRequest,
-  IsPlayerBannedResponse,
-  MuteGlobalChatsRequest,
-  MuteGlobalChatsResponse,
-  UnAdminJailMessage,
-  UnAdminJailRequest,
-  UnAdminJailResponse,
-  UnBanMessage,
-  UnBanRequest,
-  UnBanResponse,
-  UnBlockMessage,
-  UnBlockRequest,
-  UnBlockResponse,
-  UnMuteGlobalChatsRequest,
-  UnMuteGlobalChatsResponse,
-  UnWarnMessage,
-  UnWarnRequest,
-  UnWarnResponse,
-  WarnMessage,
-  WarnRequest,
-  WarnResponse,
-  WatchAdminJailsRequest,
-  WatchBansRequest,
-  WatchBlocksRequest,
-  WatchPlayerAcquittalsRequest,
-  WatchPlayerAcquittalsResponse,
-  WatchPlayerPunishmentsRequest,
-  WatchPlayerPunishmentsResponse,
-  WatchPunishmentsRequest,
-  WatchPunishmentsResponse,
-  WatchUnAdminJailsRequest,
-  WatchUnBansRequest,
-  WatchUnBlocksRequest,
-  WatchUnWarnsRequest,
-  WatchWarnsRequest} from './punishments_pb';
 
 export class MruVPunishmentsServiceClient {
   client_: grpcWeb.AbstractClientBase;
   hostname_: string;
   credentials_: null | { [index: string]: string; };
-  options_: null | { [index: string]: string; };
+  options_: null | { [index: string]: any; };
 
   constructor (hostname: string,
                credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: string; }) {
+               options?: null | { [index: string]: any; }) {
     if (!options) options = {};
     if (!credentials) credentials = {};
     options['format'] = 'text';
@@ -90,433 +36,775 @@ export class MruVPunishmentsServiceClient {
   }
 
   methodInfoBan = new grpcWeb.AbstractClientBase.MethodInfo(
-    BanResponse,
-    (request: BanRequest) => {
+    punishments_punishments_pb.BanResponse,
+    (request: punishments_punishments_pb.BanRequest) => {
       return request.serializeBinary();
     },
-    BanResponse.deserializeBinary
+    punishments_punishments_pb.BanResponse.deserializeBinary
   );
 
   ban(
-    request: BanRequest,
+    request: punishments_punishments_pb.BanRequest,
+    metadata: grpcWeb.Metadata | null): Promise<punishments_punishments_pb.BanResponse>;
+
+  ban(
+    request: punishments_punishments_pb.BanRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: BanResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.punishments.MruVPunishmentsService/Ban',
-      request,
-      metadata || {},
-      this.methodInfoBan,
-      callback);
+               response: punishments_punishments_pb.BanResponse) => void): grpcWeb.ClientReadableStream<punishments_punishments_pb.BanResponse>;
+
+  ban(
+    request: punishments_punishments_pb.BanRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: punishments_punishments_pb.BanResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.punishments.MruVPunishmentsService/Ban',
+        request,
+        metadata || {},
+        this.methodInfoBan,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.punishments.MruVPunishmentsService/Ban',
+    request,
+    metadata || {},
+    this.methodInfoBan);
   }
 
   methodInfoBlock = new grpcWeb.AbstractClientBase.MethodInfo(
-    BlockResponse,
-    (request: BlockRequest) => {
+    punishments_punishments_pb.BlockResponse,
+    (request: punishments_punishments_pb.BlockRequest) => {
       return request.serializeBinary();
     },
-    BlockResponse.deserializeBinary
+    punishments_punishments_pb.BlockResponse.deserializeBinary
   );
 
   block(
-    request: BlockRequest,
+    request: punishments_punishments_pb.BlockRequest,
+    metadata: grpcWeb.Metadata | null): Promise<punishments_punishments_pb.BlockResponse>;
+
+  block(
+    request: punishments_punishments_pb.BlockRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: BlockResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.punishments.MruVPunishmentsService/Block',
-      request,
-      metadata || {},
-      this.methodInfoBlock,
-      callback);
+               response: punishments_punishments_pb.BlockResponse) => void): grpcWeb.ClientReadableStream<punishments_punishments_pb.BlockResponse>;
+
+  block(
+    request: punishments_punishments_pb.BlockRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: punishments_punishments_pb.BlockResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.punishments.MruVPunishmentsService/Block',
+        request,
+        metadata || {},
+        this.methodInfoBlock,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.punishments.MruVPunishmentsService/Block',
+    request,
+    metadata || {},
+    this.methodInfoBlock);
   }
 
   methodInfoWarn = new grpcWeb.AbstractClientBase.MethodInfo(
-    WarnResponse,
-    (request: WarnRequest) => {
+    punishments_punishments_pb.WarnResponse,
+    (request: punishments_punishments_pb.WarnRequest) => {
       return request.serializeBinary();
     },
-    WarnResponse.deserializeBinary
+    punishments_punishments_pb.WarnResponse.deserializeBinary
   );
 
   warn(
-    request: WarnRequest,
+    request: punishments_punishments_pb.WarnRequest,
+    metadata: grpcWeb.Metadata | null): Promise<punishments_punishments_pb.WarnResponse>;
+
+  warn(
+    request: punishments_punishments_pb.WarnRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: WarnResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.punishments.MruVPunishmentsService/Warn',
-      request,
-      metadata || {},
-      this.methodInfoWarn,
-      callback);
+               response: punishments_punishments_pb.WarnResponse) => void): grpcWeb.ClientReadableStream<punishments_punishments_pb.WarnResponse>;
+
+  warn(
+    request: punishments_punishments_pb.WarnRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: punishments_punishments_pb.WarnResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.punishments.MruVPunishmentsService/Warn',
+        request,
+        metadata || {},
+        this.methodInfoWarn,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.punishments.MruVPunishmentsService/Warn',
+    request,
+    metadata || {},
+    this.methodInfoWarn);
   }
 
   methodInfoAdminJail = new grpcWeb.AbstractClientBase.MethodInfo(
-    AdminJailResponse,
-    (request: AdminJailRequest) => {
+    punishments_punishments_pb.AdminJailResponse,
+    (request: punishments_punishments_pb.AdminJailRequest) => {
       return request.serializeBinary();
     },
-    AdminJailResponse.deserializeBinary
+    punishments_punishments_pb.AdminJailResponse.deserializeBinary
   );
 
   adminJail(
-    request: AdminJailRequest,
+    request: punishments_punishments_pb.AdminJailRequest,
+    metadata: grpcWeb.Metadata | null): Promise<punishments_punishments_pb.AdminJailResponse>;
+
+  adminJail(
+    request: punishments_punishments_pb.AdminJailRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: AdminJailResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.punishments.MruVPunishmentsService/AdminJail',
-      request,
-      metadata || {},
-      this.methodInfoAdminJail,
-      callback);
+               response: punishments_punishments_pb.AdminJailResponse) => void): grpcWeb.ClientReadableStream<punishments_punishments_pb.AdminJailResponse>;
+
+  adminJail(
+    request: punishments_punishments_pb.AdminJailRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: punishments_punishments_pb.AdminJailResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.punishments.MruVPunishmentsService/AdminJail',
+        request,
+        metadata || {},
+        this.methodInfoAdminJail,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.punishments.MruVPunishmentsService/AdminJail',
+    request,
+    metadata || {},
+    this.methodInfoAdminJail);
   }
 
   methodInfoMuteGlobalChats = new grpcWeb.AbstractClientBase.MethodInfo(
-    MuteGlobalChatsResponse,
-    (request: MuteGlobalChatsRequest) => {
+    punishments_punishments_pb.MuteGlobalChatsResponse,
+    (request: punishments_punishments_pb.MuteGlobalChatsRequest) => {
       return request.serializeBinary();
     },
-    MuteGlobalChatsResponse.deserializeBinary
+    punishments_punishments_pb.MuteGlobalChatsResponse.deserializeBinary
   );
 
   muteGlobalChats(
-    request: MuteGlobalChatsRequest,
+    request: punishments_punishments_pb.MuteGlobalChatsRequest,
+    metadata: grpcWeb.Metadata | null): Promise<punishments_punishments_pb.MuteGlobalChatsResponse>;
+
+  muteGlobalChats(
+    request: punishments_punishments_pb.MuteGlobalChatsRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: MuteGlobalChatsResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.punishments.MruVPunishmentsService/MuteGlobalChats',
-      request,
-      metadata || {},
-      this.methodInfoMuteGlobalChats,
-      callback);
+               response: punishments_punishments_pb.MuteGlobalChatsResponse) => void): grpcWeb.ClientReadableStream<punishments_punishments_pb.MuteGlobalChatsResponse>;
+
+  muteGlobalChats(
+    request: punishments_punishments_pb.MuteGlobalChatsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: punishments_punishments_pb.MuteGlobalChatsResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.punishments.MruVPunishmentsService/MuteGlobalChats',
+        request,
+        metadata || {},
+        this.methodInfoMuteGlobalChats,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.punishments.MruVPunishmentsService/MuteGlobalChats',
+    request,
+    metadata || {},
+    this.methodInfoMuteGlobalChats);
   }
 
   methodInfoUnBan = new grpcWeb.AbstractClientBase.MethodInfo(
-    UnBanResponse,
-    (request: UnBanRequest) => {
+    punishments_punishments_pb.UnBanResponse,
+    (request: punishments_punishments_pb.UnBanRequest) => {
       return request.serializeBinary();
     },
-    UnBanResponse.deserializeBinary
+    punishments_punishments_pb.UnBanResponse.deserializeBinary
   );
 
   unBan(
-    request: UnBanRequest,
+    request: punishments_punishments_pb.UnBanRequest,
+    metadata: grpcWeb.Metadata | null): Promise<punishments_punishments_pb.UnBanResponse>;
+
+  unBan(
+    request: punishments_punishments_pb.UnBanRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: UnBanResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.punishments.MruVPunishmentsService/UnBan',
-      request,
-      metadata || {},
-      this.methodInfoUnBan,
-      callback);
+               response: punishments_punishments_pb.UnBanResponse) => void): grpcWeb.ClientReadableStream<punishments_punishments_pb.UnBanResponse>;
+
+  unBan(
+    request: punishments_punishments_pb.UnBanRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: punishments_punishments_pb.UnBanResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.punishments.MruVPunishmentsService/UnBan',
+        request,
+        metadata || {},
+        this.methodInfoUnBan,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.punishments.MruVPunishmentsService/UnBan',
+    request,
+    metadata || {},
+    this.methodInfoUnBan);
   }
 
   methodInfoUnBlock = new grpcWeb.AbstractClientBase.MethodInfo(
-    UnBlockResponse,
-    (request: UnBlockRequest) => {
+    punishments_punishments_pb.UnBlockResponse,
+    (request: punishments_punishments_pb.UnBlockRequest) => {
       return request.serializeBinary();
     },
-    UnBlockResponse.deserializeBinary
+    punishments_punishments_pb.UnBlockResponse.deserializeBinary
   );
 
   unBlock(
-    request: UnBlockRequest,
+    request: punishments_punishments_pb.UnBlockRequest,
+    metadata: grpcWeb.Metadata | null): Promise<punishments_punishments_pb.UnBlockResponse>;
+
+  unBlock(
+    request: punishments_punishments_pb.UnBlockRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: UnBlockResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.punishments.MruVPunishmentsService/UnBlock',
-      request,
-      metadata || {},
-      this.methodInfoUnBlock,
-      callback);
+               response: punishments_punishments_pb.UnBlockResponse) => void): grpcWeb.ClientReadableStream<punishments_punishments_pb.UnBlockResponse>;
+
+  unBlock(
+    request: punishments_punishments_pb.UnBlockRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: punishments_punishments_pb.UnBlockResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.punishments.MruVPunishmentsService/UnBlock',
+        request,
+        metadata || {},
+        this.methodInfoUnBlock,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.punishments.MruVPunishmentsService/UnBlock',
+    request,
+    metadata || {},
+    this.methodInfoUnBlock);
   }
 
   methodInfoUnWarn = new grpcWeb.AbstractClientBase.MethodInfo(
-    UnWarnResponse,
-    (request: UnWarnRequest) => {
+    punishments_punishments_pb.UnWarnResponse,
+    (request: punishments_punishments_pb.UnWarnRequest) => {
       return request.serializeBinary();
     },
-    UnWarnResponse.deserializeBinary
+    punishments_punishments_pb.UnWarnResponse.deserializeBinary
   );
 
   unWarn(
-    request: UnWarnRequest,
+    request: punishments_punishments_pb.UnWarnRequest,
+    metadata: grpcWeb.Metadata | null): Promise<punishments_punishments_pb.UnWarnResponse>;
+
+  unWarn(
+    request: punishments_punishments_pb.UnWarnRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: UnWarnResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.punishments.MruVPunishmentsService/UnWarn',
-      request,
-      metadata || {},
-      this.methodInfoUnWarn,
-      callback);
+               response: punishments_punishments_pb.UnWarnResponse) => void): grpcWeb.ClientReadableStream<punishments_punishments_pb.UnWarnResponse>;
+
+  unWarn(
+    request: punishments_punishments_pb.UnWarnRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: punishments_punishments_pb.UnWarnResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.punishments.MruVPunishmentsService/UnWarn',
+        request,
+        metadata || {},
+        this.methodInfoUnWarn,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.punishments.MruVPunishmentsService/UnWarn',
+    request,
+    metadata || {},
+    this.methodInfoUnWarn);
   }
 
   methodInfoUnAdminJail = new grpcWeb.AbstractClientBase.MethodInfo(
-    UnAdminJailResponse,
-    (request: UnAdminJailRequest) => {
+    punishments_punishments_pb.UnAdminJailResponse,
+    (request: punishments_punishments_pb.UnAdminJailRequest) => {
       return request.serializeBinary();
     },
-    UnAdminJailResponse.deserializeBinary
+    punishments_punishments_pb.UnAdminJailResponse.deserializeBinary
   );
 
   unAdminJail(
-    request: UnAdminJailRequest,
+    request: punishments_punishments_pb.UnAdminJailRequest,
+    metadata: grpcWeb.Metadata | null): Promise<punishments_punishments_pb.UnAdminJailResponse>;
+
+  unAdminJail(
+    request: punishments_punishments_pb.UnAdminJailRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: UnAdminJailResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.punishments.MruVPunishmentsService/UnAdminJail',
-      request,
-      metadata || {},
-      this.methodInfoUnAdminJail,
-      callback);
+               response: punishments_punishments_pb.UnAdminJailResponse) => void): grpcWeb.ClientReadableStream<punishments_punishments_pb.UnAdminJailResponse>;
+
+  unAdminJail(
+    request: punishments_punishments_pb.UnAdminJailRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: punishments_punishments_pb.UnAdminJailResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.punishments.MruVPunishmentsService/UnAdminJail',
+        request,
+        metadata || {},
+        this.methodInfoUnAdminJail,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.punishments.MruVPunishmentsService/UnAdminJail',
+    request,
+    metadata || {},
+    this.methodInfoUnAdminJail);
   }
 
   methodInfoUnMuteGlobalChats = new grpcWeb.AbstractClientBase.MethodInfo(
-    UnMuteGlobalChatsResponse,
-    (request: UnMuteGlobalChatsRequest) => {
+    punishments_punishments_pb.UnMuteGlobalChatsResponse,
+    (request: punishments_punishments_pb.UnMuteGlobalChatsRequest) => {
       return request.serializeBinary();
     },
-    UnMuteGlobalChatsResponse.deserializeBinary
+    punishments_punishments_pb.UnMuteGlobalChatsResponse.deserializeBinary
   );
 
   unMuteGlobalChats(
-    request: UnMuteGlobalChatsRequest,
+    request: punishments_punishments_pb.UnMuteGlobalChatsRequest,
+    metadata: grpcWeb.Metadata | null): Promise<punishments_punishments_pb.UnMuteGlobalChatsResponse>;
+
+  unMuteGlobalChats(
+    request: punishments_punishments_pb.UnMuteGlobalChatsRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: UnMuteGlobalChatsResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.punishments.MruVPunishmentsService/UnMuteGlobalChats',
-      request,
-      metadata || {},
-      this.methodInfoUnMuteGlobalChats,
-      callback);
+               response: punishments_punishments_pb.UnMuteGlobalChatsResponse) => void): grpcWeb.ClientReadableStream<punishments_punishments_pb.UnMuteGlobalChatsResponse>;
+
+  unMuteGlobalChats(
+    request: punishments_punishments_pb.UnMuteGlobalChatsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: punishments_punishments_pb.UnMuteGlobalChatsResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.punishments.MruVPunishmentsService/UnMuteGlobalChats',
+        request,
+        metadata || {},
+        this.methodInfoUnMuteGlobalChats,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.punishments.MruVPunishmentsService/UnMuteGlobalChats',
+    request,
+    metadata || {},
+    this.methodInfoUnMuteGlobalChats);
   }
 
   methodInfoGetPlayerBans = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetPlayerBansResponse,
-    (request: GetPlayerBansRequest) => {
+    punishments_punishments_pb.GetPlayerBansResponse,
+    (request: punishments_punishments_pb.GetPlayerBansRequest) => {
       return request.serializeBinary();
     },
-    GetPlayerBansResponse.deserializeBinary
+    punishments_punishments_pb.GetPlayerBansResponse.deserializeBinary
   );
 
   getPlayerBans(
-    request: GetPlayerBansRequest,
+    request: punishments_punishments_pb.GetPlayerBansRequest,
+    metadata: grpcWeb.Metadata | null): Promise<punishments_punishments_pb.GetPlayerBansResponse>;
+
+  getPlayerBans(
+    request: punishments_punishments_pb.GetPlayerBansRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetPlayerBansResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.punishments.MruVPunishmentsService/GetPlayerBans',
-      request,
-      metadata || {},
-      this.methodInfoGetPlayerBans,
-      callback);
+               response: punishments_punishments_pb.GetPlayerBansResponse) => void): grpcWeb.ClientReadableStream<punishments_punishments_pb.GetPlayerBansResponse>;
+
+  getPlayerBans(
+    request: punishments_punishments_pb.GetPlayerBansRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: punishments_punishments_pb.GetPlayerBansResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.punishments.MruVPunishmentsService/GetPlayerBans',
+        request,
+        metadata || {},
+        this.methodInfoGetPlayerBans,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.punishments.MruVPunishmentsService/GetPlayerBans',
+    request,
+    metadata || {},
+    this.methodInfoGetPlayerBans);
   }
 
   methodInfoGetPlayerWarns = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetPlayerWarnsResponse,
-    (request: GetPlayerWarnsRequest) => {
+    punishments_punishments_pb.GetPlayerWarnsResponse,
+    (request: punishments_punishments_pb.GetPlayerWarnsRequest) => {
       return request.serializeBinary();
     },
-    GetPlayerWarnsResponse.deserializeBinary
+    punishments_punishments_pb.GetPlayerWarnsResponse.deserializeBinary
   );
 
   getPlayerWarns(
-    request: GetPlayerWarnsRequest,
+    request: punishments_punishments_pb.GetPlayerWarnsRequest,
+    metadata: grpcWeb.Metadata | null): Promise<punishments_punishments_pb.GetPlayerWarnsResponse>;
+
+  getPlayerWarns(
+    request: punishments_punishments_pb.GetPlayerWarnsRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetPlayerWarnsResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.punishments.MruVPunishmentsService/GetPlayerWarns',
-      request,
-      metadata || {},
-      this.methodInfoGetPlayerWarns,
-      callback);
+               response: punishments_punishments_pb.GetPlayerWarnsResponse) => void): grpcWeb.ClientReadableStream<punishments_punishments_pb.GetPlayerWarnsResponse>;
+
+  getPlayerWarns(
+    request: punishments_punishments_pb.GetPlayerWarnsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: punishments_punishments_pb.GetPlayerWarnsResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.punishments.MruVPunishmentsService/GetPlayerWarns',
+        request,
+        metadata || {},
+        this.methodInfoGetPlayerWarns,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.punishments.MruVPunishmentsService/GetPlayerWarns',
+    request,
+    metadata || {},
+    this.methodInfoGetPlayerWarns);
   }
 
   methodInfoGetPlayerAdminJail = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetPlayerAdminJailResponse,
-    (request: GetPlayerAdminJailRequest) => {
+    punishments_punishments_pb.GetPlayerAdminJailResponse,
+    (request: punishments_punishments_pb.GetPlayerAdminJailRequest) => {
       return request.serializeBinary();
     },
-    GetPlayerAdminJailResponse.deserializeBinary
+    punishments_punishments_pb.GetPlayerAdminJailResponse.deserializeBinary
   );
 
   getPlayerAdminJail(
-    request: GetPlayerAdminJailRequest,
+    request: punishments_punishments_pb.GetPlayerAdminJailRequest,
+    metadata: grpcWeb.Metadata | null): Promise<punishments_punishments_pb.GetPlayerAdminJailResponse>;
+
+  getPlayerAdminJail(
+    request: punishments_punishments_pb.GetPlayerAdminJailRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetPlayerAdminJailResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.punishments.MruVPunishmentsService/GetPlayerAdminJail',
-      request,
-      metadata || {},
-      this.methodInfoGetPlayerAdminJail,
-      callback);
+               response: punishments_punishments_pb.GetPlayerAdminJailResponse) => void): grpcWeb.ClientReadableStream<punishments_punishments_pb.GetPlayerAdminJailResponse>;
+
+  getPlayerAdminJail(
+    request: punishments_punishments_pb.GetPlayerAdminJailRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: punishments_punishments_pb.GetPlayerAdminJailResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.punishments.MruVPunishmentsService/GetPlayerAdminJail',
+        request,
+        metadata || {},
+        this.methodInfoGetPlayerAdminJail,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.punishments.MruVPunishmentsService/GetPlayerAdminJail',
+    request,
+    metadata || {},
+    this.methodInfoGetPlayerAdminJail);
   }
 
   methodInfoGetBan = new grpcWeb.AbstractClientBase.MethodInfo(
-    BanMessage,
-    (request: GetBanRequest) => {
+    punishments_punishments_pb.BanMessage,
+    (request: punishments_punishments_pb.GetBanRequest) => {
       return request.serializeBinary();
     },
-    BanMessage.deserializeBinary
+    punishments_punishments_pb.BanMessage.deserializeBinary
   );
 
   getBan(
-    request: GetBanRequest,
+    request: punishments_punishments_pb.GetBanRequest,
+    metadata: grpcWeb.Metadata | null): Promise<punishments_punishments_pb.BanMessage>;
+
+  getBan(
+    request: punishments_punishments_pb.GetBanRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: BanMessage) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.punishments.MruVPunishmentsService/GetBan',
-      request,
-      metadata || {},
-      this.methodInfoGetBan,
-      callback);
+               response: punishments_punishments_pb.BanMessage) => void): grpcWeb.ClientReadableStream<punishments_punishments_pb.BanMessage>;
+
+  getBan(
+    request: punishments_punishments_pb.GetBanRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: punishments_punishments_pb.BanMessage) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.punishments.MruVPunishmentsService/GetBan',
+        request,
+        metadata || {},
+        this.methodInfoGetBan,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.punishments.MruVPunishmentsService/GetBan',
+    request,
+    metadata || {},
+    this.methodInfoGetBan);
   }
 
   methodInfoGetWarn = new grpcWeb.AbstractClientBase.MethodInfo(
-    WarnMessage,
-    (request: GetWarnRequest) => {
+    punishments_punishments_pb.WarnMessage,
+    (request: punishments_punishments_pb.GetWarnRequest) => {
       return request.serializeBinary();
     },
-    WarnMessage.deserializeBinary
+    punishments_punishments_pb.WarnMessage.deserializeBinary
   );
 
   getWarn(
-    request: GetWarnRequest,
+    request: punishments_punishments_pb.GetWarnRequest,
+    metadata: grpcWeb.Metadata | null): Promise<punishments_punishments_pb.WarnMessage>;
+
+  getWarn(
+    request: punishments_punishments_pb.GetWarnRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: WarnMessage) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.punishments.MruVPunishmentsService/GetWarn',
-      request,
-      metadata || {},
-      this.methodInfoGetWarn,
-      callback);
+               response: punishments_punishments_pb.WarnMessage) => void): grpcWeb.ClientReadableStream<punishments_punishments_pb.WarnMessage>;
+
+  getWarn(
+    request: punishments_punishments_pb.GetWarnRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: punishments_punishments_pb.WarnMessage) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.punishments.MruVPunishmentsService/GetWarn',
+        request,
+        metadata || {},
+        this.methodInfoGetWarn,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.punishments.MruVPunishmentsService/GetWarn',
+    request,
+    metadata || {},
+    this.methodInfoGetWarn);
   }
 
   methodInfoGetBlock = new grpcWeb.AbstractClientBase.MethodInfo(
-    BlockMessage,
-    (request: GetBlockRequest) => {
+    punishments_punishments_pb.BlockMessage,
+    (request: punishments_punishments_pb.GetBlockRequest) => {
       return request.serializeBinary();
     },
-    BlockMessage.deserializeBinary
+    punishments_punishments_pb.BlockMessage.deserializeBinary
   );
 
   getBlock(
-    request: GetBlockRequest,
+    request: punishments_punishments_pb.GetBlockRequest,
+    metadata: grpcWeb.Metadata | null): Promise<punishments_punishments_pb.BlockMessage>;
+
+  getBlock(
+    request: punishments_punishments_pb.GetBlockRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: BlockMessage) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.punishments.MruVPunishmentsService/GetBlock',
-      request,
-      metadata || {},
-      this.methodInfoGetBlock,
-      callback);
+               response: punishments_punishments_pb.BlockMessage) => void): grpcWeb.ClientReadableStream<punishments_punishments_pb.BlockMessage>;
+
+  getBlock(
+    request: punishments_punishments_pb.GetBlockRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: punishments_punishments_pb.BlockMessage) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.punishments.MruVPunishmentsService/GetBlock',
+        request,
+        metadata || {},
+        this.methodInfoGetBlock,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.punishments.MruVPunishmentsService/GetBlock',
+    request,
+    metadata || {},
+    this.methodInfoGetBlock);
   }
 
   methodInfoIsPlayerBanned = new grpcWeb.AbstractClientBase.MethodInfo(
-    IsPlayerBannedResponse,
-    (request: IsPlayerBannedRequest) => {
+    punishments_punishments_pb.IsPlayerBannedResponse,
+    (request: punishments_punishments_pb.IsPlayerBannedRequest) => {
       return request.serializeBinary();
     },
-    IsPlayerBannedResponse.deserializeBinary
+    punishments_punishments_pb.IsPlayerBannedResponse.deserializeBinary
   );
 
   isPlayerBanned(
-    request: IsPlayerBannedRequest,
+    request: punishments_punishments_pb.IsPlayerBannedRequest,
+    metadata: grpcWeb.Metadata | null): Promise<punishments_punishments_pb.IsPlayerBannedResponse>;
+
+  isPlayerBanned(
+    request: punishments_punishments_pb.IsPlayerBannedRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: IsPlayerBannedResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.punishments.MruVPunishmentsService/IsPlayerBanned',
-      request,
-      metadata || {},
-      this.methodInfoIsPlayerBanned,
-      callback);
+               response: punishments_punishments_pb.IsPlayerBannedResponse) => void): grpcWeb.ClientReadableStream<punishments_punishments_pb.IsPlayerBannedResponse>;
+
+  isPlayerBanned(
+    request: punishments_punishments_pb.IsPlayerBannedRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: punishments_punishments_pb.IsPlayerBannedResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.punishments.MruVPunishmentsService/IsPlayerBanned',
+        request,
+        metadata || {},
+        this.methodInfoIsPlayerBanned,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.punishments.MruVPunishmentsService/IsPlayerBanned',
+    request,
+    metadata || {},
+    this.methodInfoIsPlayerBanned);
   }
 
   methodInfoIsCharacterBlocked = new grpcWeb.AbstractClientBase.MethodInfo(
-    IsCharacterBlockedResponse,
-    (request: IsCharacterBlockedRequest) => {
+    punishments_punishments_pb.IsCharacterBlockedResponse,
+    (request: punishments_punishments_pb.IsCharacterBlockedRequest) => {
       return request.serializeBinary();
     },
-    IsCharacterBlockedResponse.deserializeBinary
+    punishments_punishments_pb.IsCharacterBlockedResponse.deserializeBinary
   );
 
   isCharacterBlocked(
-    request: IsCharacterBlockedRequest,
+    request: punishments_punishments_pb.IsCharacterBlockedRequest,
+    metadata: grpcWeb.Metadata | null): Promise<punishments_punishments_pb.IsCharacterBlockedResponse>;
+
+  isCharacterBlocked(
+    request: punishments_punishments_pb.IsCharacterBlockedRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: IsCharacterBlockedResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.punishments.MruVPunishmentsService/IsCharacterBlocked',
-      request,
-      metadata || {},
-      this.methodInfoIsCharacterBlocked,
-      callback);
+               response: punishments_punishments_pb.IsCharacterBlockedResponse) => void): grpcWeb.ClientReadableStream<punishments_punishments_pb.IsCharacterBlockedResponse>;
+
+  isCharacterBlocked(
+    request: punishments_punishments_pb.IsCharacterBlockedRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: punishments_punishments_pb.IsCharacterBlockedResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.punishments.MruVPunishmentsService/IsCharacterBlocked',
+        request,
+        metadata || {},
+        this.methodInfoIsCharacterBlocked,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.punishments.MruVPunishmentsService/IsCharacterBlocked',
+    request,
+    metadata || {},
+    this.methodInfoIsCharacterBlocked);
   }
 
   methodInfoIsCharacterJailed = new grpcWeb.AbstractClientBase.MethodInfo(
-    IsCharacterJailedResponse,
-    (request: IsCharacterJailedRequest) => {
+    punishments_punishments_pb.IsCharacterJailedResponse,
+    (request: punishments_punishments_pb.IsCharacterJailedRequest) => {
       return request.serializeBinary();
     },
-    IsCharacterJailedResponse.deserializeBinary
+    punishments_punishments_pb.IsCharacterJailedResponse.deserializeBinary
   );
 
   isCharacterJailed(
-    request: IsCharacterJailedRequest,
+    request: punishments_punishments_pb.IsCharacterJailedRequest,
+    metadata: grpcWeb.Metadata | null): Promise<punishments_punishments_pb.IsCharacterJailedResponse>;
+
+  isCharacterJailed(
+    request: punishments_punishments_pb.IsCharacterJailedRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: IsCharacterJailedResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.punishments.MruVPunishmentsService/IsCharacterJailed',
-      request,
-      metadata || {},
-      this.methodInfoIsCharacterJailed,
-      callback);
+               response: punishments_punishments_pb.IsCharacterJailedResponse) => void): grpcWeb.ClientReadableStream<punishments_punishments_pb.IsCharacterJailedResponse>;
+
+  isCharacterJailed(
+    request: punishments_punishments_pb.IsCharacterJailedRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: punishments_punishments_pb.IsCharacterJailedResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.punishments.MruVPunishmentsService/IsCharacterJailed',
+        request,
+        metadata || {},
+        this.methodInfoIsCharacterJailed,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.punishments.MruVPunishmentsService/IsCharacterJailed',
+    request,
+    metadata || {},
+    this.methodInfoIsCharacterJailed);
   }
 
   methodInfoWatchBans = new grpcWeb.AbstractClientBase.MethodInfo(
-    BanMessage,
-    (request: WatchBansRequest) => {
+    punishments_punishments_pb.BanMessage,
+    (request: punishments_punishments_pb.WatchBansRequest) => {
       return request.serializeBinary();
     },
-    BanMessage.deserializeBinary
+    punishments_punishments_pb.BanMessage.deserializeBinary
   );
 
   watchBans(
-    request: WatchBansRequest,
+    request: punishments_punishments_pb.WatchBansRequest,
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +
@@ -527,15 +815,15 @@ export class MruVPunishmentsServiceClient {
   }
 
   methodInfoWatchBlocks = new grpcWeb.AbstractClientBase.MethodInfo(
-    BlockMessage,
-    (request: WatchBlocksRequest) => {
+    punishments_punishments_pb.BlockMessage,
+    (request: punishments_punishments_pb.WatchBlocksRequest) => {
       return request.serializeBinary();
     },
-    BlockMessage.deserializeBinary
+    punishments_punishments_pb.BlockMessage.deserializeBinary
   );
 
   watchBlocks(
-    request: WatchBlocksRequest,
+    request: punishments_punishments_pb.WatchBlocksRequest,
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +
@@ -546,15 +834,15 @@ export class MruVPunishmentsServiceClient {
   }
 
   methodInfoWatchWarns = new grpcWeb.AbstractClientBase.MethodInfo(
-    WarnMessage,
-    (request: WatchWarnsRequest) => {
+    punishments_punishments_pb.WarnMessage,
+    (request: punishments_punishments_pb.WatchWarnsRequest) => {
       return request.serializeBinary();
     },
-    WarnMessage.deserializeBinary
+    punishments_punishments_pb.WarnMessage.deserializeBinary
   );
 
   watchWarns(
-    request: WatchWarnsRequest,
+    request: punishments_punishments_pb.WatchWarnsRequest,
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +
@@ -565,15 +853,15 @@ export class MruVPunishmentsServiceClient {
   }
 
   methodInfoWatchAdminJails = new grpcWeb.AbstractClientBase.MethodInfo(
-    AdminJailMessage,
-    (request: WatchAdminJailsRequest) => {
+    punishments_punishments_pb.AdminJailMessage,
+    (request: punishments_punishments_pb.WatchAdminJailsRequest) => {
       return request.serializeBinary();
     },
-    AdminJailMessage.deserializeBinary
+    punishments_punishments_pb.AdminJailMessage.deserializeBinary
   );
 
   watchAdminJails(
-    request: WatchAdminJailsRequest,
+    request: punishments_punishments_pb.WatchAdminJailsRequest,
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +
@@ -584,15 +872,15 @@ export class MruVPunishmentsServiceClient {
   }
 
   methodInfoWatchUnBans = new grpcWeb.AbstractClientBase.MethodInfo(
-    UnBanMessage,
-    (request: WatchUnBansRequest) => {
+    punishments_punishments_pb.UnBanMessage,
+    (request: punishments_punishments_pb.WatchUnBansRequest) => {
       return request.serializeBinary();
     },
-    UnBanMessage.deserializeBinary
+    punishments_punishments_pb.UnBanMessage.deserializeBinary
   );
 
   watchUnBans(
-    request: WatchUnBansRequest,
+    request: punishments_punishments_pb.WatchUnBansRequest,
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +
@@ -603,15 +891,15 @@ export class MruVPunishmentsServiceClient {
   }
 
   methodInfoWatchUnBlocks = new grpcWeb.AbstractClientBase.MethodInfo(
-    UnBlockMessage,
-    (request: WatchUnBlocksRequest) => {
+    punishments_punishments_pb.UnBlockMessage,
+    (request: punishments_punishments_pb.WatchUnBlocksRequest) => {
       return request.serializeBinary();
     },
-    UnBlockMessage.deserializeBinary
+    punishments_punishments_pb.UnBlockMessage.deserializeBinary
   );
 
   watchUnBlocks(
-    request: WatchUnBlocksRequest,
+    request: punishments_punishments_pb.WatchUnBlocksRequest,
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +
@@ -622,15 +910,15 @@ export class MruVPunishmentsServiceClient {
   }
 
   methodInfoWatchUnWarns = new grpcWeb.AbstractClientBase.MethodInfo(
-    UnWarnMessage,
-    (request: WatchUnWarnsRequest) => {
+    punishments_punishments_pb.UnWarnMessage,
+    (request: punishments_punishments_pb.WatchUnWarnsRequest) => {
       return request.serializeBinary();
     },
-    UnWarnMessage.deserializeBinary
+    punishments_punishments_pb.UnWarnMessage.deserializeBinary
   );
 
   watchUnWarns(
-    request: WatchUnWarnsRequest,
+    request: punishments_punishments_pb.WatchUnWarnsRequest,
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +
@@ -641,15 +929,15 @@ export class MruVPunishmentsServiceClient {
   }
 
   methodInfoWatchUnAdminJails = new grpcWeb.AbstractClientBase.MethodInfo(
-    UnAdminJailMessage,
-    (request: WatchUnAdminJailsRequest) => {
+    punishments_punishments_pb.UnAdminJailMessage,
+    (request: punishments_punishments_pb.WatchUnAdminJailsRequest) => {
       return request.serializeBinary();
     },
-    UnAdminJailMessage.deserializeBinary
+    punishments_punishments_pb.UnAdminJailMessage.deserializeBinary
   );
 
   watchUnAdminJails(
-    request: WatchUnAdminJailsRequest,
+    request: punishments_punishments_pb.WatchUnAdminJailsRequest,
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +
@@ -660,15 +948,15 @@ export class MruVPunishmentsServiceClient {
   }
 
   methodInfoWatchPlayerPunishments = new grpcWeb.AbstractClientBase.MethodInfo(
-    WatchPlayerPunishmentsResponse,
-    (request: WatchPlayerPunishmentsRequest) => {
+    punishments_punishments_pb.WatchPlayerPunishmentsResponse,
+    (request: punishments_punishments_pb.WatchPlayerPunishmentsRequest) => {
       return request.serializeBinary();
     },
-    WatchPlayerPunishmentsResponse.deserializeBinary
+    punishments_punishments_pb.WatchPlayerPunishmentsResponse.deserializeBinary
   );
 
   watchPlayerPunishments(
-    request: WatchPlayerPunishmentsRequest,
+    request: punishments_punishments_pb.WatchPlayerPunishmentsRequest,
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +
@@ -679,15 +967,15 @@ export class MruVPunishmentsServiceClient {
   }
 
   methodInfoWatchPlayerAcquittals = new grpcWeb.AbstractClientBase.MethodInfo(
-    WatchPlayerAcquittalsResponse,
-    (request: WatchPlayerAcquittalsRequest) => {
+    punishments_punishments_pb.WatchPlayerAcquittalsResponse,
+    (request: punishments_punishments_pb.WatchPlayerAcquittalsRequest) => {
       return request.serializeBinary();
     },
-    WatchPlayerAcquittalsResponse.deserializeBinary
+    punishments_punishments_pb.WatchPlayerAcquittalsResponse.deserializeBinary
   );
 
   watchPlayerAcquittals(
-    request: WatchPlayerAcquittalsRequest,
+    request: punishments_punishments_pb.WatchPlayerAcquittalsRequest,
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +
@@ -698,15 +986,15 @@ export class MruVPunishmentsServiceClient {
   }
 
   methodInfoWatchPunishments = new grpcWeb.AbstractClientBase.MethodInfo(
-    WatchPunishmentsResponse,
-    (request: WatchPunishmentsRequest) => {
+    punishments_punishments_pb.WatchPunishmentsResponse,
+    (request: punishments_punishments_pb.WatchPunishmentsRequest) => {
       return request.serializeBinary();
     },
-    WatchPunishmentsResponse.deserializeBinary
+    punishments_punishments_pb.WatchPunishmentsResponse.deserializeBinary
   );
 
   watchPunishments(
-    request: WatchPunishmentsRequest,
+    request: punishments_punishments_pb.WatchPunishmentsRequest,
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +

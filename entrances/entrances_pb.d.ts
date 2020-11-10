@@ -1,21 +1,22 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 import * as spots_spots_pb from '../spots/spots_pb';
 
+
 export class Entrance extends jspb.Message {
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): Entrance;
 
   getOut(): spots_spots_pb.Spot | undefined;
-  setOut(value?: spots_spots_pb.Spot): void;
+  setOut(value?: spots_spots_pb.Spot): Entrance;
   hasOut(): boolean;
-  clearOut(): void;
+  clearOut(): Entrance;
 
   getIn(): spots_spots_pb.Spot | undefined;
-  setIn(value?: spots_spots_pb.Spot): void;
+  setIn(value?: spots_spots_pb.Spot): Entrance;
   hasIn(): boolean;
-  clearIn(): void;
+  clearIn(): Entrance;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Entrance.AsObject;
@@ -35,17 +36,17 @@ export namespace Entrance {
 
 export class CreateEntranceRequest extends jspb.Message {
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): CreateEntranceRequest;
 
   getOut(): spots_spots_pb.Spot | undefined;
-  setOut(value?: spots_spots_pb.Spot): void;
+  setOut(value?: spots_spots_pb.Spot): CreateEntranceRequest;
   hasOut(): boolean;
-  clearOut(): void;
+  clearOut(): CreateEntranceRequest;
 
   getIn(): spots_spots_pb.Spot | undefined;
-  setIn(value?: spots_spots_pb.Spot): void;
+  setIn(value?: spots_spots_pb.Spot): CreateEntranceRequest;
   hasIn(): boolean;
-  clearIn(): void;
+  clearIn(): CreateEntranceRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateEntranceRequest.AsObject;
@@ -65,7 +66,7 @@ export namespace CreateEntranceRequest {
 
 export class CreateEntranceResponse extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): CreateEntranceResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateEntranceResponse.AsObject;
@@ -83,7 +84,7 @@ export namespace CreateEntranceResponse {
 
 export class GetEntranceRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): GetEntranceRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetEntranceRequest.AsObject;
@@ -101,17 +102,17 @@ export namespace GetEntranceRequest {
 
 export class GetEntranceResponse extends jspb.Message {
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): GetEntranceResponse;
 
   getInSpot(): spots_spots_pb.Spot | undefined;
-  setInSpot(value?: spots_spots_pb.Spot): void;
+  setInSpot(value?: spots_spots_pb.Spot): GetEntranceResponse;
   hasInSpot(): boolean;
-  clearInSpot(): void;
+  clearInSpot(): GetEntranceResponse;
 
   getOutSpot(): spots_spots_pb.Spot | undefined;
-  setOutSpot(value?: spots_spots_pb.Spot): void;
+  setOutSpot(value?: spots_spots_pb.Spot): GetEntranceResponse;
   hasOutSpot(): boolean;
-  clearOutSpot(): void;
+  clearOutSpot(): GetEntranceResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetEntranceResponse.AsObject;
@@ -131,13 +132,13 @@ export namespace GetEntranceResponse {
 
 export class UpdateEntranceRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): UpdateEntranceRequest;
 
   getInSpotId(): number;
-  setInSpotId(value: number): void;
+  setInSpotId(value: number): UpdateEntranceRequest;
 
   getOutSpotId(): number;
-  setOutSpotId(value: number): void;
+  setOutSpotId(value: number): UpdateEntranceRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UpdateEntranceRequest.AsObject;
@@ -171,7 +172,7 @@ export namespace UpdateEntranceResponse {
 
 export class DeleteEntranceRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): DeleteEntranceRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteEntranceRequest.AsObject;
@@ -203,7 +204,7 @@ export namespace DeleteEntranceResponse {
 
 export class LockRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): LockRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): LockRequest.AsObject;
@@ -235,7 +236,7 @@ export namespace LockResponse {
 
 export class UnlockRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): UnlockRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UnlockRequest.AsObject;
@@ -267,16 +268,16 @@ export namespace UnlockResponse {
 
 export class FindNearestEntranceRequest extends jspb.Message {
   getX(): number;
-  setX(value: number): void;
+  setX(value: number): FindNearestEntranceRequest;
 
   getY(): number;
-  setY(value: number): void;
+  setY(value: number): FindNearestEntranceRequest;
 
   getZ(): number;
-  setZ(value: number): void;
+  setZ(value: number): FindNearestEntranceRequest;
 
   getMaxDistance(): number;
-  setMaxDistance(value: number): void;
+  setMaxDistance(value: number): FindNearestEntranceRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FindNearestEntranceRequest.AsObject;
@@ -297,13 +298,13 @@ export namespace FindNearestEntranceRequest {
 
 export class FindNearestEntranceResponse extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): FindNearestEntranceResponse;
 
   getDistance(): number;
-  setDistance(value: number): void;
+  setDistance(value: number): FindNearestEntranceResponse;
 
   getInside(): boolean;
-  setInside(value: boolean): void;
+  setInside(value: boolean): FindNearestEntranceResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FindNearestEntranceResponse.AsObject;
@@ -323,7 +324,7 @@ export namespace FindNearestEntranceResponse {
 
 export class EnterRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): EnterRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): EnterRequest.AsObject;
@@ -355,7 +356,7 @@ export namespace EnterResponse {
 
 export class ExitRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): ExitRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ExitRequest.AsObject;
@@ -387,7 +388,7 @@ export namespace ExitResponse {
 
 export class FetchAllEntrancesRequest extends jspb.Message {
   getChunkSize(): number;
-  setChunkSize(value: number): void;
+  setChunkSize(value: number): FetchAllEntrancesRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FetchAllEntrancesRequest.AsObject;
@@ -405,7 +406,7 @@ export namespace FetchAllEntrancesRequest {
 
 export class FetchAllEntrancesResponse extends jspb.Message {
   getEntrancesMap(): jspb.Map<number, Entrance>;
-  clearEntrancesMap(): void;
+  clearEntrancesMap(): FetchAllEntrancesResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FetchAllEntrancesResponse.AsObject;

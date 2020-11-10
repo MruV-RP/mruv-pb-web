@@ -1,38 +1,39 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 import * as common_health_pb from '../common/health_pb';
 
+
 export class Character extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): Character;
 
   getOwnerId(): number;
-  setOwnerId(value: number): void;
+  setOwnerId(value: number): Character;
 
   getFirstName(): string;
-  setFirstName(value: string): void;
+  setFirstName(value: string): Character;
 
   getSecondName(): string;
-  setSecondName(value: string): void;
+  setSecondName(value: string): Character;
 
   getAge(): number;
-  setAge(value: number): void;
+  setAge(value: number): Character;
 
   getSex(): number;
-  setSex(value: number): void;
+  setSex(value: number): Character;
 
   getClothesId(): number;
-  setClothesId(value: number): void;
+  setClothesId(value: number): Character;
 
   getX(): number;
-  setX(value: number): void;
+  setX(value: number): Character;
 
   getY(): number;
-  setY(value: number): void;
+  setY(value: number): Character;
 
   getZ(): number;
-  setZ(value: number): void;
+  setZ(value: number): Character;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Character.AsObject;
@@ -59,7 +60,7 @@ export namespace Character {
 
 export class CharacterID extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): CharacterID;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CharacterID.AsObject;
@@ -77,22 +78,22 @@ export namespace CharacterID {
 
 export class CreateCharacterRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): CreateCharacterRequest;
 
   getOwnerId(): number;
-  setOwnerId(value: number): void;
+  setOwnerId(value: number): CreateCharacterRequest;
 
   getFirstName(): string;
-  setFirstName(value: string): void;
+  setFirstName(value: string): CreateCharacterRequest;
 
   getSecondName(): string;
-  setSecondName(value: string): void;
+  setSecondName(value: string): CreateCharacterRequest;
 
   getAge(): number;
-  setAge(value: number): void;
+  setAge(value: number): CreateCharacterRequest;
 
   getSex(): number;
-  setSex(value: number): void;
+  setSex(value: number): CreateCharacterRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateCharacterRequest.AsObject;
@@ -115,7 +116,7 @@ export namespace CreateCharacterRequest {
 
 export class CreateCharacterResponse extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): CreateCharacterResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateCharacterResponse.AsObject;
@@ -133,7 +134,7 @@ export namespace CreateCharacterResponse {
 
 export class GetCharacterRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): GetCharacterRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetCharacterRequest.AsObject;
@@ -151,34 +152,34 @@ export namespace GetCharacterRequest {
 
 export class GetCharacterResponse extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): GetCharacterResponse;
 
   getOwnerId(): number;
-  setOwnerId(value: number): void;
+  setOwnerId(value: number): GetCharacterResponse;
 
   getFirstName(): string;
-  setFirstName(value: string): void;
+  setFirstName(value: string): GetCharacterResponse;
 
   getSecondName(): string;
-  setSecondName(value: string): void;
+  setSecondName(value: string): GetCharacterResponse;
 
   getAge(): number;
-  setAge(value: number): void;
+  setAge(value: number): GetCharacterResponse;
 
   getSex(): number;
-  setSex(value: number): void;
+  setSex(value: number): GetCharacterResponse;
 
   getClothesId(): number;
-  setClothesId(value: number): void;
+  setClothesId(value: number): GetCharacterResponse;
 
   getX(): number;
-  setX(value: number): void;
+  setX(value: number): GetCharacterResponse;
 
   getY(): number;
-  setY(value: number): void;
+  setY(value: number): GetCharacterResponse;
 
   getZ(): number;
-  setZ(value: number): void;
+  setZ(value: number): GetCharacterResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetCharacterResponse.AsObject;
@@ -205,7 +206,7 @@ export namespace GetCharacterResponse {
 
 export class UpdateCharacterRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): UpdateCharacterRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UpdateCharacterRequest.AsObject;
@@ -237,7 +238,7 @@ export namespace UpdateCharacterResponse {
 
 export class DeleteCharacterRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): DeleteCharacterRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteCharacterRequest.AsObject;
@@ -269,10 +270,10 @@ export namespace DeleteCharacterResponse {
 
 export class ChangeClothesRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): ChangeClothesRequest;
 
   getClothesId(): number;
-  setClothesId(value: number): void;
+  setClothesId(value: number): ChangeClothesRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ChangeClothesRequest.AsObject;
@@ -305,9 +306,9 @@ export namespace ChangeClothesResponse {
 
 export class DeathStreamRequest extends jspb.Message {
   getDeathTypesList(): Array<DeathType>;
-  setDeathTypesList(value: Array<DeathType>): void;
-  clearDeathTypesList(): void;
-  addDeathTypes(value: DeathType, index?: number): void;
+  setDeathTypesList(value: Array<DeathType>): DeathStreamRequest;
+  clearDeathTypesList(): DeathStreamRequest;
+  addDeathTypes(value: DeathType, index?: number): DeathStreamRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeathStreamRequest.AsObject;
@@ -325,12 +326,12 @@ export namespace DeathStreamRequest {
 
 export class DeathStreamResponse extends jspb.Message {
   getCharacter(): Character | undefined;
-  setCharacter(value?: Character): void;
+  setCharacter(value?: Character): DeathStreamResponse;
   hasCharacter(): boolean;
-  clearCharacter(): void;
+  clearCharacter(): DeathStreamResponse;
 
   getDeathType(): DeathType;
-  setDeathType(value: DeathType): void;
+  setDeathType(value: DeathType): DeathStreamResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeathStreamResponse.AsObject;

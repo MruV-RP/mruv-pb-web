@@ -1,14 +1,16 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
+
+
 
 export class Position extends jspb.Message {
   getX(): number;
-  setX(value: number): void;
+  setX(value: number): Position;
 
   getY(): number;
-  setY(value: number): void;
+  setY(value: number): Position;
 
   getZ(): number;
-  setZ(value: number): void;
+  setZ(value: number): Position;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Position.AsObject;
@@ -28,13 +30,13 @@ export namespace Position {
 
 export class Rotation extends jspb.Message {
   getRx(): number;
-  setRx(value: number): void;
+  setRx(value: number): Rotation;
 
   getRy(): number;
-  setRy(value: number): void;
+  setRy(value: number): Rotation;
 
   getRz(): number;
-  setRz(value: number): void;
+  setRz(value: number): Rotation;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Rotation.AsObject;

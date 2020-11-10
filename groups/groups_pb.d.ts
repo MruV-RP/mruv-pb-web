@@ -1,14 +1,15 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 import * as common_health_pb from '../common/health_pb';
 
+
 export class CreateGroupRequest extends jspb.Message {
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): CreateGroupRequest;
 
   getDescription(): string;
-  setDescription(value: string): void;
+  setDescription(value: string): CreateGroupRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateGroupRequest.AsObject;
@@ -27,7 +28,7 @@ export namespace CreateGroupRequest {
 
 export class CreateGroupResponse extends jspb.Message {
   getGroupId(): number;
-  setGroupId(value: number): void;
+  setGroupId(value: number): CreateGroupResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateGroupResponse.AsObject;
@@ -45,7 +46,7 @@ export namespace CreateGroupResponse {
 
 export class GetGroupRequest extends jspb.Message {
   getGroupId(): number;
-  setGroupId(value: number): void;
+  setGroupId(value: number): GetGroupRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetGroupRequest.AsObject;
@@ -63,10 +64,10 @@ export namespace GetGroupRequest {
 
 export class GetGroupResponse extends jspb.Message {
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): GetGroupResponse;
 
   getDescription(): string;
-  setDescription(value: string): void;
+  setDescription(value: string): GetGroupResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetGroupResponse.AsObject;
@@ -85,13 +86,13 @@ export namespace GetGroupResponse {
 
 export class UpdateGroupRequest extends jspb.Message {
   getGroupId(): number;
-  setGroupId(value: number): void;
+  setGroupId(value: number): UpdateGroupRequest;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): UpdateGroupRequest;
 
   getDescription(): string;
-  setDescription(value: string): void;
+  setDescription(value: string): UpdateGroupRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UpdateGroupRequest.AsObject;
@@ -125,7 +126,7 @@ export namespace UpdateGroupResponse {
 
 export class DeleteGroupRequest extends jspb.Message {
   getGroupId(): number;
-  setGroupId(value: number): void;
+  setGroupId(value: number): DeleteGroupRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteGroupRequest.AsObject;
@@ -157,10 +158,10 @@ export namespace DeleteGroupResponse {
 
 export class GetGroupsRequest extends jspb.Message {
   getLimit(): number;
-  setLimit(value: number): void;
+  setLimit(value: number): GetGroupsRequest;
 
   getBeginFrom(): number;
-  setBeginFrom(value: number): void;
+  setBeginFrom(value: number): GetGroupsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetGroupsRequest.AsObject;
@@ -179,8 +180,8 @@ export namespace GetGroupsRequest {
 
 export class GetGroupsResponse extends jspb.Message {
   getGroupsList(): Array<GetGroupsResponse.Group>;
-  setGroupsList(value: Array<GetGroupsResponse.Group>): void;
-  clearGroupsList(): void;
+  setGroupsList(value: Array<GetGroupsResponse.Group>): GetGroupsResponse;
+  clearGroupsList(): GetGroupsResponse;
   addGroups(value?: GetGroupsResponse.Group, index?: number): GetGroupsResponse.Group;
 
   serializeBinary(): Uint8Array;
@@ -198,13 +199,13 @@ export namespace GetGroupsResponse {
 
   export class Group extends jspb.Message {
     getId(): number;
-    setId(value: number): void;
+    setId(value: number): Group;
 
     getName(): string;
-    setName(value: string): void;
+    setName(value: string): Group;
 
     getDescription(): string;
-    setDescription(value: string): void;
+    setDescription(value: string): Group;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Group.AsObject;
@@ -226,13 +227,13 @@ export namespace GetGroupsResponse {
 
 export class AssignOwnerRequest extends jspb.Message {
   getGroupId(): number;
-  setGroupId(value: number): void;
+  setGroupId(value: number): AssignOwnerRequest;
 
   getOwnerType(): OwnerType;
-  setOwnerType(value: OwnerType): void;
+  setOwnerType(value: OwnerType): AssignOwnerRequest;
 
   getOwnerId(): number;
-  setOwnerId(value: number): void;
+  setOwnerId(value: number): AssignOwnerRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AssignOwnerRequest.AsObject;
@@ -266,7 +267,7 @@ export namespace AssignOwnerResponse {
 
 export class GetOwnerRequest extends jspb.Message {
   getGroupId(): number;
-  setGroupId(value: number): void;
+  setGroupId(value: number): GetOwnerRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetOwnerRequest.AsObject;
@@ -284,10 +285,10 @@ export namespace GetOwnerRequest {
 
 export class GetOwnerResponse extends jspb.Message {
   getOwnerId(): number;
-  setOwnerId(value: number): void;
+  setOwnerId(value: number): GetOwnerResponse;
 
   getOwnerType(): OwnerType;
-  setOwnerType(value: OwnerType): void;
+  setOwnerType(value: OwnerType): GetOwnerResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetOwnerResponse.AsObject;
@@ -306,10 +307,10 @@ export namespace GetOwnerResponse {
 
 export class AddMemberRequest extends jspb.Message {
   getGroupId(): number;
-  setGroupId(value: number): void;
+  setGroupId(value: number): AddMemberRequest;
 
   getMemberId(): number;
-  setMemberId(value: number): void;
+  setMemberId(value: number): AddMemberRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AddMemberRequest.AsObject;
@@ -342,7 +343,7 @@ export namespace AddMemberResponse {
 
 export class GetMembersRequest extends jspb.Message {
   getGroupId(): number;
-  setGroupId(value: number): void;
+  setGroupId(value: number): GetMembersRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetMembersRequest.AsObject;
@@ -360,12 +361,12 @@ export namespace GetMembersRequest {
 
 export class GetMembersResponse extends jspb.Message {
   getMemberType(): MemberType;
-  setMemberType(value: MemberType): void;
+  setMemberType(value: MemberType): GetMembersResponse;
 
   getMemberIdsList(): Array<number>;
-  setMemberIdsList(value: Array<number>): void;
-  clearMemberIdsList(): void;
-  addMemberIds(value: number, index?: number): void;
+  setMemberIdsList(value: Array<number>): GetMembersResponse;
+  clearMemberIdsList(): GetMembersResponse;
+  addMemberIds(value: number, index?: number): GetMembersResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetMembersResponse.AsObject;
@@ -384,10 +385,10 @@ export namespace GetMembersResponse {
 
 export class RemoveMemberRequest extends jspb.Message {
   getGroupId(): number;
-  setGroupId(value: number): void;
+  setGroupId(value: number): RemoveMemberRequest;
 
   getMemberId(): number;
-  setMemberId(value: number): void;
+  setMemberId(value: number): RemoveMemberRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): RemoveMemberRequest.AsObject;
@@ -420,13 +421,13 @@ export namespace RemoveMemberResponse {
 
 export class AddPermissionRequest extends jspb.Message {
   getGroupId(): number;
-  setGroupId(value: number): void;
+  setGroupId(value: number): AddPermissionRequest;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): AddPermissionRequest;
 
   getDefinition(): string;
-  setDefinition(value: string): void;
+  setDefinition(value: string): AddPermissionRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AddPermissionRequest.AsObject;
@@ -446,7 +447,7 @@ export namespace AddPermissionRequest {
 
 export class AddPermissionResponse extends jspb.Message {
   getPermissionId(): number;
-  setPermissionId(value: number): void;
+  setPermissionId(value: number): AddPermissionResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AddPermissionResponse.AsObject;
@@ -464,7 +465,7 @@ export namespace AddPermissionResponse {
 
 export class GetPermissionsRequest extends jspb.Message {
   getGroupId(): number;
-  setGroupId(value: number): void;
+  setGroupId(value: number): GetPermissionsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetPermissionsRequest.AsObject;
@@ -482,8 +483,8 @@ export namespace GetPermissionsRequest {
 
 export class GetPermissionsResponse extends jspb.Message {
   getPermissionsList(): Array<GetPermissionsResponse.Permission>;
-  setPermissionsList(value: Array<GetPermissionsResponse.Permission>): void;
-  clearPermissionsList(): void;
+  setPermissionsList(value: Array<GetPermissionsResponse.Permission>): GetPermissionsResponse;
+  clearPermissionsList(): GetPermissionsResponse;
   addPermissions(value?: GetPermissionsResponse.Permission, index?: number): GetPermissionsResponse.Permission;
 
   serializeBinary(): Uint8Array;
@@ -501,13 +502,13 @@ export namespace GetPermissionsResponse {
 
   export class Permission extends jspb.Message {
     getId(): number;
-    setId(value: number): void;
+    setId(value: number): Permission;
 
     getName(): string;
-    setName(value: string): void;
+    setName(value: string): Permission;
 
     getDefinition(): string;
-    setDefinition(value: string): void;
+    setDefinition(value: string): Permission;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Permission.AsObject;
@@ -529,10 +530,10 @@ export namespace GetPermissionsResponse {
 
 export class RemovePermissionRequest extends jspb.Message {
   getGroupId(): number;
-  setGroupId(value: number): void;
+  setGroupId(value: number): RemovePermissionRequest;
 
   getPermissionId(): number;
-  setPermissionId(value: number): void;
+  setPermissionId(value: number): RemovePermissionRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): RemovePermissionRequest.AsObject;
@@ -565,10 +566,10 @@ export namespace RemovePermissionResponse {
 
 export class AddSubgroupRequest extends jspb.Message {
   getGroupId(): number;
-  setGroupId(value: number): void;
+  setGroupId(value: number): AddSubgroupRequest;
 
   getSubgroupId(): number;
-  setSubgroupId(value: number): void;
+  setSubgroupId(value: number): AddSubgroupRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AddSubgroupRequest.AsObject;
@@ -601,7 +602,7 @@ export namespace AddSubgroupResponse {
 
 export class GetSubgroupsRequest extends jspb.Message {
   getGroupId(): number;
-  setGroupId(value: number): void;
+  setGroupId(value: number): GetSubgroupsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetSubgroupsRequest.AsObject;
@@ -619,9 +620,9 @@ export namespace GetSubgroupsRequest {
 
 export class GetSubgroupsResponse extends jspb.Message {
   getSubgroupIdsList(): Array<number>;
-  setSubgroupIdsList(value: Array<number>): void;
-  clearSubgroupIdsList(): void;
-  addSubgroupIds(value: number, index?: number): void;
+  setSubgroupIdsList(value: Array<number>): GetSubgroupsResponse;
+  clearSubgroupIdsList(): GetSubgroupsResponse;
+  addSubgroupIds(value: number, index?: number): GetSubgroupsResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetSubgroupsResponse.AsObject;
@@ -639,10 +640,10 @@ export namespace GetSubgroupsResponse {
 
 export class RemoveSubgroupRequest extends jspb.Message {
   getGroupId(): number;
-  setGroupId(value: number): void;
+  setGroupId(value: number): RemoveSubgroupRequest;
 
   getSubgroupId(): number;
-  setSubgroupId(value: number): void;
+  setSubgroupId(value: number): RemoveSubgroupRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): RemoveSubgroupRequest.AsObject;
@@ -675,13 +676,13 @@ export namespace RemoveSubgroupResponse {
 
 export class IsPermittedRequest extends jspb.Message {
   getMemberId(): number;
-  setMemberId(value: number): void;
+  setMemberId(value: number): IsPermittedRequest;
 
   getMemberType(): MemberType;
-  setMemberType(value: MemberType): void;
+  setMemberType(value: MemberType): IsPermittedRequest;
 
   getAction(): string;
-  setAction(value: string): void;
+  setAction(value: string): IsPermittedRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): IsPermittedRequest.AsObject;
@@ -701,7 +702,7 @@ export namespace IsPermittedRequest {
 
 export class IsPermittedResponse extends jspb.Message {
   getPermitted(): boolean;
-  setPermitted(value: boolean): void;
+  setPermitted(value: boolean): IsPermittedResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): IsPermittedResponse.AsObject;

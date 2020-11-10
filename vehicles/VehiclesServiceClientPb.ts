@@ -7,29 +7,24 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 
+/* eslint-disable */
+// @ts-nocheck
+
+
 import * as grpcWeb from 'grpc-web';
 
-import * as google_api_annotations_pb from '../google/api/annotations_pb';
+import * as vehicles_vehicles_pb from '../vehicles/vehicles_pb';
 
-import {
-  CreateVehicleRequest,
-  CreateVehicleResponse,
-  DeleteVehicleRequest,
-  DeleteVehicleResponse,
-  GetVehicleRequest,
-  GetVehicleResponse,
-  UpdateVehicleRequest,
-  UpdateVehicleResponse} from './vehicles_pb';
 
 export class MruVVehiclesServiceClient {
   client_: grpcWeb.AbstractClientBase;
   hostname_: string;
   credentials_: null | { [index: string]: string; };
-  options_: null | { [index: string]: string; };
+  options_: null | { [index: string]: any; };
 
   constructor (hostname: string,
                credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: string; }) {
+               options?: null | { [index: string]: any; }) {
     if (!options) options = {};
     if (!credentials) credentials = {};
     options['format'] = 'text';
@@ -41,91 +36,163 @@ export class MruVVehiclesServiceClient {
   }
 
   methodInfoCreateVehicle = new grpcWeb.AbstractClientBase.MethodInfo(
-    CreateVehicleResponse,
-    (request: CreateVehicleRequest) => {
+    vehicles_vehicles_pb.CreateVehicleResponse,
+    (request: vehicles_vehicles_pb.CreateVehicleRequest) => {
       return request.serializeBinary();
     },
-    CreateVehicleResponse.deserializeBinary
+    vehicles_vehicles_pb.CreateVehicleResponse.deserializeBinary
   );
 
   createVehicle(
-    request: CreateVehicleRequest,
+    request: vehicles_vehicles_pb.CreateVehicleRequest,
+    metadata: grpcWeb.Metadata | null): Promise<vehicles_vehicles_pb.CreateVehicleResponse>;
+
+  createVehicle(
+    request: vehicles_vehicles_pb.CreateVehicleRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: CreateVehicleResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.vehicles.MruVVehiclesService/CreateVehicle',
-      request,
-      metadata || {},
-      this.methodInfoCreateVehicle,
-      callback);
+               response: vehicles_vehicles_pb.CreateVehicleResponse) => void): grpcWeb.ClientReadableStream<vehicles_vehicles_pb.CreateVehicleResponse>;
+
+  createVehicle(
+    request: vehicles_vehicles_pb.CreateVehicleRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: vehicles_vehicles_pb.CreateVehicleResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.vehicles.MruVVehiclesService/CreateVehicle',
+        request,
+        metadata || {},
+        this.methodInfoCreateVehicle,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.vehicles.MruVVehiclesService/CreateVehicle',
+    request,
+    metadata || {},
+    this.methodInfoCreateVehicle);
   }
 
   methodInfoGetVehicle = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetVehicleResponse,
-    (request: GetVehicleRequest) => {
+    vehicles_vehicles_pb.GetVehicleResponse,
+    (request: vehicles_vehicles_pb.GetVehicleRequest) => {
       return request.serializeBinary();
     },
-    GetVehicleResponse.deserializeBinary
+    vehicles_vehicles_pb.GetVehicleResponse.deserializeBinary
   );
 
   getVehicle(
-    request: GetVehicleRequest,
+    request: vehicles_vehicles_pb.GetVehicleRequest,
+    metadata: grpcWeb.Metadata | null): Promise<vehicles_vehicles_pb.GetVehicleResponse>;
+
+  getVehicle(
+    request: vehicles_vehicles_pb.GetVehicleRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetVehicleResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.vehicles.MruVVehiclesService/GetVehicle',
-      request,
-      metadata || {},
-      this.methodInfoGetVehicle,
-      callback);
+               response: vehicles_vehicles_pb.GetVehicleResponse) => void): grpcWeb.ClientReadableStream<vehicles_vehicles_pb.GetVehicleResponse>;
+
+  getVehicle(
+    request: vehicles_vehicles_pb.GetVehicleRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: vehicles_vehicles_pb.GetVehicleResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.vehicles.MruVVehiclesService/GetVehicle',
+        request,
+        metadata || {},
+        this.methodInfoGetVehicle,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.vehicles.MruVVehiclesService/GetVehicle',
+    request,
+    metadata || {},
+    this.methodInfoGetVehicle);
   }
 
   methodInfoUpdateVehicle = new grpcWeb.AbstractClientBase.MethodInfo(
-    UpdateVehicleResponse,
-    (request: UpdateVehicleRequest) => {
+    vehicles_vehicles_pb.UpdateVehicleResponse,
+    (request: vehicles_vehicles_pb.UpdateVehicleRequest) => {
       return request.serializeBinary();
     },
-    UpdateVehicleResponse.deserializeBinary
+    vehicles_vehicles_pb.UpdateVehicleResponse.deserializeBinary
   );
 
   updateVehicle(
-    request: UpdateVehicleRequest,
+    request: vehicles_vehicles_pb.UpdateVehicleRequest,
+    metadata: grpcWeb.Metadata | null): Promise<vehicles_vehicles_pb.UpdateVehicleResponse>;
+
+  updateVehicle(
+    request: vehicles_vehicles_pb.UpdateVehicleRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: UpdateVehicleResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.vehicles.MruVVehiclesService/UpdateVehicle',
-      request,
-      metadata || {},
-      this.methodInfoUpdateVehicle,
-      callback);
+               response: vehicles_vehicles_pb.UpdateVehicleResponse) => void): grpcWeb.ClientReadableStream<vehicles_vehicles_pb.UpdateVehicleResponse>;
+
+  updateVehicle(
+    request: vehicles_vehicles_pb.UpdateVehicleRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: vehicles_vehicles_pb.UpdateVehicleResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.vehicles.MruVVehiclesService/UpdateVehicle',
+        request,
+        metadata || {},
+        this.methodInfoUpdateVehicle,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.vehicles.MruVVehiclesService/UpdateVehicle',
+    request,
+    metadata || {},
+    this.methodInfoUpdateVehicle);
   }
 
   methodInfoDeleteVehicle = new grpcWeb.AbstractClientBase.MethodInfo(
-    DeleteVehicleResponse,
-    (request: DeleteVehicleRequest) => {
+    vehicles_vehicles_pb.DeleteVehicleResponse,
+    (request: vehicles_vehicles_pb.DeleteVehicleRequest) => {
       return request.serializeBinary();
     },
-    DeleteVehicleResponse.deserializeBinary
+    vehicles_vehicles_pb.DeleteVehicleResponse.deserializeBinary
   );
 
   deleteVehicle(
-    request: DeleteVehicleRequest,
+    request: vehicles_vehicles_pb.DeleteVehicleRequest,
+    metadata: grpcWeb.Metadata | null): Promise<vehicles_vehicles_pb.DeleteVehicleResponse>;
+
+  deleteVehicle(
+    request: vehicles_vehicles_pb.DeleteVehicleRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: DeleteVehicleResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.vehicles.MruVVehiclesService/DeleteVehicle',
-      request,
-      metadata || {},
-      this.methodInfoDeleteVehicle,
-      callback);
+               response: vehicles_vehicles_pb.DeleteVehicleResponse) => void): grpcWeb.ClientReadableStream<vehicles_vehicles_pb.DeleteVehicleResponse>;
+
+  deleteVehicle(
+    request: vehicles_vehicles_pb.DeleteVehicleRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: vehicles_vehicles_pb.DeleteVehicleResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.vehicles.MruVVehiclesService/DeleteVehicle',
+        request,
+        metadata || {},
+        this.methodInfoDeleteVehicle,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.vehicles.MruVVehiclesService/DeleteVehicle',
+    request,
+    metadata || {},
+    this.methodInfoDeleteVehicle);
   }
 
 }

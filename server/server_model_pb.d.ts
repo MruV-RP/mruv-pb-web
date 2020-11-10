@@ -1,8 +1,10 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
+
+
 
 export class ServerID extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): ServerID;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ServerID.AsObject;
@@ -20,25 +22,25 @@ export namespace ServerID {
 
 export class ServerInfo extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): ServerInfo;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): ServerInfo;
 
   getHost(): string;
-  setHost(value: string): void;
+  setHost(value: string): ServerInfo;
 
   getPort(): string;
-  setPort(value: string): void;
+  setPort(value: string): ServerInfo;
 
   getPlatform(): string;
-  setPlatform(value: string): void;
+  setPlatform(value: string): ServerInfo;
 
   getStatus(): ServerStatus;
-  setStatus(value: ServerStatus): void;
+  setStatus(value: ServerStatus): ServerInfo;
 
   getPlayers(): number;
-  setPlayers(value: number): void;
+  setPlayers(value: number): ServerInfo;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ServerInfo.AsObject;

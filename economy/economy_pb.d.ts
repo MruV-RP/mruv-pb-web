@@ -1,25 +1,26 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 
+
 export class RegisterProductRequest extends jspb.Message {
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): RegisterProductRequest;
 
   getFullName(): string;
-  setFullName(value: string): void;
+  setFullName(value: string): RegisterProductRequest;
 
   getDescription(): string;
-  setDescription(value: string): void;
+  setDescription(value: string): RegisterProductRequest;
 
   getPriceClass(): number;
-  setPriceClass(value: number): void;
+  setPriceClass(value: number): RegisterProductRequest;
 
   getPriceRatio(): number;
-  setPriceRatio(value: number): void;
+  setPriceRatio(value: number): RegisterProductRequest;
 
   getStartingPrice(): number;
-  setStartingPrice(value: number): void;
+  setStartingPrice(value: number): RegisterProductRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): RegisterProductRequest.AsObject;
@@ -42,7 +43,7 @@ export namespace RegisterProductRequest {
 
 export class RegisterProductResponse extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): RegisterProductResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): RegisterProductResponse.AsObject;
@@ -60,10 +61,10 @@ export namespace RegisterProductResponse {
 
 export class GetProductRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): GetProductRequest;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): GetProductRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetProductRequest.AsObject;
@@ -82,25 +83,25 @@ export namespace GetProductRequest {
 
 export class GetProductResponse extends jspb.Message {
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): GetProductResponse;
 
   getFullName(): string;
-  setFullName(value: string): void;
+  setFullName(value: string): GetProductResponse;
 
   getDescription(): string;
-  setDescription(value: string): void;
+  setDescription(value: string): GetProductResponse;
 
   getPriceClass(): number;
-  setPriceClass(value: number): void;
+  setPriceClass(value: number): GetProductResponse;
 
   getPriceRatio(): number;
-  setPriceRatio(value: number): void;
+  setPriceRatio(value: number): GetProductResponse;
 
   getStartingPrice(): number;
-  setStartingPrice(value: number): void;
+  setStartingPrice(value: number): GetProductResponse;
 
   getPrice(): number;
-  setPrice(value: number): void;
+  setPrice(value: number): GetProductResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetProductResponse.AsObject;
@@ -124,22 +125,22 @@ export namespace GetProductResponse {
 
 export class UpdateProductRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): UpdateProductRequest;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): UpdateProductRequest;
 
   getFullName(): string;
-  setFullName(value: string): void;
+  setFullName(value: string): UpdateProductRequest;
 
   getDescription(): string;
-  setDescription(value: string): void;
+  setDescription(value: string): UpdateProductRequest;
 
   getPriceClass(): number;
-  setPriceClass(value: number): void;
+  setPriceClass(value: number): UpdateProductRequest;
 
   getPriceRatio(): number;
-  setPriceRatio(value: number): void;
+  setPriceRatio(value: number): UpdateProductRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UpdateProductRequest.AsObject;
@@ -176,13 +177,13 @@ export namespace UpdateProductResponse {
 
 export class UpdatePriceRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): UpdatePriceRequest;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): UpdatePriceRequest;
 
   getNewPrice(): number;
-  setNewPrice(value: number): void;
+  setNewPrice(value: number): UpdatePriceRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UpdatePriceRequest.AsObject;
@@ -216,10 +217,10 @@ export namespace UpdatePriceResponse {
 
 export class DeleteProductRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): DeleteProductRequest;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): DeleteProductRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteProductRequest.AsObject;
@@ -252,10 +253,10 @@ export namespace DeleteProductResponse {
 
 export class GetPriceRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): GetPriceRequest;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): GetPriceRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetPriceRequest.AsObject;
@@ -274,7 +275,7 @@ export namespace GetPriceRequest {
 
 export class GetPriceResponse extends jspb.Message {
   getPrice(): number;
-  setPrice(value: number): void;
+  setPrice(value: number): GetPriceResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetPriceResponse.AsObject;
@@ -292,10 +293,10 @@ export namespace GetPriceResponse {
 
 export class BuyProductRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): BuyProductRequest;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): BuyProductRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): BuyProductRequest.AsObject;
@@ -328,10 +329,10 @@ export namespace BuyProductResponse {
 
 export class WatchProductRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): WatchProductRequest;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): WatchProductRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): WatchProductRequest.AsObject;
@@ -350,7 +351,7 @@ export namespace WatchProductRequest {
 
 export class WatchProductResponse extends jspb.Message {
   getEvent(): WatchProductResponse.ProductEvent;
-  setEvent(value: WatchProductResponse.ProductEvent): void;
+  setEvent(value: WatchProductResponse.ProductEvent): WatchProductResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): WatchProductResponse.AsObject;
@@ -376,10 +377,10 @@ export namespace WatchProductResponse {
 
 export class WatchPriceRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): WatchPriceRequest;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): WatchPriceRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): WatchPriceRequest.AsObject;
@@ -398,7 +399,7 @@ export namespace WatchPriceRequest {
 
 export class WatchPriceResponse extends jspb.Message {
   getPrice(): number;
-  setPrice(value: number): void;
+  setPrice(value: number): WatchPriceResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): WatchPriceResponse.AsObject;

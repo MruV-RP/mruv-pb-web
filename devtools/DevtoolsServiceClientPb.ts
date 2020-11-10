@@ -7,39 +7,25 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 
+/* eslint-disable */
+// @ts-nocheck
+
+
 import * as grpcWeb from 'grpc-web';
 
-import * as google_api_annotations_pb from '../google/api/annotations_pb';
 import * as common_health_pb from '../common/health_pb';
-import * as devtools_devtools_model_pb from '../devtools/devtools_model_pb';
+import * as devtools_devtools_pb from '../devtools/devtools_pb';
 
-import {
-  DeletePositionRequest,
-  DeletePositionResponse,
-  GetAnimationRequest,
-  GetAnimationResponse,
-  GetAnimationsRequest,
-  GetAnimationsResponse,
-  GetOutfitsRequest,
-  GetOutfitsResponse,
-  GetPositionsRequest,
-  GetPositionsResponse,
-  SaveAnimationRequest,
-  SaveAnimationResponse,
-  SaveOutfitRequest,
-  SaveOutfitResponse,
-  SavePositionRequest,
-  SavePositionResponse} from './devtools_pb';
 
 export class MruVDevToolsServiceClient {
   client_: grpcWeb.AbstractClientBase;
   hostname_: string;
   credentials_: null | { [index: string]: string; };
-  options_: null | { [index: string]: string; };
+  options_: null | { [index: string]: any; };
 
   constructor (hostname: string,
                credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: string; }) {
+               options?: null | { [index: string]: any; }) {
     if (!options) options = {};
     if (!credentials) credentials = {};
     options['format'] = 'text';
@@ -51,179 +37,323 @@ export class MruVDevToolsServiceClient {
   }
 
   methodInfoGetPositions = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetPositionsResponse,
-    (request: GetPositionsRequest) => {
+    devtools_devtools_pb.GetPositionsResponse,
+    (request: devtools_devtools_pb.GetPositionsRequest) => {
       return request.serializeBinary();
     },
-    GetPositionsResponse.deserializeBinary
+    devtools_devtools_pb.GetPositionsResponse.deserializeBinary
   );
 
   getPositions(
-    request: GetPositionsRequest,
+    request: devtools_devtools_pb.GetPositionsRequest,
+    metadata: grpcWeb.Metadata | null): Promise<devtools_devtools_pb.GetPositionsResponse>;
+
+  getPositions(
+    request: devtools_devtools_pb.GetPositionsRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetPositionsResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.devtools.MruVDevToolsService/GetPositions',
-      request,
-      metadata || {},
-      this.methodInfoGetPositions,
-      callback);
+               response: devtools_devtools_pb.GetPositionsResponse) => void): grpcWeb.ClientReadableStream<devtools_devtools_pb.GetPositionsResponse>;
+
+  getPositions(
+    request: devtools_devtools_pb.GetPositionsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: devtools_devtools_pb.GetPositionsResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.devtools.MruVDevToolsService/GetPositions',
+        request,
+        metadata || {},
+        this.methodInfoGetPositions,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.devtools.MruVDevToolsService/GetPositions',
+    request,
+    metadata || {},
+    this.methodInfoGetPositions);
   }
 
   methodInfoSavePosition = new grpcWeb.AbstractClientBase.MethodInfo(
-    SavePositionResponse,
-    (request: SavePositionRequest) => {
+    devtools_devtools_pb.SavePositionResponse,
+    (request: devtools_devtools_pb.SavePositionRequest) => {
       return request.serializeBinary();
     },
-    SavePositionResponse.deserializeBinary
+    devtools_devtools_pb.SavePositionResponse.deserializeBinary
   );
 
   savePosition(
-    request: SavePositionRequest,
+    request: devtools_devtools_pb.SavePositionRequest,
+    metadata: grpcWeb.Metadata | null): Promise<devtools_devtools_pb.SavePositionResponse>;
+
+  savePosition(
+    request: devtools_devtools_pb.SavePositionRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: SavePositionResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.devtools.MruVDevToolsService/SavePosition',
-      request,
-      metadata || {},
-      this.methodInfoSavePosition,
-      callback);
+               response: devtools_devtools_pb.SavePositionResponse) => void): grpcWeb.ClientReadableStream<devtools_devtools_pb.SavePositionResponse>;
+
+  savePosition(
+    request: devtools_devtools_pb.SavePositionRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: devtools_devtools_pb.SavePositionResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.devtools.MruVDevToolsService/SavePosition',
+        request,
+        metadata || {},
+        this.methodInfoSavePosition,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.devtools.MruVDevToolsService/SavePosition',
+    request,
+    metadata || {},
+    this.methodInfoSavePosition);
   }
 
   methodInfoDeletePosition = new grpcWeb.AbstractClientBase.MethodInfo(
-    DeletePositionResponse,
-    (request: DeletePositionRequest) => {
+    devtools_devtools_pb.DeletePositionResponse,
+    (request: devtools_devtools_pb.DeletePositionRequest) => {
       return request.serializeBinary();
     },
-    DeletePositionResponse.deserializeBinary
+    devtools_devtools_pb.DeletePositionResponse.deserializeBinary
   );
 
   deletePosition(
-    request: DeletePositionRequest,
+    request: devtools_devtools_pb.DeletePositionRequest,
+    metadata: grpcWeb.Metadata | null): Promise<devtools_devtools_pb.DeletePositionResponse>;
+
+  deletePosition(
+    request: devtools_devtools_pb.DeletePositionRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: DeletePositionResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.devtools.MruVDevToolsService/DeletePosition',
-      request,
-      metadata || {},
-      this.methodInfoDeletePosition,
-      callback);
+               response: devtools_devtools_pb.DeletePositionResponse) => void): grpcWeb.ClientReadableStream<devtools_devtools_pb.DeletePositionResponse>;
+
+  deletePosition(
+    request: devtools_devtools_pb.DeletePositionRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: devtools_devtools_pb.DeletePositionResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.devtools.MruVDevToolsService/DeletePosition',
+        request,
+        metadata || {},
+        this.methodInfoDeletePosition,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.devtools.MruVDevToolsService/DeletePosition',
+    request,
+    metadata || {},
+    this.methodInfoDeletePosition);
   }
 
   methodInfoGetOutfits = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetOutfitsResponse,
-    (request: GetOutfitsRequest) => {
+    devtools_devtools_pb.GetOutfitsResponse,
+    (request: devtools_devtools_pb.GetOutfitsRequest) => {
       return request.serializeBinary();
     },
-    GetOutfitsResponse.deserializeBinary
+    devtools_devtools_pb.GetOutfitsResponse.deserializeBinary
   );
 
   getOutfits(
-    request: GetOutfitsRequest,
+    request: devtools_devtools_pb.GetOutfitsRequest,
+    metadata: grpcWeb.Metadata | null): Promise<devtools_devtools_pb.GetOutfitsResponse>;
+
+  getOutfits(
+    request: devtools_devtools_pb.GetOutfitsRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetOutfitsResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.devtools.MruVDevToolsService/GetOutfits',
-      request,
-      metadata || {},
-      this.methodInfoGetOutfits,
-      callback);
+               response: devtools_devtools_pb.GetOutfitsResponse) => void): grpcWeb.ClientReadableStream<devtools_devtools_pb.GetOutfitsResponse>;
+
+  getOutfits(
+    request: devtools_devtools_pb.GetOutfitsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: devtools_devtools_pb.GetOutfitsResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.devtools.MruVDevToolsService/GetOutfits',
+        request,
+        metadata || {},
+        this.methodInfoGetOutfits,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.devtools.MruVDevToolsService/GetOutfits',
+    request,
+    metadata || {},
+    this.methodInfoGetOutfits);
   }
 
   methodInfoSaveOutfit = new grpcWeb.AbstractClientBase.MethodInfo(
-    SaveOutfitResponse,
-    (request: SaveOutfitRequest) => {
+    devtools_devtools_pb.SaveOutfitResponse,
+    (request: devtools_devtools_pb.SaveOutfitRequest) => {
       return request.serializeBinary();
     },
-    SaveOutfitResponse.deserializeBinary
+    devtools_devtools_pb.SaveOutfitResponse.deserializeBinary
   );
 
   saveOutfit(
-    request: SaveOutfitRequest,
+    request: devtools_devtools_pb.SaveOutfitRequest,
+    metadata: grpcWeb.Metadata | null): Promise<devtools_devtools_pb.SaveOutfitResponse>;
+
+  saveOutfit(
+    request: devtools_devtools_pb.SaveOutfitRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: SaveOutfitResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.devtools.MruVDevToolsService/SaveOutfit',
-      request,
-      metadata || {},
-      this.methodInfoSaveOutfit,
-      callback);
+               response: devtools_devtools_pb.SaveOutfitResponse) => void): grpcWeb.ClientReadableStream<devtools_devtools_pb.SaveOutfitResponse>;
+
+  saveOutfit(
+    request: devtools_devtools_pb.SaveOutfitRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: devtools_devtools_pb.SaveOutfitResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.devtools.MruVDevToolsService/SaveOutfit',
+        request,
+        metadata || {},
+        this.methodInfoSaveOutfit,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.devtools.MruVDevToolsService/SaveOutfit',
+    request,
+    metadata || {},
+    this.methodInfoSaveOutfit);
   }
 
   methodInfoGetAnimations = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetAnimationsResponse,
-    (request: GetAnimationsRequest) => {
+    devtools_devtools_pb.GetAnimationsResponse,
+    (request: devtools_devtools_pb.GetAnimationsRequest) => {
       return request.serializeBinary();
     },
-    GetAnimationsResponse.deserializeBinary
+    devtools_devtools_pb.GetAnimationsResponse.deserializeBinary
   );
 
   getAnimations(
-    request: GetAnimationsRequest,
+    request: devtools_devtools_pb.GetAnimationsRequest,
+    metadata: grpcWeb.Metadata | null): Promise<devtools_devtools_pb.GetAnimationsResponse>;
+
+  getAnimations(
+    request: devtools_devtools_pb.GetAnimationsRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetAnimationsResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.devtools.MruVDevToolsService/GetAnimations',
-      request,
-      metadata || {},
-      this.methodInfoGetAnimations,
-      callback);
+               response: devtools_devtools_pb.GetAnimationsResponse) => void): grpcWeb.ClientReadableStream<devtools_devtools_pb.GetAnimationsResponse>;
+
+  getAnimations(
+    request: devtools_devtools_pb.GetAnimationsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: devtools_devtools_pb.GetAnimationsResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.devtools.MruVDevToolsService/GetAnimations',
+        request,
+        metadata || {},
+        this.methodInfoGetAnimations,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.devtools.MruVDevToolsService/GetAnimations',
+    request,
+    metadata || {},
+    this.methodInfoGetAnimations);
   }
 
   methodInfoGetAnimation = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetAnimationResponse,
-    (request: GetAnimationRequest) => {
+    devtools_devtools_pb.GetAnimationResponse,
+    (request: devtools_devtools_pb.GetAnimationRequest) => {
       return request.serializeBinary();
     },
-    GetAnimationResponse.deserializeBinary
+    devtools_devtools_pb.GetAnimationResponse.deserializeBinary
   );
 
   getAnimation(
-    request: GetAnimationRequest,
+    request: devtools_devtools_pb.GetAnimationRequest,
+    metadata: grpcWeb.Metadata | null): Promise<devtools_devtools_pb.GetAnimationResponse>;
+
+  getAnimation(
+    request: devtools_devtools_pb.GetAnimationRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetAnimationResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.devtools.MruVDevToolsService/GetAnimation',
-      request,
-      metadata || {},
-      this.methodInfoGetAnimation,
-      callback);
+               response: devtools_devtools_pb.GetAnimationResponse) => void): grpcWeb.ClientReadableStream<devtools_devtools_pb.GetAnimationResponse>;
+
+  getAnimation(
+    request: devtools_devtools_pb.GetAnimationRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: devtools_devtools_pb.GetAnimationResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.devtools.MruVDevToolsService/GetAnimation',
+        request,
+        metadata || {},
+        this.methodInfoGetAnimation,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.devtools.MruVDevToolsService/GetAnimation',
+    request,
+    metadata || {},
+    this.methodInfoGetAnimation);
   }
 
   methodInfoSaveAnimation = new grpcWeb.AbstractClientBase.MethodInfo(
-    SaveAnimationResponse,
-    (request: SaveAnimationRequest) => {
+    devtools_devtools_pb.SaveAnimationResponse,
+    (request: devtools_devtools_pb.SaveAnimationRequest) => {
       return request.serializeBinary();
     },
-    SaveAnimationResponse.deserializeBinary
+    devtools_devtools_pb.SaveAnimationResponse.deserializeBinary
   );
 
   saveAnimation(
-    request: SaveAnimationRequest,
+    request: devtools_devtools_pb.SaveAnimationRequest,
+    metadata: grpcWeb.Metadata | null): Promise<devtools_devtools_pb.SaveAnimationResponse>;
+
+  saveAnimation(
+    request: devtools_devtools_pb.SaveAnimationRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: SaveAnimationResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.devtools.MruVDevToolsService/SaveAnimation',
-      request,
-      metadata || {},
-      this.methodInfoSaveAnimation,
-      callback);
+               response: devtools_devtools_pb.SaveAnimationResponse) => void): grpcWeb.ClientReadableStream<devtools_devtools_pb.SaveAnimationResponse>;
+
+  saveAnimation(
+    request: devtools_devtools_pb.SaveAnimationRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: devtools_devtools_pb.SaveAnimationResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.devtools.MruVDevToolsService/SaveAnimation',
+        request,
+        metadata || {},
+        this.methodInfoSaveAnimation,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.devtools.MruVDevToolsService/SaveAnimation',
+    request,
+    metadata || {},
+    this.methodInfoSaveAnimation);
   }
 
   methodInfoGetServiceStatus = new grpcWeb.AbstractClientBase.MethodInfo(
@@ -236,16 +366,34 @@ export class MruVDevToolsServiceClient {
 
   getServiceStatus(
     request: common_health_pb.ServiceStatusRequest,
+    metadata: grpcWeb.Metadata | null): Promise<common_health_pb.ServiceStatusResponse>;
+
+  getServiceStatus(
+    request: common_health_pb.ServiceStatusRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
+               response: common_health_pb.ServiceStatusResponse) => void): grpcWeb.ClientReadableStream<common_health_pb.ServiceStatusResponse>;
+
+  getServiceStatus(
+    request: common_health_pb.ServiceStatusRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
                response: common_health_pb.ServiceStatusResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.devtools.MruVDevToolsService/GetServiceStatus',
-      request,
-      metadata || {},
-      this.methodInfoGetServiceStatus,
-      callback);
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.devtools.MruVDevToolsService/GetServiceStatus',
+        request,
+        metadata || {},
+        this.methodInfoGetServiceStatus,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.devtools.MruVDevToolsService/GetServiceStatus',
+    request,
+    metadata || {},
+    this.methodInfoGetServiceStatus);
   }
 
   methodInfoGetServiceVersion = new grpcWeb.AbstractClientBase.MethodInfo(
@@ -258,16 +406,34 @@ export class MruVDevToolsServiceClient {
 
   getServiceVersion(
     request: common_health_pb.VersionRequest,
+    metadata: grpcWeb.Metadata | null): Promise<common_health_pb.VersionResponse>;
+
+  getServiceVersion(
+    request: common_health_pb.VersionRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
+               response: common_health_pb.VersionResponse) => void): grpcWeb.ClientReadableStream<common_health_pb.VersionResponse>;
+
+  getServiceVersion(
+    request: common_health_pb.VersionRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
                response: common_health_pb.VersionResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.devtools.MruVDevToolsService/GetServiceVersion',
-      request,
-      metadata || {},
-      this.methodInfoGetServiceVersion,
-      callback);
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.devtools.MruVDevToolsService/GetServiceVersion',
+        request,
+        metadata || {},
+        this.methodInfoGetServiceVersion,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.devtools.MruVDevToolsService/GetServiceVersion',
+    request,
+    metadata || {},
+    this.methodInfoGetServiceVersion);
   }
 
 }

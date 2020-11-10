@@ -1,26 +1,28 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
+
+
 
 export class ItemType extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): ItemType;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): ItemType;
 
   getDescription(): string;
-  setDescription(value: string): void;
+  setDescription(value: string): ItemType;
 
   getBaseWeight(): number;
-  setBaseWeight(value: number): void;
+  setBaseWeight(value: number): ItemType;
 
   getBaseVolume(): number;
-  setBaseVolume(value: number): void;
+  setBaseVolume(value: number): ItemType;
 
   getModelName(): string;
-  setModelName(value: string): void;
+  setModelName(value: string): ItemType;
 
   getModelHash(): number;
-  setModelHash(value: number): void;
+  setModelHash(value: number): ItemType;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ItemType.AsObject;
@@ -44,7 +46,7 @@ export namespace ItemType {
 
 export class ItemTypeID extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): ItemTypeID;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ItemTypeID.AsObject;
@@ -62,16 +64,16 @@ export namespace ItemTypeID {
 
 export class Item extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): Item;
 
   getItemTypeId(): number;
-  setItemTypeId(value: number): void;
+  setItemTypeId(value: number): Item;
 
   getWeight(): number;
-  setWeight(value: number): void;
+  setWeight(value: number): Item;
 
   getVolume(): number;
-  setVolume(value: number): void;
+  setVolume(value: number): Item;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Item.AsObject;
@@ -92,7 +94,7 @@ export namespace Item {
 
 export class ItemID extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): ItemID;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ItemID.AsObject;
@@ -110,24 +112,24 @@ export namespace ItemID {
 
 export class ContainerType extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): ContainerType;
 
   getContainerItemTypeId(): number;
-  setContainerItemTypeId(value: number): void;
+  setContainerItemTypeId(value: number): ContainerType;
 
   getMaxNumber(): number;
-  setMaxNumber(value: number): void;
+  setMaxNumber(value: number): ContainerType;
 
   getMaxVolume(): number;
-  setMaxVolume(value: number): void;
+  setMaxVolume(value: number): ContainerType;
 
   getMaxWeight(): number;
-  setMaxWeight(value: number): void;
+  setMaxWeight(value: number): ContainerType;
 
   getValidItemTypesList(): Array<number>;
-  setValidItemTypesList(value: Array<number>): void;
-  clearValidItemTypesList(): void;
-  addValidItemTypes(value: number, index?: number): void;
+  setValidItemTypesList(value: Array<number>): ContainerType;
+  clearValidItemTypesList(): ContainerType;
+  addValidItemTypes(value: number, index?: number): ContainerType;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ContainerType.AsObject;
@@ -150,7 +152,7 @@ export namespace ContainerType {
 
 export class ContainerTypeID extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): ContainerTypeID;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ContainerTypeID.AsObject;
@@ -168,20 +170,20 @@ export namespace ContainerTypeID {
 
 export class Container extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): Container;
 
   getTypeId(): number;
-  setTypeId(value: number): void;
+  setTypeId(value: number): Container;
 
   getItemId(): number;
-  setItemId(value: number): void;
+  setItemId(value: number): Container;
 
   getItemsInside(): number;
-  setItemsInside(value: number): void;
+  setItemsInside(value: number): Container;
 
   getItemsList(): Array<InsideItem>;
-  setItemsList(value: Array<InsideItem>): void;
-  clearItemsList(): void;
+  setItemsList(value: Array<InsideItem>): Container;
+  clearItemsList(): Container;
   addItems(value?: InsideItem, index?: number): InsideItem;
 
   serializeBinary(): Uint8Array;
@@ -204,7 +206,7 @@ export namespace Container {
 
 export class ContainerID extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): ContainerID;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ContainerID.AsObject;
@@ -222,18 +224,18 @@ export namespace ContainerID {
 
 export class InsideItem extends jspb.Message {
   getContainerId(): number;
-  setContainerId(value: number): void;
+  setContainerId(value: number): InsideItem;
 
   getItemId(): number;
-  setItemId(value: number): void;
+  setItemId(value: number): InsideItem;
 
   getItem(): Item | undefined;
-  setItem(value?: Item): void;
+  setItem(value?: Item): InsideItem;
   hasItem(): boolean;
-  clearItem(): void;
+  clearItem(): InsideItem;
 
   getPosition(): number;
-  setPosition(value: number): void;
+  setPosition(value: number): InsideItem;
 
   getItemOrIdCase(): InsideItem.ItemOrIdCase;
 

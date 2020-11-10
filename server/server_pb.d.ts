@@ -1,7 +1,8 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 import * as server_server_model_pb from '../server/server_model_pb';
+
 
 export class GetRegisteredServersRequest extends jspb.Message {
   serializeBinary(): Uint8Array;
@@ -19,8 +20,8 @@ export namespace GetRegisteredServersRequest {
 
 export class GetRegisteredServersResponse extends jspb.Message {
   getServersList(): Array<server_server_model_pb.ServerInfo>;
-  setServersList(value: Array<server_server_model_pb.ServerInfo>): void;
-  clearServersList(): void;
+  setServersList(value: Array<server_server_model_pb.ServerInfo>): GetRegisteredServersResponse;
+  clearServersList(): GetRegisteredServersResponse;
   addServers(value?: server_server_model_pb.ServerInfo, index?: number): server_server_model_pb.ServerInfo;
 
   serializeBinary(): Uint8Array;
@@ -39,13 +40,13 @@ export namespace GetRegisteredServersResponse {
 
 export class UpdateServerStatusRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): UpdateServerStatusRequest;
 
   getStatus(): server_server_model_pb.ServerStatus;
-  setStatus(value: server_server_model_pb.ServerStatus): void;
+  setStatus(value: server_server_model_pb.ServerStatus): UpdateServerStatusRequest;
 
   getPlayers(): number;
-  setPlayers(value: number): void;
+  setPlayers(value: number): UpdateServerStatusRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UpdateServerStatusRequest.AsObject;
@@ -79,7 +80,7 @@ export namespace UpdateServerStatusResponse {
 
 export class ServerEventsStreamRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): ServerEventsStreamRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ServerEventsStreamRequest.AsObject;
@@ -97,7 +98,7 @@ export namespace ServerEventsStreamRequest {
 
 export class ServerEvent extends jspb.Message {
   getType(): ServerEvent.ServerEventType;
-  setType(value: ServerEvent.ServerEventType): void;
+  setType(value: ServerEvent.ServerEventType): ServerEvent;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ServerEvent.AsObject;

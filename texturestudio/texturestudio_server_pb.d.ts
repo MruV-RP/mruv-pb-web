@@ -1,10 +1,11 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 
+
 export class StartServerRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): StartServerRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): StartServerRequest.AsObject;
@@ -36,7 +37,7 @@ export namespace StartServerResponse {
 
 export class StopServerRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): StopServerRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): StopServerRequest.AsObject;
@@ -68,7 +69,7 @@ export namespace StopServerResponse {
 
 export class RestartServerRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): RestartServerRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): RestartServerRequest.AsObject;
@@ -100,7 +101,7 @@ export namespace RestartServerResponse {
 
 export class ServerStatusRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): ServerStatusRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ServerStatusRequest.AsObject;
@@ -118,10 +119,10 @@ export namespace ServerStatusRequest {
 
 export class ServerStatusResponse extends jspb.Message {
   getPort(): number;
-  setPort(value: number): void;
+  setPort(value: number): ServerStatusResponse;
 
   getStatus(): ServerStatus;
-  setStatus(value: ServerStatus): void;
+  setStatus(value: ServerStatus): ServerStatusResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ServerStatusResponse.AsObject;
@@ -140,18 +141,18 @@ export namespace ServerStatusResponse {
 
 export class UploadProjectRequest extends jspb.Message {
   getServerId(): number;
-  setServerId(value: number): void;
+  setServerId(value: number): UploadProjectRequest;
 
   getProjectName(): string;
-  setProjectName(value: string): void;
+  setProjectName(value: string): UploadProjectRequest;
 
   getCode(): string;
-  setCode(value: string): void;
+  setCode(value: string): UploadProjectRequest;
 
   getFile(): Uint8Array | string;
   getFile_asU8(): Uint8Array;
   getFile_asB64(): string;
-  setFile(value: Uint8Array | string): void;
+  setFile(value: Uint8Array | string): UploadProjectRequest;
 
   getProjectCase(): UploadProjectRequest.ProjectCase;
 
@@ -194,10 +195,10 @@ export namespace UploadProjectResponse {
 
 export class GetProjectRequest extends jspb.Message {
   getServerId(): number;
-  setServerId(value: number): void;
+  setServerId(value: number): GetProjectRequest;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): GetProjectRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetProjectRequest.AsObject;
@@ -216,7 +217,7 @@ export namespace GetProjectRequest {
 
 export class GetProjectResponse extends jspb.Message {
   getCode(): string;
-  setCode(value: string): void;
+  setCode(value: string): GetProjectResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetProjectResponse.AsObject;
@@ -234,7 +235,7 @@ export namespace GetProjectResponse {
 
 export class GetProjectsRequest extends jspb.Message {
   getServerId(): number;
-  setServerId(value: number): void;
+  setServerId(value: number): GetProjectsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetProjectsRequest.AsObject;
@@ -252,9 +253,9 @@ export namespace GetProjectsRequest {
 
 export class GetProjectsResponse extends jspb.Message {
   getNamesList(): Array<string>;
-  setNamesList(value: Array<string>): void;
-  clearNamesList(): void;
-  addNames(value: string, index?: number): void;
+  setNamesList(value: Array<string>): GetProjectsResponse;
+  clearNamesList(): GetProjectsResponse;
+  addNames(value: string, index?: number): GetProjectsResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetProjectsResponse.AsObject;
@@ -272,7 +273,7 @@ export namespace GetProjectsResponse {
 
 export class SubscribeToProjectsChangesRequest extends jspb.Message {
   getServerId(): number;
-  setServerId(value: number): void;
+  setServerId(value: number): SubscribeToProjectsChangesRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SubscribeToProjectsChangesRequest.AsObject;
@@ -290,7 +291,7 @@ export namespace SubscribeToProjectsChangesRequest {
 
 export class SubscribeToProjectsChangesResponse extends jspb.Message {
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): SubscribeToProjectsChangesResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SubscribeToProjectsChangesResponse.AsObject;

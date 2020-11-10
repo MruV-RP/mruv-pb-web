@@ -1,13 +1,14 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 import * as common_health_pb from '../common/health_pb';
 import * as items_items_model_pb from '../items/items_model_pb';
 import * as common_spatial_pb from '../common/spatial_pb';
 
+
 export class GetItemsRequest extends jspb.Message {
   getLimit(): number;
-  setLimit(value: number): void;
+  setLimit(value: number): GetItemsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetItemsRequest.AsObject;
@@ -25,8 +26,8 @@ export namespace GetItemsRequest {
 
 export class GetItemsResponse extends jspb.Message {
   getItemsList(): Array<items_items_model_pb.Item>;
-  setItemsList(value: Array<items_items_model_pb.Item>): void;
-  clearItemsList(): void;
+  setItemsList(value: Array<items_items_model_pb.Item>): GetItemsResponse;
+  clearItemsList(): GetItemsResponse;
   addItems(value?: items_items_model_pb.Item, index?: number): items_items_model_pb.Item;
 
   serializeBinary(): Uint8Array;
@@ -45,7 +46,7 @@ export namespace GetItemsResponse {
 
 export class GetItemTypesRequest extends jspb.Message {
   getLimit(): number;
-  setLimit(value: number): void;
+  setLimit(value: number): GetItemTypesRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetItemTypesRequest.AsObject;
@@ -63,8 +64,8 @@ export namespace GetItemTypesRequest {
 
 export class GetItemTypesResponse extends jspb.Message {
   getItemTypesList(): Array<items_items_model_pb.ItemType>;
-  setItemTypesList(value: Array<items_items_model_pb.ItemType>): void;
-  clearItemTypesList(): void;
+  setItemTypesList(value: Array<items_items_model_pb.ItemType>): GetItemTypesResponse;
+  clearItemTypesList(): GetItemTypesResponse;
   addItemTypes(value?: items_items_model_pb.ItemType, index?: number): items_items_model_pb.ItemType;
 
   serializeBinary(): Uint8Array;
@@ -83,7 +84,7 @@ export namespace GetItemTypesResponse {
 
 export class GetContainersRequest extends jspb.Message {
   getLimit(): number;
-  setLimit(value: number): void;
+  setLimit(value: number): GetContainersRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetContainersRequest.AsObject;
@@ -101,8 +102,8 @@ export namespace GetContainersRequest {
 
 export class GetContainersResponse extends jspb.Message {
   getContainersList(): Array<items_items_model_pb.Container>;
-  setContainersList(value: Array<items_items_model_pb.Container>): void;
-  clearContainersList(): void;
+  setContainersList(value: Array<items_items_model_pb.Container>): GetContainersResponse;
+  clearContainersList(): GetContainersResponse;
   addContainers(value?: items_items_model_pb.Container, index?: number): items_items_model_pb.Container;
 
   serializeBinary(): Uint8Array;
@@ -121,7 +122,7 @@ export namespace GetContainersResponse {
 
 export class GetContainerTypesRequest extends jspb.Message {
   getLimit(): number;
-  setLimit(value: number): void;
+  setLimit(value: number): GetContainerTypesRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetContainerTypesRequest.AsObject;
@@ -139,8 +140,8 @@ export namespace GetContainerTypesRequest {
 
 export class GetContainerTypesResponse extends jspb.Message {
   getContainerTypesList(): Array<items_items_model_pb.ContainerType>;
-  setContainerTypesList(value: Array<items_items_model_pb.ContainerType>): void;
-  clearContainerTypesList(): void;
+  setContainerTypesList(value: Array<items_items_model_pb.ContainerType>): GetContainerTypesResponse;
+  clearContainerTypesList(): GetContainerTypesResponse;
   addContainerTypes(value?: items_items_model_pb.ContainerType, index?: number): items_items_model_pb.ContainerType;
 
   serializeBinary(): Uint8Array;
@@ -159,13 +160,13 @@ export namespace GetContainerTypesResponse {
 
 export class PutItemRequest extends jspb.Message {
   getContainerId(): number;
-  setContainerId(value: number): void;
+  setContainerId(value: number): PutItemRequest;
 
   getItemId(): number;
-  setItemId(value: number): void;
+  setItemId(value: number): PutItemRequest;
 
   getSlot(): number;
-  setSlot(value: number): void;
+  setSlot(value: number): PutItemRequest;
 
   getWhereCase(): PutItemRequest.WhereCase;
 
@@ -192,9 +193,9 @@ export namespace PutItemRequest {
 
 export class PutItemResponse extends jspb.Message {
   getInsideItem(): items_items_model_pb.InsideItem | undefined;
-  setInsideItem(value?: items_items_model_pb.InsideItem): void;
+  setInsideItem(value?: items_items_model_pb.InsideItem): PutItemResponse;
   hasInsideItem(): boolean;
-  clearInsideItem(): void;
+  clearInsideItem(): PutItemResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PutItemResponse.AsObject;
@@ -212,10 +213,10 @@ export namespace PutItemResponse {
 
 export class GetContainerItemsRequest extends jspb.Message {
   getContainerId(): number;
-  setContainerId(value: number): void;
+  setContainerId(value: number): GetContainerItemsRequest;
 
   getLimit(): number;
-  setLimit(value: number): void;
+  setLimit(value: number): GetContainerItemsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetContainerItemsRequest.AsObject;
@@ -234,8 +235,8 @@ export namespace GetContainerItemsRequest {
 
 export class GetContainerItemsResponse extends jspb.Message {
   getItemsList(): Array<items_items_model_pb.InsideItem>;
-  setItemsList(value: Array<items_items_model_pb.InsideItem>): void;
-  clearItemsList(): void;
+  setItemsList(value: Array<items_items_model_pb.InsideItem>): GetContainerItemsResponse;
+  clearItemsList(): GetContainerItemsResponse;
   addItems(value?: items_items_model_pb.InsideItem, index?: number): items_items_model_pb.InsideItem;
 
   serializeBinary(): Uint8Array;
@@ -254,10 +255,10 @@ export namespace GetContainerItemsResponse {
 
 export class PullItemRequest extends jspb.Message {
   getContainerId(): number;
-  setContainerId(value: number): void;
+  setContainerId(value: number): PullItemRequest;
 
   getItemId(): number;
-  setItemId(value: number): void;
+  setItemId(value: number): PullItemRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PullItemRequest.AsObject;
@@ -276,10 +277,10 @@ export namespace PullItemRequest {
 
 export class SortItemsRequest extends jspb.Message {
   getContainerId(): number;
-  setContainerId(value: number): void;
+  setContainerId(value: number): SortItemsRequest;
 
   getSortBy(): items_items_model_pb.SortingMode;
-  setSortBy(value: items_items_model_pb.SortingMode): void;
+  setSortBy(value: items_items_model_pb.SortingMode): SortItemsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SortItemsRequest.AsObject;
@@ -298,9 +299,9 @@ export namespace SortItemsRequest {
 
 export class SortItemsResponse extends jspb.Message {
   getContainer(): items_items_model_pb.Container | undefined;
-  setContainer(value?: items_items_model_pb.Container): void;
+  setContainer(value?: items_items_model_pb.Container): SortItemsResponse;
   hasContainer(): boolean;
-  clearContainer(): void;
+  clearContainer(): SortItemsResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SortItemsResponse.AsObject;
@@ -318,15 +319,15 @@ export namespace SortItemsResponse {
 
 export class GetNearestItemsRequest extends jspb.Message {
   getPosition(): common_spatial_pb.Position | undefined;
-  setPosition(value?: common_spatial_pb.Position): void;
+  setPosition(value?: common_spatial_pb.Position): GetNearestItemsRequest;
   hasPosition(): boolean;
-  clearPosition(): void;
+  clearPosition(): GetNearestItemsRequest;
 
   getContainerId(): number;
-  setContainerId(value: number): void;
+  setContainerId(value: number): GetNearestItemsRequest;
 
   getDistanceLimit(): number;
-  setDistanceLimit(value: number): void;
+  setDistanceLimit(value: number): GetNearestItemsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetNearestItemsRequest.AsObject;
@@ -346,8 +347,8 @@ export namespace GetNearestItemsRequest {
 
 export class GetNearestItemsResponse extends jspb.Message {
   getItemList(): Array<items_items_model_pb.InsideItem>;
-  setItemList(value: Array<items_items_model_pb.InsideItem>): void;
-  clearItemList(): void;
+  setItemList(value: Array<items_items_model_pb.InsideItem>): GetNearestItemsResponse;
+  clearItemList(): GetNearestItemsResponse;
   addItem(value?: items_items_model_pb.InsideItem, index?: number): items_items_model_pb.InsideItem;
 
   serializeBinary(): Uint8Array;
@@ -366,7 +367,7 @@ export namespace GetNearestItemsResponse {
 
 export class UseItemRequest extends jspb.Message {
   getItemId(): number;
-  setItemId(value: number): void;
+  setItemId(value: number): UseItemRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UseItemRequest.AsObject;
@@ -384,7 +385,7 @@ export namespace UseItemRequest {
 
 export class UseItemResponse extends jspb.Message {
   getSuccess(): boolean;
-  setSuccess(value: boolean): void;
+  setSuccess(value: boolean): UseItemResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UseItemResponse.AsObject;

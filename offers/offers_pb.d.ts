@@ -1,28 +1,29 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 
+
 export class CreateOfferRequest extends jspb.Message {
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): CreateOfferRequest;
 
   getDescription(): string;
-  setDescription(value: string): void;
+  setDescription(value: string): CreateOfferRequest;
 
   getOffer(): string;
-  setOffer(value: string): void;
+  setOffer(value: string): CreateOfferRequest;
 
   getEndDate(): number;
-  setEndDate(value: number): void;
+  setEndDate(value: number): CreateOfferRequest;
 
   getPrice(): number;
-  setPrice(value: number): void;
+  setPrice(value: number): CreateOfferRequest;
 
   getOfferType(): OfferType;
-  setOfferType(value: OfferType): void;
+  setOfferType(value: OfferType): CreateOfferRequest;
 
   getOfferEntityId(): number;
-  setOfferEntityId(value: number): void;
+  setOfferEntityId(value: number): CreateOfferRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateOfferRequest.AsObject;
@@ -46,7 +47,7 @@ export namespace CreateOfferRequest {
 
 export class CreateOfferResponse extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): CreateOfferResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateOfferResponse.AsObject;
@@ -64,7 +65,7 @@ export namespace CreateOfferResponse {
 
 export class GetOfferRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): GetOfferRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetOfferRequest.AsObject;
@@ -96,7 +97,7 @@ export namespace GetOfferResponse {
 
 export class UpdateOfferRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): UpdateOfferRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UpdateOfferRequest.AsObject;
@@ -128,7 +129,7 @@ export namespace UpdateOfferResponse {
 
 export class DeleteOfferRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): DeleteOfferRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteOfferRequest.AsObject;
@@ -160,7 +161,7 @@ export namespace DeleteOfferResponse {
 
 export class AcceptOfferRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): AcceptOfferRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AcceptOfferRequest.AsObject;

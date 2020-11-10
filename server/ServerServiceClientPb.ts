@@ -7,28 +7,25 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 
+/* eslint-disable */
+// @ts-nocheck
+
+
 import * as grpcWeb from 'grpc-web';
 
-import * as google_api_annotations_pb from '../google/api/annotations_pb';
 import * as server_server_model_pb from '../server/server_model_pb';
+import * as server_server_pb from '../server/server_pb';
 
-import {
-  GetRegisteredServersRequest,
-  GetRegisteredServersResponse,
-  ServerEvent,
-  ServerEventsStreamRequest,
-  UpdateServerStatusRequest,
-  UpdateServerStatusResponse} from './server_pb';
 
 export class MruVServerServiceClient {
   client_: grpcWeb.AbstractClientBase;
   hostname_: string;
   credentials_: null | { [index: string]: string; };
-  options_: null | { [index: string]: string; };
+  options_: null | { [index: string]: any; };
 
   constructor (hostname: string,
                credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: string; }) {
+               options?: null | { [index: string]: any; }) {
     if (!options) options = {};
     if (!credentials) credentials = {};
     options['format'] = 'text';
@@ -49,38 +46,74 @@ export class MruVServerServiceClient {
 
   registerServer(
     request: server_server_model_pb.ServerInfo,
+    metadata: grpcWeb.Metadata | null): Promise<server_server_model_pb.ServerID>;
+
+  registerServer(
+    request: server_server_model_pb.ServerInfo,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
+               response: server_server_model_pb.ServerID) => void): grpcWeb.ClientReadableStream<server_server_model_pb.ServerID>;
+
+  registerServer(
+    request: server_server_model_pb.ServerInfo,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
                response: server_server_model_pb.ServerID) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.server.MruVServerService/RegisterServer',
-      request,
-      metadata || {},
-      this.methodInfoRegisterServer,
-      callback);
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.server.MruVServerService/RegisterServer',
+        request,
+        metadata || {},
+        this.methodInfoRegisterServer,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.server.MruVServerService/RegisterServer',
+    request,
+    metadata || {},
+    this.methodInfoRegisterServer);
   }
 
   methodInfoGetRegisteredServers = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetRegisteredServersResponse,
-    (request: GetRegisteredServersRequest) => {
+    server_server_pb.GetRegisteredServersResponse,
+    (request: server_server_pb.GetRegisteredServersRequest) => {
       return request.serializeBinary();
     },
-    GetRegisteredServersResponse.deserializeBinary
+    server_server_pb.GetRegisteredServersResponse.deserializeBinary
   );
 
   getRegisteredServers(
-    request: GetRegisteredServersRequest,
+    request: server_server_pb.GetRegisteredServersRequest,
+    metadata: grpcWeb.Metadata | null): Promise<server_server_pb.GetRegisteredServersResponse>;
+
+  getRegisteredServers(
+    request: server_server_pb.GetRegisteredServersRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetRegisteredServersResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.server.MruVServerService/GetRegisteredServers',
-      request,
-      metadata || {},
-      this.methodInfoGetRegisteredServers,
-      callback);
+               response: server_server_pb.GetRegisteredServersResponse) => void): grpcWeb.ClientReadableStream<server_server_pb.GetRegisteredServersResponse>;
+
+  getRegisteredServers(
+    request: server_server_pb.GetRegisteredServersRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: server_server_pb.GetRegisteredServersResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.server.MruVServerService/GetRegisteredServers',
+        request,
+        metadata || {},
+        this.methodInfoGetRegisteredServers,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.server.MruVServerService/GetRegisteredServers',
+    request,
+    metadata || {},
+    this.methodInfoGetRegisteredServers);
   }
 
   methodInfoGetServerInfo = new grpcWeb.AbstractClientBase.MethodInfo(
@@ -93,50 +126,86 @@ export class MruVServerServiceClient {
 
   getServerInfo(
     request: server_server_model_pb.ServerID,
+    metadata: grpcWeb.Metadata | null): Promise<server_server_model_pb.ServerInfo>;
+
+  getServerInfo(
+    request: server_server_model_pb.ServerID,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
+               response: server_server_model_pb.ServerInfo) => void): grpcWeb.ClientReadableStream<server_server_model_pb.ServerInfo>;
+
+  getServerInfo(
+    request: server_server_model_pb.ServerID,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
                response: server_server_model_pb.ServerInfo) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.server.MruVServerService/GetServerInfo',
-      request,
-      metadata || {},
-      this.methodInfoGetServerInfo,
-      callback);
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.server.MruVServerService/GetServerInfo',
+        request,
+        metadata || {},
+        this.methodInfoGetServerInfo,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.server.MruVServerService/GetServerInfo',
+    request,
+    metadata || {},
+    this.methodInfoGetServerInfo);
   }
 
   methodInfoUpdateServerStatus = new grpcWeb.AbstractClientBase.MethodInfo(
-    UpdateServerStatusResponse,
-    (request: UpdateServerStatusRequest) => {
+    server_server_pb.UpdateServerStatusResponse,
+    (request: server_server_pb.UpdateServerStatusRequest) => {
       return request.serializeBinary();
     },
-    UpdateServerStatusResponse.deserializeBinary
+    server_server_pb.UpdateServerStatusResponse.deserializeBinary
   );
 
   updateServerStatus(
-    request: UpdateServerStatusRequest,
+    request: server_server_pb.UpdateServerStatusRequest,
+    metadata: grpcWeb.Metadata | null): Promise<server_server_pb.UpdateServerStatusResponse>;
+
+  updateServerStatus(
+    request: server_server_pb.UpdateServerStatusRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: UpdateServerStatusResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.server.MruVServerService/UpdateServerStatus',
-      request,
-      metadata || {},
-      this.methodInfoUpdateServerStatus,
-      callback);
+               response: server_server_pb.UpdateServerStatusResponse) => void): grpcWeb.ClientReadableStream<server_server_pb.UpdateServerStatusResponse>;
+
+  updateServerStatus(
+    request: server_server_pb.UpdateServerStatusRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: server_server_pb.UpdateServerStatusResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.server.MruVServerService/UpdateServerStatus',
+        request,
+        metadata || {},
+        this.methodInfoUpdateServerStatus,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.server.MruVServerService/UpdateServerStatus',
+    request,
+    metadata || {},
+    this.methodInfoUpdateServerStatus);
   }
 
   methodInfoServerEventsStream = new grpcWeb.AbstractClientBase.MethodInfo(
-    ServerEvent,
-    (request: ServerEventsStreamRequest) => {
+    server_server_pb.ServerEvent,
+    (request: server_server_pb.ServerEventsStreamRequest) => {
       return request.serializeBinary();
     },
-    ServerEvent.deserializeBinary
+    server_server_pb.ServerEvent.deserializeBinary
   );
 
   serverEventsStream(
-    request: ServerEventsStreamRequest,
+    request: server_server_pb.ServerEventsStreamRequest,
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +

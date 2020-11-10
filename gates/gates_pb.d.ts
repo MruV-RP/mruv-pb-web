@@ -1,28 +1,29 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 import * as objects_movable_pb from '../objects/movable_pb';
 import * as spots_spots_pb from '../spots/spots_pb';
 
+
 export class Gate extends jspb.Message {
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): Gate;
 
   getGateObjectsList(): Array<objects_movable_pb.MovableObject>;
-  setGateObjectsList(value: Array<objects_movable_pb.MovableObject>): void;
-  clearGateObjectsList(): void;
+  setGateObjectsList(value: Array<objects_movable_pb.MovableObject>): Gate;
+  clearGateObjectsList(): Gate;
   addGateObjects(value?: objects_movable_pb.MovableObject, index?: number): objects_movable_pb.MovableObject;
 
   getSpot(): spots_spots_pb.Spot | undefined;
-  setSpot(value?: spots_spots_pb.Spot): void;
+  setSpot(value?: spots_spots_pb.Spot): Gate;
   hasSpot(): boolean;
-  clearSpot(): void;
+  clearSpot(): Gate;
 
   getOpened(): boolean;
-  setOpened(value: boolean): void;
+  setOpened(value: boolean): Gate;
 
   getLocked(): boolean;
-  setLocked(value: boolean): void;
+  setLocked(value: boolean): Gate;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Gate.AsObject;
@@ -44,17 +45,17 @@ export namespace Gate {
 
 export class CreateGateRequest extends jspb.Message {
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): CreateGateRequest;
 
   getGateObjectsList(): Array<objects_movable_pb.MovableObject>;
-  setGateObjectsList(value: Array<objects_movable_pb.MovableObject>): void;
-  clearGateObjectsList(): void;
+  setGateObjectsList(value: Array<objects_movable_pb.MovableObject>): CreateGateRequest;
+  clearGateObjectsList(): CreateGateRequest;
   addGateObjects(value?: objects_movable_pb.MovableObject, index?: number): objects_movable_pb.MovableObject;
 
   getSpot(): spots_spots_pb.Spot | undefined;
-  setSpot(value?: spots_spots_pb.Spot): void;
+  setSpot(value?: spots_spots_pb.Spot): CreateGateRequest;
   hasSpot(): boolean;
-  clearSpot(): void;
+  clearSpot(): CreateGateRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateGateRequest.AsObject;
@@ -74,7 +75,7 @@ export namespace CreateGateRequest {
 
 export class CreateGateResponse extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): CreateGateResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateGateResponse.AsObject;
@@ -92,7 +93,7 @@ export namespace CreateGateResponse {
 
 export class GetGateRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): GetGateRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetGateRequest.AsObject;
@@ -110,23 +111,23 @@ export namespace GetGateRequest {
 
 export class GetGateResponse extends jspb.Message {
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): GetGateResponse;
 
   getMovableObjectsList(): Array<objects_movable_pb.MovableObject>;
-  setMovableObjectsList(value: Array<objects_movable_pb.MovableObject>): void;
-  clearMovableObjectsList(): void;
+  setMovableObjectsList(value: Array<objects_movable_pb.MovableObject>): GetGateResponse;
+  clearMovableObjectsList(): GetGateResponse;
   addMovableObjects(value?: objects_movable_pb.MovableObject, index?: number): objects_movable_pb.MovableObject;
 
   getSpot(): spots_spots_pb.Spot | undefined;
-  setSpot(value?: spots_spots_pb.Spot): void;
+  setSpot(value?: spots_spots_pb.Spot): GetGateResponse;
   hasSpot(): boolean;
-  clearSpot(): void;
+  clearSpot(): GetGateResponse;
 
   getOpened(): boolean;
-  setOpened(value: boolean): void;
+  setOpened(value: boolean): GetGateResponse;
 
   getLocked(): boolean;
-  setLocked(value: boolean): void;
+  setLocked(value: boolean): GetGateResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetGateResponse.AsObject;
@@ -148,18 +149,18 @@ export namespace GetGateResponse {
 
 export class UpdateGateRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): UpdateGateRequest;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): UpdateGateRequest;
 
   getSpotId(): number;
-  setSpotId(value: number): void;
+  setSpotId(value: number): UpdateGateRequest;
 
   getGateMovableObjectsList(): Array<number>;
-  setGateMovableObjectsList(value: Array<number>): void;
-  clearGateMovableObjectsList(): void;
-  addGateMovableObjects(value: number, index?: number): void;
+  setGateMovableObjectsList(value: Array<number>): UpdateGateRequest;
+  clearGateMovableObjectsList(): UpdateGateRequest;
+  addGateMovableObjects(value: number, index?: number): UpdateGateRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UpdateGateRequest.AsObject;
@@ -194,7 +195,7 @@ export namespace UpdateGateResponse {
 
 export class DeleteGateRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): DeleteGateRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteGateRequest.AsObject;
@@ -226,7 +227,7 @@ export namespace DeleteGateResponse {
 
 export class LockRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): LockRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): LockRequest.AsObject;
@@ -258,7 +259,7 @@ export namespace LockResponse {
 
 export class UnlockRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): UnlockRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UnlockRequest.AsObject;
@@ -290,7 +291,7 @@ export namespace UnlockResponse {
 
 export class OpenRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): OpenRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): OpenRequest.AsObject;
@@ -322,7 +323,7 @@ export namespace OpenResponse {
 
 export class CloseRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): CloseRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CloseRequest.AsObject;
@@ -354,16 +355,16 @@ export namespace CloseResponse {
 
 export class FindNearestGateRequest extends jspb.Message {
   getX(): number;
-  setX(value: number): void;
+  setX(value: number): FindNearestGateRequest;
 
   getY(): number;
-  setY(value: number): void;
+  setY(value: number): FindNearestGateRequest;
 
   getZ(): number;
-  setZ(value: number): void;
+  setZ(value: number): FindNearestGateRequest;
 
   getMaxDistance(): number;
-  setMaxDistance(value: number): void;
+  setMaxDistance(value: number): FindNearestGateRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FindNearestGateRequest.AsObject;
@@ -384,10 +385,10 @@ export namespace FindNearestGateRequest {
 
 export class FindNearestGateResponse extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): FindNearestGateResponse;
 
   getDistance(): number;
-  setDistance(value: number): void;
+  setDistance(value: number): FindNearestGateResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FindNearestGateResponse.AsObject;
@@ -406,7 +407,7 @@ export namespace FindNearestGateResponse {
 
 export class FetchAllGatesRequest extends jspb.Message {
   getChunkSize(): number;
-  setChunkSize(value: number): void;
+  setChunkSize(value: number): FetchAllGatesRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FetchAllGatesRequest.AsObject;
@@ -424,7 +425,7 @@ export namespace FetchAllGatesRequest {
 
 export class FetchAllGatesResponse extends jspb.Message {
   getGatesMap(): jspb.Map<number, Gate>;
-  clearGatesMap(): void;
+  clearGatesMap(): FetchAllGatesResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FetchAllGatesResponse.AsObject;

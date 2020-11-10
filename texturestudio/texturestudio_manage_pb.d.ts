@@ -1,10 +1,11 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 
+
 export class CreateServerRequest extends jspb.Message {
   getOwnerId(): number;
-  setOwnerId(value: number): void;
+  setOwnerId(value: number): CreateServerRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateServerRequest.AsObject;
@@ -22,10 +23,10 @@ export namespace CreateServerRequest {
 
 export class CreateServerResponse extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): CreateServerResponse;
 
   getPort(): number;
-  setPort(value: number): void;
+  setPort(value: number): CreateServerResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateServerResponse.AsObject;
@@ -58,9 +59,9 @@ export namespace GetServersRequest {
 
 export class GetServersResponse extends jspb.Message {
   getIdList(): Array<number>;
-  setIdList(value: Array<number>): void;
-  clearIdList(): void;
-  addId(value: number, index?: number): void;
+  setIdList(value: Array<number>): GetServersResponse;
+  clearIdList(): GetServersResponse;
+  addId(value: number, index?: number): GetServersResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetServersResponse.AsObject;
@@ -92,7 +93,7 @@ export namespace MyServerRequest {
 
 export class MyServerResponse extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): MyServerResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): MyServerResponse.AsObject;
@@ -110,10 +111,10 @@ export namespace MyServerResponse {
 
 export class TransferOwnershipRequest extends jspb.Message {
   getServerId(): number;
-  setServerId(value: number): void;
+  setServerId(value: number): TransferOwnershipRequest;
 
   getOwnerId(): number;
-  setOwnerId(value: number): void;
+  setOwnerId(value: number): TransferOwnershipRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): TransferOwnershipRequest.AsObject;
@@ -146,7 +147,7 @@ export namespace TransferOwnershipResponse {
 
 export class DeleteServerRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): DeleteServerRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteServerRequest.AsObject;

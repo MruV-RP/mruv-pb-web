@@ -1,16 +1,17 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 
+
 export class RegisterAccountRequest extends jspb.Message {
   getLogin(): string;
-  setLogin(value: string): void;
+  setLogin(value: string): RegisterAccountRequest;
 
   getPassword(): string;
-  setPassword(value: string): void;
+  setPassword(value: string): RegisterAccountRequest;
 
   getEmail(): string;
-  setEmail(value: string): void;
+  setEmail(value: string): RegisterAccountRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): RegisterAccountRequest.AsObject;
@@ -30,10 +31,10 @@ export namespace RegisterAccountRequest {
 
 export class RegisterAccountResponse extends jspb.Message {
   getSuccess(): boolean;
-  setSuccess(value: boolean): void;
+  setSuccess(value: boolean): RegisterAccountResponse;
 
   getAccountId(): number;
-  setAccountId(value: number): void;
+  setAccountId(value: number): RegisterAccountResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): RegisterAccountResponse.AsObject;
@@ -52,10 +53,10 @@ export namespace RegisterAccountResponse {
 
 export class LogInRequest extends jspb.Message {
   getLogin(): string;
-  setLogin(value: string): void;
+  setLogin(value: string): LogInRequest;
 
   getPassword(): string;
-  setPassword(value: string): void;
+  setPassword(value: string): LogInRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): LogInRequest.AsObject;
@@ -74,10 +75,10 @@ export namespace LogInRequest {
 
 export class LogInResponse extends jspb.Message {
   getSuccess(): boolean;
-  setSuccess(value: boolean): void;
+  setSuccess(value: boolean): LogInResponse;
 
   getAccountId(): number;
-  setAccountId(value: number): void;
+  setAccountId(value: number): LogInResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): LogInResponse.AsObject;
@@ -96,7 +97,7 @@ export namespace LogInResponse {
 
 export class GetAccountRequest extends jspb.Message {
   getLogin(): string;
-  setLogin(value: string): void;
+  setLogin(value: string): GetAccountRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetAccountRequest.AsObject;
@@ -114,10 +115,10 @@ export namespace GetAccountRequest {
 
 export class GetAccountResponse extends jspb.Message {
   getLogin(): string;
-  setLogin(value: string): void;
+  setLogin(value: string): GetAccountResponse;
 
   getEmail(): string;
-  setEmail(value: string): void;
+  setEmail(value: string): GetAccountResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetAccountResponse.AsObject;
@@ -136,7 +137,7 @@ export namespace GetAccountResponse {
 
 export class GetAccountCharactersRequest extends jspb.Message {
   getLogin(): string;
-  setLogin(value: string): void;
+  setLogin(value: string): GetAccountCharactersRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetAccountCharactersRequest.AsObject;
@@ -154,9 +155,9 @@ export namespace GetAccountCharactersRequest {
 
 export class GetAccountCharactersResponse extends jspb.Message {
   getCharacterIdsList(): Array<number>;
-  setCharacterIdsList(value: Array<number>): void;
-  clearCharacterIdsList(): void;
-  addCharacterIds(value: number, index?: number): void;
+  setCharacterIdsList(value: Array<number>): GetAccountCharactersResponse;
+  clearCharacterIdsList(): GetAccountCharactersResponse;
+  addCharacterIds(value: number, index?: number): GetAccountCharactersResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetAccountCharactersResponse.AsObject;
@@ -174,7 +175,7 @@ export namespace GetAccountCharactersResponse {
 
 export class IsAccountExistRequest extends jspb.Message {
   getLogin(): string;
-  setLogin(value: string): void;
+  setLogin(value: string): IsAccountExistRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): IsAccountExistRequest.AsObject;
@@ -192,10 +193,10 @@ export namespace IsAccountExistRequest {
 
 export class IsAccountExistResponse extends jspb.Message {
   getExists(): boolean;
-  setExists(value: boolean): void;
+  setExists(value: boolean): IsAccountExistResponse;
 
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): IsAccountExistResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): IsAccountExistResponse.AsObject;

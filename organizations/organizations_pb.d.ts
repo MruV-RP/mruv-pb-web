@@ -1,6 +1,7 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
+
 
 export class CreateOrganizationRequest extends jspb.Message {
   serializeBinary(): Uint8Array;
@@ -32,7 +33,7 @@ export namespace CreateOrganizationResponse {
 
 export class GetOrganizationRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): GetOrganizationRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetOrganizationRequest.AsObject;
@@ -64,7 +65,7 @@ export namespace GetOrganizationResponse {
 
 export class UpdateOrganizationRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): UpdateOrganizationRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UpdateOrganizationRequest.AsObject;
@@ -96,7 +97,7 @@ export namespace UpdateOrganizationResponse {
 
 export class DeleteOrganizationRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): DeleteOrganizationRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteOrganizationRequest.AsObject;
@@ -128,7 +129,7 @@ export namespace DeleteOrganizationResponse {
 
 export class AssignLeaderRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): AssignLeaderRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AssignLeaderRequest.AsObject;
@@ -160,7 +161,7 @@ export namespace AssignLeaderResponse {
 
 export class UnassignLeaderRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): UnassignLeaderRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UnassignLeaderRequest.AsObject;

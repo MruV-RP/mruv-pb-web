@@ -1,18 +1,19 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 import * as common_spatial_pb from '../common/spatial_pb';
 
+
 export class Plot extends jspb.Message {
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): Plot;
 
   getDescription(): string;
-  setDescription(value: string): void;
+  setDescription(value: string): Plot;
 
   getPointsList(): Array<common_spatial_pb.Position>;
-  setPointsList(value: Array<common_spatial_pb.Position>): void;
-  clearPointsList(): void;
+  setPointsList(value: Array<common_spatial_pb.Position>): Plot;
+  clearPointsList(): Plot;
   addPoints(value?: common_spatial_pb.Position, index?: number): common_spatial_pb.Position;
 
   serializeBinary(): Uint8Array;
@@ -33,14 +34,14 @@ export namespace Plot {
 
 export class CreatePlotRequest extends jspb.Message {
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): CreatePlotRequest;
 
   getDescription(): string;
-  setDescription(value: string): void;
+  setDescription(value: string): CreatePlotRequest;
 
   getPointsList(): Array<common_spatial_pb.Position>;
-  setPointsList(value: Array<common_spatial_pb.Position>): void;
-  clearPointsList(): void;
+  setPointsList(value: Array<common_spatial_pb.Position>): CreatePlotRequest;
+  clearPointsList(): CreatePlotRequest;
   addPoints(value?: common_spatial_pb.Position, index?: number): common_spatial_pb.Position;
 
   serializeBinary(): Uint8Array;
@@ -61,7 +62,7 @@ export namespace CreatePlotRequest {
 
 export class CreatePlotResponse extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): CreatePlotResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreatePlotResponse.AsObject;
@@ -79,7 +80,7 @@ export namespace CreatePlotResponse {
 
 export class GetPlotRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): GetPlotRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetPlotRequest.AsObject;
@@ -97,18 +98,18 @@ export namespace GetPlotRequest {
 
 export class GetPlotResponse extends jspb.Message {
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): GetPlotResponse;
 
   getDescription(): string;
-  setDescription(value: string): void;
+  setDescription(value: string): GetPlotResponse;
 
   getPointsList(): Array<common_spatial_pb.Position>;
-  setPointsList(value: Array<common_spatial_pb.Position>): void;
-  clearPointsList(): void;
+  setPointsList(value: Array<common_spatial_pb.Position>): GetPlotResponse;
+  clearPointsList(): GetPlotResponse;
   addPoints(value?: common_spatial_pb.Position, index?: number): common_spatial_pb.Position;
 
   getArea(): number;
-  setArea(value: number): void;
+  setArea(value: number): GetPlotResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetPlotResponse.AsObject;
@@ -129,13 +130,13 @@ export namespace GetPlotResponse {
 
 export class UpdatePlotRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): UpdatePlotRequest;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): UpdatePlotRequest;
 
   getDescription(): string;
-  setDescription(value: string): void;
+  setDescription(value: string): UpdatePlotRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UpdatePlotRequest.AsObject;
@@ -169,7 +170,7 @@ export namespace UpdatePlotResponse {
 
 export class DeletePlotRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): DeletePlotRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeletePlotRequest.AsObject;

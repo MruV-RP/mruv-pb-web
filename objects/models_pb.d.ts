@@ -1,54 +1,55 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 
+
 export class ObjectModel extends jspb.Message {
   getModel(): number;
-  setModel(value: number): void;
+  setModel(value: number): ObjectModel;
 
   getModelName(): string;
-  setModelName(value: string): void;
+  setModelName(value: string): ObjectModel;
 
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): ObjectModel;
 
   getCategory(): string;
-  setCategory(value: string): void;
+  setCategory(value: string): ObjectModel;
 
   getLength(): number;
-  setLength(value: number): void;
+  setLength(value: number): ObjectModel;
 
   getWidth(): number;
-  setWidth(value: number): void;
+  setWidth(value: number): ObjectModel;
 
   getHeight(): number;
-  setHeight(value: number): void;
+  setHeight(value: number): ObjectModel;
 
   getSize(): number;
-  setSize(value: number): void;
+  setSize(value: number): ObjectModel;
 
   getTagsList(): Array<string>;
-  setTagsList(value: Array<string>): void;
-  clearTagsList(): void;
-  addTags(value: string, index?: number): void;
+  setTagsList(value: Array<string>): ObjectModel;
+  clearTagsList(): ObjectModel;
+  addTags(value: string, index?: number): ObjectModel;
 
   getHasCollision(): boolean;
-  setHasCollision(value: boolean): void;
+  setHasCollision(value: boolean): ObjectModel;
 
   getBreaksOnHit(): boolean;
-  setBreaksOnHit(value: boolean): void;
+  setBreaksOnHit(value: boolean): ObjectModel;
 
   getHasAnimation(): boolean;
-  setHasAnimation(value: boolean): void;
+  setHasAnimation(value: boolean): ObjectModel;
 
   getVisibleByTime(): boolean;
-  setVisibleByTime(value: boolean): void;
+  setVisibleByTime(value: boolean): ObjectModel;
 
   getVisibleFrom(): number;
-  setVisibleFrom(value: number): void;
+  setVisibleFrom(value: number): ObjectModel;
 
   getVisibleTo(): number;
-  setVisibleTo(value: number): void;
+  setVisibleTo(value: number): ObjectModel;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ObjectModel.AsObject;
@@ -80,9 +81,9 @@ export namespace ObjectModel {
 
 export class CreateObjectModelRequest extends jspb.Message {
   getObjectType(): ObjectModel | undefined;
-  setObjectType(value?: ObjectModel): void;
+  setObjectType(value?: ObjectModel): CreateObjectModelRequest;
   hasObjectType(): boolean;
-  clearObjectType(): void;
+  clearObjectType(): CreateObjectModelRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateObjectModelRequest.AsObject;
@@ -100,7 +101,7 @@ export namespace CreateObjectModelRequest {
 
 export class CreateObjectModelResponse extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): CreateObjectModelResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateObjectModelResponse.AsObject;
@@ -118,7 +119,7 @@ export namespace CreateObjectModelResponse {
 
 export class GetObjectModelRequest extends jspb.Message {
   getModel(): number;
-  setModel(value: number): void;
+  setModel(value: number): GetObjectModelRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetObjectModelRequest.AsObject;
@@ -136,9 +137,9 @@ export namespace GetObjectModelRequest {
 
 export class GetObjectModelResponse extends jspb.Message {
   getObjectType(): ObjectModel | undefined;
-  setObjectType(value?: ObjectModel): void;
+  setObjectType(value?: ObjectModel): GetObjectModelResponse;
   hasObjectType(): boolean;
-  clearObjectType(): void;
+  clearObjectType(): GetObjectModelResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetObjectModelResponse.AsObject;
@@ -156,9 +157,9 @@ export namespace GetObjectModelResponse {
 
 export class UpdateObjectModelRequest extends jspb.Message {
   getObjectType(): ObjectModel | undefined;
-  setObjectType(value?: ObjectModel): void;
+  setObjectType(value?: ObjectModel): UpdateObjectModelRequest;
   hasObjectType(): boolean;
-  clearObjectType(): void;
+  clearObjectType(): UpdateObjectModelRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UpdateObjectModelRequest.AsObject;
@@ -190,7 +191,7 @@ export namespace UpdateObjectModelResponse {
 
 export class DeleteObjectModelRequest extends jspb.Message {
   getModel(): number;
-  setModel(value: number): void;
+  setModel(value: number): DeleteObjectModelRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteObjectModelRequest.AsObject;
@@ -222,7 +223,7 @@ export namespace DeleteObjectModelResponse {
 
 export class FetchAllModelsRequest extends jspb.Message {
   getChunkSize(): number;
-  setChunkSize(value: number): void;
+  setChunkSize(value: number): FetchAllModelsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FetchAllModelsRequest.AsObject;
@@ -240,7 +241,7 @@ export namespace FetchAllModelsRequest {
 
 export class FetchAllModelsResponse extends jspb.Message {
   getModelsMap(): jspb.Map<number, ObjectModel>;
-  clearModelsMap(): void;
+  clearModelsMap(): FetchAllModelsResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FetchAllModelsResponse.AsObject;

@@ -7,39 +7,24 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 
+/* eslint-disable */
+// @ts-nocheck
+
+
 import * as grpcWeb from 'grpc-web';
 
-import * as google_api_annotations_pb from '../google/api/annotations_pb';
+import * as economy_economy_pb from '../economy/economy_pb';
 
-import {
-  BuyProductRequest,
-  BuyProductResponse,
-  DeleteProductRequest,
-  DeleteProductResponse,
-  GetPriceRequest,
-  GetPriceResponse,
-  GetProductRequest,
-  GetProductResponse,
-  RegisterProductRequest,
-  RegisterProductResponse,
-  UpdatePriceRequest,
-  UpdatePriceResponse,
-  UpdateProductRequest,
-  UpdateProductResponse,
-  WatchPriceRequest,
-  WatchPriceResponse,
-  WatchProductRequest,
-  WatchProductResponse} from './economy_pb';
 
 export class MruVEconomyServiceClient {
   client_: grpcWeb.AbstractClientBase;
   hostname_: string;
   credentials_: null | { [index: string]: string; };
-  options_: null | { [index: string]: string; };
+  options_: null | { [index: string]: any; };
 
   constructor (hostname: string,
                credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: string; }) {
+               options?: null | { [index: string]: any; }) {
     if (!options) options = {};
     if (!credentials) credentials = {};
     options['format'] = 'text';
@@ -51,169 +36,295 @@ export class MruVEconomyServiceClient {
   }
 
   methodInfoRegisterProduct = new grpcWeb.AbstractClientBase.MethodInfo(
-    RegisterProductResponse,
-    (request: RegisterProductRequest) => {
+    economy_economy_pb.RegisterProductResponse,
+    (request: economy_economy_pb.RegisterProductRequest) => {
       return request.serializeBinary();
     },
-    RegisterProductResponse.deserializeBinary
+    economy_economy_pb.RegisterProductResponse.deserializeBinary
   );
 
   registerProduct(
-    request: RegisterProductRequest,
+    request: economy_economy_pb.RegisterProductRequest,
+    metadata: grpcWeb.Metadata | null): Promise<economy_economy_pb.RegisterProductResponse>;
+
+  registerProduct(
+    request: economy_economy_pb.RegisterProductRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: RegisterProductResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.economy.MruVEconomyService/RegisterProduct',
-      request,
-      metadata || {},
-      this.methodInfoRegisterProduct,
-      callback);
+               response: economy_economy_pb.RegisterProductResponse) => void): grpcWeb.ClientReadableStream<economy_economy_pb.RegisterProductResponse>;
+
+  registerProduct(
+    request: economy_economy_pb.RegisterProductRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: economy_economy_pb.RegisterProductResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.economy.MruVEconomyService/RegisterProduct',
+        request,
+        metadata || {},
+        this.methodInfoRegisterProduct,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.economy.MruVEconomyService/RegisterProduct',
+    request,
+    metadata || {},
+    this.methodInfoRegisterProduct);
   }
 
   methodInfoGetProduct = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetProductResponse,
-    (request: GetProductRequest) => {
+    economy_economy_pb.GetProductResponse,
+    (request: economy_economy_pb.GetProductRequest) => {
       return request.serializeBinary();
     },
-    GetProductResponse.deserializeBinary
+    economy_economy_pb.GetProductResponse.deserializeBinary
   );
 
   getProduct(
-    request: GetProductRequest,
+    request: economy_economy_pb.GetProductRequest,
+    metadata: grpcWeb.Metadata | null): Promise<economy_economy_pb.GetProductResponse>;
+
+  getProduct(
+    request: economy_economy_pb.GetProductRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetProductResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.economy.MruVEconomyService/GetProduct',
-      request,
-      metadata || {},
-      this.methodInfoGetProduct,
-      callback);
+               response: economy_economy_pb.GetProductResponse) => void): grpcWeb.ClientReadableStream<economy_economy_pb.GetProductResponse>;
+
+  getProduct(
+    request: economy_economy_pb.GetProductRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: economy_economy_pb.GetProductResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.economy.MruVEconomyService/GetProduct',
+        request,
+        metadata || {},
+        this.methodInfoGetProduct,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.economy.MruVEconomyService/GetProduct',
+    request,
+    metadata || {},
+    this.methodInfoGetProduct);
   }
 
   methodInfoUpdateProduct = new grpcWeb.AbstractClientBase.MethodInfo(
-    UpdateProductResponse,
-    (request: UpdateProductRequest) => {
+    economy_economy_pb.UpdateProductResponse,
+    (request: economy_economy_pb.UpdateProductRequest) => {
       return request.serializeBinary();
     },
-    UpdateProductResponse.deserializeBinary
+    economy_economy_pb.UpdateProductResponse.deserializeBinary
   );
 
   updateProduct(
-    request: UpdateProductRequest,
+    request: economy_economy_pb.UpdateProductRequest,
+    metadata: grpcWeb.Metadata | null): Promise<economy_economy_pb.UpdateProductResponse>;
+
+  updateProduct(
+    request: economy_economy_pb.UpdateProductRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: UpdateProductResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.economy.MruVEconomyService/UpdateProduct',
-      request,
-      metadata || {},
-      this.methodInfoUpdateProduct,
-      callback);
+               response: economy_economy_pb.UpdateProductResponse) => void): grpcWeb.ClientReadableStream<economy_economy_pb.UpdateProductResponse>;
+
+  updateProduct(
+    request: economy_economy_pb.UpdateProductRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: economy_economy_pb.UpdateProductResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.economy.MruVEconomyService/UpdateProduct',
+        request,
+        metadata || {},
+        this.methodInfoUpdateProduct,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.economy.MruVEconomyService/UpdateProduct',
+    request,
+    metadata || {},
+    this.methodInfoUpdateProduct);
   }
 
   methodInfoDeleteProduct = new grpcWeb.AbstractClientBase.MethodInfo(
-    DeleteProductResponse,
-    (request: DeleteProductRequest) => {
+    economy_economy_pb.DeleteProductResponse,
+    (request: economy_economy_pb.DeleteProductRequest) => {
       return request.serializeBinary();
     },
-    DeleteProductResponse.deserializeBinary
+    economy_economy_pb.DeleteProductResponse.deserializeBinary
   );
 
   deleteProduct(
-    request: DeleteProductRequest,
+    request: economy_economy_pb.DeleteProductRequest,
+    metadata: grpcWeb.Metadata | null): Promise<economy_economy_pb.DeleteProductResponse>;
+
+  deleteProduct(
+    request: economy_economy_pb.DeleteProductRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: DeleteProductResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.economy.MruVEconomyService/DeleteProduct',
-      request,
-      metadata || {},
-      this.methodInfoDeleteProduct,
-      callback);
+               response: economy_economy_pb.DeleteProductResponse) => void): grpcWeb.ClientReadableStream<economy_economy_pb.DeleteProductResponse>;
+
+  deleteProduct(
+    request: economy_economy_pb.DeleteProductRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: economy_economy_pb.DeleteProductResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.economy.MruVEconomyService/DeleteProduct',
+        request,
+        metadata || {},
+        this.methodInfoDeleteProduct,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.economy.MruVEconomyService/DeleteProduct',
+    request,
+    metadata || {},
+    this.methodInfoDeleteProduct);
   }
 
   methodInfoUpdatePrice = new grpcWeb.AbstractClientBase.MethodInfo(
-    UpdatePriceResponse,
-    (request: UpdatePriceRequest) => {
+    economy_economy_pb.UpdatePriceResponse,
+    (request: economy_economy_pb.UpdatePriceRequest) => {
       return request.serializeBinary();
     },
-    UpdatePriceResponse.deserializeBinary
+    economy_economy_pb.UpdatePriceResponse.deserializeBinary
   );
 
   updatePrice(
-    request: UpdatePriceRequest,
+    request: economy_economy_pb.UpdatePriceRequest,
+    metadata: grpcWeb.Metadata | null): Promise<economy_economy_pb.UpdatePriceResponse>;
+
+  updatePrice(
+    request: economy_economy_pb.UpdatePriceRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: UpdatePriceResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.economy.MruVEconomyService/UpdatePrice',
-      request,
-      metadata || {},
-      this.methodInfoUpdatePrice,
-      callback);
+               response: economy_economy_pb.UpdatePriceResponse) => void): grpcWeb.ClientReadableStream<economy_economy_pb.UpdatePriceResponse>;
+
+  updatePrice(
+    request: economy_economy_pb.UpdatePriceRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: economy_economy_pb.UpdatePriceResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.economy.MruVEconomyService/UpdatePrice',
+        request,
+        metadata || {},
+        this.methodInfoUpdatePrice,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.economy.MruVEconomyService/UpdatePrice',
+    request,
+    metadata || {},
+    this.methodInfoUpdatePrice);
   }
 
   methodInfoGetPrice = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetPriceResponse,
-    (request: GetPriceRequest) => {
+    economy_economy_pb.GetPriceResponse,
+    (request: economy_economy_pb.GetPriceRequest) => {
       return request.serializeBinary();
     },
-    GetPriceResponse.deserializeBinary
+    economy_economy_pb.GetPriceResponse.deserializeBinary
   );
 
   getPrice(
-    request: GetPriceRequest,
+    request: economy_economy_pb.GetPriceRequest,
+    metadata: grpcWeb.Metadata | null): Promise<economy_economy_pb.GetPriceResponse>;
+
+  getPrice(
+    request: economy_economy_pb.GetPriceRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetPriceResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.economy.MruVEconomyService/GetPrice',
-      request,
-      metadata || {},
-      this.methodInfoGetPrice,
-      callback);
+               response: economy_economy_pb.GetPriceResponse) => void): grpcWeb.ClientReadableStream<economy_economy_pb.GetPriceResponse>;
+
+  getPrice(
+    request: economy_economy_pb.GetPriceRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: economy_economy_pb.GetPriceResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.economy.MruVEconomyService/GetPrice',
+        request,
+        metadata || {},
+        this.methodInfoGetPrice,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.economy.MruVEconomyService/GetPrice',
+    request,
+    metadata || {},
+    this.methodInfoGetPrice);
   }
 
   methodInfoBuyProduct = new grpcWeb.AbstractClientBase.MethodInfo(
-    BuyProductResponse,
-    (request: BuyProductRequest) => {
+    economy_economy_pb.BuyProductResponse,
+    (request: economy_economy_pb.BuyProductRequest) => {
       return request.serializeBinary();
     },
-    BuyProductResponse.deserializeBinary
+    economy_economy_pb.BuyProductResponse.deserializeBinary
   );
 
   buyProduct(
-    request: BuyProductRequest,
+    request: economy_economy_pb.BuyProductRequest,
+    metadata: grpcWeb.Metadata | null): Promise<economy_economy_pb.BuyProductResponse>;
+
+  buyProduct(
+    request: economy_economy_pb.BuyProductRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: BuyProductResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.economy.MruVEconomyService/BuyProduct',
-      request,
-      metadata || {},
-      this.methodInfoBuyProduct,
-      callback);
+               response: economy_economy_pb.BuyProductResponse) => void): grpcWeb.ClientReadableStream<economy_economy_pb.BuyProductResponse>;
+
+  buyProduct(
+    request: economy_economy_pb.BuyProductRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: economy_economy_pb.BuyProductResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.economy.MruVEconomyService/BuyProduct',
+        request,
+        metadata || {},
+        this.methodInfoBuyProduct,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.economy.MruVEconomyService/BuyProduct',
+    request,
+    metadata || {},
+    this.methodInfoBuyProduct);
   }
 
   methodInfoWatchProduct = new grpcWeb.AbstractClientBase.MethodInfo(
-    WatchProductResponse,
-    (request: WatchProductRequest) => {
+    economy_economy_pb.WatchProductResponse,
+    (request: economy_economy_pb.WatchProductRequest) => {
       return request.serializeBinary();
     },
-    WatchProductResponse.deserializeBinary
+    economy_economy_pb.WatchProductResponse.deserializeBinary
   );
 
   watchProduct(
-    request: WatchProductRequest,
+    request: economy_economy_pb.WatchProductRequest,
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +
@@ -224,15 +335,15 @@ export class MruVEconomyServiceClient {
   }
 
   methodInfoWatchPrice = new grpcWeb.AbstractClientBase.MethodInfo(
-    WatchPriceResponse,
-    (request: WatchPriceRequest) => {
+    economy_economy_pb.WatchPriceResponse,
+    (request: economy_economy_pb.WatchPriceRequest) => {
       return request.serializeBinary();
     },
-    WatchPriceResponse.deserializeBinary
+    economy_economy_pb.WatchPriceResponse.deserializeBinary
   );
 
   watchPrice(
-    request: WatchPriceRequest,
+    request: economy_economy_pb.WatchPriceRequest,
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +

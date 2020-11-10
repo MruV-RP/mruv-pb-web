@@ -7,33 +7,24 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 
+/* eslint-disable */
+// @ts-nocheck
+
+
 import * as grpcWeb from 'grpc-web';
 
-import * as google_api_annotations_pb from '../google/api/annotations_pb';
+import * as organizations_organizations_pb from '../organizations/organizations_pb';
 
-import {
-  AssignLeaderRequest,
-  AssignLeaderResponse,
-  CreateOrganizationRequest,
-  CreateOrganizationResponse,
-  DeleteOrganizationRequest,
-  DeleteOrganizationResponse,
-  GetOrganizationRequest,
-  GetOrganizationResponse,
-  UnassignLeaderRequest,
-  UnassignLeaderResponse,
-  UpdateOrganizationRequest,
-  UpdateOrganizationResponse} from './organizations_pb';
 
 export class MruVOrganizationsServiceClient {
   client_: grpcWeb.AbstractClientBase;
   hostname_: string;
   credentials_: null | { [index: string]: string; };
-  options_: null | { [index: string]: string; };
+  options_: null | { [index: string]: any; };
 
   constructor (hostname: string,
                credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: string; }) {
+               options?: null | { [index: string]: any; }) {
     if (!options) options = {};
     if (!credentials) credentials = {};
     options['format'] = 'text';
@@ -45,135 +36,243 @@ export class MruVOrganizationsServiceClient {
   }
 
   methodInfoCreateOrganization = new grpcWeb.AbstractClientBase.MethodInfo(
-    CreateOrganizationResponse,
-    (request: CreateOrganizationRequest) => {
+    organizations_organizations_pb.CreateOrganizationResponse,
+    (request: organizations_organizations_pb.CreateOrganizationRequest) => {
       return request.serializeBinary();
     },
-    CreateOrganizationResponse.deserializeBinary
+    organizations_organizations_pb.CreateOrganizationResponse.deserializeBinary
   );
 
   createOrganization(
-    request: CreateOrganizationRequest,
+    request: organizations_organizations_pb.CreateOrganizationRequest,
+    metadata: grpcWeb.Metadata | null): Promise<organizations_organizations_pb.CreateOrganizationResponse>;
+
+  createOrganization(
+    request: organizations_organizations_pb.CreateOrganizationRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: CreateOrganizationResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.organizations.MruVOrganizationsService/CreateOrganization',
-      request,
-      metadata || {},
-      this.methodInfoCreateOrganization,
-      callback);
+               response: organizations_organizations_pb.CreateOrganizationResponse) => void): grpcWeb.ClientReadableStream<organizations_organizations_pb.CreateOrganizationResponse>;
+
+  createOrganization(
+    request: organizations_organizations_pb.CreateOrganizationRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: organizations_organizations_pb.CreateOrganizationResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.organizations.MruVOrganizationsService/CreateOrganization',
+        request,
+        metadata || {},
+        this.methodInfoCreateOrganization,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.organizations.MruVOrganizationsService/CreateOrganization',
+    request,
+    metadata || {},
+    this.methodInfoCreateOrganization);
   }
 
   methodInfoGetOrganization = new grpcWeb.AbstractClientBase.MethodInfo(
-    GetOrganizationResponse,
-    (request: GetOrganizationRequest) => {
+    organizations_organizations_pb.GetOrganizationResponse,
+    (request: organizations_organizations_pb.GetOrganizationRequest) => {
       return request.serializeBinary();
     },
-    GetOrganizationResponse.deserializeBinary
+    organizations_organizations_pb.GetOrganizationResponse.deserializeBinary
   );
 
   getOrganization(
-    request: GetOrganizationRequest,
+    request: organizations_organizations_pb.GetOrganizationRequest,
+    metadata: grpcWeb.Metadata | null): Promise<organizations_organizations_pb.GetOrganizationResponse>;
+
+  getOrganization(
+    request: organizations_organizations_pb.GetOrganizationRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: GetOrganizationResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.organizations.MruVOrganizationsService/GetOrganization',
-      request,
-      metadata || {},
-      this.methodInfoGetOrganization,
-      callback);
+               response: organizations_organizations_pb.GetOrganizationResponse) => void): grpcWeb.ClientReadableStream<organizations_organizations_pb.GetOrganizationResponse>;
+
+  getOrganization(
+    request: organizations_organizations_pb.GetOrganizationRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: organizations_organizations_pb.GetOrganizationResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.organizations.MruVOrganizationsService/GetOrganization',
+        request,
+        metadata || {},
+        this.methodInfoGetOrganization,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.organizations.MruVOrganizationsService/GetOrganization',
+    request,
+    metadata || {},
+    this.methodInfoGetOrganization);
   }
 
   methodInfoUpdateOrganization = new grpcWeb.AbstractClientBase.MethodInfo(
-    UpdateOrganizationResponse,
-    (request: UpdateOrganizationRequest) => {
+    organizations_organizations_pb.UpdateOrganizationResponse,
+    (request: organizations_organizations_pb.UpdateOrganizationRequest) => {
       return request.serializeBinary();
     },
-    UpdateOrganizationResponse.deserializeBinary
+    organizations_organizations_pb.UpdateOrganizationResponse.deserializeBinary
   );
 
   updateOrganization(
-    request: UpdateOrganizationRequest,
+    request: organizations_organizations_pb.UpdateOrganizationRequest,
+    metadata: grpcWeb.Metadata | null): Promise<organizations_organizations_pb.UpdateOrganizationResponse>;
+
+  updateOrganization(
+    request: organizations_organizations_pb.UpdateOrganizationRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: UpdateOrganizationResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.organizations.MruVOrganizationsService/UpdateOrganization',
-      request,
-      metadata || {},
-      this.methodInfoUpdateOrganization,
-      callback);
+               response: organizations_organizations_pb.UpdateOrganizationResponse) => void): grpcWeb.ClientReadableStream<organizations_organizations_pb.UpdateOrganizationResponse>;
+
+  updateOrganization(
+    request: organizations_organizations_pb.UpdateOrganizationRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: organizations_organizations_pb.UpdateOrganizationResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.organizations.MruVOrganizationsService/UpdateOrganization',
+        request,
+        metadata || {},
+        this.methodInfoUpdateOrganization,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.organizations.MruVOrganizationsService/UpdateOrganization',
+    request,
+    metadata || {},
+    this.methodInfoUpdateOrganization);
   }
 
   methodInfoDeleteOrganization = new grpcWeb.AbstractClientBase.MethodInfo(
-    DeleteOrganizationResponse,
-    (request: DeleteOrganizationRequest) => {
+    organizations_organizations_pb.DeleteOrganizationResponse,
+    (request: organizations_organizations_pb.DeleteOrganizationRequest) => {
       return request.serializeBinary();
     },
-    DeleteOrganizationResponse.deserializeBinary
+    organizations_organizations_pb.DeleteOrganizationResponse.deserializeBinary
   );
 
   deleteOrganization(
-    request: DeleteOrganizationRequest,
+    request: organizations_organizations_pb.DeleteOrganizationRequest,
+    metadata: grpcWeb.Metadata | null): Promise<organizations_organizations_pb.DeleteOrganizationResponse>;
+
+  deleteOrganization(
+    request: organizations_organizations_pb.DeleteOrganizationRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: DeleteOrganizationResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.organizations.MruVOrganizationsService/DeleteOrganization',
-      request,
-      metadata || {},
-      this.methodInfoDeleteOrganization,
-      callback);
+               response: organizations_organizations_pb.DeleteOrganizationResponse) => void): grpcWeb.ClientReadableStream<organizations_organizations_pb.DeleteOrganizationResponse>;
+
+  deleteOrganization(
+    request: organizations_organizations_pb.DeleteOrganizationRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: organizations_organizations_pb.DeleteOrganizationResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.organizations.MruVOrganizationsService/DeleteOrganization',
+        request,
+        metadata || {},
+        this.methodInfoDeleteOrganization,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.organizations.MruVOrganizationsService/DeleteOrganization',
+    request,
+    metadata || {},
+    this.methodInfoDeleteOrganization);
   }
 
   methodInfoAssignLeader = new grpcWeb.AbstractClientBase.MethodInfo(
-    AssignLeaderResponse,
-    (request: AssignLeaderRequest) => {
+    organizations_organizations_pb.AssignLeaderResponse,
+    (request: organizations_organizations_pb.AssignLeaderRequest) => {
       return request.serializeBinary();
     },
-    AssignLeaderResponse.deserializeBinary
+    organizations_organizations_pb.AssignLeaderResponse.deserializeBinary
   );
 
   assignLeader(
-    request: AssignLeaderRequest,
+    request: organizations_organizations_pb.AssignLeaderRequest,
+    metadata: grpcWeb.Metadata | null): Promise<organizations_organizations_pb.AssignLeaderResponse>;
+
+  assignLeader(
+    request: organizations_organizations_pb.AssignLeaderRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: AssignLeaderResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.organizations.MruVOrganizationsService/AssignLeader',
-      request,
-      metadata || {},
-      this.methodInfoAssignLeader,
-      callback);
+               response: organizations_organizations_pb.AssignLeaderResponse) => void): grpcWeb.ClientReadableStream<organizations_organizations_pb.AssignLeaderResponse>;
+
+  assignLeader(
+    request: organizations_organizations_pb.AssignLeaderRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: organizations_organizations_pb.AssignLeaderResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.organizations.MruVOrganizationsService/AssignLeader',
+        request,
+        metadata || {},
+        this.methodInfoAssignLeader,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.organizations.MruVOrganizationsService/AssignLeader',
+    request,
+    metadata || {},
+    this.methodInfoAssignLeader);
   }
 
   methodInfoUnassignLeader = new grpcWeb.AbstractClientBase.MethodInfo(
-    UnassignLeaderResponse,
-    (request: UnassignLeaderRequest) => {
+    organizations_organizations_pb.UnassignLeaderResponse,
+    (request: organizations_organizations_pb.UnassignLeaderRequest) => {
       return request.serializeBinary();
     },
-    UnassignLeaderResponse.deserializeBinary
+    organizations_organizations_pb.UnassignLeaderResponse.deserializeBinary
   );
 
   unassignLeader(
-    request: UnassignLeaderRequest,
+    request: organizations_organizations_pb.UnassignLeaderRequest,
+    metadata: grpcWeb.Metadata | null): Promise<organizations_organizations_pb.UnassignLeaderResponse>;
+
+  unassignLeader(
+    request: organizations_organizations_pb.UnassignLeaderRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: UnassignLeaderResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.organizations.MruVOrganizationsService/UnassignLeader',
-      request,
-      metadata || {},
-      this.methodInfoUnassignLeader,
-      callback);
+               response: organizations_organizations_pb.UnassignLeaderResponse) => void): grpcWeb.ClientReadableStream<organizations_organizations_pb.UnassignLeaderResponse>;
+
+  unassignLeader(
+    request: organizations_organizations_pb.UnassignLeaderRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: organizations_organizations_pb.UnassignLeaderResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.organizations.MruVOrganizationsService/UnassignLeader',
+        request,
+        metadata || {},
+        this.methodInfoUnassignLeader,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.organizations.MruVOrganizationsService/UnassignLeader',
+    request,
+    metadata || {},
+    this.methodInfoUnassignLeader);
   }
 
 }

@@ -1,58 +1,59 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 
+
 export class Object extends jspb.Message {
   getModel(): number;
-  setModel(value: number): void;
+  setModel(value: number): Object;
 
   getX(): number;
-  setX(value: number): void;
+  setX(value: number): Object;
 
   getY(): number;
-  setY(value: number): void;
+  setY(value: number): Object;
 
   getZ(): number;
-  setZ(value: number): void;
+  setZ(value: number): Object;
 
   getRx(): number;
-  setRx(value: number): void;
+  setRx(value: number): Object;
 
   getRy(): number;
-  setRy(value: number): void;
+  setRy(value: number): Object;
 
   getRz(): number;
-  setRz(value: number): void;
+  setRz(value: number): Object;
 
   getWorldId(): number;
-  setWorldId(value: number): void;
+  setWorldId(value: number): Object;
 
   getInteriorId(): number;
-  setInteriorId(value: number): void;
+  setInteriorId(value: number): Object;
 
   getPlayerId(): number;
-  setPlayerId(value: number): void;
+  setPlayerId(value: number): Object;
 
   getAreaId(): number;
-  setAreaId(value: number): void;
+  setAreaId(value: number): Object;
 
   getStreamDistance(): number;
-  setStreamDistance(value: number): void;
+  setStreamDistance(value: number): Object;
 
   getDrawDistance(): number;
-  setDrawDistance(value: number): void;
+  setDrawDistance(value: number): Object;
 
   getPriority(): number;
-  setPriority(value: number): void;
+  setPriority(value: number): Object;
 
   getEstateId(): number;
-  setEstateId(value: number): void;
+  setEstateId(value: number): Object;
 
   getMaterialsMap(): jspb.Map<number, Material>;
-  clearMaterialsMap(): void;
+  clearMaterialsMap(): Object;
 
   getMaterialTextsMap(): jspb.Map<number, MaterialText>;
-  clearMaterialTextsMap(): void;
+  clearMaterialTextsMap(): Object;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Object.AsObject;
@@ -86,16 +87,16 @@ export namespace Object {
 
 export class Material extends jspb.Message {
   getModelId(): number;
-  setModelId(value: number): void;
+  setModelId(value: number): Material;
 
   getTxdName(): string;
-  setTxdName(value: string): void;
+  setTxdName(value: string): Material;
 
   getTextureName(): string;
-  setTextureName(value: string): void;
+  setTextureName(value: string): Material;
 
   getMaterialColor(): number;
-  setMaterialColor(value: number): void;
+  setMaterialColor(value: number): Material;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Material.AsObject;
@@ -116,28 +117,28 @@ export namespace Material {
 
 export class MaterialText extends jspb.Message {
   getText(): string;
-  setText(value: string): void;
+  setText(value: string): MaterialText;
 
   getMaterialSize(): MaterialSize;
-  setMaterialSize(value: MaterialSize): void;
+  setMaterialSize(value: MaterialSize): MaterialText;
 
   getFontFace(): string;
-  setFontFace(value: string): void;
+  setFontFace(value: string): MaterialText;
 
   getFontSize(): number;
-  setFontSize(value: number): void;
+  setFontSize(value: number): MaterialText;
 
   getBold(): boolean;
-  setBold(value: boolean): void;
+  setBold(value: boolean): MaterialText;
 
   getFontColor(): number;
-  setFontColor(value: number): void;
+  setFontColor(value: number): MaterialText;
 
   getBackColor(): number;
-  setBackColor(value: number): void;
+  setBackColor(value: number): MaterialText;
 
   getTextAlignment(): number;
-  setTextAlignment(value: number): void;
+  setTextAlignment(value: number): MaterialText;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): MaterialText.AsObject;
@@ -162,22 +163,22 @@ export namespace MaterialText {
 
 export class RemovedBuilding extends jspb.Message {
   getModel(): number;
-  setModel(value: number): void;
+  setModel(value: number): RemovedBuilding;
 
   getX(): number;
-  setX(value: number): void;
+  setX(value: number): RemovedBuilding;
 
   getY(): number;
-  setY(value: number): void;
+  setY(value: number): RemovedBuilding;
 
   getZ(): number;
-  setZ(value: number): void;
+  setZ(value: number): RemovedBuilding;
 
   getRadius(): number;
-  setRadius(value: number): void;
+  setRadius(value: number): RemovedBuilding;
 
   getEstateId(): number;
-  setEstateId(value: number): void;
+  setEstateId(value: number): RemovedBuilding;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): RemovedBuilding.AsObject;
@@ -200,9 +201,9 @@ export namespace RemovedBuilding {
 
 export class CreateObjectRequest extends jspb.Message {
   getObject(): Object | undefined;
-  setObject(value?: Object): void;
+  setObject(value?: Object): CreateObjectRequest;
   hasObject(): boolean;
-  clearObject(): void;
+  clearObject(): CreateObjectRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateObjectRequest.AsObject;
@@ -220,7 +221,7 @@ export namespace CreateObjectRequest {
 
 export class CreateObjectResponse extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): CreateObjectResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateObjectResponse.AsObject;
@@ -238,7 +239,7 @@ export namespace CreateObjectResponse {
 
 export class GetObjectRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): GetObjectRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetObjectRequest.AsObject;
@@ -256,9 +257,9 @@ export namespace GetObjectRequest {
 
 export class GetObjectResponse extends jspb.Message {
   getObject(): Object | undefined;
-  setObject(value?: Object): void;
+  setObject(value?: Object): GetObjectResponse;
   hasObject(): boolean;
-  clearObject(): void;
+  clearObject(): GetObjectResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetObjectResponse.AsObject;
@@ -276,12 +277,12 @@ export namespace GetObjectResponse {
 
 export class UpdateObjectRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): UpdateObjectRequest;
 
   getObject(): Object | undefined;
-  setObject(value?: Object): void;
+  setObject(value?: Object): UpdateObjectRequest;
   hasObject(): boolean;
-  clearObject(): void;
+  clearObject(): UpdateObjectRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UpdateObjectRequest.AsObject;
@@ -314,7 +315,7 @@ export namespace UpdateObjectResponse {
 
 export class DeleteObjectRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): DeleteObjectRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteObjectRequest.AsObject;
@@ -346,15 +347,15 @@ export namespace DeleteObjectResponse {
 
 export class AddObjectMaterialRequest extends jspb.Message {
   getObjectId(): number;
-  setObjectId(value: number): void;
+  setObjectId(value: number): AddObjectMaterialRequest;
 
   getIndex(): number;
-  setIndex(value: number): void;
+  setIndex(value: number): AddObjectMaterialRequest;
 
   getMaterial(): Material | undefined;
-  setMaterial(value?: Material): void;
+  setMaterial(value?: Material): AddObjectMaterialRequest;
   hasMaterial(): boolean;
-  clearMaterial(): void;
+  clearMaterial(): AddObjectMaterialRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AddObjectMaterialRequest.AsObject;
@@ -388,7 +389,7 @@ export namespace AddObjectMaterialResponse {
 
 export class GetObjectMaterialsRequest extends jspb.Message {
   getObjectId(): number;
-  setObjectId(value: number): void;
+  setObjectId(value: number): GetObjectMaterialsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetObjectMaterialsRequest.AsObject;
@@ -406,7 +407,7 @@ export namespace GetObjectMaterialsRequest {
 
 export class GetObjectMaterialsResponse extends jspb.Message {
   getMaterialsMap(): jspb.Map<number, Material>;
-  clearMaterialsMap(): void;
+  clearMaterialsMap(): GetObjectMaterialsResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetObjectMaterialsResponse.AsObject;
@@ -424,10 +425,10 @@ export namespace GetObjectMaterialsResponse {
 
 export class DeleteObjectMaterialRequest extends jspb.Message {
   getObjectId(): number;
-  setObjectId(value: number): void;
+  setObjectId(value: number): DeleteObjectMaterialRequest;
 
   getIndex(): number;
-  setIndex(value: number): void;
+  setIndex(value: number): DeleteObjectMaterialRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteObjectMaterialRequest.AsObject;
@@ -460,15 +461,15 @@ export namespace DeleteObjectMaterialResponse {
 
 export class AddObjectMaterialTextRequest extends jspb.Message {
   getObjectId(): number;
-  setObjectId(value: number): void;
+  setObjectId(value: number): AddObjectMaterialTextRequest;
 
   getIndex(): number;
-  setIndex(value: number): void;
+  setIndex(value: number): AddObjectMaterialTextRequest;
 
   getMaterialText(): MaterialText | undefined;
-  setMaterialText(value?: MaterialText): void;
+  setMaterialText(value?: MaterialText): AddObjectMaterialTextRequest;
   hasMaterialText(): boolean;
-  clearMaterialText(): void;
+  clearMaterialText(): AddObjectMaterialTextRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AddObjectMaterialTextRequest.AsObject;
@@ -502,7 +503,7 @@ export namespace AddObjectMaterialTextResponse {
 
 export class GetObjectMaterialTextsRequest extends jspb.Message {
   getObjectId(): number;
-  setObjectId(value: number): void;
+  setObjectId(value: number): GetObjectMaterialTextsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetObjectMaterialTextsRequest.AsObject;
@@ -520,7 +521,7 @@ export namespace GetObjectMaterialTextsRequest {
 
 export class GetObjectMaterialTextsResponse extends jspb.Message {
   getMaterialTextsMap(): jspb.Map<number, MaterialText>;
-  clearMaterialTextsMap(): void;
+  clearMaterialTextsMap(): GetObjectMaterialTextsResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetObjectMaterialTextsResponse.AsObject;
@@ -538,10 +539,10 @@ export namespace GetObjectMaterialTextsResponse {
 
 export class DeleteObjectMaterialTextRequest extends jspb.Message {
   getObjectId(): number;
-  setObjectId(value: number): void;
+  setObjectId(value: number): DeleteObjectMaterialTextRequest;
 
   getIndex(): number;
-  setIndex(value: number): void;
+  setIndex(value: number): DeleteObjectMaterialTextRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteObjectMaterialTextRequest.AsObject;
@@ -574,9 +575,9 @@ export namespace DeleteObjectMaterialTextResponse {
 
 export class AddRemoveBuildingRequest extends jspb.Message {
   getRemovedBuilding(): RemovedBuilding | undefined;
-  setRemovedBuilding(value?: RemovedBuilding): void;
+  setRemovedBuilding(value?: RemovedBuilding): AddRemoveBuildingRequest;
   hasRemovedBuilding(): boolean;
-  clearRemovedBuilding(): void;
+  clearRemovedBuilding(): AddRemoveBuildingRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AddRemoveBuildingRequest.AsObject;
@@ -594,7 +595,7 @@ export namespace AddRemoveBuildingRequest {
 
 export class AddRemoveBuildingResponse extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): AddRemoveBuildingResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AddRemoveBuildingResponse.AsObject;
@@ -612,7 +613,7 @@ export namespace AddRemoveBuildingResponse {
 
 export class GetRemovedBuildingsRequest extends jspb.Message {
   getEstateId(): number;
-  setEstateId(value: number): void;
+  setEstateId(value: number): GetRemovedBuildingsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetRemovedBuildingsRequest.AsObject;
@@ -630,8 +631,8 @@ export namespace GetRemovedBuildingsRequest {
 
 export class GetRemovedBuildingsResponse extends jspb.Message {
   getRemovedBuildingsList(): Array<RemovedBuilding>;
-  setRemovedBuildingsList(value: Array<RemovedBuilding>): void;
-  clearRemovedBuildingsList(): void;
+  setRemovedBuildingsList(value: Array<RemovedBuilding>): GetRemovedBuildingsResponse;
+  clearRemovedBuildingsList(): GetRemovedBuildingsResponse;
   addRemovedBuildings(value?: RemovedBuilding, index?: number): RemovedBuilding;
 
   serializeBinary(): Uint8Array;
@@ -650,7 +651,7 @@ export namespace GetRemovedBuildingsResponse {
 
 export class DeleteRemoveBuildingRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): DeleteRemoveBuildingRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteRemoveBuildingRequest.AsObject;
@@ -682,10 +683,10 @@ export namespace DeleteRemoveBuildingResponse {
 
 export class FetchAllObjectsRequest extends jspb.Message {
   getChunkSize(): number;
-  setChunkSize(value: number): void;
+  setChunkSize(value: number): FetchAllObjectsRequest;
 
   getEstateId(): number;
-  setEstateId(value: number): void;
+  setEstateId(value: number): FetchAllObjectsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FetchAllObjectsRequest.AsObject;
@@ -704,7 +705,7 @@ export namespace FetchAllObjectsRequest {
 
 export class FetchAllObjectsResponse extends jspb.Message {
   getObjectsMap(): jspb.Map<number, Object>;
-  clearObjectsMap(): void;
+  clearObjectsMap(): FetchAllObjectsResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FetchAllObjectsResponse.AsObject;

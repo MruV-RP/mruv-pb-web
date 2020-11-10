@@ -7,40 +7,24 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 
+/* eslint-disable */
+// @ts-nocheck
+
+
 import * as grpcWeb from 'grpc-web';
 
-import * as google_api_annotations_pb from '../google/api/annotations_pb';
+import * as business_business_pb from '../business/business_pb';
 
-import {
-  AssignEstateRequest,
-  AssignEstateResponse,
-  AssignOwnerRequest,
-  AssignOwnerResponse,
-  Business,
-  BuyBusinessRequest,
-  BuyBusinessResponse,
-  CreateBusinessRequest,
-  CreateBusinessResponse,
-  DeleteBusinessRequest,
-  DeleteBusinessResponse,
-  GetBusinessRequest,
-  UnassignEstateRequest,
-  UnassignEstateResponse,
-  UpdateBusinessRequest,
-  WatchBusinessRequest,
-  WatchBusinessResponse,
-  WatchBusinessesRequest,
-  WatchBusinessesResponse} from './business_pb';
 
 export class MruVBusinessServiceClient {
   client_: grpcWeb.AbstractClientBase;
   hostname_: string;
   credentials_: null | { [index: string]: string; };
-  options_: null | { [index: string]: string; };
+  options_: null | { [index: string]: any; };
 
   constructor (hostname: string,
                credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: string; }) {
+               options?: null | { [index: string]: any; }) {
     if (!options) options = {};
     if (!credentials) credentials = {};
     options['format'] = 'text';
@@ -52,191 +36,335 @@ export class MruVBusinessServiceClient {
   }
 
   methodInfoCreateBusiness = new grpcWeb.AbstractClientBase.MethodInfo(
-    CreateBusinessResponse,
-    (request: CreateBusinessRequest) => {
+    business_business_pb.CreateBusinessResponse,
+    (request: business_business_pb.CreateBusinessRequest) => {
       return request.serializeBinary();
     },
-    CreateBusinessResponse.deserializeBinary
+    business_business_pb.CreateBusinessResponse.deserializeBinary
   );
 
   createBusiness(
-    request: CreateBusinessRequest,
+    request: business_business_pb.CreateBusinessRequest,
+    metadata: grpcWeb.Metadata | null): Promise<business_business_pb.CreateBusinessResponse>;
+
+  createBusiness(
+    request: business_business_pb.CreateBusinessRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: CreateBusinessResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.business.MruVBusinessService/CreateBusiness',
-      request,
-      metadata || {},
-      this.methodInfoCreateBusiness,
-      callback);
+               response: business_business_pb.CreateBusinessResponse) => void): grpcWeb.ClientReadableStream<business_business_pb.CreateBusinessResponse>;
+
+  createBusiness(
+    request: business_business_pb.CreateBusinessRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: business_business_pb.CreateBusinessResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.business.MruVBusinessService/CreateBusiness',
+        request,
+        metadata || {},
+        this.methodInfoCreateBusiness,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.business.MruVBusinessService/CreateBusiness',
+    request,
+    metadata || {},
+    this.methodInfoCreateBusiness);
   }
 
   methodInfoGetBusiness = new grpcWeb.AbstractClientBase.MethodInfo(
-    Business,
-    (request: GetBusinessRequest) => {
+    business_business_pb.Business,
+    (request: business_business_pb.GetBusinessRequest) => {
       return request.serializeBinary();
     },
-    Business.deserializeBinary
+    business_business_pb.Business.deserializeBinary
   );
 
   getBusiness(
-    request: GetBusinessRequest,
+    request: business_business_pb.GetBusinessRequest,
+    metadata: grpcWeb.Metadata | null): Promise<business_business_pb.Business>;
+
+  getBusiness(
+    request: business_business_pb.GetBusinessRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: Business) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.business.MruVBusinessService/GetBusiness',
-      request,
-      metadata || {},
-      this.methodInfoGetBusiness,
-      callback);
+               response: business_business_pb.Business) => void): grpcWeb.ClientReadableStream<business_business_pb.Business>;
+
+  getBusiness(
+    request: business_business_pb.GetBusinessRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: business_business_pb.Business) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.business.MruVBusinessService/GetBusiness',
+        request,
+        metadata || {},
+        this.methodInfoGetBusiness,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.business.MruVBusinessService/GetBusiness',
+    request,
+    metadata || {},
+    this.methodInfoGetBusiness);
   }
 
   methodInfoUpdateBusiness = new grpcWeb.AbstractClientBase.MethodInfo(
-    Business,
-    (request: UpdateBusinessRequest) => {
+    business_business_pb.Business,
+    (request: business_business_pb.UpdateBusinessRequest) => {
       return request.serializeBinary();
     },
-    Business.deserializeBinary
+    business_business_pb.Business.deserializeBinary
   );
 
   updateBusiness(
-    request: UpdateBusinessRequest,
+    request: business_business_pb.UpdateBusinessRequest,
+    metadata: grpcWeb.Metadata | null): Promise<business_business_pb.Business>;
+
+  updateBusiness(
+    request: business_business_pb.UpdateBusinessRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: Business) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.business.MruVBusinessService/UpdateBusiness',
-      request,
-      metadata || {},
-      this.methodInfoUpdateBusiness,
-      callback);
+               response: business_business_pb.Business) => void): grpcWeb.ClientReadableStream<business_business_pb.Business>;
+
+  updateBusiness(
+    request: business_business_pb.UpdateBusinessRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: business_business_pb.Business) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.business.MruVBusinessService/UpdateBusiness',
+        request,
+        metadata || {},
+        this.methodInfoUpdateBusiness,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.business.MruVBusinessService/UpdateBusiness',
+    request,
+    metadata || {},
+    this.methodInfoUpdateBusiness);
   }
 
   methodInfoDeleteBusiness = new grpcWeb.AbstractClientBase.MethodInfo(
-    DeleteBusinessResponse,
-    (request: DeleteBusinessRequest) => {
+    business_business_pb.DeleteBusinessResponse,
+    (request: business_business_pb.DeleteBusinessRequest) => {
       return request.serializeBinary();
     },
-    DeleteBusinessResponse.deserializeBinary
+    business_business_pb.DeleteBusinessResponse.deserializeBinary
   );
 
   deleteBusiness(
-    request: DeleteBusinessRequest,
+    request: business_business_pb.DeleteBusinessRequest,
+    metadata: grpcWeb.Metadata | null): Promise<business_business_pb.DeleteBusinessResponse>;
+
+  deleteBusiness(
+    request: business_business_pb.DeleteBusinessRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: DeleteBusinessResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.business.MruVBusinessService/DeleteBusiness',
-      request,
-      metadata || {},
-      this.methodInfoDeleteBusiness,
-      callback);
+               response: business_business_pb.DeleteBusinessResponse) => void): grpcWeb.ClientReadableStream<business_business_pb.DeleteBusinessResponse>;
+
+  deleteBusiness(
+    request: business_business_pb.DeleteBusinessRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: business_business_pb.DeleteBusinessResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.business.MruVBusinessService/DeleteBusiness',
+        request,
+        metadata || {},
+        this.methodInfoDeleteBusiness,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.business.MruVBusinessService/DeleteBusiness',
+    request,
+    metadata || {},
+    this.methodInfoDeleteBusiness);
   }
 
   methodInfoAssignOwner = new grpcWeb.AbstractClientBase.MethodInfo(
-    AssignOwnerResponse,
-    (request: AssignOwnerRequest) => {
+    business_business_pb.AssignOwnerResponse,
+    (request: business_business_pb.AssignOwnerRequest) => {
       return request.serializeBinary();
     },
-    AssignOwnerResponse.deserializeBinary
+    business_business_pb.AssignOwnerResponse.deserializeBinary
   );
 
   assignOwner(
-    request: AssignOwnerRequest,
+    request: business_business_pb.AssignOwnerRequest,
+    metadata: grpcWeb.Metadata | null): Promise<business_business_pb.AssignOwnerResponse>;
+
+  assignOwner(
+    request: business_business_pb.AssignOwnerRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: AssignOwnerResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.business.MruVBusinessService/AssignOwner',
-      request,
-      metadata || {},
-      this.methodInfoAssignOwner,
-      callback);
+               response: business_business_pb.AssignOwnerResponse) => void): grpcWeb.ClientReadableStream<business_business_pb.AssignOwnerResponse>;
+
+  assignOwner(
+    request: business_business_pb.AssignOwnerRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: business_business_pb.AssignOwnerResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.business.MruVBusinessService/AssignOwner',
+        request,
+        metadata || {},
+        this.methodInfoAssignOwner,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.business.MruVBusinessService/AssignOwner',
+    request,
+    metadata || {},
+    this.methodInfoAssignOwner);
   }
 
   methodInfoAssignEstate = new grpcWeb.AbstractClientBase.MethodInfo(
-    AssignEstateResponse,
-    (request: AssignEstateRequest) => {
+    business_business_pb.AssignEstateResponse,
+    (request: business_business_pb.AssignEstateRequest) => {
       return request.serializeBinary();
     },
-    AssignEstateResponse.deserializeBinary
+    business_business_pb.AssignEstateResponse.deserializeBinary
   );
 
   assignEstate(
-    request: AssignEstateRequest,
+    request: business_business_pb.AssignEstateRequest,
+    metadata: grpcWeb.Metadata | null): Promise<business_business_pb.AssignEstateResponse>;
+
+  assignEstate(
+    request: business_business_pb.AssignEstateRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: AssignEstateResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.business.MruVBusinessService/AssignEstate',
-      request,
-      metadata || {},
-      this.methodInfoAssignEstate,
-      callback);
+               response: business_business_pb.AssignEstateResponse) => void): grpcWeb.ClientReadableStream<business_business_pb.AssignEstateResponse>;
+
+  assignEstate(
+    request: business_business_pb.AssignEstateRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: business_business_pb.AssignEstateResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.business.MruVBusinessService/AssignEstate',
+        request,
+        metadata || {},
+        this.methodInfoAssignEstate,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.business.MruVBusinessService/AssignEstate',
+    request,
+    metadata || {},
+    this.methodInfoAssignEstate);
   }
 
   methodInfoUnassignEstate = new grpcWeb.AbstractClientBase.MethodInfo(
-    UnassignEstateResponse,
-    (request: UnassignEstateRequest) => {
+    business_business_pb.UnassignEstateResponse,
+    (request: business_business_pb.UnassignEstateRequest) => {
       return request.serializeBinary();
     },
-    UnassignEstateResponse.deserializeBinary
+    business_business_pb.UnassignEstateResponse.deserializeBinary
   );
 
   unassignEstate(
-    request: UnassignEstateRequest,
+    request: business_business_pb.UnassignEstateRequest,
+    metadata: grpcWeb.Metadata | null): Promise<business_business_pb.UnassignEstateResponse>;
+
+  unassignEstate(
+    request: business_business_pb.UnassignEstateRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: UnassignEstateResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.business.MruVBusinessService/UnassignEstate',
-      request,
-      metadata || {},
-      this.methodInfoUnassignEstate,
-      callback);
+               response: business_business_pb.UnassignEstateResponse) => void): grpcWeb.ClientReadableStream<business_business_pb.UnassignEstateResponse>;
+
+  unassignEstate(
+    request: business_business_pb.UnassignEstateRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: business_business_pb.UnassignEstateResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.business.MruVBusinessService/UnassignEstate',
+        request,
+        metadata || {},
+        this.methodInfoUnassignEstate,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.business.MruVBusinessService/UnassignEstate',
+    request,
+    metadata || {},
+    this.methodInfoUnassignEstate);
   }
 
   methodInfoBuyBusiness = new grpcWeb.AbstractClientBase.MethodInfo(
-    BuyBusinessResponse,
-    (request: BuyBusinessRequest) => {
+    business_business_pb.BuyBusinessResponse,
+    (request: business_business_pb.BuyBusinessRequest) => {
       return request.serializeBinary();
     },
-    BuyBusinessResponse.deserializeBinary
+    business_business_pb.BuyBusinessResponse.deserializeBinary
   );
 
   buyBusiness(
-    request: BuyBusinessRequest,
+    request: business_business_pb.BuyBusinessRequest,
+    metadata: grpcWeb.Metadata | null): Promise<business_business_pb.BuyBusinessResponse>;
+
+  buyBusiness(
+    request: business_business_pb.BuyBusinessRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (err: grpcWeb.Error,
-               response: BuyBusinessResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.business.MruVBusinessService/BuyBusiness',
-      request,
-      metadata || {},
-      this.methodInfoBuyBusiness,
-      callback);
+               response: business_business_pb.BuyBusinessResponse) => void): grpcWeb.ClientReadableStream<business_business_pb.BuyBusinessResponse>;
+
+  buyBusiness(
+    request: business_business_pb.BuyBusinessRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.Error,
+               response: business_business_pb.BuyBusinessResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/mruv.business.MruVBusinessService/BuyBusiness',
+        request,
+        metadata || {},
+        this.methodInfoBuyBusiness,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/mruv.business.MruVBusinessService/BuyBusiness',
+    request,
+    metadata || {},
+    this.methodInfoBuyBusiness);
   }
 
   methodInfoWatchBusiness = new grpcWeb.AbstractClientBase.MethodInfo(
-    WatchBusinessResponse,
-    (request: WatchBusinessRequest) => {
+    business_business_pb.WatchBusinessResponse,
+    (request: business_business_pb.WatchBusinessRequest) => {
       return request.serializeBinary();
     },
-    WatchBusinessResponse.deserializeBinary
+    business_business_pb.WatchBusinessResponse.deserializeBinary
   );
 
   watchBusiness(
-    request: WatchBusinessRequest,
+    request: business_business_pb.WatchBusinessRequest,
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +
@@ -247,15 +375,15 @@ export class MruVBusinessServiceClient {
   }
 
   methodInfoWatchBusinesses = new grpcWeb.AbstractClientBase.MethodInfo(
-    WatchBusinessesResponse,
-    (request: WatchBusinessesRequest) => {
+    business_business_pb.WatchBusinessesResponse,
+    (request: business_business_pb.WatchBusinessesRequest) => {
       return request.serializeBinary();
     },
-    WatchBusinessesResponse.deserializeBinary
+    business_business_pb.WatchBusinessesResponse.deserializeBinary
   );
 
   watchBusinesses(
-    request: WatchBusinessesRequest,
+    request: business_business_pb.WatchBusinessesRequest,
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +

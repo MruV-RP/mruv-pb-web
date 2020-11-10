@@ -1,35 +1,36 @@
-import * as jspb from "google-protobuf"
+import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 
+
 export class Business extends jspb.Message {
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): Business;
 
   getDescription(): string;
-  setDescription(value: string): void;
+  setDescription(value: string): Business;
 
   getEstateIdsList(): Array<number>;
-  setEstateIdsList(value: Array<number>): void;
-  clearEstateIdsList(): void;
-  addEstateIds(value: number, index?: number): void;
+  setEstateIdsList(value: Array<number>): Business;
+  clearEstateIdsList(): Business;
+  addEstateIds(value: number, index?: number): Business;
 
   getProductId(): number;
-  setProductId(value: number): void;
+  setProductId(value: number): Business;
 
   getOwnerType(): OwnerType;
-  setOwnerType(value: OwnerType): void;
+  setOwnerType(value: OwnerType): Business;
 
   getOwnerId(): number;
-  setOwnerId(value: number): void;
+  setOwnerId(value: number): Business;
 
   getBusinessItemsList(): Array<number>;
-  setBusinessItemsList(value: Array<number>): void;
-  clearBusinessItemsList(): void;
-  addBusinessItems(value: number, index?: number): void;
+  setBusinessItemsList(value: Array<number>): Business;
+  clearBusinessItemsList(): Business;
+  addBusinessItems(value: number, index?: number): Business;
 
   getBusinessGroup(): number;
-  setBusinessGroup(value: number): void;
+  setBusinessGroup(value: number): Business;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Business.AsObject;
@@ -54,13 +55,13 @@ export namespace Business {
 
 export class CreateBusinessRequest extends jspb.Message {
   getName(): string;
-  setName(value: string): void;
+  setName(value: string): CreateBusinessRequest;
 
   getDescription(): string;
-  setDescription(value: string): void;
+  setDescription(value: string): CreateBusinessRequest;
 
   getProductId(): number;
-  setProductId(value: number): void;
+  setProductId(value: number): CreateBusinessRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateBusinessRequest.AsObject;
@@ -80,7 +81,7 @@ export namespace CreateBusinessRequest {
 
 export class CreateBusinessResponse extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): CreateBusinessResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateBusinessResponse.AsObject;
@@ -98,7 +99,7 @@ export namespace CreateBusinessResponse {
 
 export class GetBusinessRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): GetBusinessRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetBusinessRequest.AsObject;
@@ -130,7 +131,7 @@ export namespace GetBusinessResponse {
 
 export class UpdateBusinessRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): UpdateBusinessRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UpdateBusinessRequest.AsObject;
@@ -162,7 +163,7 @@ export namespace UpdateBusinessResponse {
 
 export class DeleteBusinessRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): DeleteBusinessRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteBusinessRequest.AsObject;
@@ -194,7 +195,7 @@ export namespace DeleteBusinessResponse {
 
 export class AssignOwnerRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): AssignOwnerRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AssignOwnerRequest.AsObject;
@@ -212,10 +213,10 @@ export namespace AssignOwnerRequest {
 
 export class AssignOwnerResponse extends jspb.Message {
   getOwnerType(): OwnerType;
-  setOwnerType(value: OwnerType): void;
+  setOwnerType(value: OwnerType): AssignOwnerResponse;
 
   getOwnerId(): number;
-  setOwnerId(value: number): void;
+  setOwnerId(value: number): AssignOwnerResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AssignOwnerResponse.AsObject;
@@ -234,10 +235,10 @@ export namespace AssignOwnerResponse {
 
 export class AssignEstateRequest extends jspb.Message {
   getBusinessId(): number;
-  setBusinessId(value: number): void;
+  setBusinessId(value: number): AssignEstateRequest;
 
   getEstateId(): number;
-  setEstateId(value: number): void;
+  setEstateId(value: number): AssignEstateRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AssignEstateRequest.AsObject;
@@ -256,7 +257,7 @@ export namespace AssignEstateRequest {
 
 export class AssignEstateResponse extends jspb.Message {
   getEstateCount(): number;
-  setEstateCount(value: number): void;
+  setEstateCount(value: number): AssignEstateResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AssignEstateResponse.AsObject;
@@ -274,10 +275,10 @@ export namespace AssignEstateResponse {
 
 export class UnassignEstateRequest extends jspb.Message {
   getBusinessId(): number;
-  setBusinessId(value: number): void;
+  setBusinessId(value: number): UnassignEstateRequest;
 
   getEstateId(): number;
-  setEstateId(value: number): void;
+  setEstateId(value: number): UnassignEstateRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UnassignEstateRequest.AsObject;
@@ -296,7 +297,7 @@ export namespace UnassignEstateRequest {
 
 export class UnassignEstateResponse extends jspb.Message {
   getEstateCount(): number;
-  setEstateCount(value: number): void;
+  setEstateCount(value: number): UnassignEstateResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UnassignEstateResponse.AsObject;
@@ -314,13 +315,13 @@ export namespace UnassignEstateResponse {
 
 export class BuyBusinessRequest extends jspb.Message {
   getId(): number;
-  setId(value: number): void;
+  setId(value: number): BuyBusinessRequest;
 
   getBuyerType(): OwnerType;
-  setBuyerType(value: OwnerType): void;
+  setBuyerType(value: OwnerType): BuyBusinessRequest;
 
   getBuyerId(): number;
-  setBuyerId(value: number): void;
+  setBuyerId(value: number): BuyBusinessRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): BuyBusinessRequest.AsObject;
