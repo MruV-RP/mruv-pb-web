@@ -2,48 +2,6 @@ import * as jspb from "google-protobuf"
 
 import * as google_api_annotations_pb from '../google/api/annotations_pb';
 
-export class PunishmentMessage extends jspb.Message {
-  getPlayer(): number;
-  setPlayer(value: number): void;
-
-  getCharacter(): number;
-  setCharacter(value: number): void;
-
-  getExpirationDate(): number;
-  setExpirationDate(value: number): void;
-
-  getReason(): string;
-  setReason(value: string): void;
-
-  getAdmin(): number;
-  setAdmin(value: number): void;
-
-  getDate(): number;
-  setDate(value: number): void;
-
-  getActive(): boolean;
-  setActive(value: boolean): void;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): PunishmentMessage.AsObject;
-  static toObject(includeInstance: boolean, msg: PunishmentMessage): PunishmentMessage.AsObject;
-  static serializeBinaryToWriter(message: PunishmentMessage, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): PunishmentMessage;
-  static deserializeBinaryFromReader(message: PunishmentMessage, reader: jspb.BinaryReader): PunishmentMessage;
-}
-
-export namespace PunishmentMessage {
-  export type AsObject = {
-    player: number,
-    character: number,
-    expirationDate: number,
-    reason: string,
-    admin: number,
-    date: number,
-    active: boolean,
-  }
-}
-
 export class BanMessage extends jspb.Message {
   getPlayer(): number;
   setPlayer(value: number): void;
@@ -320,50 +278,6 @@ export namespace UnAdminJailMessage {
   }
 }
 
-export class PunishRequest extends jspb.Message {
-  getPlayer(): number;
-  setPlayer(value: number): void;
-
-  getCharacter(): number;
-  setCharacter(value: number): void;
-
-  getReason(): string;
-  setReason(value: string): void;
-
-  getAdmin(): number;
-  setAdmin(value: number): void;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): PunishRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: PunishRequest): PunishRequest.AsObject;
-  static serializeBinaryToWriter(message: PunishRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): PunishRequest;
-  static deserializeBinaryFromReader(message: PunishRequest, reader: jspb.BinaryReader): PunishRequest;
-}
-
-export namespace PunishRequest {
-  export type AsObject = {
-    player: number,
-    character: number,
-    reason: string,
-    admin: number,
-  }
-}
-
-export class PunishResponse extends jspb.Message {
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): PunishResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: PunishResponse): PunishResponse.AsObject;
-  static serializeBinaryToWriter(message: PunishResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): PunishResponse;
-  static deserializeBinaryFromReader(message: PunishResponse, reader: jspb.BinaryReader): PunishResponse;
-}
-
-export namespace PunishResponse {
-  export type AsObject = {
-  }
-}
-
 export class BanRequest extends jspb.Message {
   getPlayer(): number;
   setPlayer(value: number): void;
@@ -599,9 +513,6 @@ export class UnBanRequest extends jspb.Message {
   getReason(): string;
   setReason(value: string): void;
 
-  getAdminId(): number;
-  setAdminId(value: number): void;
-
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UnBanRequest.AsObject;
   static toObject(includeInstance: boolean, msg: UnBanRequest): UnBanRequest.AsObject;
@@ -614,7 +525,6 @@ export namespace UnBanRequest {
   export type AsObject = {
     banId: number,
     reason: string,
-    adminId: number,
   }
 }
 
@@ -639,9 +549,6 @@ export class UnBlockRequest extends jspb.Message {
   getReason(): string;
   setReason(value: string): void;
 
-  getAdminId(): number;
-  setAdminId(value: number): void;
-
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UnBlockRequest.AsObject;
   static toObject(includeInstance: boolean, msg: UnBlockRequest): UnBlockRequest.AsObject;
@@ -654,7 +561,6 @@ export namespace UnBlockRequest {
   export type AsObject = {
     blockId: number,
     reason: string,
-    adminId: number,
   }
 }
 
@@ -679,9 +585,6 @@ export class UnWarnRequest extends jspb.Message {
   getReason(): string;
   setReason(value: string): void;
 
-  getAdminId(): number;
-  setAdminId(value: number): void;
-
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UnWarnRequest.AsObject;
   static toObject(includeInstance: boolean, msg: UnWarnRequest): UnWarnRequest.AsObject;
@@ -694,7 +597,6 @@ export namespace UnWarnRequest {
   export type AsObject = {
     warnId: number,
     reason: string,
-    adminId: number,
   }
 }
 
@@ -716,12 +618,6 @@ export class UnAdminJailRequest extends jspb.Message {
   getCharacter(): number;
   setCharacter(value: number): void;
 
-  getReason(): string;
-  setReason(value: string): void;
-
-  getAdminId(): number;
-  setAdminId(value: number): void;
-
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UnAdminJailRequest.AsObject;
   static toObject(includeInstance: boolean, msg: UnAdminJailRequest): UnAdminJailRequest.AsObject;
@@ -733,8 +629,6 @@ export class UnAdminJailRequest extends jspb.Message {
 export namespace UnAdminJailRequest {
   export type AsObject = {
     character: number,
-    reason: string,
-    adminId: number,
   }
 }
 
@@ -1202,13 +1096,35 @@ export namespace WatchUnAdminJailsRequest {
   }
 }
 
+export class WatchPlayerAcquittalsRequest extends jspb.Message {
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): WatchPlayerAcquittalsRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: WatchPlayerAcquittalsRequest): WatchPlayerAcquittalsRequest.AsObject;
+  static serializeBinaryToWriter(message: WatchPlayerAcquittalsRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): WatchPlayerAcquittalsRequest;
+  static deserializeBinaryFromReader(message: WatchPlayerAcquittalsRequest, reader: jspb.BinaryReader): WatchPlayerAcquittalsRequest;
+}
+
+export namespace WatchPlayerAcquittalsRequest {
+  export type AsObject = {
+  }
+}
+
+export class WatchPlayerAcquittalsResponse extends jspb.Message {
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): WatchPlayerAcquittalsResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: WatchPlayerAcquittalsResponse): WatchPlayerAcquittalsResponse.AsObject;
+  static serializeBinaryToWriter(message: WatchPlayerAcquittalsResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): WatchPlayerAcquittalsResponse;
+  static deserializeBinaryFromReader(message: WatchPlayerAcquittalsResponse, reader: jspb.BinaryReader): WatchPlayerAcquittalsResponse;
+}
+
+export namespace WatchPlayerAcquittalsResponse {
+  export type AsObject = {
+  }
+}
+
 export class WatchPlayerPunishmentsRequest extends jspb.Message {
-  getAccountId(): number;
-  setAccountId(value: number): void;
-
-  getCharacterId(): number;
-  setCharacterId(value: number): void;
-
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): WatchPlayerPunishmentsRequest.AsObject;
   static toObject(includeInstance: boolean, msg: WatchPlayerPunishmentsRequest): WatchPlayerPunishmentsRequest.AsObject;
@@ -1219,33 +1135,15 @@ export class WatchPlayerPunishmentsRequest extends jspb.Message {
 
 export namespace WatchPlayerPunishmentsRequest {
   export type AsObject = {
-    accountId: number,
-    characterId: number,
   }
 }
 
 export class WatchPlayerPunishmentsResponse extends jspb.Message {
-  getBan(): BanMessage | undefined;
-  setBan(value?: BanMessage): void;
-  hasBan(): boolean;
-  clearBan(): void;
+  getType(): PunishmentType;
+  setType(value: PunishmentType): void;
 
-  getBlock(): BlockMessage | undefined;
-  setBlock(value?: BlockMessage): void;
-  hasBlock(): boolean;
-  clearBlock(): void;
-
-  getWarn(): WarnMessage | undefined;
-  setWarn(value?: WarnMessage): void;
-  hasWarn(): boolean;
-  clearWarn(): void;
-
-  getAj(): AdminJailMessage | undefined;
-  setAj(value?: AdminJailMessage): void;
-  hasAj(): boolean;
-  clearAj(): void;
-
-  getPunishmentCase(): WatchPlayerPunishmentsResponse.PunishmentCase;
+  getPunishmentId(): number;
+  setPunishmentId(value: number): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): WatchPlayerPunishmentsResponse.AsObject;
@@ -1257,88 +1155,8 @@ export class WatchPlayerPunishmentsResponse extends jspb.Message {
 
 export namespace WatchPlayerPunishmentsResponse {
   export type AsObject = {
-    ban?: BanMessage.AsObject,
-    block?: BlockMessage.AsObject,
-    warn?: WarnMessage.AsObject,
-    aj?: AdminJailMessage.AsObject,
-  }
-
-  export enum PunishmentCase { 
-    PUNISHMENT_NOT_SET = 0,
-    BAN = 1,
-    BLOCK = 2,
-    WARN = 3,
-    AJ = 4,
-  }
-}
-
-export class WatchPlayerAcquittalsRequest extends jspb.Message {
-  getAccountId(): number;
-  setAccountId(value: number): void;
-
-  getCharacterId(): number;
-  setCharacterId(value: number): void;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): WatchPlayerAcquittalsRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: WatchPlayerAcquittalsRequest): WatchPlayerAcquittalsRequest.AsObject;
-  static serializeBinaryToWriter(message: WatchPlayerAcquittalsRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): WatchPlayerAcquittalsRequest;
-  static deserializeBinaryFromReader(message: WatchPlayerAcquittalsRequest, reader: jspb.BinaryReader): WatchPlayerAcquittalsRequest;
-}
-
-export namespace WatchPlayerAcquittalsRequest {
-  export type AsObject = {
-    accountId: number,
-    characterId: number,
-  }
-}
-
-export class WatchPlayerAcquittalsResponse extends jspb.Message {
-  getUnban(): UnBanMessage | undefined;
-  setUnban(value?: UnBanMessage): void;
-  hasUnban(): boolean;
-  clearUnban(): void;
-
-  getUnblock(): UnBlockMessage | undefined;
-  setUnblock(value?: UnBlockMessage): void;
-  hasUnblock(): boolean;
-  clearUnblock(): void;
-
-  getUnwarn(): UnWarnMessage | undefined;
-  setUnwarn(value?: UnWarnMessage): void;
-  hasUnwarn(): boolean;
-  clearUnwarn(): void;
-
-  getUnaj(): UnAdminJailMessage | undefined;
-  setUnaj(value?: UnAdminJailMessage): void;
-  hasUnaj(): boolean;
-  clearUnaj(): void;
-
-  getAcquittalCase(): WatchPlayerAcquittalsResponse.AcquittalCase;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): WatchPlayerAcquittalsResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: WatchPlayerAcquittalsResponse): WatchPlayerAcquittalsResponse.AsObject;
-  static serializeBinaryToWriter(message: WatchPlayerAcquittalsResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): WatchPlayerAcquittalsResponse;
-  static deserializeBinaryFromReader(message: WatchPlayerAcquittalsResponse, reader: jspb.BinaryReader): WatchPlayerAcquittalsResponse;
-}
-
-export namespace WatchPlayerAcquittalsResponse {
-  export type AsObject = {
-    unban?: UnBanMessage.AsObject,
-    unblock?: UnBlockMessage.AsObject,
-    unwarn?: UnWarnMessage.AsObject,
-    unaj?: UnAdminJailMessage.AsObject,
-  }
-
-  export enum AcquittalCase { 
-    ACQUITTAL_NOT_SET = 0,
-    UNBAN = 1,
-    UNBLOCK = 2,
-    UNWARN = 3,
-    UNAJ = 4,
+    type: PunishmentType,
+    punishmentId: number,
   }
 }
 
@@ -1357,27 +1175,17 @@ export namespace WatchPunishmentsRequest {
 }
 
 export class WatchPunishmentsResponse extends jspb.Message {
-  getBan(): BanMessage | undefined;
-  setBan(value?: BanMessage): void;
-  hasBan(): boolean;
-  clearBan(): void;
+  getType(): PunishmentType;
+  setType(value: PunishmentType): void;
 
-  getBlock(): BlockMessage | undefined;
-  setBlock(value?: BlockMessage): void;
-  hasBlock(): boolean;
-  clearBlock(): void;
+  getPunishmentId(): number;
+  setPunishmentId(value: number): void;
 
-  getWarn(): WarnMessage | undefined;
-  setWarn(value?: WarnMessage): void;
-  hasWarn(): boolean;
-  clearWarn(): void;
+  getPlayer(): number;
+  setPlayer(value: number): void;
 
-  getAj(): AdminJailMessage | undefined;
-  setAj(value?: AdminJailMessage): void;
-  hasAj(): boolean;
-  clearAj(): void;
-
-  getPunishmentCase(): WatchPunishmentsResponse.PunishmentCase;
+  getCharacter(): number;
+  setCharacter(value: number): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): WatchPunishmentsResponse.AsObject;
@@ -1389,80 +1197,24 @@ export class WatchPunishmentsResponse extends jspb.Message {
 
 export namespace WatchPunishmentsResponse {
   export type AsObject = {
-    ban?: BanMessage.AsObject,
-    block?: BlockMessage.AsObject,
-    warn?: WarnMessage.AsObject,
-    aj?: AdminJailMessage.AsObject,
-  }
-
-  export enum PunishmentCase { 
-    PUNISHMENT_NOT_SET = 0,
-    BAN = 1,
-    BLOCK = 2,
-    WARN = 3,
-    AJ = 4,
+    type: PunishmentType,
+    punishmentId: number,
+    player: number,
+    character: number,
   }
 }
 
-export class WatchAcquittalsRequest extends jspb.Message {
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): WatchAcquittalsRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: WatchAcquittalsRequest): WatchAcquittalsRequest.AsObject;
-  static serializeBinaryToWriter(message: WatchAcquittalsRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): WatchAcquittalsRequest;
-  static deserializeBinaryFromReader(message: WatchAcquittalsRequest, reader: jspb.BinaryReader): WatchAcquittalsRequest;
+export enum PunishmentType { 
+  UNKNOWN_PUNISHMENT = 0,
+  BAN = 1,
+  BLOCK = 2,
+  WARN = 3,
+  ADMIN_JAIL = 4,
 }
-
-export namespace WatchAcquittalsRequest {
-  export type AsObject = {
-  }
+export enum AcquittalsType { 
+  UNKNOWN_ACQUITAL = 0,
+  UNBAN = 1,
+  UNBLOCK = 2,
+  UNWARN = 3,
+  UN_ADMIN_JAIL = 4,
 }
-
-export class WatchAcquittalsResponse extends jspb.Message {
-  getUnban(): UnBanMessage | undefined;
-  setUnban(value?: UnBanMessage): void;
-  hasUnban(): boolean;
-  clearUnban(): void;
-
-  getUnblock(): UnBlockMessage | undefined;
-  setUnblock(value?: UnBlockMessage): void;
-  hasUnblock(): boolean;
-  clearUnblock(): void;
-
-  getUnwarn(): UnWarnMessage | undefined;
-  setUnwarn(value?: UnWarnMessage): void;
-  hasUnwarn(): boolean;
-  clearUnwarn(): void;
-
-  getUnaj(): UnAdminJailMessage | undefined;
-  setUnaj(value?: UnAdminJailMessage): void;
-  hasUnaj(): boolean;
-  clearUnaj(): void;
-
-  getAcquittalCase(): WatchAcquittalsResponse.AcquittalCase;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): WatchAcquittalsResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: WatchAcquittalsResponse): WatchAcquittalsResponse.AsObject;
-  static serializeBinaryToWriter(message: WatchAcquittalsResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): WatchAcquittalsResponse;
-  static deserializeBinaryFromReader(message: WatchAcquittalsResponse, reader: jspb.BinaryReader): WatchAcquittalsResponse;
-}
-
-export namespace WatchAcquittalsResponse {
-  export type AsObject = {
-    unban?: UnBanMessage.AsObject,
-    unblock?: UnBlockMessage.AsObject,
-    unwarn?: UnWarnMessage.AsObject,
-    unaj?: UnAdminJailMessage.AsObject,
-  }
-
-  export enum AcquittalCase { 
-    ACQUITTAL_NOT_SET = 0,
-    UNBAN = 1,
-    UNBLOCK = 2,
-    UNWARN = 3,
-    UNAJ = 4,
-  }
-}
-

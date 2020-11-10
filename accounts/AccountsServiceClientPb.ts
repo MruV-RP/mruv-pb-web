@@ -1,5 +1,5 @@
 /**
- * @fileoverview gRPC-Web generated client stub for mruv.accounts
+ * @fileoverview gRPC-Web generated client stub for mruv
  * @enhanceable
  * @public
  */
@@ -57,7 +57,7 @@ export class MruVAccountsServiceClient {
                response: RegisterAccountResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.accounts.MruVAccountsService/RegisterAccount',
+        '/mruv.MruVAccountsService/RegisterAccount',
       request,
       metadata || {},
       this.methodInfoRegisterAccount,
@@ -79,7 +79,7 @@ export class MruVAccountsServiceClient {
                response: LogInResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.accounts.MruVAccountsService/LogIn',
+        '/mruv.MruVAccountsService/LogIn',
       request,
       metadata || {},
       this.methodInfoLogIn,
@@ -101,7 +101,7 @@ export class MruVAccountsServiceClient {
                response: IsAccountExistResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.accounts.MruVAccountsService/IsAccountExist',
+        '/mruv.MruVAccountsService/IsAccountExist',
       request,
       metadata || {},
       this.methodInfoIsAccountExist,
@@ -123,7 +123,7 @@ export class MruVAccountsServiceClient {
                response: GetAccountResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.accounts.MruVAccountsService/GetAccount',
+        '/mruv.MruVAccountsService/GetAccount',
       request,
       metadata || {},
       this.methodInfoGetAccount,
@@ -145,7 +145,7 @@ export class MruVAccountsServiceClient {
                response: GetAccountCharactersResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.accounts.MruVAccountsService/GetAccountCharacters',
+        '/mruv.MruVAccountsService/GetAccountCharacters',
       request,
       metadata || {},
       this.methodInfoGetAccountCharacters,

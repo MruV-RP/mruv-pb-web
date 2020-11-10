@@ -38,8 +38,6 @@ import {
   IsPlayerBannedResponse,
   MuteGlobalChatsRequest,
   MuteGlobalChatsResponse,
-  PunishRequest,
-  PunishResponse,
   UnAdminJailMessage,
   UnAdminJailRequest,
   UnAdminJailResponse,
@@ -57,8 +55,6 @@ import {
   WarnMessage,
   WarnRequest,
   WarnResponse,
-  WatchAcquittalsRequest,
-  WatchAcquittalsResponse,
   WatchAdminJailsRequest,
   WatchBansRequest,
   WatchBlocksRequest,
@@ -91,28 +87,6 @@ export class MruVPunishmentsServiceClient {
     this.hostname_ = hostname;
     this.credentials_ = credentials;
     this.options_ = options;
-  }
-
-  methodInfoPunish = new grpcWeb.AbstractClientBase.MethodInfo(
-    PunishResponse,
-    (request: PunishRequest) => {
-      return request.serializeBinary();
-    },
-    PunishResponse.deserializeBinary
-  );
-
-  punish(
-    request: PunishRequest,
-    metadata: grpcWeb.Metadata | null,
-    callback: (err: grpcWeb.Error,
-               response: PunishResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.punishments.MruVPunishmentsService/Punish',
-      request,
-      metadata || {},
-      this.methodInfoPunish,
-      callback);
   }
 
   methodInfoBan = new grpcWeb.AbstractClientBase.MethodInfo(
@@ -740,28 +714,6 @@ export class MruVPunishmentsServiceClient {
       request,
       metadata || {},
       this.methodInfoWatchPunishments);
-  }
-
-  methodInfoWatchAcquittals = new grpcWeb.AbstractClientBase.MethodInfo(
-    WatchAcquittalsResponse,
-    (request: WatchAcquittalsRequest) => {
-      return request.serializeBinary();
-    },
-    WatchAcquittalsResponse.deserializeBinary
-  );
-
-  watchAcquittals(
-    request: WatchAcquittalsRequest,
-    metadata: grpcWeb.Metadata | null,
-    callback: (err: grpcWeb.Error,
-               response: WatchAcquittalsResponse) => void) {
-    return this.client_.rpcCall(
-      this.hostname_ +
-        '/mruv.punishments.MruVPunishmentsService/WatchAcquittals',
-      request,
-      metadata || {},
-      this.methodInfoWatchAcquittals,
-      callback);
   }
 
 }

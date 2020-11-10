@@ -1,5 +1,5 @@
 /**
- * @fileoverview gRPC-Web generated client stub for mruv.characters
+ * @fileoverview gRPC-Web generated client stub for mruv
  * @enhanceable
  * @public
  */
@@ -61,7 +61,7 @@ export class MruVCharactersServiceClient {
                response: CreateCharacterResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.characters.MruVCharactersService/CreateCharacter',
+        '/mruv.MruVCharactersService/CreateCharacter',
       request,
       metadata || {},
       this.methodInfoCreateCharacter,
@@ -83,7 +83,7 @@ export class MruVCharactersServiceClient {
                response: GetCharacterResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.characters.MruVCharactersService/GetCharacter',
+        '/mruv.MruVCharactersService/GetCharacter',
       request,
       metadata || {},
       this.methodInfoGetCharacter,
@@ -105,7 +105,7 @@ export class MruVCharactersServiceClient {
                response: UpdateCharacterResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.characters.MruVCharactersService/UpdateCharacter',
+        '/mruv.MruVCharactersService/UpdateCharacter',
       request,
       metadata || {},
       this.methodInfoUpdateCharacter,
@@ -127,7 +127,7 @@ export class MruVCharactersServiceClient {
                response: DeleteCharacterResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.characters.MruVCharactersService/DeleteCharacter',
+        '/mruv.MruVCharactersService/DeleteCharacter',
       request,
       metadata || {},
       this.methodInfoDeleteCharacter,
@@ -149,7 +149,7 @@ export class MruVCharactersServiceClient {
                response: CharacterID) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.characters.MruVCharactersService/PermanentCharacterKill',
+        '/mruv.MruVCharactersService/PermanentCharacterKill',
       request,
       metadata || {},
       this.methodInfoPermanentCharacterKill,
@@ -171,7 +171,7 @@ export class MruVCharactersServiceClient {
                response: ChangeClothesResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.characters.MruVCharactersService/ChangeClothes',
+        '/mruv.MruVCharactersService/ChangeClothes',
       request,
       metadata || {},
       this.methodInfoChangeClothes,
@@ -191,7 +191,7 @@ export class MruVCharactersServiceClient {
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +
-        '/mruv.characters.MruVCharactersService/DeathsStream',
+        '/mruv.MruVCharactersService/DeathsStream',
       request,
       metadata || {},
       this.methodInfoDeathsStream);
@@ -212,7 +212,7 @@ export class MruVCharactersServiceClient {
                response: common_health_pb.ServiceStatusResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.characters.MruVCharactersService/GetServiceStatus',
+        '/mruv.MruVCharactersService/GetServiceStatus',
       request,
       metadata || {},
       this.methodInfoGetServiceStatus,
@@ -234,7 +234,7 @@ export class MruVCharactersServiceClient {
                response: common_health_pb.VersionResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.characters.MruVCharactersService/GetServiceVersion',
+        '/mruv.MruVCharactersService/GetServiceVersion',
       request,
       metadata || {},
       this.methodInfoGetServiceVersion,

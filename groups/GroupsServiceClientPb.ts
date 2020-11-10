@@ -1,5 +1,5 @@
 /**
- * @fileoverview gRPC-Web generated client stub for mruv.groups
+ * @fileoverview gRPC-Web generated client stub for mruv
  * @enhanceable
  * @public
  */
@@ -82,7 +82,7 @@ export class MruVGroupsServiceClient {
                response: CreateGroupResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.groups.MruVGroupsService/CreateGroup',
+        '/mruv.MruVGroupsService/CreateGroup',
       request,
       metadata || {},
       this.methodInfoCreateGroup,
@@ -104,7 +104,7 @@ export class MruVGroupsServiceClient {
                response: GetGroupResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.groups.MruVGroupsService/GetGroup',
+        '/mruv.MruVGroupsService/GetGroup',
       request,
       metadata || {},
       this.methodInfoGetGroup,
@@ -126,7 +126,7 @@ export class MruVGroupsServiceClient {
                response: UpdateGroupResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.groups.MruVGroupsService/UpdateGroup',
+        '/mruv.MruVGroupsService/UpdateGroup',
       request,
       metadata || {},
       this.methodInfoUpdateGroup,
@@ -148,7 +148,7 @@ export class MruVGroupsServiceClient {
                response: DeleteGroupResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.groups.MruVGroupsService/DeleteGroup',
+        '/mruv.MruVGroupsService/DeleteGroup',
       request,
       metadata || {},
       this.methodInfoDeleteGroup,
@@ -170,7 +170,7 @@ export class MruVGroupsServiceClient {
                response: GetGroupsResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.groups.MruVGroupsService/GetGroups',
+        '/mruv.MruVGroupsService/GetGroups',
       request,
       metadata || {},
       this.methodInfoGetGroups,
@@ -192,7 +192,7 @@ export class MruVGroupsServiceClient {
                response: AssignOwnerResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.groups.MruVGroupsService/AssignOwner',
+        '/mruv.MruVGroupsService/AssignOwner',
       request,
       metadata || {},
       this.methodInfoAssignOwner,
@@ -214,7 +214,7 @@ export class MruVGroupsServiceClient {
                response: GetOwnerResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.groups.MruVGroupsService/GetOwner',
+        '/mruv.MruVGroupsService/GetOwner',
       request,
       metadata || {},
       this.methodInfoGetOwner,
@@ -236,7 +236,7 @@ export class MruVGroupsServiceClient {
                response: AddMemberResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.groups.MruVGroupsService/AddMember',
+        '/mruv.MruVGroupsService/AddMember',
       request,
       metadata || {},
       this.methodInfoAddMember,
@@ -258,7 +258,7 @@ export class MruVGroupsServiceClient {
                response: GetMembersResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.groups.MruVGroupsService/GetMembers',
+        '/mruv.MruVGroupsService/GetMembers',
       request,
       metadata || {},
       this.methodInfoGetMembers,
@@ -280,7 +280,7 @@ export class MruVGroupsServiceClient {
                response: RemoveMemberResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.groups.MruVGroupsService/RemoveMember',
+        '/mruv.MruVGroupsService/RemoveMember',
       request,
       metadata || {},
       this.methodInfoRemoveMember,
@@ -302,7 +302,7 @@ export class MruVGroupsServiceClient {
                response: AddPermissionResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.groups.MruVGroupsService/AddPermission',
+        '/mruv.MruVGroupsService/AddPermission',
       request,
       metadata || {},
       this.methodInfoAddPermission,
@@ -324,7 +324,7 @@ export class MruVGroupsServiceClient {
                response: GetPermissionsResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.groups.MruVGroupsService/GetPermissions',
+        '/mruv.MruVGroupsService/GetPermissions',
       request,
       metadata || {},
       this.methodInfoGetPermissions,
@@ -346,7 +346,7 @@ export class MruVGroupsServiceClient {
                response: RemovePermissionResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.groups.MruVGroupsService/RemovePermission',
+        '/mruv.MruVGroupsService/RemovePermission',
       request,
       metadata || {},
       this.methodInfoRemovePermission,
@@ -368,7 +368,7 @@ export class MruVGroupsServiceClient {
                response: AddSubgroupResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.groups.MruVGroupsService/AddSubgroup',
+        '/mruv.MruVGroupsService/AddSubgroup',
       request,
       metadata || {},
       this.methodInfoAddSubgroup,
@@ -390,7 +390,7 @@ export class MruVGroupsServiceClient {
                response: GetSubgroupsResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.groups.MruVGroupsService/GetSubgroups',
+        '/mruv.MruVGroupsService/GetSubgroups',
       request,
       metadata || {},
       this.methodInfoGetSubgroups,
@@ -412,7 +412,7 @@ export class MruVGroupsServiceClient {
                response: RemoveSubgroupResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.groups.MruVGroupsService/RemoveSubgroup',
+        '/mruv.MruVGroupsService/RemoveSubgroup',
       request,
       metadata || {},
       this.methodInfoRemoveSubgroup,
@@ -434,7 +434,7 @@ export class MruVGroupsServiceClient {
                response: IsPermittedResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.groups.MruVGroupsService/IsPermitted',
+        '/mruv.MruVGroupsService/IsPermitted',
       request,
       metadata || {},
       this.methodInfoIsPermitted,
@@ -456,7 +456,7 @@ export class MruVGroupsServiceClient {
                response: common_health_pb.ServiceStatusResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.groups.MruVGroupsService/GetServiceStatus',
+        '/mruv.MruVGroupsService/GetServiceStatus',
       request,
       metadata || {},
       this.methodInfoGetServiceStatus,
@@ -478,7 +478,7 @@ export class MruVGroupsServiceClient {
                response: common_health_pb.VersionResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.groups.MruVGroupsService/GetServiceVersion',
+        '/mruv.MruVGroupsService/GetServiceVersion',
       request,
       metadata || {},
       this.methodInfoGetServiceVersion,

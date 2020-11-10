@@ -1,5 +1,5 @@
 /**
- * @fileoverview gRPC-Web generated client stub for mruv.texture_studio
+ * @fileoverview gRPC-Web generated client stub for texture_studio
  * @enhanceable
  * @public
  */
@@ -63,7 +63,7 @@ export class TextureStudioServerServiceClient {
                response: StartServerResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.texture_studio.TextureStudioServerService/StartServer',
+        '/texture_studio.TextureStudioServerService/StartServer',
       request,
       metadata || {},
       this.methodInfoStartServer,
@@ -85,7 +85,7 @@ export class TextureStudioServerServiceClient {
                response: StopServerResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.texture_studio.TextureStudioServerService/StopServer',
+        '/texture_studio.TextureStudioServerService/StopServer',
       request,
       metadata || {},
       this.methodInfoStopServer,
@@ -107,7 +107,7 @@ export class TextureStudioServerServiceClient {
                response: RestartServerResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.texture_studio.TextureStudioServerService/RestartServer',
+        '/texture_studio.TextureStudioServerService/RestartServer',
       request,
       metadata || {},
       this.methodInfoRestartServer,
@@ -129,7 +129,7 @@ export class TextureStudioServerServiceClient {
                response: ServerStatusResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.texture_studio.TextureStudioServerService/ServerStatus',
+        '/texture_studio.TextureStudioServerService/ServerStatus',
       request,
       metadata || {},
       this.methodInfoServerStatus,
@@ -151,7 +151,7 @@ export class TextureStudioServerServiceClient {
                response: UploadProjectResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.texture_studio.TextureStudioServerService/UploadProject',
+        '/texture_studio.TextureStudioServerService/UploadProject',
       request,
       metadata || {},
       this.methodInfoUploadProject,
@@ -173,7 +173,7 @@ export class TextureStudioServerServiceClient {
                response: GetProjectResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.texture_studio.TextureStudioServerService/GetProject',
+        '/texture_studio.TextureStudioServerService/GetProject',
       request,
       metadata || {},
       this.methodInfoGetProject,
@@ -195,7 +195,7 @@ export class TextureStudioServerServiceClient {
                response: GetProjectsResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.texture_studio.TextureStudioServerService/GetProjects',
+        '/texture_studio.TextureStudioServerService/GetProjects',
       request,
       metadata || {},
       this.methodInfoGetProjects,
@@ -215,7 +215,7 @@ export class TextureStudioServerServiceClient {
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +
-        '/mruv.texture_studio.TextureStudioServerService/SubscribeToProjectsChanges',
+        '/texture_studio.TextureStudioServerService/SubscribeToProjectsChanges',
       request,
       metadata || {},
       this.methodInfoSubscribeToProjectsChanges);

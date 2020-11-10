@@ -1,5 +1,5 @@
 /**
- * @fileoverview gRPC-Web generated client stub for mruv.texture_studio
+ * @fileoverview gRPC-Web generated client stub for texture_studio
  * @enhanceable
  * @public
  */
@@ -57,7 +57,7 @@ export class TextureStudioManagerServiceClient {
                response: CreateServerResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.texture_studio.TextureStudioManagerService/CreateServer',
+        '/texture_studio.TextureStudioManagerService/CreateServer',
       request,
       metadata || {},
       this.methodInfoCreateServer,
@@ -79,7 +79,7 @@ export class TextureStudioManagerServiceClient {
                response: GetServersResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.texture_studio.TextureStudioManagerService/GetServers',
+        '/texture_studio.TextureStudioManagerService/GetServers',
       request,
       metadata || {},
       this.methodInfoGetServers,
@@ -101,7 +101,7 @@ export class TextureStudioManagerServiceClient {
                response: MyServerResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.texture_studio.TextureStudioManagerService/MyServer',
+        '/texture_studio.TextureStudioManagerService/MyServer',
       request,
       metadata || {},
       this.methodInfoMyServer,
@@ -123,7 +123,7 @@ export class TextureStudioManagerServiceClient {
                response: TransferOwnershipResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.texture_studio.TextureStudioManagerService/TransferOwnership',
+        '/texture_studio.TextureStudioManagerService/TransferOwnership',
       request,
       metadata || {},
       this.methodInfoTransferOwnership,
@@ -145,7 +145,7 @@ export class TextureStudioManagerServiceClient {
                response: DeleteServerResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.texture_studio.TextureStudioManagerService/DeleteServer',
+        '/texture_studio.TextureStudioManagerService/DeleteServer',
       request,
       metadata || {},
       this.methodInfoDeleteServer,

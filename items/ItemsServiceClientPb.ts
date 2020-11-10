@@ -1,5 +1,5 @@
 /**
- * @fileoverview gRPC-Web generated client stub for mruv.items
+ * @fileoverview gRPC-Web generated client stub for mruv
  * @enhanceable
  * @public
  */
@@ -69,7 +69,7 @@ export class MruVItemServiceClient {
                response: items_items_model_pb.ItemID) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/CreateItem',
+        '/mruv.MruVItemService/CreateItem',
       request,
       metadata || {},
       this.methodInfoCreateItem,
@@ -91,7 +91,7 @@ export class MruVItemServiceClient {
                response: items_items_model_pb.Item) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/GetItem',
+        '/mruv.MruVItemService/GetItem',
       request,
       metadata || {},
       this.methodInfoGetItem,
@@ -113,7 +113,7 @@ export class MruVItemServiceClient {
                response: items_items_model_pb.ItemID) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/DeleteItem',
+        '/mruv.MruVItemService/DeleteItem',
       request,
       metadata || {},
       this.methodInfoDeleteItem,
@@ -135,7 +135,7 @@ export class MruVItemServiceClient {
                response: GetItemsResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/GetItems',
+        '/mruv.MruVItemService/GetItems',
       request,
       metadata || {},
       this.methodInfoGetItems,
@@ -157,7 +157,7 @@ export class MruVItemServiceClient {
                response: items_items_model_pb.ItemTypeID) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/CreateItemType',
+        '/mruv.MruVItemService/CreateItemType',
       request,
       metadata || {},
       this.methodInfoCreateItemType,
@@ -179,7 +179,7 @@ export class MruVItemServiceClient {
                response: items_items_model_pb.ItemType) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/GetItemType',
+        '/mruv.MruVItemService/GetItemType',
       request,
       metadata || {},
       this.methodInfoGetItemType,
@@ -201,7 +201,7 @@ export class MruVItemServiceClient {
                response: items_items_model_pb.ItemTypeID) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/DeleteItemType',
+        '/mruv.MruVItemService/DeleteItemType',
       request,
       metadata || {},
       this.methodInfoDeleteItemType,
@@ -223,7 +223,7 @@ export class MruVItemServiceClient {
                response: GetItemTypesResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/GetItemTypes',
+        '/mruv.MruVItemService/GetItemTypes',
       request,
       metadata || {},
       this.methodInfoGetItemTypes,
@@ -245,7 +245,7 @@ export class MruVItemServiceClient {
                response: items_items_model_pb.ContainerID) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/CreateContainer',
+        '/mruv.MruVItemService/CreateContainer',
       request,
       metadata || {},
       this.methodInfoCreateContainer,
@@ -267,7 +267,7 @@ export class MruVItemServiceClient {
                response: items_items_model_pb.Container) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/GetContainer',
+        '/mruv.MruVItemService/GetContainer',
       request,
       metadata || {},
       this.methodInfoGetContainer,
@@ -289,7 +289,7 @@ export class MruVItemServiceClient {
                response: items_items_model_pb.ContainerID) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/DeleteContainer',
+        '/mruv.MruVItemService/DeleteContainer',
       request,
       metadata || {},
       this.methodInfoDeleteContainer,
@@ -311,7 +311,7 @@ export class MruVItemServiceClient {
                response: GetContainersResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/GetContainers',
+        '/mruv.MruVItemService/GetContainers',
       request,
       metadata || {},
       this.methodInfoGetContainers,
@@ -333,7 +333,7 @@ export class MruVItemServiceClient {
                response: items_items_model_pb.ContainerTypeID) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/CreateContainerType',
+        '/mruv.MruVItemService/CreateContainerType',
       request,
       metadata || {},
       this.methodInfoCreateContainerType,
@@ -355,7 +355,7 @@ export class MruVItemServiceClient {
                response: items_items_model_pb.ContainerType) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/GetContainerType',
+        '/mruv.MruVItemService/GetContainerType',
       request,
       metadata || {},
       this.methodInfoGetContainerType,
@@ -377,7 +377,7 @@ export class MruVItemServiceClient {
                response: items_items_model_pb.ContainerTypeID) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/DeleteContainerType',
+        '/mruv.MruVItemService/DeleteContainerType',
       request,
       metadata || {},
       this.methodInfoDeleteContainerType,
@@ -399,7 +399,7 @@ export class MruVItemServiceClient {
                response: GetContainerTypesResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/GetContainerTypes',
+        '/mruv.MruVItemService/GetContainerTypes',
       request,
       metadata || {},
       this.methodInfoGetContainerTypes,
@@ -421,7 +421,7 @@ export class MruVItemServiceClient {
                response: GetContainerItemsResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/GetContainerItems',
+        '/mruv.MruVItemService/GetContainerItems',
       request,
       metadata || {},
       this.methodInfoGetContainerItems,
@@ -443,7 +443,7 @@ export class MruVItemServiceClient {
                response: items_items_model_pb.Item) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/PullItem',
+        '/mruv.MruVItemService/PullItem',
       request,
       metadata || {},
       this.methodInfoPullItem,
@@ -465,7 +465,7 @@ export class MruVItemServiceClient {
                response: PutItemResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/PutItem',
+        '/mruv.MruVItemService/PutItem',
       request,
       metadata || {},
       this.methodInfoPutItem,
@@ -487,7 +487,7 @@ export class MruVItemServiceClient {
                response: SortItemsResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/SortItems',
+        '/mruv.MruVItemService/SortItems',
       request,
       metadata || {},
       this.methodInfoSortItems,
@@ -509,7 +509,7 @@ export class MruVItemServiceClient {
                response: GetNearestItemsResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/GetNearestItems',
+        '/mruv.MruVItemService/GetNearestItems',
       request,
       metadata || {},
       this.methodInfoGetNearestItems,
@@ -531,7 +531,7 @@ export class MruVItemServiceClient {
                response: UseItemResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/UseItem',
+        '/mruv.MruVItemService/UseItem',
       request,
       metadata || {},
       this.methodInfoUseItem,
@@ -553,7 +553,7 @@ export class MruVItemServiceClient {
                response: common_health_pb.ServiceStatusResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/GetServiceStatus',
+        '/mruv.MruVItemService/GetServiceStatus',
       request,
       metadata || {},
       this.methodInfoGetServiceStatus,
@@ -575,7 +575,7 @@ export class MruVItemServiceClient {
                response: common_health_pb.VersionResponse) => void) {
     return this.client_.rpcCall(
       this.hostname_ +
-        '/mruv.items.MruVItemService/GetServiceVersion',
+        '/mruv.MruVItemService/GetServiceVersion',
       request,
       metadata || {},
       this.methodInfoGetServiceVersion,
