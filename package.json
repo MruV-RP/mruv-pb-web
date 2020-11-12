@@ -3,7 +3,6 @@
   "version": "0.8.4",
   "description": "MruV protocol buffers generated files for gRPC Web",
   "dependencies": {
-    "@improbable-eng/grpc-web": "^0.13.0",
     "@types/google-protobuf": "^3.7.4",
     "google-protobuf": "^3.6.1",
     "grpc-web": "^1.2.1"
