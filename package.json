@@ -1,6 +1,6 @@
 {
   "name": "mruv-pb-web",
-  "version": "0.8.4",
+  "version": "0.9.0",
   "description": "MruV protocol buffers generated files for gRPC Web",
   "dependencies": {
     "@improbable-eng/grpc-web": "^0.13.0",
