@@ -1,5 +1,5 @@
 /**
- * @fileoverview gRPC-Web generated client stub for mruv
+ * @fileoverview gRPC-Web generated client stub for mruv.groups
  * @enhanceable
  * @public
  */
@@ -62,7 +62,7 @@ export class MruVGroupsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVGroupsService/CreateGroup',
+          '/mruv.groups.MruVGroupsService/CreateGroup',
         request,
         metadata || {},
         this.methodInfoCreateGroup,
@@ -70,7 +70,7 @@ export class MruVGroupsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVGroupsService/CreateGroup',
+      '/mruv.groups.MruVGroupsService/CreateGroup',
     request,
     metadata || {},
     this.methodInfoCreateGroup);
@@ -102,7 +102,7 @@ export class MruVGroupsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVGroupsService/GetGroup',
+          '/mruv.groups.MruVGroupsService/GetGroup',
         request,
         metadata || {},
         this.methodInfoGetGroup,
@@ -110,7 +110,7 @@ export class MruVGroupsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVGroupsService/GetGroup',
+      '/mruv.groups.MruVGroupsService/GetGroup',
     request,
     metadata || {},
     this.methodInfoGetGroup);
@@ -142,7 +142,7 @@ export class MruVGroupsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVGroupsService/UpdateGroup',
+          '/mruv.groups.MruVGroupsService/UpdateGroup',
         request,
         metadata || {},
         this.methodInfoUpdateGroup,
@@ -150,7 +150,7 @@ export class MruVGroupsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVGroupsService/UpdateGroup',
+      '/mruv.groups.MruVGroupsService/UpdateGroup',
     request,
     metadata || {},
     this.methodInfoUpdateGroup);
@@ -182,7 +182,7 @@ export class MruVGroupsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVGroupsService/DeleteGroup',
+          '/mruv.groups.MruVGroupsService/DeleteGroup',
         request,
         metadata || {},
         this.methodInfoDeleteGroup,
@@ -190,7 +190,7 @@ export class MruVGroupsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVGroupsService/DeleteGroup',
+      '/mruv.groups.MruVGroupsService/DeleteGroup',
     request,
     metadata || {},
     this.methodInfoDeleteGroup);
@@ -222,7 +222,7 @@ export class MruVGroupsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVGroupsService/GetGroups',
+          '/mruv.groups.MruVGroupsService/GetGroups',
         request,
         metadata || {},
         this.methodInfoGetGroups,
@@ -230,7 +230,7 @@ export class MruVGroupsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVGroupsService/GetGroups',
+      '/mruv.groups.MruVGroupsService/GetGroups',
     request,
     metadata || {},
     this.methodInfoGetGroups);
@@ -262,7 +262,7 @@ export class MruVGroupsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVGroupsService/AssignOwner',
+          '/mruv.groups.MruVGroupsService/AssignOwner',
         request,
         metadata || {},
         this.methodInfoAssignOwner,
@@ -270,7 +270,7 @@ export class MruVGroupsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVGroupsService/AssignOwner',
+      '/mruv.groups.MruVGroupsService/AssignOwner',
     request,
     metadata || {},
     this.methodInfoAssignOwner);
@@ -302,7 +302,7 @@ export class MruVGroupsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVGroupsService/GetOwner',
+          '/mruv.groups.MruVGroupsService/GetOwner',
         request,
         metadata || {},
         this.methodInfoGetOwner,
@@ -310,7 +310,7 @@ export class MruVGroupsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVGroupsService/GetOwner',
+      '/mruv.groups.MruVGroupsService/GetOwner',
     request,
     metadata || {},
     this.methodInfoGetOwner);
@@ -342,7 +342,7 @@ export class MruVGroupsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVGroupsService/AddMember',
+          '/mruv.groups.MruVGroupsService/AddMember',
         request,
         metadata || {},
         this.methodInfoAddMember,
@@ -350,7 +350,7 @@ export class MruVGroupsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVGroupsService/AddMember',
+      '/mruv.groups.MruVGroupsService/AddMember',
     request,
     metadata || {},
     this.methodInfoAddMember);
@@ -382,7 +382,7 @@ export class MruVGroupsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVGroupsService/GetMembers',
+          '/mruv.groups.MruVGroupsService/GetMembers',
         request,
         metadata || {},
         this.methodInfoGetMembers,
@@ -390,7 +390,7 @@ export class MruVGroupsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVGroupsService/GetMembers',
+      '/mruv.groups.MruVGroupsService/GetMembers',
     request,
     metadata || {},
     this.methodInfoGetMembers);
@@ -422,7 +422,7 @@ export class MruVGroupsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVGroupsService/RemoveMember',
+          '/mruv.groups.MruVGroupsService/RemoveMember',
         request,
         metadata || {},
         this.methodInfoRemoveMember,
@@ -430,7 +430,7 @@ export class MruVGroupsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVGroupsService/RemoveMember',
+      '/mruv.groups.MruVGroupsService/RemoveMember',
     request,
     metadata || {},
     this.methodInfoRemoveMember);
@@ -462,7 +462,7 @@ export class MruVGroupsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVGroupsService/AddPermission',
+          '/mruv.groups.MruVGroupsService/AddPermission',
         request,
         metadata || {},
         this.methodInfoAddPermission,
@@ -470,7 +470,7 @@ export class MruVGroupsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVGroupsService/AddPermission',
+      '/mruv.groups.MruVGroupsService/AddPermission',
     request,
     metadata || {},
     this.methodInfoAddPermission);
@@ -502,7 +502,7 @@ export class MruVGroupsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVGroupsService/GetPermissions',
+          '/mruv.groups.MruVGroupsService/GetPermissions',
         request,
         metadata || {},
         this.methodInfoGetPermissions,
@@ -510,7 +510,7 @@ export class MruVGroupsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVGroupsService/GetPermissions',
+      '/mruv.groups.MruVGroupsService/GetPermissions',
     request,
     metadata || {},
     this.methodInfoGetPermissions);
@@ -542,7 +542,7 @@ export class MruVGroupsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVGroupsService/RemovePermission',
+          '/mruv.groups.MruVGroupsService/RemovePermission',
         request,
         metadata || {},
         this.methodInfoRemovePermission,
@@ -550,7 +550,7 @@ export class MruVGroupsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVGroupsService/RemovePermission',
+      '/mruv.groups.MruVGroupsService/RemovePermission',
     request,
     metadata || {},
     this.methodInfoRemovePermission);
@@ -582,7 +582,7 @@ export class MruVGroupsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVGroupsService/AddSubgroup',
+          '/mruv.groups.MruVGroupsService/AddSubgroup',
         request,
         metadata || {},
         this.methodInfoAddSubgroup,
@@ -590,7 +590,7 @@ export class MruVGroupsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVGroupsService/AddSubgroup',
+      '/mruv.groups.MruVGroupsService/AddSubgroup',
     request,
     metadata || {},
     this.methodInfoAddSubgroup);
@@ -622,7 +622,7 @@ export class MruVGroupsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVGroupsService/GetSubgroups',
+          '/mruv.groups.MruVGroupsService/GetSubgroups',
         request,
         metadata || {},
         this.methodInfoGetSubgroups,
@@ -630,7 +630,7 @@ export class MruVGroupsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVGroupsService/GetSubgroups',
+      '/mruv.groups.MruVGroupsService/GetSubgroups',
     request,
     metadata || {},
     this.methodInfoGetSubgroups);
@@ -662,7 +662,7 @@ export class MruVGroupsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVGroupsService/RemoveSubgroup',
+          '/mruv.groups.MruVGroupsService/RemoveSubgroup',
         request,
         metadata || {},
         this.methodInfoRemoveSubgroup,
@@ -670,7 +670,7 @@ export class MruVGroupsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVGroupsService/RemoveSubgroup',
+      '/mruv.groups.MruVGroupsService/RemoveSubgroup',
     request,
     metadata || {},
     this.methodInfoRemoveSubgroup);
@@ -702,7 +702,7 @@ export class MruVGroupsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVGroupsService/IsPermitted',
+          '/mruv.groups.MruVGroupsService/IsPermitted',
         request,
         metadata || {},
         this.methodInfoIsPermitted,
@@ -710,7 +710,7 @@ export class MruVGroupsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVGroupsService/IsPermitted',
+      '/mruv.groups.MruVGroupsService/IsPermitted',
     request,
     metadata || {},
     this.methodInfoIsPermitted);
@@ -742,7 +742,7 @@ export class MruVGroupsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVGroupsService/GetServiceStatus',
+          '/mruv.groups.MruVGroupsService/GetServiceStatus',
         request,
         metadata || {},
         this.methodInfoGetServiceStatus,
@@ -750,7 +750,7 @@ export class MruVGroupsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVGroupsService/GetServiceStatus',
+      '/mruv.groups.MruVGroupsService/GetServiceStatus',
     request,
     metadata || {},
     this.methodInfoGetServiceStatus);
@@ -782,7 +782,7 @@ export class MruVGroupsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVGroupsService/GetServiceVersion',
+          '/mruv.groups.MruVGroupsService/GetServiceVersion',
         request,
         metadata || {},
         this.methodInfoGetServiceVersion,
@@ -790,7 +790,7 @@ export class MruVGroupsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVGroupsService/GetServiceVersion',
+      '/mruv.groups.MruVGroupsService/GetServiceVersion',
     request,
     metadata || {},
     this.methodInfoGetServiceVersion);

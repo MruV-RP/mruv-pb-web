@@ -1,5 +1,5 @@
 /**
- * @fileoverview gRPC-Web generated client stub for mruv
+ * @fileoverview gRPC-Web generated client stub for mruv.characters
  * @enhanceable
  * @public
  */
@@ -62,7 +62,7 @@ export class MruVCharactersServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVCharactersService/CreateCharacter',
+          '/mruv.characters.MruVCharactersService/CreateCharacter',
         request,
         metadata || {},
         this.methodInfoCreateCharacter,
@@ -70,7 +70,7 @@ export class MruVCharactersServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVCharactersService/CreateCharacter',
+      '/mruv.characters.MruVCharactersService/CreateCharacter',
     request,
     metadata || {},
     this.methodInfoCreateCharacter);
@@ -102,7 +102,7 @@ export class MruVCharactersServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVCharactersService/GetCharacter',
+          '/mruv.characters.MruVCharactersService/GetCharacter',
         request,
         metadata || {},
         this.methodInfoGetCharacter,
@@ -110,7 +110,7 @@ export class MruVCharactersServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVCharactersService/GetCharacter',
+      '/mruv.characters.MruVCharactersService/GetCharacter',
     request,
     metadata || {},
     this.methodInfoGetCharacter);
@@ -142,7 +142,7 @@ export class MruVCharactersServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVCharactersService/UpdateCharacter',
+          '/mruv.characters.MruVCharactersService/UpdateCharacter',
         request,
         metadata || {},
         this.methodInfoUpdateCharacter,
@@ -150,7 +150,7 @@ export class MruVCharactersServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVCharactersService/UpdateCharacter',
+      '/mruv.characters.MruVCharactersService/UpdateCharacter',
     request,
     metadata || {},
     this.methodInfoUpdateCharacter);
@@ -182,7 +182,7 @@ export class MruVCharactersServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVCharactersService/DeleteCharacter',
+          '/mruv.characters.MruVCharactersService/DeleteCharacter',
         request,
         metadata || {},
         this.methodInfoDeleteCharacter,
@@ -190,7 +190,7 @@ export class MruVCharactersServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVCharactersService/DeleteCharacter',
+      '/mruv.characters.MruVCharactersService/DeleteCharacter',
     request,
     metadata || {},
     this.methodInfoDeleteCharacter);
@@ -222,7 +222,7 @@ export class MruVCharactersServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVCharactersService/PermanentCharacterKill',
+          '/mruv.characters.MruVCharactersService/PermanentCharacterKill',
         request,
         metadata || {},
         this.methodInfoPermanentCharacterKill,
@@ -230,7 +230,7 @@ export class MruVCharactersServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVCharactersService/PermanentCharacterKill',
+      '/mruv.characters.MruVCharactersService/PermanentCharacterKill',
     request,
     metadata || {},
     this.methodInfoPermanentCharacterKill);
@@ -262,7 +262,7 @@ export class MruVCharactersServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVCharactersService/ChangeClothes',
+          '/mruv.characters.MruVCharactersService/ChangeClothes',
         request,
         metadata || {},
         this.methodInfoChangeClothes,
@@ -270,7 +270,7 @@ export class MruVCharactersServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVCharactersService/ChangeClothes',
+      '/mruv.characters.MruVCharactersService/ChangeClothes',
     request,
     metadata || {},
     this.methodInfoChangeClothes);
@@ -289,7 +289,7 @@ export class MruVCharactersServiceClient {
     metadata?: grpcWeb.Metadata) {
     return this.client_.serverStreaming(
       this.hostname_ +
-        '/mruv.MruVCharactersService/DeathsStream',
+        '/mruv.characters.MruVCharactersService/DeathsStream',
       request,
       metadata || {},
       this.methodInfoDeathsStream);
@@ -321,7 +321,7 @@ export class MruVCharactersServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVCharactersService/GetServiceStatus',
+          '/mruv.characters.MruVCharactersService/GetServiceStatus',
         request,
         metadata || {},
         this.methodInfoGetServiceStatus,
@@ -329,7 +329,7 @@ export class MruVCharactersServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVCharactersService/GetServiceStatus',
+      '/mruv.characters.MruVCharactersService/GetServiceStatus',
     request,
     metadata || {},
     this.methodInfoGetServiceStatus);
@@ -361,7 +361,7 @@ export class MruVCharactersServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVCharactersService/GetServiceVersion',
+          '/mruv.characters.MruVCharactersService/GetServiceVersion',
         request,
         metadata || {},
         this.methodInfoGetServiceVersion,
@@ -369,7 +369,7 @@ export class MruVCharactersServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVCharactersService/GetServiceVersion',
+      '/mruv.characters.MruVCharactersService/GetServiceVersion',
     request,
     metadata || {},
     this.methodInfoGetServiceVersion);

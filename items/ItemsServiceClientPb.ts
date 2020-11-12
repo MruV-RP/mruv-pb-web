@@ -1,5 +1,5 @@
 /**
- * @fileoverview gRPC-Web generated client stub for mruv
+ * @fileoverview gRPC-Web generated client stub for mruv.items
  * @enhanceable
  * @public
  */
@@ -63,7 +63,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/CreateItem',
+          '/mruv.items.MruVItemService/CreateItem',
         request,
         metadata || {},
         this.methodInfoCreateItem,
@@ -71,7 +71,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/CreateItem',
+      '/mruv.items.MruVItemService/CreateItem',
     request,
     metadata || {},
     this.methodInfoCreateItem);
@@ -103,7 +103,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/GetItem',
+          '/mruv.items.MruVItemService/GetItem',
         request,
         metadata || {},
         this.methodInfoGetItem,
@@ -111,7 +111,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/GetItem',
+      '/mruv.items.MruVItemService/GetItem',
     request,
     metadata || {},
     this.methodInfoGetItem);
@@ -143,7 +143,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/DeleteItem',
+          '/mruv.items.MruVItemService/DeleteItem',
         request,
         metadata || {},
         this.methodInfoDeleteItem,
@@ -151,7 +151,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/DeleteItem',
+      '/mruv.items.MruVItemService/DeleteItem',
     request,
     metadata || {},
     this.methodInfoDeleteItem);
@@ -183,7 +183,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/GetItems',
+          '/mruv.items.MruVItemService/GetItems',
         request,
         metadata || {},
         this.methodInfoGetItems,
@@ -191,7 +191,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/GetItems',
+      '/mruv.items.MruVItemService/GetItems',
     request,
     metadata || {},
     this.methodInfoGetItems);
@@ -223,7 +223,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/CreateItemType',
+          '/mruv.items.MruVItemService/CreateItemType',
         request,
         metadata || {},
         this.methodInfoCreateItemType,
@@ -231,7 +231,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/CreateItemType',
+      '/mruv.items.MruVItemService/CreateItemType',
     request,
     metadata || {},
     this.methodInfoCreateItemType);
@@ -263,7 +263,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/GetItemType',
+          '/mruv.items.MruVItemService/GetItemType',
         request,
         metadata || {},
         this.methodInfoGetItemType,
@@ -271,7 +271,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/GetItemType',
+      '/mruv.items.MruVItemService/GetItemType',
     request,
     metadata || {},
     this.methodInfoGetItemType);
@@ -303,7 +303,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/DeleteItemType',
+          '/mruv.items.MruVItemService/DeleteItemType',
         request,
         metadata || {},
         this.methodInfoDeleteItemType,
@@ -311,7 +311,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/DeleteItemType',
+      '/mruv.items.MruVItemService/DeleteItemType',
     request,
     metadata || {},
     this.methodInfoDeleteItemType);
@@ -343,7 +343,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/GetItemTypes',
+          '/mruv.items.MruVItemService/GetItemTypes',
         request,
         metadata || {},
         this.methodInfoGetItemTypes,
@@ -351,7 +351,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/GetItemTypes',
+      '/mruv.items.MruVItemService/GetItemTypes',
     request,
     metadata || {},
     this.methodInfoGetItemTypes);
@@ -383,7 +383,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/CreateContainer',
+          '/mruv.items.MruVItemService/CreateContainer',
         request,
         metadata || {},
         this.methodInfoCreateContainer,
@@ -391,7 +391,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/CreateContainer',
+      '/mruv.items.MruVItemService/CreateContainer',
     request,
     metadata || {},
     this.methodInfoCreateContainer);
@@ -423,7 +423,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/GetContainer',
+          '/mruv.items.MruVItemService/GetContainer',
         request,
         metadata || {},
         this.methodInfoGetContainer,
@@ -431,7 +431,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/GetContainer',
+      '/mruv.items.MruVItemService/GetContainer',
     request,
     metadata || {},
     this.methodInfoGetContainer);
@@ -463,7 +463,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/DeleteContainer',
+          '/mruv.items.MruVItemService/DeleteContainer',
         request,
         metadata || {},
         this.methodInfoDeleteContainer,
@@ -471,7 +471,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/DeleteContainer',
+      '/mruv.items.MruVItemService/DeleteContainer',
     request,
     metadata || {},
     this.methodInfoDeleteContainer);
@@ -503,7 +503,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/GetContainers',
+          '/mruv.items.MruVItemService/GetContainers',
         request,
         metadata || {},
         this.methodInfoGetContainers,
@@ -511,7 +511,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/GetContainers',
+      '/mruv.items.MruVItemService/GetContainers',
     request,
     metadata || {},
     this.methodInfoGetContainers);
@@ -543,7 +543,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/CreateContainerType',
+          '/mruv.items.MruVItemService/CreateContainerType',
         request,
         metadata || {},
         this.methodInfoCreateContainerType,
@@ -551,7 +551,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/CreateContainerType',
+      '/mruv.items.MruVItemService/CreateContainerType',
     request,
     metadata || {},
     this.methodInfoCreateContainerType);
@@ -583,7 +583,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/GetContainerType',
+          '/mruv.items.MruVItemService/GetContainerType',
         request,
         metadata || {},
         this.methodInfoGetContainerType,
@@ -591,7 +591,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/GetContainerType',
+      '/mruv.items.MruVItemService/GetContainerType',
     request,
     metadata || {},
     this.methodInfoGetContainerType);
@@ -623,7 +623,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/DeleteContainerType',
+          '/mruv.items.MruVItemService/DeleteContainerType',
         request,
         metadata || {},
         this.methodInfoDeleteContainerType,
@@ -631,7 +631,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/DeleteContainerType',
+      '/mruv.items.MruVItemService/DeleteContainerType',
     request,
     metadata || {},
     this.methodInfoDeleteContainerType);
@@ -663,7 +663,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/GetContainerTypes',
+          '/mruv.items.MruVItemService/GetContainerTypes',
         request,
         metadata || {},
         this.methodInfoGetContainerTypes,
@@ -671,7 +671,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/GetContainerTypes',
+      '/mruv.items.MruVItemService/GetContainerTypes',
     request,
     metadata || {},
     this.methodInfoGetContainerTypes);
@@ -703,7 +703,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/GetContainerItems',
+          '/mruv.items.MruVItemService/GetContainerItems',
         request,
         metadata || {},
         this.methodInfoGetContainerItems,
@@ -711,7 +711,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/GetContainerItems',
+      '/mruv.items.MruVItemService/GetContainerItems',
     request,
     metadata || {},
     this.methodInfoGetContainerItems);
@@ -743,7 +743,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/PullItem',
+          '/mruv.items.MruVItemService/PullItem',
         request,
         metadata || {},
         this.methodInfoPullItem,
@@ -751,7 +751,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/PullItem',
+      '/mruv.items.MruVItemService/PullItem',
     request,
     metadata || {},
     this.methodInfoPullItem);
@@ -783,7 +783,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/PutItem',
+          '/mruv.items.MruVItemService/PutItem',
         request,
         metadata || {},
         this.methodInfoPutItem,
@@ -791,7 +791,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/PutItem',
+      '/mruv.items.MruVItemService/PutItem',
     request,
     metadata || {},
     this.methodInfoPutItem);
@@ -823,7 +823,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/SortItems',
+          '/mruv.items.MruVItemService/SortItems',
         request,
         metadata || {},
         this.methodInfoSortItems,
@@ -831,7 +831,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/SortItems',
+      '/mruv.items.MruVItemService/SortItems',
     request,
     metadata || {},
     this.methodInfoSortItems);
@@ -863,7 +863,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/GetNearestItems',
+          '/mruv.items.MruVItemService/GetNearestItems',
         request,
         metadata || {},
         this.methodInfoGetNearestItems,
@@ -871,7 +871,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/GetNearestItems',
+      '/mruv.items.MruVItemService/GetNearestItems',
     request,
     metadata || {},
     this.methodInfoGetNearestItems);
@@ -903,7 +903,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/UseItem',
+          '/mruv.items.MruVItemService/UseItem',
         request,
         metadata || {},
         this.methodInfoUseItem,
@@ -911,7 +911,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/UseItem',
+      '/mruv.items.MruVItemService/UseItem',
     request,
     metadata || {},
     this.methodInfoUseItem);
@@ -943,7 +943,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/GetServiceStatus',
+          '/mruv.items.MruVItemService/GetServiceStatus',
         request,
         metadata || {},
         this.methodInfoGetServiceStatus,
@@ -951,7 +951,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/GetServiceStatus',
+      '/mruv.items.MruVItemService/GetServiceStatus',
     request,
     metadata || {},
     this.methodInfoGetServiceStatus);
@@ -983,7 +983,7 @@ export class MruVItemServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVItemService/GetServiceVersion',
+          '/mruv.items.MruVItemService/GetServiceVersion',
         request,
         metadata || {},
         this.methodInfoGetServiceVersion,
@@ -991,7 +991,7 @@ export class MruVItemServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVItemService/GetServiceVersion',
+      '/mruv.items.MruVItemService/GetServiceVersion',
     request,
     metadata || {},
     this.methodInfoGetServiceVersion);
