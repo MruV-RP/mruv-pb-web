@@ -1,5 +1,5 @@
 /**
- * @fileoverview gRPC-Web generated client stub for mruv
+ * @fileoverview gRPC-Web generated client stub for mruv.accounts
  * @enhanceable
  * @public
  */
@@ -61,7 +61,7 @@ export class MruVAccountsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVAccountsService/RegisterAccount',
+          '/mruv.accounts.MruVAccountsService/RegisterAccount',
         request,
         metadata || {},
         this.methodInfoRegisterAccount,
@@ -69,7 +69,7 @@ export class MruVAccountsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVAccountsService/RegisterAccount',
+      '/mruv.accounts.MruVAccountsService/RegisterAccount',
     request,
     metadata || {},
     this.methodInfoRegisterAccount);
@@ -101,7 +101,7 @@ export class MruVAccountsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVAccountsService/LogIn',
+          '/mruv.accounts.MruVAccountsService/LogIn',
         request,
         metadata || {},
         this.methodInfoLogIn,
@@ -109,7 +109,7 @@ export class MruVAccountsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVAccountsService/LogIn',
+      '/mruv.accounts.MruVAccountsService/LogIn',
     request,
     metadata || {},
     this.methodInfoLogIn);
@@ -141,7 +141,7 @@ export class MruVAccountsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVAccountsService/IsAccountExist',
+          '/mruv.accounts.MruVAccountsService/IsAccountExist',
         request,
         metadata || {},
         this.methodInfoIsAccountExist,
@@ -149,7 +149,7 @@ export class MruVAccountsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVAccountsService/IsAccountExist',
+      '/mruv.accounts.MruVAccountsService/IsAccountExist',
     request,
     metadata || {},
     this.methodInfoIsAccountExist);
@@ -181,7 +181,7 @@ export class MruVAccountsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVAccountsService/GetAccount',
+          '/mruv.accounts.MruVAccountsService/GetAccount',
         request,
         metadata || {},
         this.methodInfoGetAccount,
@@ -189,7 +189,7 @@ export class MruVAccountsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVAccountsService/GetAccount',
+      '/mruv.accounts.MruVAccountsService/GetAccount',
     request,
     metadata || {},
     this.methodInfoGetAccount);
@@ -221,7 +221,7 @@ export class MruVAccountsServiceClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/mruv.MruVAccountsService/GetAccountCharacters',
+          '/mruv.accounts.MruVAccountsService/GetAccountCharacters',
         request,
         metadata || {},
         this.methodInfoGetAccountCharacters,
@@ -229,7 +229,7 @@ export class MruVAccountsServiceClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/mruv.MruVAccountsService/GetAccountCharacters',
+      '/mruv.accounts.MruVAccountsService/GetAccountCharacters',
     request,
     metadata || {},
     this.methodInfoGetAccountCharacters);
