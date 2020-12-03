@@ -1,6 +1,6 @@
 {
   "name": "mruv-pb-web",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "MruV protocol buffers generated files for gRPC Web",
   "scripts": {
     "build": "npx tsc"
