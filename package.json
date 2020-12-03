@@ -1,13 +1,18 @@
 {
   "name": "mruv-pb-web",
-  "version": "0.9.1",
+  "version": "0.9.3",
   "description": "MruV protocol buffers generated files for gRPC Web",
+  "scripts": {
+    "build": "npx tsc"
+  },
   "dependencies": {
     "@types/google-protobuf": "^3.7.4",
     "google-protobuf": "^3.6.1",
     "grpc-web": "^1.2.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "typescript": "^4.1.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Mruv-RP/mruv-pb-web.git"
